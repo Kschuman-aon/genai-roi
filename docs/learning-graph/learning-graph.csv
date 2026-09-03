@@ -1,0 +1,562 @@
+ConceptID,ConceptLabel,Dependencies,TaxonomyID
+1,Artificial Intelligence,,FOUND
+2,Machine Learning,1,FOUND
+3,Deep Learning,2,FOUND
+4,Neural Network,3,FOUND
+5,Generative AI,4,FOUND
+6,Large Language Model,5,FOUND
+7,Foundation Model,6,FOUND
+8,Transformer Architecture,7,FOUND
+9,Attention Mechanism,8,FOUND
+10,Self-Attention,8,FOUND
+11,Pretraining,10,FOUND
+12,Fine-Tuning,11,FOUND
+13,Instruction Tuning,12,FOUND
+14,RLHF Alignment,13,FOUND
+15,Inference,14,FOUND
+16,Training Vs Inference Cost,15,FOUND
+17,Model Parameters,16,FOUND
+18,Model Parameter Count,17,FOUND
+19,Context Window,18,FOUND
+20,Multimodal Model,18,FOUND
+21,Open-Source Model,20,FOUND
+22,Proprietary Model,21,FOUND
+23,Model Provider,22,FOUND
+24,API Endpoint,23,FOUND
+25,Prompt,24,FOUND
+26,System Prompt,25,FOUND
+27,Prompt Engineering,25,FOUND
+28,Zero-Shot Prompting,27,FOUND
+29,Few-Shot Prompting,28,FOUND
+30,Chain-Of-Thought Prompting,29,FOUND
+31,Retrieval-Augmented Generation,30,FOUND
+32,Embedding,31,FOUND
+33,Vector Database,32,FOUND
+34,Model Hallucination,32|33,FOUND
+35,Model Latency,34,FOUND
+36,Model Throughput,35,FOUND
+37,Batch Inference,33|36,FOUND
+38,Streaming Response,37,FOUND
+39,Model Versioning,38,FOUND
+40,Model Deployment,37|39,FOUND
+41,On-Premises Deployment,39|40,FOUND
+42,Cloud-Hosted Model,40|41,FOUND
+43,Model Quantization,40|42,FOUND
+44,Knowledge Distillation,43,FOUND
+45,Model Right-Sizing,35|44,FOUND
+46,Token,,TOKEN
+47,Tokenization,46,TOKEN
+48,Subword Tokenization,47,TOKEN
+49,Byte Pair Encoding,46|48,TOKEN
+50,Token Vocabulary,46|49,TOKEN
+51,Input Token,50,TOKEN
+52,Output Token,49|51,TOKEN
+53,Token Count,49|51,TOKEN
+54,Token Limit,50|53,TOKEN
+55,Context Length,51|54,TOKEN
+56,Token-To-Word Ratio,55,TOKEN
+57,Tokenizer Choice,56,TOKEN
+58,Token Pricing Model,55|57,TOKEN
+59,Per-Token Pricing,58,TOKEN
+60,Input Token Pricing,59,TOKEN
+61,Output Token Pricing,59|60,TOKEN
+62,Blended Token Rate,61,TOKEN
+63,Prompt Caching,61,TOKEN
+64,Cached Token Discount,63,TOKEN
+65,Batch API Discount,64,TOKEN
+66,Token Budget,65,TOKEN
+67,Token Consumption Rate,66,TOKEN
+68,Token Efficiency,66,TOKEN
+69,Prompt Length,68,TOKEN
+70,System Prompt Overhead,66|68,TOKEN
+71,Few-Shot Token Overhead,70,TOKEN
+72,Context Window Cost,71,TOKEN
+73,Long-Context Pricing,72,TOKEN
+74,Token Truncation,72,TOKEN
+75,Prompt Compression,74,TOKEN
+76,Prompt Summarization,75,TOKEN
+77,Semantic Caching,76,TOKEN
+78,Redundant Token Usage,74|76,TOKEN
+79,Token Wastage,76|78,TOKEN
+80,Chunking Strategy,79,TOKEN
+81,Retrieval Chunk Size,79,TOKEN
+82,Multi-Turn Token Growth,81,TOKEN
+83,Conversation History Cost,82,TOKEN
+84,Token Metering,83,TOKEN
+85,Usage Dashboard,82|84,TOKEN
+86,Token Rate Limit,85,TOKEN
+87,Provider Rate Card,85|86,TOKEN
+88,Token Cost Benchmark,84|87,TOKEN
+89,Cross-Provider Comparison,84|87,TOKEN
+90,Token Efficiency Score,89,TOKEN
+91,Tokenizer Version Drift,89,TOKEN
+92,GPU Compute,40,INFRA
+93,CPU Inference,92,INFRA
+94,Compute Cost,93,INFRA
+95,Cloud Compute Pricing,94,INFRA
+96,On-Demand Pricing,93|95,INFRA
+97,Reserved Capacity Pricing,93|94|95,INFRA
+98,Spot Instance Pricing,97,INFRA
+99,Serverless Inference,95|98,INFRA
+100,Dedicated Endpoint,95|98,INFRA
+101,Multi-Tenant Endpoint,98|100,INFRA
+102,Autoscaling,101,INFRA
+103,Cold Start Latency,102,INFRA
+104,Warm Pool,101|102,INFRA
+105,Compute Utilization Rate,101|104,INFRA
+106,Idle Capacity Cost,105,INFRA
+107,Data Transfer Cost,106,INFRA
+108,Storage Cost,107,INFRA
+109,Vector Store Cost,108,INFRA
+110,Network Egress Cost,109,INFRA
+111,Load Balancing,110,INFRA
+112,Model Serving Framework,108|111,INFRA
+113,Inference Server,112,INFRA
+114,Hardware Accelerator,113,INFRA
+115,GPU Memory Constraint,113,INFRA
+116,Batch Size Tuning,115,INFRA
+117,Concurrency Limit,113|115,INFRA
+118,Throughput-Latency Tradeoff,117,INFRA
+119,Peak Load Provisioning,118,INFRA
+120,Capacity Planning,118|119,INFRA
+121,Infrastructure As Code,118|120,INFRA
+122,Multi-Region Deployment,121,INFRA
+123,Edge Deployment,122,INFRA
+124,Hybrid Cloud Strategy,120|123,INFRA
+125,Total Compute Footprint,124,INFRA
+126,Carbon Cost Of Compute,125,INFRA
+127,Energy Cost Per Query,123|126,INFRA
+128,Infrastructure Monitoring,126|127,INFRA
+129,Cost Alerting,128,INFRA
+130,Budget Threshold,127|129,INFRA
+131,Infrastructure Cost Dashboard,128|130,INFRA
+132,Prompt Optimization,68|94,EFFIC
+133,Prompt Template Design,68|94,EFFIC
+134,Output Length Control,133,EFFIC
+135,Max Tokens Parameter,133,EFFIC
+136,Temperature Setting,135,EFFIC
+137,Structured Output Format,133|136,EFFIC
+138,JSON Mode Output,133|136,EFFIC
+139,Function Calling,138,EFFIC
+140,Tool Use Efficiency,139,EFFIC
+141,Model Cascading,139|140,EFFIC
+142,Model Routing,140|141,EFFIC
+143,Small Model First Strategy,142,EFFIC
+144,Fallback Model Strategy,142|143,EFFIC
+145,Ensemble Cost Tradeoff,143|144,EFFIC
+146,Response Caching,145,EFFIC
+147,Deterministic Caching,144|146,EFFIC
+148,Semantic Deduplication,145|147,EFFIC
+149,Retrieval Optimization,148,EFFIC
+150,RAG Cost Tradeoff,31|109|148,EFFIC
+151,Embedding Reuse,147|150,EFFIC
+152,Vector Index Tuning,150|151,EFFIC
+153,Query Rewriting,151|152,EFFIC
+154,Context Pruning,151|152,EFFIC
+155,Context Compression,154,EFFIC
+156,Summarization Preprocessing,152|155,EFFIC
+157,Batch Processing Strategy,156,EFFIC
+158,Asynchronous Processing,156,EFFIC
+159,Off-Peak Scheduling,156|158,EFFIC
+160,Prompt Reuse Library,156|158,EFFIC
+161,Prompt Version Control,156|158,EFFIC
+162,A/B Testing Prompts,161,EFFIC
+163,Cost-Per-Task Benchmarking,162,EFFIC
+164,Quality-Cost Tradeoff,163,EFFIC
+165,Latency-Cost Tradeoff,162|164,EFFIC
+166,Right-Sizing Review Cycle,45|162|165,EFFIC
+167,Fine-Tuning Vs Prompting,12|27|166,EFFIC
+168,Distillation For Cost Cutting,12|27|44|166,EFFIC
+169,Quantization For Cost Cutting,43|168,EFFIC
+170,Sparse Model Techniques,169,EFFIC
+171,Mixture Of Experts,170,EFFIC
+172,Speculative Decoding,171,EFFIC
+173,KV Cache Optimization,169|172,EFFIC
+174,Parallel Sampling Cost,172|173,EFFIC
+175,Self-Consistency Cost,172|173,EFFIC
+176,Guardrail Overhead Cost,175,EFFIC
+177,Content Filtering Cost,176,EFFIC
+178,Token Efficiency Audit,176|177,EFFIC
+179,Continuous Cost Optimization,178,EFFIC
+180,Cost Regression Testing,179,EFFIC
+181,Efficiency Gain Tracking,180,EFFIC
+182,Return On Investment,,FINRO
+183,Total Cost Of Ownership,182,FINRO
+184,Net Present Value,183,FINRO
+185,Payback Period,184,FINRO
+186,Internal Rate Of Return,185,FINRO
+187,Cost-Benefit Analysis,185|186,FINRO
+188,Capital Expenditure,187,FINRO
+189,Operating Expenditure,187,FINRO
+190,Sunk Cost,189,FINRO
+191,Opportunity Cost,190,FINRO
+192,Depreciation,190|191,FINRO
+193,Amortization,190|191,FINRO
+194,Discount Rate,193,FINRO
+195,Time Value Of Money,194,FINRO
+196,Break-Even Analysis,194|195,FINRO
+197,Marginal Cost,196,FINRO
+198,Fixed Cost,195|197,FINRO
+199,Variable Cost,197|198,FINRO
+200,Cost Allocation,197|198,FINRO
+201,Cost Center,200,FINRO
+202,Chargeback Model,198|201,FINRO
+203,Showback Model,202,FINRO
+204,Unit Economics,203,FINRO
+205,Cost Per Transaction,203,FINRO
+206,Cost Per User,203,FINRO
+207,Cost Per Query,206,FINRO
+208,Cost Avoidance,207,FINRO
+209,Cost Reduction Vs Avoidance,206|208,FINRO
+210,Revenue Impact,208|209,FINRO
+211,Productivity Gain,207|210,FINRO
+212,Labor Cost Savings,211,FINRO
+213,Financial Statement Basics,211,FINRO
+214,Income Statement,213,FINRO
+215,Balance Sheet Basics,214,FINRO
+216,Budget Cycle,214,FINRO
+217,Business Case,213|216,FINRO
+218,Investment Appraisal,214|217,FINRO
+219,Hurdle Rate,214|217,FINRO
+220,Risk-Adjusted Return,216|219,FINRO
+221,Sensitivity Analysis,220,FINRO
+222,Scenario Analysis,221,FINRO
+223,Financial Forecasting,219|222,FINRO
+224,Baseline Cost Model,223,FINRO
+225,Counterfactual Cost Estimate,224,FINRO
+226,Financial KPI,225,FINRO
+227,GenAI ROI Metric,5|182|211,METRC
+228,Adoption Rate Metric,227,METRC
+229,Usage Frequency Metric,228,METRC
+230,Task Completion Time,228,METRC
+231,Time-To-Value Metric,227|230,METRC
+232,Quality Score Metric,231,METRC
+233,Error Rate Metric,230|232,METRC
+234,Rework Rate Metric,231|233,METRC
+235,Customer Satisfaction Metric,234,METRC
+236,Employee Satisfaction Metric,234,METRC
+237,Automation Rate Metric,233|236,METRC
+238,Throughput Improvement Metric,233|236,METRC
+239,Deflection Rate Metric,238,METRC
+240,First-Contact Resolution Rate,239,METRC
+241,Cycle Time Reduction,238|239,METRC
+242,Defect Reduction Rate,239|241,METRC
+243,Code Review Time Saved,239|242,METRC
+244,Developer Velocity Metric,243,METRC
+245,Story Points Delivered,241|243,METRC
+246,Lead Time For Changes,245,METRC
+247,Mean Time To Resolution,245|246,METRC
+248,Model Accuracy Metric,245|247,METRC
+249,Precision And Recall,246|248,METRC
+250,Hallucination Rate Metric,249,METRC
+251,User Retention Metric,249|250,METRC
+252,Net Promoter Score,251,METRC
+253,Cost Per Outcome,250|251,METRC
+254,Value Realization Metric,250|253,METRC
+255,Leading Vs Lagging Indicator,254,METRC
+256,North Star Metric,254,METRC
+257,Metric Instrumentation Plan,256,METRC
+258,KPI Dashboard Design,257,METRC
+259,Metric Baseline Capture,258,METRC
+260,Metric Attribution,259,METRC
+261,Confounding Factor,257|260,METRC
+262,Statistical Significance Check,221|261,METRC
+263,Control Group Comparison,222|262,METRC
+264,Pre/Post Comparison Study,262|263,METRC
+265,Longitudinal Tracking,262|263,METRC
+266,Metric Reporting Cadence,262|265,METRC
+267,Usage Telemetry,84|85,DATOP
+268,Cost Attribution Tagging,200|267,DATOP
+269,Cost Tagging Taxonomy,201|268,DATOP
+270,Observability Platform,268|269,DATOP
+271,Logging Strategy,267|270,DATOP
+272,Distributed Tracing,269|271,DATOP
+273,API Call Logging,272,DATOP
+274,Token Usage Logging,273,DATOP
+275,Cost Dashboard Design,274,DATOP
+276,Real-Time Cost Monitoring,129|274,DATOP
+277,Anomaly Detection In Spend,276,DATOP
+278,Spend Forecasting,276,DATOP
+279,Budget Variance Analysis,278,DATOP
+280,Cost Data Warehouse,279,DATOP
+281,Data Pipeline For Cost Analytics,280,DATOP
+282,ETL For Usage Data,279|281,DATOP
+283,Data Quality For Cost Metrics,282,DATOP
+284,Sampling Strategy For Telemetry,283,DATOP
+285,Data Retention Policy,284,DATOP
+286,Multi-Tenant Cost Attribution,285,DATOP
+287,Departmental Cost Rollup,286,DATOP
+288,Project-Level Cost Tracking,286|287,DATOP
+289,Per-User Cost Tracking,287|288,DATOP
+290,Per-Feature Cost Tracking,289,DATOP
+291,Vendor Invoice Reconciliation,290,DATOP
+292,Billing API Integration,289|291,DATOP
+293,Cost Data Normalization,292,DATOP
+294,Cross-Provider Cost Aggregation,293,DATOP
+295,Alerting Threshold Design,294,DATOP
+296,Dashboard Refresh Cadence,294,DATOP
+297,Data Governance For Metrics,293|296,DATOP
+298,Audit Trail For Spend,297,DATOP
+299,Metric Definition Documentation,298,DATOP
+300,Single Source Of Truth,296|299,DATOP
+301,Instrumentation Maturity Model,300,DATOP
+302,Cost Observability Roadmap,298|301,DATOP
+303,Telemetry Sampling Bias,301|302,DATOP
+304,Real-Time Alert Fatigue,301|302,DATOP
+305,Data Lineage For Cost Metrics,304,DATOP
+306,Instrumentation Ownership Model,302|305,DATOP
+307,Software Development Lifecycle,5,SDLC
+308,Requirements Phase Cost,307,SDLC
+309,Design Phase Cost,308,SDLC
+310,Coding Phase Cost,308,SDLC
+311,Testing Phase Cost,307|310,SDLC
+312,Deployment Phase Cost,311,SDLC
+313,Maintenance Phase Cost,311|312,SDLC
+314,AI-Assisted Requirements,312|313,SDLC
+315,AI-Assisted Code Generation,6|27|313|314,SDLC
+316,Code Completion Tool Cost,313|315,SDLC
+317,AI Pair Programming,316,SDLC
+318,Automated Code Review,316|317,SDLC
+319,AI-Generated Test Cases,316|317,SDLC
+320,Test Coverage Automation,319,SDLC
+321,Automated Documentation,320,SDLC
+322,Technical Debt From AI Code,320,SDLC
+323,Code Quality Regression Risk,322,SDLC
+324,Refactoring Cost,323,SDLC
+325,Legacy Code Migration Cost,323|324,SDLC
+326,CI/CD Pipeline Cost,323|324,SDLC
+327,Build Time Reduction,326,SDLC
+328,Deployment Automation Cost,326,SDLC
+329,Incident Response Cost,328,SDLC
+330,Bug Triage Automation,329,SDLC
+331,Developer Onboarding Cost,330,SDLC
+332,Code Review Cycle Time,328|331,SDLC
+333,Pull Request Turnaround,332,SDLC
+334,Developer Productivity Index,333,SDLC
+335,Tooling License Cost,332|334,SDLC
+336,IDE Integration Cost,332|334,SDLC
+337,Prompt-Driven Development Cost,336,SDLC
+338,Vibe Coding Risk,337,SDLC
+339,Code Generation Quality Review,338,SDLC
+340,Security Review Of AI Code,315|339,SDLC
+341,License Compliance Of AI Code,315|340,SDLC
+342,Developer Time Reallocation,341,SDLC
+343,SDLC Automation Maturity,342,SDLC
+344,SDLC Cost Baseline,224|340|342,SDLC
+345,SDLC Cost Reduction Roadmap,344,SDLC
+346,Software Delivery Risk,345,SDLC
+347,Rollback Cost,345,SDLC
+348,Post-Deployment Monitoring Cost,347,SDLC
+349,Feature Flag Cost Management,348,SDLC
+350,Release Cadence Cost Impact,349,SDLC
+351,SDLC ROI Case Study,227|350,SDLC
+352,Data Science Lifecycle,2|5,DSLC
+353,Data Collection Cost,352,DSLC
+354,Data Labeling Cost,353,DSLC
+355,AI-Assisted Data Labeling,6|354,DSLC
+356,Data Cleaning Cost,6|352|354,DSLC
+357,Feature Engineering Cost,356,DSLC
+358,AI-Assisted Feature Engineering,6|357,DSLC
+359,Model Training Cost,357|358,DSLC
+360,Hyperparameter Tuning Cost,359,DSLC
+361,Experiment Tracking Cost,360,DSLC
+362,Model Evaluation Cost,358|361,DSLC
+363,Model Validation Cost,362,DSLC
+364,Model Deployment Cost,363,DSLC
+365,Model Monitoring Cost,363|364,DSLC
+366,Model Retraining Trigger,362|365,DSLC
+367,Model Drift Detection,365|366,DSLC
+368,Data Drift Detection,364|365|367,DSLC
+369,Retraining Cadence Tuning,368,DSLC
+370,Synthetic Data Generation,366|369,DSLC
+371,Synthetic Data Cost Tradeoff,367|370,DSLC
+372,Active Learning Cost Reduction,371,DSLC
+373,Data Annotation Quality Control,369|371,DSLC
+374,Annotation Vendor Management,371|373,DSLC
+375,Data Versioning Cost,374,DSLC
+376,Feature Store Cost,375,DSLC
+377,MLOps Pipeline Cost,375|376,DSLC
+378,Model Registry Cost,374|377,DSLC
+379,Champion-Challenger Testing,378,DSLC
+380,Shadow Deployment Cost,376|378,DSLC
+381,Canary Release For Models,377|380,DSLC
+382,Model Lifecycle Management,380|381,DSLC
+383,Model Deprecation Planning,382,DSLC
+384,Compute Reuse Across Experiments,383,DSLC
+385,Notebook Environment Cost,382|384,DSLC
+386,Data Science Team Utilization,382|384,DSLC
+387,Experiment Reproducibility Cost,386,DSLC
+388,Data Science Tooling Cost,387,DSLC
+389,DSLC Cost Baseline,224|388,DSLC
+390,DSLC Cost Reduction Roadmap,387|389,DSLC
+391,DSLC ROI Case Study,227|390,DSLC
+392,AutoML Cost Tradeoff,391,DSLC
+393,Transfer Learning Cost Savings,392,DSLC
+394,Pretrained Model Reuse,392,DSLC
+395,Data Science Technical Debt,394,DSLC
+396,Cross-Team Model Reuse,395,DSLC
+397,Build Vs Buy Decision,23|183,VNDR
+398,Open-Source Vs Proprietary Cost,397,VNDR
+399,Vendor Lock-In Risk,23|398,VNDR
+400,Multi-Vendor Strategy,23|398,VNDR
+401,Model Benchmarking For Selection,400,VNDR
+402,Vendor Pricing Comparison,400,VNDR
+403,Licensing Cost Structure,402,VNDR
+404,Enterprise License Agreement,403,VNDR
+405,Usage-Based Licensing,402|404,VNDR
+406,Seat-Based Licensing,405,VNDR
+407,Committed Spend Discount,403|405,VNDR
+408,Volume Discount Negotiation,405|407,VNDR
+409,Contract Term Length Tradeoff,405|408,VNDR
+410,Vendor SLA Review,409,VNDR
+411,Vendor Support Cost,409,VNDR
+412,Total Vendor Cost Model,183|411,VNDR
+413,Switching Cost Estimate,412,VNDR
+414,Model Portability,412|413,VNDR
+415,API Abstraction Layer,412|414,VNDR
+416,Multi-Model Orchestration,413|415,VNDR
+417,Model Selection Criteria,416,VNDR
+418,Proof-Of-Concept Cost,416,VNDR
+419,Pilot Program Design,416|418,VNDR
+420,Vendor Risk Assessment,416|419,VNDR
+421,Vendor Due Diligence,419|420,VNDR
+422,Self-Hosted Model Economics,92|94|419|421,VNDR
+423,Managed Service Economics,95|419|422,VNDR
+424,Hybrid Sourcing Strategy,422|423,VNDR
+425,Procurement Cycle Impact,424,VNDR
+426,Total Addressable Cost Savings,422|424,VNDR
+427,Competitive Bidding Process,426,VNDR
+428,Vendor Consolidation Strategy,427,VNDR
+429,Community Support Risk,428,VNDR
+430,Model Update Cadence Risk,429,VNDR
+431,Vendor Deprecation Risk,430,VNDR
+432,Cost Predictability Assessment,431,VNDR
+433,Long-Term Contract Risk,432,VNDR
+434,Vendor Scorecard,430|432,VNDR
+435,Build Vs Buy Case Study,183|227|434,VNDR
+436,Sourcing Strategy Roadmap,434|435,VNDR
+437,AI Governance Framework,183,RISK
+438,Model Risk Management,437,RISK
+439,Hidden Cost Of AI Systems,183|437,RISK
+440,Shadow AI Usage Risk,437|439,RISK
+441,Data Security Risk,437|439,RISK
+442,Data Privacy Risk,441,RISK
+443,Intellectual Property Risk,439|442,RISK
+444,Compliance Risk,443,RISK
+445,Regulatory Uncertainty Cost,443,RISK
+446,Bias And Fairness Risk,445,RISK
+447,Explainability Requirement Cost,446,RISK
+448,Audit Requirement Cost,445|447,RISK
+449,Model Governance Board,437|445|447,RISK
+450,Responsible AI Policy,446|449,RISK
+451,Third-Party Risk Assessment,450,RISK
+452,Data Residency Requirement,450|451,RISK
+453,Access Control Cost,452,RISK
+454,Incident Response Planning,452|453,RISK
+455,Reputational Risk,451|454,RISK
+456,Overreliance Risk,455,RISK
+457,Skill Erosion Risk,455,RISK
+458,Staff Retraining Cost,457,RISK
+459,Change Management Cost,458,RISK
+460,Governance Overhead Cost,458,RISK
+461,AI Risk Register,460,RISK
+462,Risk Appetite Statement,461,RISK
+463,Contingency Budget,462,RISK
+464,Technical Debt Risk,463,RISK
+465,Model Retirement Cost,464,RISK
+466,Legacy Integration Risk,464|465,RISK
+467,Security Incident Cost Estimate,466,RISK
+468,Insurance Cost For AI Risk,464|467,RISK
+469,Governance Maturity Model,464|467,RISK
+470,Policy Enforcement Automation,466|469,RISK
+471,Risk-Adjusted Cost Model,467|470,RISK
+472,Hidden Cost Discovery Checklist,471,RISK
+473,Risk-Adjusted TCO,472,RISK
+474,Governance ROI Tradeoff,227|471|473,RISK
+475,Risk Mitigation Cost-Benefit,474,RISK
+476,Risk Reporting To Executives,461|475,RISK
+477,Executive Audience Analysis,213|227,COMM
+478,Financial Literacy For Engineers,182|477,COMM
+479,Technical-Financial Translation,478,COMM
+480,Jargon Reduction Technique,479,COMM
+481,Executive Attention Span,480,COMM
+482,Message Framing,478|481,COMM
+483,Storytelling With Data,480|482,COMM
+484,Narrative Arc For Reports,480|483,COMM
+485,Key Message Development,484,COMM
+486,So-What Statement,484|485,COMM
+487,Elevator Pitch For Findings,483|486,COMM
+488,Stakeholder Mapping,487,COMM
+489,Audience-Specific Framing,487|488,COMM
+490,CFO Perspective,489,COMM
+491,CIO Perspective,487|490,COMM
+492,CTO Perspective,491,COMM
+493,Board-Level Communication,492,COMM
+494,One-Page Summary Technique,493,COMM
+495,Executive Summary Writing,485|493,COMM
+496,Bottom-Line-Up-Front Principle,493|495,COMM
+497,Assumption Transparency,496,COMM
+498,Confidence Interval Framing,497,COMM
+499,Uncertainty Communication,498,COMM
+500,Risk Communication To Executives,499,COMM
+501,Recommendation Framing,500,COMM
+502,Actionable Insight Development,501,COMM
+503,Objection Anticipation,502,COMM
+504,Q&A Presentation Prep,500|503,COMM
+505,Executive Presentation Design,501|504,COMM
+506,Slide Design For Financial Data,505,COMM
+507,Verbal Presentation Technique,506,COMM
+508,Written Report Tone,505|507,COMM
+509,Credibility Building Technique,508,COMM
+510,Data-Driven Persuasion,509,COMM
+511,Ethical Findings Communication,509|510,COMM
+512,Avoiding Overstated Claims,511,COMM
+513,Benchmarking Against Peers,512,COMM
+514,Industry Comparison Framing,513,COMM
+515,Communication Feedback Loop,514,COMM
+516,Iterative Report Refinement,514,COMM
+517,Executive Report Structure,227|495,RPRT
+518,Report Scope Definition,517,RPRT
+519,Methodology Section Design,257|518,RPRT
+520,Findings Section Design,257|483|518,RPRT
+521,Recommendations Section Design,501|517|520,RPRT
+522,Appendix Design,521,RPRT
+523,Cover Page And Framing,521|522,RPRT
+524,Table Of Contents Design,523,RPRT
+525,Data Visualization Principles,258|523,RPRT
+526,Chart Type Selection,525,RPRT
+527,Bar Chart For Cost Comparison,525,RPRT
+528,Line Chart For Trend Analysis,527,RPRT
+529,Waterfall Cost Breakdown Chart,200|528,RPRT
+530,Cost Driver Tree Diagram,529,RPRT
+531,Sensitivity Analysis Chart,221|529,RPRT
+532,Scenario Comparison Table,222|531,RPRT
+533,Dashboard Mockup For Report,532,RPRT
+534,Color Use In Financial Charts,532,RPRT
+535,Chart Labeling Best Practice,532,RPRT
+536,Data Table Design,535,RPRT
+537,Footnote And Source Citation,536,RPRT
+538,Report Review Checklist,537,RPRT
+539,Peer Review Process,537|538,RPRT
+540,Report Editing Pass,539,RPRT
+541,Fact-Checking Financial Claims,512|538|540,RPRT
+542,Report Version Control,541,RPRT
+543,Report Template Library,542,RPRT
+544,Report Length Calibration,543,RPRT
+545,Report Accessibility,543|544,RPRT
+546,Report Distribution Strategy,545,RPRT
+547,Report Feedback Incorporation,546,RPRT
+548,Report Localization Note,545|547,RPRT
+549,Report Archiving Practice,545|547,RPRT
+550,Capstone Report Planning,345|390|517|549,RPRT
+551,Capstone Data Collection,259|267|550,RPRT
+552,Capstone Cost Model Build,183|224|551,RPRT
+553,Capstone ROI Calculation,184|227|552,RPRT
+554,Capstone Executive Summary Draft,495|553,RPRT
+555,Capstone Report Full Draft,554,RPRT
+556,Capstone Peer Critique,539|554,RPRT
+557,Capstone Presentation Delivery,505|556,RPRT
+558,Capstone Report Finalization,540|541|554|557,RPRT
+559,Post-Capstone Reflection,558,RPRT
+560,Continuous Improvement Plan,556|559,RPRT
+561,Career Application Of Skills,559|560,RPRT

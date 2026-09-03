@@ -1,0 +1,6774 @@
+{
+  "metadata": {
+    "title": "Measuring GenAI ROI: Token Efficiency and Executive Financial Reporting",
+    "description": "A learning graph of 561 concepts for an IT-professional course that teaches how to measure the ROI of generative AI systems, understand token efficiency, optimize cost across the software development and data science lifecycles, and produce a high-quality, executive-ready financial ROI report.",
+    "creator": "Katie Jo Schuman",
+    "date": "2026-08-20",
+    "version": "1.0",
+    "format": "Learning Graph JSON v1.0",
+    "schema": "https://raw.githubusercontent.com/dmccreary/learning-graphs/refs/heads/main/src/schema/learning-graph-schema.json",
+    "license": "CC BY-NC-SA 4.0 DEED"
+  },
+  "groups": {
+    "FOUND": {
+      "classifierName": "Generative AI & LLM Foundations",
+      "color": "SteelBlue",
+      "font": {
+        "color": "white"
+      }
+    },
+    "TOKEN": {
+      "classifierName": "Tokenization & Token Economics",
+      "color": "DarkSlateBlue",
+      "font": {
+        "color": "white"
+      }
+    },
+    "INFRA": {
+      "classifierName": "Compute, Infrastructure & Pricing",
+      "color": "DarkGreen",
+      "font": {
+        "color": "white"
+      }
+    },
+    "EFFIC": {
+      "classifierName": "Token & Cost Efficiency Techniques",
+      "color": "LimeGreen",
+      "font": {
+        "color": "black"
+      }
+    },
+    "FINRO": {
+      "classifierName": "Financial & ROI Fundamentals",
+      "color": "Gold",
+      "font": {
+        "color": "black"
+      }
+    },
+    "METRC": {
+      "classifierName": "ROI Metrics & KPIs",
+      "color": "DarkGoldenrod",
+      "font": {
+        "color": "white"
+      }
+    },
+    "DATOP": {
+      "classifierName": "Data Collection, Instrumentation & Observability",
+      "color": "Khaki",
+      "font": {
+        "color": "black"
+      }
+    },
+    "SDLC": {
+      "classifierName": "Software Development Lifecycle Cost Optimization",
+      "color": "Teal",
+      "font": {
+        "color": "white"
+      }
+    },
+    "DSLC": {
+      "classifierName": "Data Science Lifecycle Cost Optimization",
+      "color": "DodgerBlue",
+      "font": {
+        "color": "white"
+      }
+    },
+    "VNDR": {
+      "classifierName": "Vendor, Model & Build-vs-Buy Economics",
+      "color": "LightSkyBlue",
+      "font": {
+        "color": "black"
+      }
+    },
+    "RISK": {
+      "classifierName": "Risk, Governance & Hidden Costs",
+      "color": "Crimson",
+      "font": {
+        "color": "white"
+      }
+    },
+    "COMM": {
+      "classifierName": "Executive Communication & Financial Literacy",
+      "color": "DarkRed",
+      "font": {
+        "color": "white"
+      }
+    },
+    "RPRT": {
+      "classifierName": "Report Design, Visualization & Capstone",
+      "color": "MediumPurple",
+      "font": {
+        "color": "white"
+      }
+    }
+  },
+  "nodes": [
+    {
+      "id": 1,
+      "label": "Artificial Intelligence",
+      "group": "FOUND",
+      "shape": "box",
+      "cis": 424
+    },
+    {
+      "id": 2,
+      "label": "Machine Learning",
+      "group": "FOUND",
+      "cis": 423
+    },
+    {
+      "id": 3,
+      "label": "Deep Learning",
+      "group": "FOUND",
+      "cis": 422
+    },
+    {
+      "id": 4,
+      "label": "Neural Network",
+      "group": "FOUND",
+      "cis": 421
+    },
+    {
+      "id": 5,
+      "label": "Generative AI",
+      "group": "FOUND",
+      "cis": 420
+    },
+    {
+      "id": 6,
+      "label": "Large Language Model",
+      "group": "FOUND",
+      "cis": 292
+    },
+    {
+      "id": 7,
+      "label": "Foundation Model",
+      "group": "FOUND",
+      "cis": 249
+    },
+    {
+      "id": 8,
+      "label": "Transformer Architecture",
+      "group": "FOUND",
+      "cis": 248
+    },
+    {
+      "id": 9,
+      "label": "Attention Mechanism",
+      "group": "FOUND",
+      "cis": 1
+    },
+    {
+      "id": 10,
+      "label": "Self-Attention",
+      "group": "FOUND",
+      "cis": 246
+    },
+    {
+      "id": 11,
+      "label": "Pretraining",
+      "group": "FOUND",
+      "cis": 245
+    },
+    {
+      "id": 12,
+      "label": "Fine-Tuning",
+      "group": "FOUND",
+      "cis": 244
+    },
+    {
+      "id": 13,
+      "label": "Instruction Tuning",
+      "group": "FOUND",
+      "cis": 243
+    },
+    {
+      "id": 14,
+      "label": "RLHF Alignment",
+      "group": "FOUND",
+      "cis": 242
+    },
+    {
+      "id": 15,
+      "label": "Inference",
+      "group": "FOUND",
+      "cis": 241
+    },
+    {
+      "id": 16,
+      "label": "Training Vs Inference Cost",
+      "group": "FOUND",
+      "cis": 240
+    },
+    {
+      "id": 17,
+      "label": "Model Parameters",
+      "group": "FOUND",
+      "cis": 239
+    },
+    {
+      "id": 18,
+      "label": "Model Parameter Count",
+      "group": "FOUND",
+      "cis": 238
+    },
+    {
+      "id": 19,
+      "label": "Context Window",
+      "group": "FOUND",
+      "cis": 1
+    },
+    {
+      "id": 20,
+      "label": "Multimodal Model",
+      "group": "FOUND",
+      "cis": 236
+    },
+    {
+      "id": 21,
+      "label": "Open-Source Model",
+      "group": "FOUND",
+      "cis": 235
+    },
+    {
+      "id": 22,
+      "label": "Proprietary Model",
+      "group": "FOUND",
+      "cis": 234
+    },
+    {
+      "id": 23,
+      "label": "Model Provider",
+      "group": "FOUND",
+      "cis": 233
+    },
+    {
+      "id": 24,
+      "label": "API Endpoint",
+      "group": "FOUND",
+      "cis": 207
+    },
+    {
+      "id": 25,
+      "label": "Prompt",
+      "group": "FOUND",
+      "cis": 206
+    },
+    {
+      "id": 26,
+      "label": "System Prompt",
+      "group": "FOUND",
+      "cis": 1
+    },
+    {
+      "id": 27,
+      "label": "Prompt Engineering",
+      "group": "FOUND",
+      "cis": 204
+    },
+    {
+      "id": 28,
+      "label": "Zero-Shot Prompting",
+      "group": "FOUND",
+      "cis": 154
+    },
+    {
+      "id": 29,
+      "label": "Few-Shot Prompting",
+      "group": "FOUND",
+      "cis": 153
+    },
+    {
+      "id": 30,
+      "label": "Chain-Of-Thought Prompting",
+      "group": "FOUND",
+      "cis": 152
+    },
+    {
+      "id": 31,
+      "label": "Retrieval-Augmented Generation",
+      "group": "FOUND",
+      "cis": 151
+    },
+    {
+      "id": 32,
+      "label": "Embedding",
+      "group": "FOUND",
+      "cis": 150
+    },
+    {
+      "id": 33,
+      "label": "Vector Database",
+      "group": "FOUND",
+      "cis": 149
+    },
+    {
+      "id": 34,
+      "label": "Model Hallucination",
+      "group": "FOUND",
+      "cis": 148
+    },
+    {
+      "id": 35,
+      "label": "Model Latency",
+      "group": "FOUND",
+      "cis": 147
+    },
+    {
+      "id": 36,
+      "label": "Model Throughput",
+      "group": "FOUND",
+      "cis": 146
+    },
+    {
+      "id": 37,
+      "label": "Batch Inference",
+      "group": "FOUND",
+      "cis": 145
+    },
+    {
+      "id": 38,
+      "label": "Streaming Response",
+      "group": "FOUND",
+      "cis": 144
+    },
+    {
+      "id": 39,
+      "label": "Model Versioning",
+      "group": "FOUND",
+      "cis": 143
+    },
+    {
+      "id": 40,
+      "label": "Model Deployment",
+      "group": "FOUND",
+      "cis": 142
+    },
+    {
+      "id": 41,
+      "label": "On-Premises Deployment",
+      "group": "FOUND",
+      "cis": 21
+    },
+    {
+      "id": 42,
+      "label": "Cloud-Hosted Model",
+      "group": "FOUND",
+      "cis": 20
+    },
+    {
+      "id": 43,
+      "label": "Model Quantization",
+      "group": "FOUND",
+      "cis": 19
+    },
+    {
+      "id": 44,
+      "label": "Knowledge Distillation",
+      "group": "FOUND",
+      "cis": 18
+    },
+    {
+      "id": 45,
+      "label": "Model Right-Sizing",
+      "group": "FOUND",
+      "cis": 17
+    },
+    {
+      "id": 46,
+      "label": "Token",
+      "group": "TOKEN",
+      "shape": "box",
+      "cis": 147
+    },
+    {
+      "id": 47,
+      "label": "Tokenization",
+      "group": "TOKEN",
+      "cis": 146
+    },
+    {
+      "id": 48,
+      "label": "Subword Tokenization",
+      "group": "TOKEN",
+      "cis": 145
+    },
+    {
+      "id": 49,
+      "label": "Byte Pair Encoding",
+      "group": "TOKEN",
+      "cis": 144
+    },
+    {
+      "id": 50,
+      "label": "Token Vocabulary",
+      "group": "TOKEN",
+      "cis": 143
+    },
+    {
+      "id": 51,
+      "label": "Input Token",
+      "group": "TOKEN",
+      "cis": 142
+    },
+    {
+      "id": 52,
+      "label": "Output Token",
+      "group": "TOKEN",
+      "cis": 1
+    },
+    {
+      "id": 53,
+      "label": "Token Count",
+      "group": "TOKEN",
+      "cis": 140
+    },
+    {
+      "id": 54,
+      "label": "Token Limit",
+      "group": "TOKEN",
+      "cis": 139
+    },
+    {
+      "id": 55,
+      "label": "Context Length",
+      "group": "TOKEN",
+      "cis": 138
+    },
+    {
+      "id": 56,
+      "label": "Token-To-Word Ratio",
+      "group": "TOKEN",
+      "cis": 137
+    },
+    {
+      "id": 57,
+      "label": "Tokenizer Choice",
+      "group": "TOKEN",
+      "cis": 136
+    },
+    {
+      "id": 58,
+      "label": "Token Pricing Model",
+      "group": "TOKEN",
+      "cis": 135
+    },
+    {
+      "id": 59,
+      "label": "Per-Token Pricing",
+      "group": "TOKEN",
+      "cis": 134
+    },
+    {
+      "id": 60,
+      "label": "Input Token Pricing",
+      "group": "TOKEN",
+      "cis": 133
+    },
+    {
+      "id": 61,
+      "label": "Output Token Pricing",
+      "group": "TOKEN",
+      "cis": 132
+    },
+    {
+      "id": 62,
+      "label": "Blended Token Rate",
+      "group": "TOKEN",
+      "cis": 1
+    },
+    {
+      "id": 63,
+      "label": "Prompt Caching",
+      "group": "TOKEN",
+      "cis": 130
+    },
+    {
+      "id": 64,
+      "label": "Cached Token Discount",
+      "group": "TOKEN",
+      "cis": 129
+    },
+    {
+      "id": 65,
+      "label": "Batch API Discount",
+      "group": "TOKEN",
+      "cis": 128
+    },
+    {
+      "id": 66,
+      "label": "Token Budget",
+      "group": "TOKEN",
+      "cis": 127
+    },
+    {
+      "id": 67,
+      "label": "Token Consumption Rate",
+      "group": "TOKEN",
+      "cis": 1
+    },
+    {
+      "id": 68,
+      "label": "Token Efficiency",
+      "group": "TOKEN",
+      "cis": 125
+    },
+    {
+      "id": 69,
+      "label": "Prompt Length",
+      "group": "TOKEN",
+      "cis": 1
+    },
+    {
+      "id": 70,
+      "label": "System Prompt Overhead",
+      "group": "TOKEN",
+      "cis": 73
+    },
+    {
+      "id": 71,
+      "label": "Few-Shot Token Overhead",
+      "group": "TOKEN",
+      "cis": 72
+    },
+    {
+      "id": 72,
+      "label": "Context Window Cost",
+      "group": "TOKEN",
+      "cis": 71
+    },
+    {
+      "id": 73,
+      "label": "Long-Context Pricing",
+      "group": "TOKEN",
+      "cis": 1
+    },
+    {
+      "id": 74,
+      "label": "Token Truncation",
+      "group": "TOKEN",
+      "cis": 69
+    },
+    {
+      "id": 75,
+      "label": "Prompt Compression",
+      "group": "TOKEN",
+      "cis": 68
+    },
+    {
+      "id": 76,
+      "label": "Prompt Summarization",
+      "group": "TOKEN",
+      "cis": 67
+    },
+    {
+      "id": 77,
+      "label": "Semantic Caching",
+      "group": "TOKEN",
+      "cis": 1
+    },
+    {
+      "id": 78,
+      "label": "Redundant Token Usage",
+      "group": "TOKEN",
+      "cis": 65
+    },
+    {
+      "id": 79,
+      "label": "Token Wastage",
+      "group": "TOKEN",
+      "cis": 64
+    },
+    {
+      "id": 80,
+      "label": "Chunking Strategy",
+      "group": "TOKEN",
+      "cis": 1
+    },
+    {
+      "id": 81,
+      "label": "Retrieval Chunk Size",
+      "group": "TOKEN",
+      "cis": 62
+    },
+    {
+      "id": 82,
+      "label": "Multi-Turn Token Growth",
+      "group": "TOKEN",
+      "cis": 61
+    },
+    {
+      "id": 83,
+      "label": "Conversation History Cost",
+      "group": "TOKEN",
+      "cis": 60
+    },
+    {
+      "id": 84,
+      "label": "Token Metering",
+      "group": "TOKEN",
+      "cis": 59
+    },
+    {
+      "id": 85,
+      "label": "Usage Dashboard",
+      "group": "TOKEN",
+      "cis": 58
+    },
+    {
+      "id": 86,
+      "label": "Token Rate Limit",
+      "group": "TOKEN",
+      "cis": 6
+    },
+    {
+      "id": 87,
+      "label": "Provider Rate Card",
+      "group": "TOKEN",
+      "cis": 5
+    },
+    {
+      "id": 88,
+      "label": "Token Cost Benchmark",
+      "group": "TOKEN",
+      "cis": 1
+    },
+    {
+      "id": 89,
+      "label": "Cross-Provider Comparison",
+      "group": "TOKEN",
+      "cis": 3
+    },
+    {
+      "id": 90,
+      "label": "Token Efficiency Score",
+      "group": "TOKEN",
+      "cis": 1
+    },
+    {
+      "id": 91,
+      "label": "Tokenizer Version Drift",
+      "group": "TOKEN",
+      "cis": 1
+    },
+    {
+      "id": 92,
+      "label": "GPU Compute",
+      "group": "INFRA",
+      "cis": 136
+    },
+    {
+      "id": 93,
+      "label": "CPU Inference",
+      "group": "INFRA",
+      "cis": 135
+    },
+    {
+      "id": 94,
+      "label": "Compute Cost",
+      "group": "INFRA",
+      "cis": 134
+    },
+    {
+      "id": 95,
+      "label": "Cloud Compute Pricing",
+      "group": "INFRA",
+      "cis": 114
+    },
+    {
+      "id": 96,
+      "label": "On-Demand Pricing",
+      "group": "INFRA",
+      "cis": 1
+    },
+    {
+      "id": 97,
+      "label": "Reserved Capacity Pricing",
+      "group": "INFRA",
+      "cis": 98
+    },
+    {
+      "id": 98,
+      "label": "Spot Instance Pricing",
+      "group": "INFRA",
+      "cis": 97
+    },
+    {
+      "id": 99,
+      "label": "Serverless Inference",
+      "group": "INFRA",
+      "cis": 1
+    },
+    {
+      "id": 100,
+      "label": "Dedicated Endpoint",
+      "group": "INFRA",
+      "cis": 95
+    },
+    {
+      "id": 101,
+      "label": "Multi-Tenant Endpoint",
+      "group": "INFRA",
+      "cis": 94
+    },
+    {
+      "id": 102,
+      "label": "Autoscaling",
+      "group": "INFRA",
+      "cis": 93
+    },
+    {
+      "id": 103,
+      "label": "Cold Start Latency",
+      "group": "INFRA",
+      "cis": 1
+    },
+    {
+      "id": 104,
+      "label": "Warm Pool",
+      "group": "INFRA",
+      "cis": 91
+    },
+    {
+      "id": 105,
+      "label": "Compute Utilization Rate",
+      "group": "INFRA",
+      "cis": 90
+    },
+    {
+      "id": 106,
+      "label": "Idle Capacity Cost",
+      "group": "INFRA",
+      "cis": 89
+    },
+    {
+      "id": 107,
+      "label": "Data Transfer Cost",
+      "group": "INFRA",
+      "cis": 88
+    },
+    {
+      "id": 108,
+      "label": "Storage Cost",
+      "group": "INFRA",
+      "cis": 87
+    },
+    {
+      "id": 109,
+      "label": "Vector Store Cost",
+      "group": "INFRA",
+      "cis": 86
+    },
+    {
+      "id": 110,
+      "label": "Network Egress Cost",
+      "group": "INFRA",
+      "cis": 53
+    },
+    {
+      "id": 111,
+      "label": "Load Balancing",
+      "group": "INFRA",
+      "cis": 52
+    },
+    {
+      "id": 112,
+      "label": "Model Serving Framework",
+      "group": "INFRA",
+      "cis": 51
+    },
+    {
+      "id": 113,
+      "label": "Inference Server",
+      "group": "INFRA",
+      "cis": 50
+    },
+    {
+      "id": 114,
+      "label": "Hardware Accelerator",
+      "group": "INFRA",
+      "cis": 1
+    },
+    {
+      "id": 115,
+      "label": "GPU Memory Constraint",
+      "group": "INFRA",
+      "cis": 48
+    },
+    {
+      "id": 116,
+      "label": "Batch Size Tuning",
+      "group": "INFRA",
+      "cis": 1
+    },
+    {
+      "id": 117,
+      "label": "Concurrency Limit",
+      "group": "INFRA",
+      "cis": 46
+    },
+    {
+      "id": 118,
+      "label": "Throughput-Latency Tradeoff",
+      "group": "INFRA",
+      "cis": 45
+    },
+    {
+      "id": 119,
+      "label": "Peak Load Provisioning",
+      "group": "INFRA",
+      "cis": 44
+    },
+    {
+      "id": 120,
+      "label": "Capacity Planning",
+      "group": "INFRA",
+      "cis": 43
+    },
+    {
+      "id": 121,
+      "label": "Infrastructure As Code",
+      "group": "INFRA",
+      "cis": 42
+    },
+    {
+      "id": 122,
+      "label": "Multi-Region Deployment",
+      "group": "INFRA",
+      "cis": 41
+    },
+    {
+      "id": 123,
+      "label": "Edge Deployment",
+      "group": "INFRA",
+      "cis": 40
+    },
+    {
+      "id": 124,
+      "label": "Hybrid Cloud Strategy",
+      "group": "INFRA",
+      "cis": 39
+    },
+    {
+      "id": 125,
+      "label": "Total Compute Footprint",
+      "group": "INFRA",
+      "cis": 38
+    },
+    {
+      "id": 126,
+      "label": "Carbon Cost Of Compute",
+      "group": "INFRA",
+      "cis": 37
+    },
+    {
+      "id": 127,
+      "label": "Energy Cost Per Query",
+      "group": "INFRA",
+      "cis": 36
+    },
+    {
+      "id": 128,
+      "label": "Infrastructure Monitoring",
+      "group": "INFRA",
+      "cis": 35
+    },
+    {
+      "id": 129,
+      "label": "Cost Alerting",
+      "group": "INFRA",
+      "cis": 34
+    },
+    {
+      "id": 130,
+      "label": "Budget Threshold",
+      "group": "INFRA",
+      "cis": 2
+    },
+    {
+      "id": 131,
+      "label": "Infrastructure Cost Dashboard",
+      "group": "INFRA",
+      "cis": 1
+    },
+    {
+      "id": 132,
+      "label": "Prompt Optimization",
+      "group": "EFFIC",
+      "cis": 1
+    },
+    {
+      "id": 133,
+      "label": "Prompt Template Design",
+      "group": "EFFIC",
+      "cis": 49
+    },
+    {
+      "id": 134,
+      "label": "Output Length Control",
+      "group": "EFFIC",
+      "cis": 1
+    },
+    {
+      "id": 135,
+      "label": "Max Tokens Parameter",
+      "group": "EFFIC",
+      "cis": 47
+    },
+    {
+      "id": 136,
+      "label": "Temperature Setting",
+      "group": "EFFIC",
+      "cis": 46
+    },
+    {
+      "id": 137,
+      "label": "Structured Output Format",
+      "group": "EFFIC",
+      "cis": 1
+    },
+    {
+      "id": 138,
+      "label": "JSON Mode Output",
+      "group": "EFFIC",
+      "cis": 44
+    },
+    {
+      "id": 139,
+      "label": "Function Calling",
+      "group": "EFFIC",
+      "cis": 43
+    },
+    {
+      "id": 140,
+      "label": "Tool Use Efficiency",
+      "group": "EFFIC",
+      "cis": 42
+    },
+    {
+      "id": 141,
+      "label": "Model Cascading",
+      "group": "EFFIC",
+      "cis": 41
+    },
+    {
+      "id": 142,
+      "label": "Model Routing",
+      "group": "EFFIC",
+      "cis": 40
+    },
+    {
+      "id": 143,
+      "label": "Small Model First Strategy",
+      "group": "EFFIC",
+      "cis": 39
+    },
+    {
+      "id": 144,
+      "label": "Fallback Model Strategy",
+      "group": "EFFIC",
+      "cis": 38
+    },
+    {
+      "id": 145,
+      "label": "Ensemble Cost Tradeoff",
+      "group": "EFFIC",
+      "cis": 37
+    },
+    {
+      "id": 146,
+      "label": "Response Caching",
+      "group": "EFFIC",
+      "cis": 36
+    },
+    {
+      "id": 147,
+      "label": "Deterministic Caching",
+      "group": "EFFIC",
+      "cis": 35
+    },
+    {
+      "id": 148,
+      "label": "Semantic Deduplication",
+      "group": "EFFIC",
+      "cis": 34
+    },
+    {
+      "id": 149,
+      "label": "Retrieval Optimization",
+      "group": "EFFIC",
+      "cis": 1
+    },
+    {
+      "id": 150,
+      "label": "RAG Cost Tradeoff",
+      "group": "EFFIC",
+      "cis": 32
+    },
+    {
+      "id": 151,
+      "label": "Embedding Reuse",
+      "group": "EFFIC",
+      "cis": 31
+    },
+    {
+      "id": 152,
+      "label": "Vector Index Tuning",
+      "group": "EFFIC",
+      "cis": 30
+    },
+    {
+      "id": 153,
+      "label": "Query Rewriting",
+      "group": "EFFIC",
+      "cis": 1
+    },
+    {
+      "id": 154,
+      "label": "Context Pruning",
+      "group": "EFFIC",
+      "cis": 28
+    },
+    {
+      "id": 155,
+      "label": "Context Compression",
+      "group": "EFFIC",
+      "cis": 27
+    },
+    {
+      "id": 156,
+      "label": "Summarization Preprocessing",
+      "group": "EFFIC",
+      "cis": 26
+    },
+    {
+      "id": 157,
+      "label": "Batch Processing Strategy",
+      "group": "EFFIC",
+      "cis": 1
+    },
+    {
+      "id": 158,
+      "label": "Asynchronous Processing",
+      "group": "EFFIC",
+      "cis": 24
+    },
+    {
+      "id": 159,
+      "label": "Off-Peak Scheduling",
+      "group": "EFFIC",
+      "cis": 1
+    },
+    {
+      "id": 160,
+      "label": "Prompt Reuse Library",
+      "group": "EFFIC",
+      "cis": 1
+    },
+    {
+      "id": 161,
+      "label": "Prompt Version Control",
+      "group": "EFFIC",
+      "cis": 21
+    },
+    {
+      "id": 162,
+      "label": "A/B Testing Prompts",
+      "group": "EFFIC",
+      "cis": 20
+    },
+    {
+      "id": 163,
+      "label": "Cost-Per-Task Benchmarking",
+      "group": "EFFIC",
+      "cis": 19
+    },
+    {
+      "id": 164,
+      "label": "Quality-Cost Tradeoff",
+      "group": "EFFIC",
+      "cis": 18
+    },
+    {
+      "id": 165,
+      "label": "Latency-Cost Tradeoff",
+      "group": "EFFIC",
+      "cis": 17
+    },
+    {
+      "id": 166,
+      "label": "Right-Sizing Review Cycle",
+      "group": "EFFIC",
+      "cis": 16
+    },
+    {
+      "id": 167,
+      "label": "Fine-Tuning Vs Prompting",
+      "group": "EFFIC",
+      "cis": 1
+    },
+    {
+      "id": 168,
+      "label": "Distillation For Cost Cutting",
+      "group": "EFFIC",
+      "cis": 14
+    },
+    {
+      "id": 169,
+      "label": "Quantization For Cost Cutting",
+      "group": "EFFIC",
+      "cis": 13
+    },
+    {
+      "id": 170,
+      "label": "Sparse Model Techniques",
+      "group": "EFFIC",
+      "cis": 12
+    },
+    {
+      "id": 171,
+      "label": "Mixture Of Experts",
+      "group": "EFFIC",
+      "cis": 11
+    },
+    {
+      "id": 172,
+      "label": "Speculative Decoding",
+      "group": "EFFIC",
+      "cis": 10
+    },
+    {
+      "id": 173,
+      "label": "KV Cache Optimization",
+      "group": "EFFIC",
+      "cis": 9
+    },
+    {
+      "id": 174,
+      "label": "Parallel Sampling Cost",
+      "group": "EFFIC",
+      "cis": 1
+    },
+    {
+      "id": 175,
+      "label": "Self-Consistency Cost",
+      "group": "EFFIC",
+      "cis": 7
+    },
+    {
+      "id": 176,
+      "label": "Guardrail Overhead Cost",
+      "group": "EFFIC",
+      "cis": 6
+    },
+    {
+      "id": 177,
+      "label": "Content Filtering Cost",
+      "group": "EFFIC",
+      "cis": 5
+    },
+    {
+      "id": 178,
+      "label": "Token Efficiency Audit",
+      "group": "EFFIC",
+      "cis": 4
+    },
+    {
+      "id": 179,
+      "label": "Continuous Cost Optimization",
+      "group": "EFFIC",
+      "cis": 3
+    },
+    {
+      "id": 180,
+      "label": "Cost Regression Testing",
+      "group": "EFFIC",
+      "cis": 2
+    },
+    {
+      "id": 181,
+      "label": "Efficiency Gain Tracking",
+      "group": "EFFIC",
+      "cis": 1
+    },
+    {
+      "id": 182,
+      "label": "Return On Investment",
+      "group": "FINRO",
+      "shape": "box",
+      "cis": 305
+    },
+    {
+      "id": 183,
+      "label": "Total Cost Of Ownership",
+      "group": "FINRO",
+      "cis": 304
+    },
+    {
+      "id": 184,
+      "label": "Net Present Value",
+      "group": "FINRO",
+      "cis": 228
+    },
+    {
+      "id": 185,
+      "label": "Payback Period",
+      "group": "FINRO",
+      "cis": 227
+    },
+    {
+      "id": 186,
+      "label": "Internal Rate Of Return",
+      "group": "FINRO",
+      "cis": 226
+    },
+    {
+      "id": 187,
+      "label": "Cost-Benefit Analysis",
+      "group": "FINRO",
+      "cis": 225
+    },
+    {
+      "id": 188,
+      "label": "Capital Expenditure",
+      "group": "FINRO",
+      "cis": 1
+    },
+    {
+      "id": 189,
+      "label": "Operating Expenditure",
+      "group": "FINRO",
+      "cis": 223
+    },
+    {
+      "id": 190,
+      "label": "Sunk Cost",
+      "group": "FINRO",
+      "cis": 222
+    },
+    {
+      "id": 191,
+      "label": "Opportunity Cost",
+      "group": "FINRO",
+      "cis": 221
+    },
+    {
+      "id": 192,
+      "label": "Depreciation",
+      "group": "FINRO",
+      "cis": 1
+    },
+    {
+      "id": 193,
+      "label": "Amortization",
+      "group": "FINRO",
+      "cis": 219
+    },
+    {
+      "id": 194,
+      "label": "Discount Rate",
+      "group": "FINRO",
+      "cis": 218
+    },
+    {
+      "id": 195,
+      "label": "Time Value Of Money",
+      "group": "FINRO",
+      "cis": 217
+    },
+    {
+      "id": 196,
+      "label": "Break-Even Analysis",
+      "group": "FINRO",
+      "cis": 216
+    },
+    {
+      "id": 197,
+      "label": "Marginal Cost",
+      "group": "FINRO",
+      "cis": 215
+    },
+    {
+      "id": 198,
+      "label": "Fixed Cost",
+      "group": "FINRO",
+      "cis": 214
+    },
+    {
+      "id": 199,
+      "label": "Variable Cost",
+      "group": "FINRO",
+      "cis": 1
+    },
+    {
+      "id": 200,
+      "label": "Cost Allocation",
+      "group": "FINRO",
+      "cis": 212
+    },
+    {
+      "id": 201,
+      "label": "Cost Center",
+      "group": "FINRO",
+      "cis": 210
+    },
+    {
+      "id": 202,
+      "label": "Chargeback Model",
+      "group": "FINRO",
+      "cis": 171
+    },
+    {
+      "id": 203,
+      "label": "Showback Model",
+      "group": "FINRO",
+      "cis": 170
+    },
+    {
+      "id": 204,
+      "label": "Unit Economics",
+      "group": "FINRO",
+      "cis": 1
+    },
+    {
+      "id": 205,
+      "label": "Cost Per Transaction",
+      "group": "FINRO",
+      "cis": 1
+    },
+    {
+      "id": 206,
+      "label": "Cost Per User",
+      "group": "FINRO",
+      "cis": 167
+    },
+    {
+      "id": 207,
+      "label": "Cost Per Query",
+      "group": "FINRO",
+      "cis": 166
+    },
+    {
+      "id": 208,
+      "label": "Cost Avoidance",
+      "group": "FINRO",
+      "cis": 165
+    },
+    {
+      "id": 209,
+      "label": "Cost Reduction Vs Avoidance",
+      "group": "FINRO",
+      "cis": 164
+    },
+    {
+      "id": 210,
+      "label": "Revenue Impact",
+      "group": "FINRO",
+      "cis": 163
+    },
+    {
+      "id": 211,
+      "label": "Productivity Gain",
+      "group": "FINRO",
+      "cis": 162
+    },
+    {
+      "id": 212,
+      "label": "Labor Cost Savings",
+      "group": "FINRO",
+      "cis": 1
+    },
+    {
+      "id": 213,
+      "label": "Financial Statement Basics",
+      "group": "FINRO",
+      "cis": 120
+    },
+    {
+      "id": 214,
+      "label": "Income Statement",
+      "group": "FINRO",
+      "cis": 65
+    },
+    {
+      "id": 215,
+      "label": "Balance Sheet Basics",
+      "group": "FINRO",
+      "cis": 1
+    },
+    {
+      "id": 216,
+      "label": "Budget Cycle",
+      "group": "FINRO",
+      "cis": 63
+    },
+    {
+      "id": 217,
+      "label": "Business Case",
+      "group": "FINRO",
+      "cis": 62
+    },
+    {
+      "id": 218,
+      "label": "Investment Appraisal",
+      "group": "FINRO",
+      "cis": 1
+    },
+    {
+      "id": 219,
+      "label": "Hurdle Rate",
+      "group": "FINRO",
+      "cis": 60
+    },
+    {
+      "id": 220,
+      "label": "Risk-Adjusted Return",
+      "group": "FINRO",
+      "cis": 59
+    },
+    {
+      "id": 221,
+      "label": "Sensitivity Analysis",
+      "group": "FINRO",
+      "cis": 58
+    },
+    {
+      "id": 222,
+      "label": "Scenario Analysis",
+      "group": "FINRO",
+      "cis": 55
+    },
+    {
+      "id": 223,
+      "label": "Financial Forecasting",
+      "group": "FINRO",
+      "cis": 32
+    },
+    {
+      "id": 224,
+      "label": "Baseline Cost Model",
+      "group": "FINRO",
+      "cis": 31
+    },
+    {
+      "id": 225,
+      "label": "Counterfactual Cost Estimate",
+      "group": "FINRO",
+      "cis": 2
+    },
+    {
+      "id": 226,
+      "label": "Financial KPI",
+      "group": "FINRO",
+      "cis": 1
+    },
+    {
+      "id": 227,
+      "label": "GenAI ROI Metric",
+      "group": "METRC",
+      "cis": 137
+    },
+    {
+      "id": 228,
+      "label": "Adoption Rate Metric",
+      "group": "METRC",
+      "cis": 82
+    },
+    {
+      "id": 229,
+      "label": "Usage Frequency Metric",
+      "group": "METRC",
+      "cis": 1
+    },
+    {
+      "id": 230,
+      "label": "Task Completion Time",
+      "group": "METRC",
+      "cis": 80
+    },
+    {
+      "id": 231,
+      "label": "Time-To-Value Metric",
+      "group": "METRC",
+      "cis": 79
+    },
+    {
+      "id": 232,
+      "label": "Quality Score Metric",
+      "group": "METRC",
+      "cis": 78
+    },
+    {
+      "id": 233,
+      "label": "Error Rate Metric",
+      "group": "METRC",
+      "cis": 77
+    },
+    {
+      "id": 234,
+      "label": "Rework Rate Metric",
+      "group": "METRC",
+      "cis": 76
+    },
+    {
+      "id": 235,
+      "label": "Customer Satisfaction Metric",
+      "group": "METRC",
+      "cis": 1
+    },
+    {
+      "id": 236,
+      "label": "Employee Satisfaction Metric",
+      "group": "METRC",
+      "cis": 74
+    },
+    {
+      "id": 237,
+      "label": "Automation Rate Metric",
+      "group": "METRC",
+      "cis": 1
+    },
+    {
+      "id": 238,
+      "label": "Throughput Improvement Metric",
+      "group": "METRC",
+      "cis": 72
+    },
+    {
+      "id": 239,
+      "label": "Deflection Rate Metric",
+      "group": "METRC",
+      "cis": 71
+    },
+    {
+      "id": 240,
+      "label": "First-Contact Resolution Rate",
+      "group": "METRC",
+      "cis": 1
+    },
+    {
+      "id": 241,
+      "label": "Cycle Time Reduction",
+      "group": "METRC",
+      "cis": 69
+    },
+    {
+      "id": 242,
+      "label": "Defect Reduction Rate",
+      "group": "METRC",
+      "cis": 68
+    },
+    {
+      "id": 243,
+      "label": "Code Review Time Saved",
+      "group": "METRC",
+      "cis": 67
+    },
+    {
+      "id": 244,
+      "label": "Developer Velocity Metric",
+      "group": "METRC",
+      "cis": 1
+    },
+    {
+      "id": 245,
+      "label": "Story Points Delivered",
+      "group": "METRC",
+      "cis": 65
+    },
+    {
+      "id": 246,
+      "label": "Lead Time For Changes",
+      "group": "METRC",
+      "cis": 64
+    },
+    {
+      "id": 247,
+      "label": "Mean Time To Resolution",
+      "group": "METRC",
+      "cis": 63
+    },
+    {
+      "id": 248,
+      "label": "Model Accuracy Metric",
+      "group": "METRC",
+      "cis": 62
+    },
+    {
+      "id": 249,
+      "label": "Precision And Recall",
+      "group": "METRC",
+      "cis": 61
+    },
+    {
+      "id": 250,
+      "label": "Hallucination Rate Metric",
+      "group": "METRC",
+      "cis": 60
+    },
+    {
+      "id": 251,
+      "label": "User Retention Metric",
+      "group": "METRC",
+      "cis": 59
+    },
+    {
+      "id": 252,
+      "label": "Net Promoter Score",
+      "group": "METRC",
+      "cis": 1
+    },
+    {
+      "id": 253,
+      "label": "Cost Per Outcome",
+      "group": "METRC",
+      "cis": 57
+    },
+    {
+      "id": 254,
+      "label": "Value Realization Metric",
+      "group": "METRC",
+      "cis": 56
+    },
+    {
+      "id": 255,
+      "label": "Leading Vs Lagging Indicator",
+      "group": "METRC",
+      "cis": 1
+    },
+    {
+      "id": 256,
+      "label": "North Star Metric",
+      "group": "METRC",
+      "cis": 54
+    },
+    {
+      "id": 257,
+      "label": "Metric Instrumentation Plan",
+      "group": "METRC",
+      "cis": 53
+    },
+    {
+      "id": 258,
+      "label": "KPI Dashboard Design",
+      "group": "METRC",
+      "cis": 46
+    },
+    {
+      "id": 259,
+      "label": "Metric Baseline Capture",
+      "group": "METRC",
+      "cis": 19
+    },
+    {
+      "id": 260,
+      "label": "Metric Attribution",
+      "group": "METRC",
+      "cis": 7
+    },
+    {
+      "id": 261,
+      "label": "Confounding Factor",
+      "group": "METRC",
+      "cis": 6
+    },
+    {
+      "id": 262,
+      "label": "Statistical Significance Check",
+      "group": "METRC",
+      "cis": 5
+    },
+    {
+      "id": 263,
+      "label": "Control Group Comparison",
+      "group": "METRC",
+      "cis": 4
+    },
+    {
+      "id": 264,
+      "label": "Pre/Post Comparison Study",
+      "group": "METRC",
+      "cis": 1
+    },
+    {
+      "id": 265,
+      "label": "Longitudinal Tracking",
+      "group": "METRC",
+      "cis": 2
+    },
+    {
+      "id": 266,
+      "label": "Metric Reporting Cadence",
+      "group": "METRC",
+      "cis": 1
+    },
+    {
+      "id": 267,
+      "label": "Usage Telemetry",
+      "group": "DATOP",
+      "cis": 51
+    },
+    {
+      "id": 268,
+      "label": "Cost Attribution Tagging",
+      "group": "DATOP",
+      "cis": 39
+    },
+    {
+      "id": 269,
+      "label": "Cost Tagging Taxonomy",
+      "group": "DATOP",
+      "cis": 38
+    },
+    {
+      "id": 270,
+      "label": "Observability Platform",
+      "group": "DATOP",
+      "cis": 37
+    },
+    {
+      "id": 271,
+      "label": "Logging Strategy",
+      "group": "DATOP",
+      "cis": 36
+    },
+    {
+      "id": 272,
+      "label": "Distributed Tracing",
+      "group": "DATOP",
+      "cis": 35
+    },
+    {
+      "id": 273,
+      "label": "API Call Logging",
+      "group": "DATOP",
+      "cis": 34
+    },
+    {
+      "id": 274,
+      "label": "Token Usage Logging",
+      "group": "DATOP",
+      "cis": 33
+    },
+    {
+      "id": 275,
+      "label": "Cost Dashboard Design",
+      "group": "DATOP",
+      "cis": 1
+    },
+    {
+      "id": 276,
+      "label": "Real-Time Cost Monitoring",
+      "group": "DATOP",
+      "cis": 31
+    },
+    {
+      "id": 277,
+      "label": "Anomaly Detection In Spend",
+      "group": "DATOP",
+      "cis": 1
+    },
+    {
+      "id": 278,
+      "label": "Spend Forecasting",
+      "group": "DATOP",
+      "cis": 29
+    },
+    {
+      "id": 279,
+      "label": "Budget Variance Analysis",
+      "group": "DATOP",
+      "cis": 28
+    },
+    {
+      "id": 280,
+      "label": "Cost Data Warehouse",
+      "group": "DATOP",
+      "cis": 27
+    },
+    {
+      "id": 281,
+      "label": "Data Pipeline For Cost Analytics",
+      "group": "DATOP",
+      "cis": 26
+    },
+    {
+      "id": 282,
+      "label": "ETL For Usage Data",
+      "group": "DATOP",
+      "cis": 25
+    },
+    {
+      "id": 283,
+      "label": "Data Quality For Cost Metrics",
+      "group": "DATOP",
+      "cis": 24
+    },
+    {
+      "id": 284,
+      "label": "Sampling Strategy For Telemetry",
+      "group": "DATOP",
+      "cis": 23
+    },
+    {
+      "id": 285,
+      "label": "Data Retention Policy",
+      "group": "DATOP",
+      "cis": 22
+    },
+    {
+      "id": 286,
+      "label": "Multi-Tenant Cost Attribution",
+      "group": "DATOP",
+      "cis": 21
+    },
+    {
+      "id": 287,
+      "label": "Departmental Cost Rollup",
+      "group": "DATOP",
+      "cis": 20
+    },
+    {
+      "id": 288,
+      "label": "Project-Level Cost Tracking",
+      "group": "DATOP",
+      "cis": 19
+    },
+    {
+      "id": 289,
+      "label": "Per-User Cost Tracking",
+      "group": "DATOP",
+      "cis": 18
+    },
+    {
+      "id": 290,
+      "label": "Per-Feature Cost Tracking",
+      "group": "DATOP",
+      "cis": 17
+    },
+    {
+      "id": 291,
+      "label": "Vendor Invoice Reconciliation",
+      "group": "DATOP",
+      "cis": 16
+    },
+    {
+      "id": 292,
+      "label": "Billing API Integration",
+      "group": "DATOP",
+      "cis": 15
+    },
+    {
+      "id": 293,
+      "label": "Cost Data Normalization",
+      "group": "DATOP",
+      "cis": 14
+    },
+    {
+      "id": 294,
+      "label": "Cross-Provider Cost Aggregation",
+      "group": "DATOP",
+      "cis": 13
+    },
+    {
+      "id": 295,
+      "label": "Alerting Threshold Design",
+      "group": "DATOP",
+      "cis": 1
+    },
+    {
+      "id": 296,
+      "label": "Dashboard Refresh Cadence",
+      "group": "DATOP",
+      "cis": 11
+    },
+    {
+      "id": 297,
+      "label": "Data Governance For Metrics",
+      "group": "DATOP",
+      "cis": 10
+    },
+    {
+      "id": 298,
+      "label": "Audit Trail For Spend",
+      "group": "DATOP",
+      "cis": 9
+    },
+    {
+      "id": 299,
+      "label": "Metric Definition Documentation",
+      "group": "DATOP",
+      "cis": 8
+    },
+    {
+      "id": 300,
+      "label": "Single Source Of Truth",
+      "group": "DATOP",
+      "cis": 7
+    },
+    {
+      "id": 301,
+      "label": "Instrumentation Maturity Model",
+      "group": "DATOP",
+      "cis": 6
+    },
+    {
+      "id": 302,
+      "label": "Cost Observability Roadmap",
+      "group": "DATOP",
+      "cis": 5
+    },
+    {
+      "id": 303,
+      "label": "Telemetry Sampling Bias",
+      "group": "DATOP",
+      "cis": 1
+    },
+    {
+      "id": 304,
+      "label": "Real-Time Alert Fatigue",
+      "group": "DATOP",
+      "cis": 3
+    },
+    {
+      "id": 305,
+      "label": "Data Lineage For Cost Metrics",
+      "group": "DATOP",
+      "cis": 2
+    },
+    {
+      "id": 306,
+      "label": "Instrumentation Ownership Model",
+      "group": "DATOP",
+      "cis": 1
+    },
+    {
+      "id": 307,
+      "label": "Software Development Lifecycle",
+      "group": "SDLC",
+      "cis": 57
+    },
+    {
+      "id": 308,
+      "label": "Requirements Phase Cost",
+      "group": "SDLC",
+      "cis": 56
+    },
+    {
+      "id": 309,
+      "label": "Design Phase Cost",
+      "group": "SDLC",
+      "cis": 1
+    },
+    {
+      "id": 310,
+      "label": "Coding Phase Cost",
+      "group": "SDLC",
+      "cis": 54
+    },
+    {
+      "id": 311,
+      "label": "Testing Phase Cost",
+      "group": "SDLC",
+      "cis": 53
+    },
+    {
+      "id": 312,
+      "label": "Deployment Phase Cost",
+      "group": "SDLC",
+      "cis": 52
+    },
+    {
+      "id": 313,
+      "label": "Maintenance Phase Cost",
+      "group": "SDLC",
+      "cis": 51
+    },
+    {
+      "id": 314,
+      "label": "AI-Assisted Requirements",
+      "group": "SDLC",
+      "cis": 50
+    },
+    {
+      "id": 315,
+      "label": "AI-Assisted Code Generation",
+      "group": "SDLC",
+      "cis": 49
+    },
+    {
+      "id": 316,
+      "label": "Code Completion Tool Cost",
+      "group": "SDLC",
+      "cis": 48
+    },
+    {
+      "id": 317,
+      "label": "AI Pair Programming",
+      "group": "SDLC",
+      "cis": 47
+    },
+    {
+      "id": 318,
+      "label": "Automated Code Review",
+      "group": "SDLC",
+      "cis": 1
+    },
+    {
+      "id": 319,
+      "label": "AI-Generated Test Cases",
+      "group": "SDLC",
+      "cis": 45
+    },
+    {
+      "id": 320,
+      "label": "Test Coverage Automation",
+      "group": "SDLC",
+      "cis": 44
+    },
+    {
+      "id": 321,
+      "label": "Automated Documentation",
+      "group": "SDLC",
+      "cis": 1
+    },
+    {
+      "id": 322,
+      "label": "Technical Debt From AI Code",
+      "group": "SDLC",
+      "cis": 42
+    },
+    {
+      "id": 323,
+      "label": "Code Quality Regression Risk",
+      "group": "SDLC",
+      "cis": 41
+    },
+    {
+      "id": 324,
+      "label": "Refactoring Cost",
+      "group": "SDLC",
+      "cis": 40
+    },
+    {
+      "id": 325,
+      "label": "Legacy Code Migration Cost",
+      "group": "SDLC",
+      "cis": 1
+    },
+    {
+      "id": 326,
+      "label": "CI/CD Pipeline Cost",
+      "group": "SDLC",
+      "cis": 38
+    },
+    {
+      "id": 327,
+      "label": "Build Time Reduction",
+      "group": "SDLC",
+      "cis": 1
+    },
+    {
+      "id": 328,
+      "label": "Deployment Automation Cost",
+      "group": "SDLC",
+      "cis": 36
+    },
+    {
+      "id": 329,
+      "label": "Incident Response Cost",
+      "group": "SDLC",
+      "cis": 35
+    },
+    {
+      "id": 330,
+      "label": "Bug Triage Automation",
+      "group": "SDLC",
+      "cis": 34
+    },
+    {
+      "id": 331,
+      "label": "Developer Onboarding Cost",
+      "group": "SDLC",
+      "cis": 33
+    },
+    {
+      "id": 332,
+      "label": "Code Review Cycle Time",
+      "group": "SDLC",
+      "cis": 32
+    },
+    {
+      "id": 333,
+      "label": "Pull Request Turnaround",
+      "group": "SDLC",
+      "cis": 31
+    },
+    {
+      "id": 334,
+      "label": "Developer Productivity Index",
+      "group": "SDLC",
+      "cis": 30
+    },
+    {
+      "id": 335,
+      "label": "Tooling License Cost",
+      "group": "SDLC",
+      "cis": 1
+    },
+    {
+      "id": 336,
+      "label": "IDE Integration Cost",
+      "group": "SDLC",
+      "cis": 28
+    },
+    {
+      "id": 337,
+      "label": "Prompt-Driven Development Cost",
+      "group": "SDLC",
+      "cis": 27
+    },
+    {
+      "id": 338,
+      "label": "Vibe Coding Risk",
+      "group": "SDLC",
+      "cis": 26
+    },
+    {
+      "id": 339,
+      "label": "Code Generation Quality Review",
+      "group": "SDLC",
+      "cis": 25
+    },
+    {
+      "id": 340,
+      "label": "Security Review Of AI Code",
+      "group": "SDLC",
+      "cis": 24
+    },
+    {
+      "id": 341,
+      "label": "License Compliance Of AI Code",
+      "group": "SDLC",
+      "cis": 23
+    },
+    {
+      "id": 342,
+      "label": "Developer Time Reallocation",
+      "group": "SDLC",
+      "cis": 22
+    },
+    {
+      "id": 343,
+      "label": "SDLC Automation Maturity",
+      "group": "SDLC",
+      "cis": 1
+    },
+    {
+      "id": 344,
+      "label": "SDLC Cost Baseline",
+      "group": "SDLC",
+      "cis": 20
+    },
+    {
+      "id": 345,
+      "label": "SDLC Cost Reduction Roadmap",
+      "group": "SDLC",
+      "cis": 19
+    },
+    {
+      "id": 346,
+      "label": "Software Delivery Risk",
+      "group": "SDLC",
+      "cis": 1
+    },
+    {
+      "id": 347,
+      "label": "Rollback Cost",
+      "group": "SDLC",
+      "cis": 5
+    },
+    {
+      "id": 348,
+      "label": "Post-Deployment Monitoring Cost",
+      "group": "SDLC",
+      "cis": 4
+    },
+    {
+      "id": 349,
+      "label": "Feature Flag Cost Management",
+      "group": "SDLC",
+      "cis": 3
+    },
+    {
+      "id": 350,
+      "label": "Release Cadence Cost Impact",
+      "group": "SDLC",
+      "cis": 2
+    },
+    {
+      "id": 351,
+      "label": "SDLC ROI Case Study",
+      "group": "SDLC",
+      "cis": 1
+    },
+    {
+      "id": 352,
+      "label": "Data Science Lifecycle",
+      "group": "DSLC",
+      "cis": 57
+    },
+    {
+      "id": 353,
+      "label": "Data Collection Cost",
+      "group": "DSLC",
+      "cis": 56
+    },
+    {
+      "id": 354,
+      "label": "Data Labeling Cost",
+      "group": "DSLC",
+      "cis": 55
+    },
+    {
+      "id": 355,
+      "label": "AI-Assisted Data Labeling",
+      "group": "DSLC",
+      "cis": 1
+    },
+    {
+      "id": 356,
+      "label": "Data Cleaning Cost",
+      "group": "DSLC",
+      "cis": 53
+    },
+    {
+      "id": 357,
+      "label": "Feature Engineering Cost",
+      "group": "DSLC",
+      "cis": 52
+    },
+    {
+      "id": 358,
+      "label": "AI-Assisted Feature Engineering",
+      "group": "DSLC",
+      "cis": 51
+    },
+    {
+      "id": 359,
+      "label": "Model Training Cost",
+      "group": "DSLC",
+      "cis": 50
+    },
+    {
+      "id": 360,
+      "label": "Hyperparameter Tuning Cost",
+      "group": "DSLC",
+      "cis": 49
+    },
+    {
+      "id": 361,
+      "label": "Experiment Tracking Cost",
+      "group": "DSLC",
+      "cis": 48
+    },
+    {
+      "id": 362,
+      "label": "Model Evaluation Cost",
+      "group": "DSLC",
+      "cis": 47
+    },
+    {
+      "id": 363,
+      "label": "Model Validation Cost",
+      "group": "DSLC",
+      "cis": 46
+    },
+    {
+      "id": 364,
+      "label": "Model Deployment Cost",
+      "group": "DSLC",
+      "cis": 45
+    },
+    {
+      "id": 365,
+      "label": "Model Monitoring Cost",
+      "group": "DSLC",
+      "cis": 44
+    },
+    {
+      "id": 366,
+      "label": "Model Retraining Trigger",
+      "group": "DSLC",
+      "cis": 43
+    },
+    {
+      "id": 367,
+      "label": "Model Drift Detection",
+      "group": "DSLC",
+      "cis": 42
+    },
+    {
+      "id": 368,
+      "label": "Data Drift Detection",
+      "group": "DSLC",
+      "cis": 41
+    },
+    {
+      "id": 369,
+      "label": "Retraining Cadence Tuning",
+      "group": "DSLC",
+      "cis": 40
+    },
+    {
+      "id": 370,
+      "label": "Synthetic Data Generation",
+      "group": "DSLC",
+      "cis": 39
+    },
+    {
+      "id": 371,
+      "label": "Synthetic Data Cost Tradeoff",
+      "group": "DSLC",
+      "cis": 38
+    },
+    {
+      "id": 372,
+      "label": "Active Learning Cost Reduction",
+      "group": "DSLC",
+      "cis": 1
+    },
+    {
+      "id": 373,
+      "label": "Data Annotation Quality Control",
+      "group": "DSLC",
+      "cis": 36
+    },
+    {
+      "id": 374,
+      "label": "Annotation Vendor Management",
+      "group": "DSLC",
+      "cis": 35
+    },
+    {
+      "id": 375,
+      "label": "Data Versioning Cost",
+      "group": "DSLC",
+      "cis": 34
+    },
+    {
+      "id": 376,
+      "label": "Feature Store Cost",
+      "group": "DSLC",
+      "cis": 33
+    },
+    {
+      "id": 377,
+      "label": "MLOps Pipeline Cost",
+      "group": "DSLC",
+      "cis": 32
+    },
+    {
+      "id": 378,
+      "label": "Model Registry Cost",
+      "group": "DSLC",
+      "cis": 31
+    },
+    {
+      "id": 379,
+      "label": "Champion-Challenger Testing",
+      "group": "DSLC",
+      "cis": 1
+    },
+    {
+      "id": 380,
+      "label": "Shadow Deployment Cost",
+      "group": "DSLC",
+      "cis": 29
+    },
+    {
+      "id": 381,
+      "label": "Canary Release For Models",
+      "group": "DSLC",
+      "cis": 28
+    },
+    {
+      "id": 382,
+      "label": "Model Lifecycle Management",
+      "group": "DSLC",
+      "cis": 27
+    },
+    {
+      "id": 383,
+      "label": "Model Deprecation Planning",
+      "group": "DSLC",
+      "cis": 26
+    },
+    {
+      "id": 384,
+      "label": "Compute Reuse Across Experiments",
+      "group": "DSLC",
+      "cis": 25
+    },
+    {
+      "id": 385,
+      "label": "Notebook Environment Cost",
+      "group": "DSLC",
+      "cis": 1
+    },
+    {
+      "id": 386,
+      "label": "Data Science Team Utilization",
+      "group": "DSLC",
+      "cis": 23
+    },
+    {
+      "id": 387,
+      "label": "Experiment Reproducibility Cost",
+      "group": "DSLC",
+      "cis": 22
+    },
+    {
+      "id": 388,
+      "label": "Data Science Tooling Cost",
+      "group": "DSLC",
+      "cis": 21
+    },
+    {
+      "id": 389,
+      "label": "DSLC Cost Baseline",
+      "group": "DSLC",
+      "cis": 20
+    },
+    {
+      "id": 390,
+      "label": "DSLC Cost Reduction Roadmap",
+      "group": "DSLC",
+      "cis": 19
+    },
+    {
+      "id": 391,
+      "label": "DSLC ROI Case Study",
+      "group": "DSLC",
+      "cis": 6
+    },
+    {
+      "id": 392,
+      "label": "AutoML Cost Tradeoff",
+      "group": "DSLC",
+      "cis": 5
+    },
+    {
+      "id": 393,
+      "label": "Transfer Learning Cost Savings",
+      "group": "DSLC",
+      "cis": 1
+    },
+    {
+      "id": 394,
+      "label": "Pretrained Model Reuse",
+      "group": "DSLC",
+      "cis": 3
+    },
+    {
+      "id": 395,
+      "label": "Data Science Technical Debt",
+      "group": "DSLC",
+      "cis": 2
+    },
+    {
+      "id": 396,
+      "label": "Cross-Team Model Reuse",
+      "group": "DSLC",
+      "cis": 1
+    },
+    {
+      "id": 397,
+      "label": "Build Vs Buy Decision",
+      "group": "VNDR",
+      "cis": 40
+    },
+    {
+      "id": 398,
+      "label": "Open-Source Vs Proprietary Cost",
+      "group": "VNDR",
+      "cis": 39
+    },
+    {
+      "id": 399,
+      "label": "Vendor Lock-In Risk",
+      "group": "VNDR",
+      "cis": 1
+    },
+    {
+      "id": 400,
+      "label": "Multi-Vendor Strategy",
+      "group": "VNDR",
+      "cis": 37
+    },
+    {
+      "id": 401,
+      "label": "Model Benchmarking For Selection",
+      "group": "VNDR",
+      "cis": 1
+    },
+    {
+      "id": 402,
+      "label": "Vendor Pricing Comparison",
+      "group": "VNDR",
+      "cis": 35
+    },
+    {
+      "id": 403,
+      "label": "Licensing Cost Structure",
+      "group": "VNDR",
+      "cis": 34
+    },
+    {
+      "id": 404,
+      "label": "Enterprise License Agreement",
+      "group": "VNDR",
+      "cis": 33
+    },
+    {
+      "id": 405,
+      "label": "Usage-Based Licensing",
+      "group": "VNDR",
+      "cis": 32
+    },
+    {
+      "id": 406,
+      "label": "Seat-Based Licensing",
+      "group": "VNDR",
+      "cis": 1
+    },
+    {
+      "id": 407,
+      "label": "Committed Spend Discount",
+      "group": "VNDR",
+      "cis": 30
+    },
+    {
+      "id": 408,
+      "label": "Volume Discount Negotiation",
+      "group": "VNDR",
+      "cis": 29
+    },
+    {
+      "id": 409,
+      "label": "Contract Term Length Tradeoff",
+      "group": "VNDR",
+      "cis": 28
+    },
+    {
+      "id": 410,
+      "label": "Vendor SLA Review",
+      "group": "VNDR",
+      "cis": 1
+    },
+    {
+      "id": 411,
+      "label": "Vendor Support Cost",
+      "group": "VNDR",
+      "cis": 26
+    },
+    {
+      "id": 412,
+      "label": "Total Vendor Cost Model",
+      "group": "VNDR",
+      "cis": 25
+    },
+    {
+      "id": 413,
+      "label": "Switching Cost Estimate",
+      "group": "VNDR",
+      "cis": 24
+    },
+    {
+      "id": 414,
+      "label": "Model Portability",
+      "group": "VNDR",
+      "cis": 23
+    },
+    {
+      "id": 415,
+      "label": "API Abstraction Layer",
+      "group": "VNDR",
+      "cis": 22
+    },
+    {
+      "id": 416,
+      "label": "Multi-Model Orchestration",
+      "group": "VNDR",
+      "cis": 21
+    },
+    {
+      "id": 417,
+      "label": "Model Selection Criteria",
+      "group": "VNDR",
+      "cis": 1
+    },
+    {
+      "id": 418,
+      "label": "Proof-Of-Concept Cost",
+      "group": "VNDR",
+      "cis": 19
+    },
+    {
+      "id": 419,
+      "label": "Pilot Program Design",
+      "group": "VNDR",
+      "cis": 18
+    },
+    {
+      "id": 420,
+      "label": "Vendor Risk Assessment",
+      "group": "VNDR",
+      "cis": 17
+    },
+    {
+      "id": 421,
+      "label": "Vendor Due Diligence",
+      "group": "VNDR",
+      "cis": 16
+    },
+    {
+      "id": 422,
+      "label": "Self-Hosted Model Economics",
+      "group": "VNDR",
+      "cis": 15
+    },
+    {
+      "id": 423,
+      "label": "Managed Service Economics",
+      "group": "VNDR",
+      "cis": 14
+    },
+    {
+      "id": 424,
+      "label": "Hybrid Sourcing Strategy",
+      "group": "VNDR",
+      "cis": 13
+    },
+    {
+      "id": 425,
+      "label": "Procurement Cycle Impact",
+      "group": "VNDR",
+      "cis": 1
+    },
+    {
+      "id": 426,
+      "label": "Total Addressable Cost Savings",
+      "group": "VNDR",
+      "cis": 11
+    },
+    {
+      "id": 427,
+      "label": "Competitive Bidding Process",
+      "group": "VNDR",
+      "cis": 10
+    },
+    {
+      "id": 428,
+      "label": "Vendor Consolidation Strategy",
+      "group": "VNDR",
+      "cis": 9
+    },
+    {
+      "id": 429,
+      "label": "Community Support Risk",
+      "group": "VNDR",
+      "cis": 8
+    },
+    {
+      "id": 430,
+      "label": "Model Update Cadence Risk",
+      "group": "VNDR",
+      "cis": 7
+    },
+    {
+      "id": 431,
+      "label": "Vendor Deprecation Risk",
+      "group": "VNDR",
+      "cis": 6
+    },
+    {
+      "id": 432,
+      "label": "Cost Predictability Assessment",
+      "group": "VNDR",
+      "cis": 5
+    },
+    {
+      "id": 433,
+      "label": "Long-Term Contract Risk",
+      "group": "VNDR",
+      "cis": 1
+    },
+    {
+      "id": 434,
+      "label": "Vendor Scorecard",
+      "group": "VNDR",
+      "cis": 3
+    },
+    {
+      "id": 435,
+      "label": "Build Vs Buy Case Study",
+      "group": "VNDR",
+      "cis": 2
+    },
+    {
+      "id": 436,
+      "label": "Sourcing Strategy Roadmap",
+      "group": "VNDR",
+      "cis": 1
+    },
+    {
+      "id": 437,
+      "label": "AI Governance Framework",
+      "group": "RISK",
+      "cis": 40
+    },
+    {
+      "id": 438,
+      "label": "Model Risk Management",
+      "group": "RISK",
+      "cis": 1
+    },
+    {
+      "id": 439,
+      "label": "Hidden Cost Of AI Systems",
+      "group": "RISK",
+      "cis": 38
+    },
+    {
+      "id": 440,
+      "label": "Shadow AI Usage Risk",
+      "group": "RISK",
+      "cis": 1
+    },
+    {
+      "id": 441,
+      "label": "Data Security Risk",
+      "group": "RISK",
+      "cis": 36
+    },
+    {
+      "id": 442,
+      "label": "Data Privacy Risk",
+      "group": "RISK",
+      "cis": 35
+    },
+    {
+      "id": 443,
+      "label": "Intellectual Property Risk",
+      "group": "RISK",
+      "cis": 34
+    },
+    {
+      "id": 444,
+      "label": "Compliance Risk",
+      "group": "RISK",
+      "cis": 1
+    },
+    {
+      "id": 445,
+      "label": "Regulatory Uncertainty Cost",
+      "group": "RISK",
+      "cis": 32
+    },
+    {
+      "id": 446,
+      "label": "Bias And Fairness Risk",
+      "group": "RISK",
+      "cis": 31
+    },
+    {
+      "id": 447,
+      "label": "Explainability Requirement Cost",
+      "group": "RISK",
+      "cis": 30
+    },
+    {
+      "id": 448,
+      "label": "Audit Requirement Cost",
+      "group": "RISK",
+      "cis": 1
+    },
+    {
+      "id": 449,
+      "label": "Model Governance Board",
+      "group": "RISK",
+      "cis": 28
+    },
+    {
+      "id": 450,
+      "label": "Responsible AI Policy",
+      "group": "RISK",
+      "cis": 27
+    },
+    {
+      "id": 451,
+      "label": "Third-Party Risk Assessment",
+      "group": "RISK",
+      "cis": 26
+    },
+    {
+      "id": 452,
+      "label": "Data Residency Requirement",
+      "group": "RISK",
+      "cis": 25
+    },
+    {
+      "id": 453,
+      "label": "Access Control Cost",
+      "group": "RISK",
+      "cis": 24
+    },
+    {
+      "id": 454,
+      "label": "Incident Response Planning",
+      "group": "RISK",
+      "cis": 23
+    },
+    {
+      "id": 455,
+      "label": "Reputational Risk",
+      "group": "RISK",
+      "cis": 22
+    },
+    {
+      "id": 456,
+      "label": "Overreliance Risk",
+      "group": "RISK",
+      "cis": 1
+    },
+    {
+      "id": 457,
+      "label": "Skill Erosion Risk",
+      "group": "RISK",
+      "cis": 20
+    },
+    {
+      "id": 458,
+      "label": "Staff Retraining Cost",
+      "group": "RISK",
+      "cis": 19
+    },
+    {
+      "id": 459,
+      "label": "Change Management Cost",
+      "group": "RISK",
+      "cis": 1
+    },
+    {
+      "id": 460,
+      "label": "Governance Overhead Cost",
+      "group": "RISK",
+      "cis": 17
+    },
+    {
+      "id": 461,
+      "label": "AI Risk Register",
+      "group": "RISK",
+      "cis": 16
+    },
+    {
+      "id": 462,
+      "label": "Risk Appetite Statement",
+      "group": "RISK",
+      "cis": 15
+    },
+    {
+      "id": 463,
+      "label": "Contingency Budget",
+      "group": "RISK",
+      "cis": 14
+    },
+    {
+      "id": 464,
+      "label": "Technical Debt Risk",
+      "group": "RISK",
+      "cis": 13
+    },
+    {
+      "id": 465,
+      "label": "Model Retirement Cost",
+      "group": "RISK",
+      "cis": 12
+    },
+    {
+      "id": 466,
+      "label": "Legacy Integration Risk",
+      "group": "RISK",
+      "cis": 11
+    },
+    {
+      "id": 467,
+      "label": "Security Incident Cost Estimate",
+      "group": "RISK",
+      "cis": 10
+    },
+    {
+      "id": 468,
+      "label": "Insurance Cost For AI Risk",
+      "group": "RISK",
+      "cis": 1
+    },
+    {
+      "id": 469,
+      "label": "Governance Maturity Model",
+      "group": "RISK",
+      "cis": 8
+    },
+    {
+      "id": 470,
+      "label": "Policy Enforcement Automation",
+      "group": "RISK",
+      "cis": 7
+    },
+    {
+      "id": 471,
+      "label": "Risk-Adjusted Cost Model",
+      "group": "RISK",
+      "cis": 6
+    },
+    {
+      "id": 472,
+      "label": "Hidden Cost Discovery Checklist",
+      "group": "RISK",
+      "cis": 5
+    },
+    {
+      "id": 473,
+      "label": "Risk-Adjusted TCO",
+      "group": "RISK",
+      "cis": 4
+    },
+    {
+      "id": 474,
+      "label": "Governance ROI Tradeoff",
+      "group": "RISK",
+      "cis": 3
+    },
+    {
+      "id": 475,
+      "label": "Risk Mitigation Cost-Benefit",
+      "group": "RISK",
+      "cis": 2
+    },
+    {
+      "id": 476,
+      "label": "Risk Reporting To Executives",
+      "group": "RISK",
+      "cis": 1
+    },
+    {
+      "id": 477,
+      "label": "Executive Audience Analysis",
+      "group": "COMM",
+      "cis": 85
+    },
+    {
+      "id": 478,
+      "label": "Financial Literacy For Engineers",
+      "group": "COMM",
+      "cis": 84
+    },
+    {
+      "id": 479,
+      "label": "Technical-Financial Translation",
+      "group": "COMM",
+      "cis": 83
+    },
+    {
+      "id": 480,
+      "label": "Jargon Reduction Technique",
+      "group": "COMM",
+      "cis": 82
+    },
+    {
+      "id": 481,
+      "label": "Executive Attention Span",
+      "group": "COMM",
+      "cis": 81
+    },
+    {
+      "id": 482,
+      "label": "Message Framing",
+      "group": "COMM",
+      "cis": 80
+    },
+    {
+      "id": 483,
+      "label": "Storytelling With Data",
+      "group": "COMM",
+      "cis": 79
+    },
+    {
+      "id": 484,
+      "label": "Narrative Arc For Reports",
+      "group": "COMM",
+      "cis": 78
+    },
+    {
+      "id": 485,
+      "label": "Key Message Development",
+      "group": "COMM",
+      "cis": 77
+    },
+    {
+      "id": 486,
+      "label": "So-What Statement",
+      "group": "COMM",
+      "cis": 76
+    },
+    {
+      "id": 487,
+      "label": "Elevator Pitch For Findings",
+      "group": "COMM",
+      "cis": 75
+    },
+    {
+      "id": 488,
+      "label": "Stakeholder Mapping",
+      "group": "COMM",
+      "cis": 74
+    },
+    {
+      "id": 489,
+      "label": "Audience-Specific Framing",
+      "group": "COMM",
+      "cis": 73
+    },
+    {
+      "id": 490,
+      "label": "CFO Perspective",
+      "group": "COMM",
+      "cis": 72
+    },
+    {
+      "id": 491,
+      "label": "CIO Perspective",
+      "group": "COMM",
+      "cis": 71
+    },
+    {
+      "id": 492,
+      "label": "CTO Perspective",
+      "group": "COMM",
+      "cis": 70
+    },
+    {
+      "id": 493,
+      "label": "Board-Level Communication",
+      "group": "COMM",
+      "cis": 69
+    },
+    {
+      "id": 494,
+      "label": "One-Page Summary Technique",
+      "group": "COMM",
+      "cis": 1
+    },
+    {
+      "id": 495,
+      "label": "Executive Summary Writing",
+      "group": "COMM",
+      "cis": 67
+    },
+    {
+      "id": 496,
+      "label": "Bottom-Line-Up-Front Principle",
+      "group": "COMM",
+      "cis": 62
+    },
+    {
+      "id": 497,
+      "label": "Assumption Transparency",
+      "group": "COMM",
+      "cis": 61
+    },
+    {
+      "id": 498,
+      "label": "Confidence Interval Framing",
+      "group": "COMM",
+      "cis": 60
+    },
+    {
+      "id": 499,
+      "label": "Uncertainty Communication",
+      "group": "COMM",
+      "cis": 59
+    },
+    {
+      "id": 500,
+      "label": "Risk Communication To Executives",
+      "group": "COMM",
+      "cis": 58
+    },
+    {
+      "id": 501,
+      "label": "Recommendation Framing",
+      "group": "COMM",
+      "cis": 57
+    },
+    {
+      "id": 502,
+      "label": "Actionable Insight Development",
+      "group": "COMM",
+      "cis": 36
+    },
+    {
+      "id": 503,
+      "label": "Objection Anticipation",
+      "group": "COMM",
+      "cis": 35
+    },
+    {
+      "id": 504,
+      "label": "Q&A Presentation Prep",
+      "group": "COMM",
+      "cis": 34
+    },
+    {
+      "id": 505,
+      "label": "Executive Presentation Design",
+      "group": "COMM",
+      "cis": 33
+    },
+    {
+      "id": 506,
+      "label": "Slide Design For Financial Data",
+      "group": "COMM",
+      "cis": 32
+    },
+    {
+      "id": 507,
+      "label": "Verbal Presentation Technique",
+      "group": "COMM",
+      "cis": 31
+    },
+    {
+      "id": 508,
+      "label": "Written Report Tone",
+      "group": "COMM",
+      "cis": 30
+    },
+    {
+      "id": 509,
+      "label": "Credibility Building Technique",
+      "group": "COMM",
+      "cis": 29
+    },
+    {
+      "id": 510,
+      "label": "Data-Driven Persuasion",
+      "group": "COMM",
+      "cis": 28
+    },
+    {
+      "id": 511,
+      "label": "Ethical Findings Communication",
+      "group": "COMM",
+      "cis": 27
+    },
+    {
+      "id": 512,
+      "label": "Avoiding Overstated Claims",
+      "group": "COMM",
+      "cis": 26
+    },
+    {
+      "id": 513,
+      "label": "Benchmarking Against Peers",
+      "group": "COMM",
+      "cis": 4
+    },
+    {
+      "id": 514,
+      "label": "Industry Comparison Framing",
+      "group": "COMM",
+      "cis": 3
+    },
+    {
+      "id": 515,
+      "label": "Communication Feedback Loop",
+      "group": "COMM",
+      "cis": 1
+    },
+    {
+      "id": 516,
+      "label": "Iterative Report Refinement",
+      "group": "COMM",
+      "cis": 1
+    },
+    {
+      "id": 517,
+      "label": "Executive Report Structure",
+      "group": "RPRT",
+      "cis": 45
+    },
+    {
+      "id": 518,
+      "label": "Report Scope Definition",
+      "group": "RPRT",
+      "cis": 44
+    },
+    {
+      "id": 519,
+      "label": "Methodology Section Design",
+      "group": "RPRT",
+      "cis": 1
+    },
+    {
+      "id": 520,
+      "label": "Findings Section Design",
+      "group": "RPRT",
+      "cis": 42
+    },
+    {
+      "id": 521,
+      "label": "Recommendations Section Design",
+      "group": "RPRT",
+      "cis": 41
+    },
+    {
+      "id": 522,
+      "label": "Appendix Design",
+      "group": "RPRT",
+      "cis": 40
+    },
+    {
+      "id": 523,
+      "label": "Cover Page And Framing",
+      "group": "RPRT",
+      "cis": 39
+    },
+    {
+      "id": 524,
+      "label": "Table Of Contents Design",
+      "group": "RPRT",
+      "cis": 1
+    },
+    {
+      "id": 525,
+      "label": "Data Visualization Principles",
+      "group": "RPRT",
+      "cis": 37
+    },
+    {
+      "id": 526,
+      "label": "Chart Type Selection",
+      "group": "RPRT",
+      "cis": 1
+    },
+    {
+      "id": 527,
+      "label": "Bar Chart For Cost Comparison",
+      "group": "RPRT",
+      "cis": 35
+    },
+    {
+      "id": 528,
+      "label": "Line Chart For Trend Analysis",
+      "group": "RPRT",
+      "cis": 34
+    },
+    {
+      "id": 529,
+      "label": "Waterfall Cost Breakdown Chart",
+      "group": "RPRT",
+      "cis": 33
+    },
+    {
+      "id": 530,
+      "label": "Cost Driver Tree Diagram",
+      "group": "RPRT",
+      "cis": 1
+    },
+    {
+      "id": 531,
+      "label": "Sensitivity Analysis Chart",
+      "group": "RPRT",
+      "cis": 31
+    },
+    {
+      "id": 532,
+      "label": "Scenario Comparison Table",
+      "group": "RPRT",
+      "cis": 30
+    },
+    {
+      "id": 533,
+      "label": "Dashboard Mockup For Report",
+      "group": "RPRT",
+      "cis": 1
+    },
+    {
+      "id": 534,
+      "label": "Color Use In Financial Charts",
+      "group": "RPRT",
+      "cis": 1
+    },
+    {
+      "id": 535,
+      "label": "Chart Labeling Best Practice",
+      "group": "RPRT",
+      "cis": 27
+    },
+    {
+      "id": 536,
+      "label": "Data Table Design",
+      "group": "RPRT",
+      "cis": 26
+    },
+    {
+      "id": 537,
+      "label": "Footnote And Source Citation",
+      "group": "RPRT",
+      "cis": 25
+    },
+    {
+      "id": 538,
+      "label": "Report Review Checklist",
+      "group": "RPRT",
+      "cis": 24
+    },
+    {
+      "id": 539,
+      "label": "Peer Review Process",
+      "group": "RPRT",
+      "cis": 23
+    },
+    {
+      "id": 540,
+      "label": "Report Editing Pass",
+      "group": "RPRT",
+      "cis": 22
+    },
+    {
+      "id": 541,
+      "label": "Fact-Checking Financial Claims",
+      "group": "RPRT",
+      "cis": 21
+    },
+    {
+      "id": 542,
+      "label": "Report Version Control",
+      "group": "RPRT",
+      "cis": 20
+    },
+    {
+      "id": 543,
+      "label": "Report Template Library",
+      "group": "RPRT",
+      "cis": 19
+    },
+    {
+      "id": 544,
+      "label": "Report Length Calibration",
+      "group": "RPRT",
+      "cis": 18
+    },
+    {
+      "id": 545,
+      "label": "Report Accessibility",
+      "group": "RPRT",
+      "cis": 17
+    },
+    {
+      "id": 546,
+      "label": "Report Distribution Strategy",
+      "group": "RPRT",
+      "cis": 16
+    },
+    {
+      "id": 547,
+      "label": "Report Feedback Incorporation",
+      "group": "RPRT",
+      "cis": 15
+    },
+    {
+      "id": 548,
+      "label": "Report Localization Note",
+      "group": "RPRT",
+      "cis": 1
+    },
+    {
+      "id": 549,
+      "label": "Report Archiving Practice",
+      "group": "RPRT",
+      "cis": 13
+    },
+    {
+      "id": 550,
+      "label": "Capstone Report Planning",
+      "group": "RPRT",
+      "cis": 12
+    },
+    {
+      "id": 551,
+      "label": "Capstone Data Collection",
+      "group": "RPRT",
+      "cis": 11
+    },
+    {
+      "id": 552,
+      "label": "Capstone Cost Model Build",
+      "group": "RPRT",
+      "cis": 10
+    },
+    {
+      "id": 553,
+      "label": "Capstone ROI Calculation",
+      "group": "RPRT",
+      "cis": 9
+    },
+    {
+      "id": 554,
+      "label": "Capstone Executive Summary Draft",
+      "group": "RPRT",
+      "cis": 8
+    },
+    {
+      "id": 555,
+      "label": "Capstone Report Full Draft",
+      "group": "RPRT",
+      "cis": 1
+    },
+    {
+      "id": 556,
+      "label": "Capstone Peer Critique",
+      "group": "RPRT",
+      "cis": 6
+    },
+    {
+      "id": 557,
+      "label": "Capstone Presentation Delivery",
+      "group": "RPRT",
+      "cis": 5
+    },
+    {
+      "id": 558,
+      "label": "Capstone Report Finalization",
+      "group": "RPRT",
+      "cis": 4
+    },
+    {
+      "id": 559,
+      "label": "Post-Capstone Reflection",
+      "group": "RPRT",
+      "cis": 3
+    },
+    {
+      "id": 560,
+      "label": "Continuous Improvement Plan",
+      "group": "RPRT",
+      "cis": 2
+    },
+    {
+      "id": 561,
+      "label": "Career Application Of Skills",
+      "group": "RPRT",
+      "cis": 1
+    }
+  ],
+  "edges": [
+    {
+      "from": 2,
+      "to": 1
+    },
+    {
+      "from": 3,
+      "to": 2
+    },
+    {
+      "from": 4,
+      "to": 3
+    },
+    {
+      "from": 5,
+      "to": 4
+    },
+    {
+      "from": 6,
+      "to": 5
+    },
+    {
+      "from": 7,
+      "to": 6
+    },
+    {
+      "from": 8,
+      "to": 7
+    },
+    {
+      "from": 9,
+      "to": 8
+    },
+    {
+      "from": 10,
+      "to": 8
+    },
+    {
+      "from": 11,
+      "to": 10
+    },
+    {
+      "from": 12,
+      "to": 11
+    },
+    {
+      "from": 13,
+      "to": 12
+    },
+    {
+      "from": 14,
+      "to": 13
+    },
+    {
+      "from": 15,
+      "to": 14
+    },
+    {
+      "from": 16,
+      "to": 15
+    },
+    {
+      "from": 17,
+      "to": 16
+    },
+    {
+      "from": 18,
+      "to": 17
+    },
+    {
+      "from": 19,
+      "to": 18
+    },
+    {
+      "from": 20,
+      "to": 18
+    },
+    {
+      "from": 21,
+      "to": 20
+    },
+    {
+      "from": 22,
+      "to": 21
+    },
+    {
+      "from": 23,
+      "to": 22
+    },
+    {
+      "from": 24,
+      "to": 23
+    },
+    {
+      "from": 25,
+      "to": 24
+    },
+    {
+      "from": 26,
+      "to": 25
+    },
+    {
+      "from": 27,
+      "to": 25
+    },
+    {
+      "from": 28,
+      "to": 27
+    },
+    {
+      "from": 29,
+      "to": 28
+    },
+    {
+      "from": 30,
+      "to": 29
+    },
+    {
+      "from": 31,
+      "to": 30
+    },
+    {
+      "from": 32,
+      "to": 31
+    },
+    {
+      "from": 33,
+      "to": 32
+    },
+    {
+      "from": 34,
+      "to": 32
+    },
+    {
+      "from": 34,
+      "to": 33
+    },
+    {
+      "from": 35,
+      "to": 34
+    },
+    {
+      "from": 36,
+      "to": 35
+    },
+    {
+      "from": 37,
+      "to": 33
+    },
+    {
+      "from": 37,
+      "to": 36
+    },
+    {
+      "from": 38,
+      "to": 37
+    },
+    {
+      "from": 39,
+      "to": 38
+    },
+    {
+      "from": 40,
+      "to": 37
+    },
+    {
+      "from": 40,
+      "to": 39
+    },
+    {
+      "from": 41,
+      "to": 39
+    },
+    {
+      "from": 41,
+      "to": 40
+    },
+    {
+      "from": 42,
+      "to": 40
+    },
+    {
+      "from": 42,
+      "to": 41
+    },
+    {
+      "from": 43,
+      "to": 40
+    },
+    {
+      "from": 43,
+      "to": 42
+    },
+    {
+      "from": 44,
+      "to": 43
+    },
+    {
+      "from": 45,
+      "to": 35
+    },
+    {
+      "from": 45,
+      "to": 44
+    },
+    {
+      "from": 47,
+      "to": 46
+    },
+    {
+      "from": 48,
+      "to": 47
+    },
+    {
+      "from": 49,
+      "to": 46
+    },
+    {
+      "from": 49,
+      "to": 48
+    },
+    {
+      "from": 50,
+      "to": 46
+    },
+    {
+      "from": 50,
+      "to": 49
+    },
+    {
+      "from": 51,
+      "to": 50
+    },
+    {
+      "from": 52,
+      "to": 49
+    },
+    {
+      "from": 52,
+      "to": 51
+    },
+    {
+      "from": 53,
+      "to": 49
+    },
+    {
+      "from": 53,
+      "to": 51
+    },
+    {
+      "from": 54,
+      "to": 50
+    },
+    {
+      "from": 54,
+      "to": 53
+    },
+    {
+      "from": 55,
+      "to": 51
+    },
+    {
+      "from": 55,
+      "to": 54
+    },
+    {
+      "from": 56,
+      "to": 55
+    },
+    {
+      "from": 57,
+      "to": 56
+    },
+    {
+      "from": 58,
+      "to": 55
+    },
+    {
+      "from": 58,
+      "to": 57
+    },
+    {
+      "from": 59,
+      "to": 58
+    },
+    {
+      "from": 60,
+      "to": 59
+    },
+    {
+      "from": 61,
+      "to": 59
+    },
+    {
+      "from": 61,
+      "to": 60
+    },
+    {
+      "from": 62,
+      "to": 61
+    },
+    {
+      "from": 63,
+      "to": 61
+    },
+    {
+      "from": 64,
+      "to": 63
+    },
+    {
+      "from": 65,
+      "to": 64
+    },
+    {
+      "from": 66,
+      "to": 65
+    },
+    {
+      "from": 67,
+      "to": 66
+    },
+    {
+      "from": 68,
+      "to": 66
+    },
+    {
+      "from": 69,
+      "to": 68
+    },
+    {
+      "from": 70,
+      "to": 66
+    },
+    {
+      "from": 70,
+      "to": 68
+    },
+    {
+      "from": 71,
+      "to": 70
+    },
+    {
+      "from": 72,
+      "to": 71
+    },
+    {
+      "from": 73,
+      "to": 72
+    },
+    {
+      "from": 74,
+      "to": 72
+    },
+    {
+      "from": 75,
+      "to": 74
+    },
+    {
+      "from": 76,
+      "to": 75
+    },
+    {
+      "from": 77,
+      "to": 76
+    },
+    {
+      "from": 78,
+      "to": 74
+    },
+    {
+      "from": 78,
+      "to": 76
+    },
+    {
+      "from": 79,
+      "to": 76
+    },
+    {
+      "from": 79,
+      "to": 78
+    },
+    {
+      "from": 80,
+      "to": 79
+    },
+    {
+      "from": 81,
+      "to": 79
+    },
+    {
+      "from": 82,
+      "to": 81
+    },
+    {
+      "from": 83,
+      "to": 82
+    },
+    {
+      "from": 84,
+      "to": 83
+    },
+    {
+      "from": 85,
+      "to": 82
+    },
+    {
+      "from": 85,
+      "to": 84
+    },
+    {
+      "from": 86,
+      "to": 85
+    },
+    {
+      "from": 87,
+      "to": 85
+    },
+    {
+      "from": 87,
+      "to": 86
+    },
+    {
+      "from": 88,
+      "to": 84
+    },
+    {
+      "from": 88,
+      "to": 87
+    },
+    {
+      "from": 89,
+      "to": 84
+    },
+    {
+      "from": 89,
+      "to": 87
+    },
+    {
+      "from": 90,
+      "to": 89
+    },
+    {
+      "from": 91,
+      "to": 89
+    },
+    {
+      "from": 92,
+      "to": 40
+    },
+    {
+      "from": 93,
+      "to": 92
+    },
+    {
+      "from": 94,
+      "to": 93
+    },
+    {
+      "from": 95,
+      "to": 94
+    },
+    {
+      "from": 96,
+      "to": 93
+    },
+    {
+      "from": 96,
+      "to": 95
+    },
+    {
+      "from": 97,
+      "to": 93
+    },
+    {
+      "from": 97,
+      "to": 94
+    },
+    {
+      "from": 97,
+      "to": 95
+    },
+    {
+      "from": 98,
+      "to": 97
+    },
+    {
+      "from": 99,
+      "to": 95
+    },
+    {
+      "from": 99,
+      "to": 98
+    },
+    {
+      "from": 100,
+      "to": 95
+    },
+    {
+      "from": 100,
+      "to": 98
+    },
+    {
+      "from": 101,
+      "to": 98
+    },
+    {
+      "from": 101,
+      "to": 100
+    },
+    {
+      "from": 102,
+      "to": 101
+    },
+    {
+      "from": 103,
+      "to": 102
+    },
+    {
+      "from": 104,
+      "to": 101
+    },
+    {
+      "from": 104,
+      "to": 102
+    },
+    {
+      "from": 105,
+      "to": 101
+    },
+    {
+      "from": 105,
+      "to": 104
+    },
+    {
+      "from": 106,
+      "to": 105
+    },
+    {
+      "from": 107,
+      "to": 106
+    },
+    {
+      "from": 108,
+      "to": 107
+    },
+    {
+      "from": 109,
+      "to": 108
+    },
+    {
+      "from": 110,
+      "to": 109
+    },
+    {
+      "from": 111,
+      "to": 110
+    },
+    {
+      "from": 112,
+      "to": 108
+    },
+    {
+      "from": 112,
+      "to": 111
+    },
+    {
+      "from": 113,
+      "to": 112
+    },
+    {
+      "from": 114,
+      "to": 113
+    },
+    {
+      "from": 115,
+      "to": 113
+    },
+    {
+      "from": 116,
+      "to": 115
+    },
+    {
+      "from": 117,
+      "to": 113
+    },
+    {
+      "from": 117,
+      "to": 115
+    },
+    {
+      "from": 118,
+      "to": 117
+    },
+    {
+      "from": 119,
+      "to": 118
+    },
+    {
+      "from": 120,
+      "to": 118
+    },
+    {
+      "from": 120,
+      "to": 119
+    },
+    {
+      "from": 121,
+      "to": 118
+    },
+    {
+      "from": 121,
+      "to": 120
+    },
+    {
+      "from": 122,
+      "to": 121
+    },
+    {
+      "from": 123,
+      "to": 122
+    },
+    {
+      "from": 124,
+      "to": 120
+    },
+    {
+      "from": 124,
+      "to": 123
+    },
+    {
+      "from": 125,
+      "to": 124
+    },
+    {
+      "from": 126,
+      "to": 125
+    },
+    {
+      "from": 127,
+      "to": 123
+    },
+    {
+      "from": 127,
+      "to": 126
+    },
+    {
+      "from": 128,
+      "to": 126
+    },
+    {
+      "from": 128,
+      "to": 127
+    },
+    {
+      "from": 129,
+      "to": 128
+    },
+    {
+      "from": 130,
+      "to": 127
+    },
+    {
+      "from": 130,
+      "to": 129
+    },
+    {
+      "from": 131,
+      "to": 128
+    },
+    {
+      "from": 131,
+      "to": 130
+    },
+    {
+      "from": 132,
+      "to": 68
+    },
+    {
+      "from": 132,
+      "to": 94
+    },
+    {
+      "from": 133,
+      "to": 68
+    },
+    {
+      "from": 133,
+      "to": 94
+    },
+    {
+      "from": 134,
+      "to": 133
+    },
+    {
+      "from": 135,
+      "to": 133
+    },
+    {
+      "from": 136,
+      "to": 135
+    },
+    {
+      "from": 137,
+      "to": 133
+    },
+    {
+      "from": 137,
+      "to": 136
+    },
+    {
+      "from": 138,
+      "to": 133
+    },
+    {
+      "from": 138,
+      "to": 136
+    },
+    {
+      "from": 139,
+      "to": 138
+    },
+    {
+      "from": 140,
+      "to": 139
+    },
+    {
+      "from": 141,
+      "to": 139
+    },
+    {
+      "from": 141,
+      "to": 140
+    },
+    {
+      "from": 142,
+      "to": 140
+    },
+    {
+      "from": 142,
+      "to": 141
+    },
+    {
+      "from": 143,
+      "to": 142
+    },
+    {
+      "from": 144,
+      "to": 142
+    },
+    {
+      "from": 144,
+      "to": 143
+    },
+    {
+      "from": 145,
+      "to": 143
+    },
+    {
+      "from": 145,
+      "to": 144
+    },
+    {
+      "from": 146,
+      "to": 145
+    },
+    {
+      "from": 147,
+      "to": 144
+    },
+    {
+      "from": 147,
+      "to": 146
+    },
+    {
+      "from": 148,
+      "to": 145
+    },
+    {
+      "from": 148,
+      "to": 147
+    },
+    {
+      "from": 149,
+      "to": 148
+    },
+    {
+      "from": 150,
+      "to": 31
+    },
+    {
+      "from": 150,
+      "to": 109
+    },
+    {
+      "from": 150,
+      "to": 148
+    },
+    {
+      "from": 151,
+      "to": 147
+    },
+    {
+      "from": 151,
+      "to": 150
+    },
+    {
+      "from": 152,
+      "to": 150
+    },
+    {
+      "from": 152,
+      "to": 151
+    },
+    {
+      "from": 153,
+      "to": 151
+    },
+    {
+      "from": 153,
+      "to": 152
+    },
+    {
+      "from": 154,
+      "to": 151
+    },
+    {
+      "from": 154,
+      "to": 152
+    },
+    {
+      "from": 155,
+      "to": 154
+    },
+    {
+      "from": 156,
+      "to": 152
+    },
+    {
+      "from": 156,
+      "to": 155
+    },
+    {
+      "from": 157,
+      "to": 156
+    },
+    {
+      "from": 158,
+      "to": 156
+    },
+    {
+      "from": 159,
+      "to": 156
+    },
+    {
+      "from": 159,
+      "to": 158
+    },
+    {
+      "from": 160,
+      "to": 156
+    },
+    {
+      "from": 160,
+      "to": 158
+    },
+    {
+      "from": 161,
+      "to": 156
+    },
+    {
+      "from": 161,
+      "to": 158
+    },
+    {
+      "from": 162,
+      "to": 161
+    },
+    {
+      "from": 163,
+      "to": 162
+    },
+    {
+      "from": 164,
+      "to": 163
+    },
+    {
+      "from": 165,
+      "to": 162
+    },
+    {
+      "from": 165,
+      "to": 164
+    },
+    {
+      "from": 166,
+      "to": 45
+    },
+    {
+      "from": 166,
+      "to": 162
+    },
+    {
+      "from": 166,
+      "to": 165
+    },
+    {
+      "from": 167,
+      "to": 12
+    },
+    {
+      "from": 167,
+      "to": 27
+    },
+    {
+      "from": 167,
+      "to": 166
+    },
+    {
+      "from": 168,
+      "to": 12
+    },
+    {
+      "from": 168,
+      "to": 27
+    },
+    {
+      "from": 168,
+      "to": 44
+    },
+    {
+      "from": 168,
+      "to": 166
+    },
+    {
+      "from": 169,
+      "to": 43
+    },
+    {
+      "from": 169,
+      "to": 168
+    },
+    {
+      "from": 170,
+      "to": 169
+    },
+    {
+      "from": 171,
+      "to": 170
+    },
+    {
+      "from": 172,
+      "to": 171
+    },
+    {
+      "from": 173,
+      "to": 169
+    },
+    {
+      "from": 173,
+      "to": 172
+    },
+    {
+      "from": 174,
+      "to": 172
+    },
+    {
+      "from": 174,
+      "to": 173
+    },
+    {
+      "from": 175,
+      "to": 172
+    },
+    {
+      "from": 175,
+      "to": 173
+    },
+    {
+      "from": 176,
+      "to": 175
+    },
+    {
+      "from": 177,
+      "to": 176
+    },
+    {
+      "from": 178,
+      "to": 176
+    },
+    {
+      "from": 178,
+      "to": 177
+    },
+    {
+      "from": 179,
+      "to": 178
+    },
+    {
+      "from": 180,
+      "to": 179
+    },
+    {
+      "from": 181,
+      "to": 180
+    },
+    {
+      "from": 183,
+      "to": 182
+    },
+    {
+      "from": 184,
+      "to": 183
+    },
+    {
+      "from": 185,
+      "to": 184
+    },
+    {
+      "from": 186,
+      "to": 185
+    },
+    {
+      "from": 187,
+      "to": 185
+    },
+    {
+      "from": 187,
+      "to": 186
+    },
+    {
+      "from": 188,
+      "to": 187
+    },
+    {
+      "from": 189,
+      "to": 187
+    },
+    {
+      "from": 190,
+      "to": 189
+    },
+    {
+      "from": 191,
+      "to": 190
+    },
+    {
+      "from": 192,
+      "to": 190
+    },
+    {
+      "from": 192,
+      "to": 191
+    },
+    {
+      "from": 193,
+      "to": 190
+    },
+    {
+      "from": 193,
+      "to": 191
+    },
+    {
+      "from": 194,
+      "to": 193
+    },
+    {
+      "from": 195,
+      "to": 194
+    },
+    {
+      "from": 196,
+      "to": 194
+    },
+    {
+      "from": 196,
+      "to": 195
+    },
+    {
+      "from": 197,
+      "to": 196
+    },
+    {
+      "from": 198,
+      "to": 195
+    },
+    {
+      "from": 198,
+      "to": 197
+    },
+    {
+      "from": 199,
+      "to": 197
+    },
+    {
+      "from": 199,
+      "to": 198
+    },
+    {
+      "from": 200,
+      "to": 197
+    },
+    {
+      "from": 200,
+      "to": 198
+    },
+    {
+      "from": 201,
+      "to": 200
+    },
+    {
+      "from": 202,
+      "to": 198
+    },
+    {
+      "from": 202,
+      "to": 201
+    },
+    {
+      "from": 203,
+      "to": 202
+    },
+    {
+      "from": 204,
+      "to": 203
+    },
+    {
+      "from": 205,
+      "to": 203
+    },
+    {
+      "from": 206,
+      "to": 203
+    },
+    {
+      "from": 207,
+      "to": 206
+    },
+    {
+      "from": 208,
+      "to": 207
+    },
+    {
+      "from": 209,
+      "to": 206
+    },
+    {
+      "from": 209,
+      "to": 208
+    },
+    {
+      "from": 210,
+      "to": 208
+    },
+    {
+      "from": 210,
+      "to": 209
+    },
+    {
+      "from": 211,
+      "to": 207
+    },
+    {
+      "from": 211,
+      "to": 210
+    },
+    {
+      "from": 212,
+      "to": 211
+    },
+    {
+      "from": 213,
+      "to": 211
+    },
+    {
+      "from": 214,
+      "to": 213
+    },
+    {
+      "from": 215,
+      "to": 214
+    },
+    {
+      "from": 216,
+      "to": 214
+    },
+    {
+      "from": 217,
+      "to": 213
+    },
+    {
+      "from": 217,
+      "to": 216
+    },
+    {
+      "from": 218,
+      "to": 214
+    },
+    {
+      "from": 218,
+      "to": 217
+    },
+    {
+      "from": 219,
+      "to": 214
+    },
+    {
+      "from": 219,
+      "to": 217
+    },
+    {
+      "from": 220,
+      "to": 216
+    },
+    {
+      "from": 220,
+      "to": 219
+    },
+    {
+      "from": 221,
+      "to": 220
+    },
+    {
+      "from": 222,
+      "to": 221
+    },
+    {
+      "from": 223,
+      "to": 219
+    },
+    {
+      "from": 223,
+      "to": 222
+    },
+    {
+      "from": 224,
+      "to": 223
+    },
+    {
+      "from": 225,
+      "to": 224
+    },
+    {
+      "from": 226,
+      "to": 225
+    },
+    {
+      "from": 227,
+      "to": 5
+    },
+    {
+      "from": 227,
+      "to": 182
+    },
+    {
+      "from": 227,
+      "to": 211
+    },
+    {
+      "from": 228,
+      "to": 227
+    },
+    {
+      "from": 229,
+      "to": 228
+    },
+    {
+      "from": 230,
+      "to": 228
+    },
+    {
+      "from": 231,
+      "to": 227
+    },
+    {
+      "from": 231,
+      "to": 230
+    },
+    {
+      "from": 232,
+      "to": 231
+    },
+    {
+      "from": 233,
+      "to": 230
+    },
+    {
+      "from": 233,
+      "to": 232
+    },
+    {
+      "from": 234,
+      "to": 231
+    },
+    {
+      "from": 234,
+      "to": 233
+    },
+    {
+      "from": 235,
+      "to": 234
+    },
+    {
+      "from": 236,
+      "to": 234
+    },
+    {
+      "from": 237,
+      "to": 233
+    },
+    {
+      "from": 237,
+      "to": 236
+    },
+    {
+      "from": 238,
+      "to": 233
+    },
+    {
+      "from": 238,
+      "to": 236
+    },
+    {
+      "from": 239,
+      "to": 238
+    },
+    {
+      "from": 240,
+      "to": 239
+    },
+    {
+      "from": 241,
+      "to": 238
+    },
+    {
+      "from": 241,
+      "to": 239
+    },
+    {
+      "from": 242,
+      "to": 239
+    },
+    {
+      "from": 242,
+      "to": 241
+    },
+    {
+      "from": 243,
+      "to": 239
+    },
+    {
+      "from": 243,
+      "to": 242
+    },
+    {
+      "from": 244,
+      "to": 243
+    },
+    {
+      "from": 245,
+      "to": 241
+    },
+    {
+      "from": 245,
+      "to": 243
+    },
+    {
+      "from": 246,
+      "to": 245
+    },
+    {
+      "from": 247,
+      "to": 245
+    },
+    {
+      "from": 247,
+      "to": 246
+    },
+    {
+      "from": 248,
+      "to": 245
+    },
+    {
+      "from": 248,
+      "to": 247
+    },
+    {
+      "from": 249,
+      "to": 246
+    },
+    {
+      "from": 249,
+      "to": 248
+    },
+    {
+      "from": 250,
+      "to": 249
+    },
+    {
+      "from": 251,
+      "to": 249
+    },
+    {
+      "from": 251,
+      "to": 250
+    },
+    {
+      "from": 252,
+      "to": 251
+    },
+    {
+      "from": 253,
+      "to": 250
+    },
+    {
+      "from": 253,
+      "to": 251
+    },
+    {
+      "from": 254,
+      "to": 250
+    },
+    {
+      "from": 254,
+      "to": 253
+    },
+    {
+      "from": 255,
+      "to": 254
+    },
+    {
+      "from": 256,
+      "to": 254
+    },
+    {
+      "from": 257,
+      "to": 256
+    },
+    {
+      "from": 258,
+      "to": 257
+    },
+    {
+      "from": 259,
+      "to": 258
+    },
+    {
+      "from": 260,
+      "to": 259
+    },
+    {
+      "from": 261,
+      "to": 257
+    },
+    {
+      "from": 261,
+      "to": 260
+    },
+    {
+      "from": 262,
+      "to": 221
+    },
+    {
+      "from": 262,
+      "to": 261
+    },
+    {
+      "from": 263,
+      "to": 222
+    },
+    {
+      "from": 263,
+      "to": 262
+    },
+    {
+      "from": 264,
+      "to": 262
+    },
+    {
+      "from": 264,
+      "to": 263
+    },
+    {
+      "from": 265,
+      "to": 262
+    },
+    {
+      "from": 265,
+      "to": 263
+    },
+    {
+      "from": 266,
+      "to": 262
+    },
+    {
+      "from": 266,
+      "to": 265
+    },
+    {
+      "from": 267,
+      "to": 84
+    },
+    {
+      "from": 267,
+      "to": 85
+    },
+    {
+      "from": 268,
+      "to": 200
+    },
+    {
+      "from": 268,
+      "to": 267
+    },
+    {
+      "from": 269,
+      "to": 201
+    },
+    {
+      "from": 269,
+      "to": 268
+    },
+    {
+      "from": 270,
+      "to": 268
+    },
+    {
+      "from": 270,
+      "to": 269
+    },
+    {
+      "from": 271,
+      "to": 267
+    },
+    {
+      "from": 271,
+      "to": 270
+    },
+    {
+      "from": 272,
+      "to": 269
+    },
+    {
+      "from": 272,
+      "to": 271
+    },
+    {
+      "from": 273,
+      "to": 272
+    },
+    {
+      "from": 274,
+      "to": 273
+    },
+    {
+      "from": 275,
+      "to": 274
+    },
+    {
+      "from": 276,
+      "to": 129
+    },
+    {
+      "from": 276,
+      "to": 274
+    },
+    {
+      "from": 277,
+      "to": 276
+    },
+    {
+      "from": 278,
+      "to": 276
+    },
+    {
+      "from": 279,
+      "to": 278
+    },
+    {
+      "from": 280,
+      "to": 279
+    },
+    {
+      "from": 281,
+      "to": 280
+    },
+    {
+      "from": 282,
+      "to": 279
+    },
+    {
+      "from": 282,
+      "to": 281
+    },
+    {
+      "from": 283,
+      "to": 282
+    },
+    {
+      "from": 284,
+      "to": 283
+    },
+    {
+      "from": 285,
+      "to": 284
+    },
+    {
+      "from": 286,
+      "to": 285
+    },
+    {
+      "from": 287,
+      "to": 286
+    },
+    {
+      "from": 288,
+      "to": 286
+    },
+    {
+      "from": 288,
+      "to": 287
+    },
+    {
+      "from": 289,
+      "to": 287
+    },
+    {
+      "from": 289,
+      "to": 288
+    },
+    {
+      "from": 290,
+      "to": 289
+    },
+    {
+      "from": 291,
+      "to": 290
+    },
+    {
+      "from": 292,
+      "to": 289
+    },
+    {
+      "from": 292,
+      "to": 291
+    },
+    {
+      "from": 293,
+      "to": 292
+    },
+    {
+      "from": 294,
+      "to": 293
+    },
+    {
+      "from": 295,
+      "to": 294
+    },
+    {
+      "from": 296,
+      "to": 294
+    },
+    {
+      "from": 297,
+      "to": 293
+    },
+    {
+      "from": 297,
+      "to": 296
+    },
+    {
+      "from": 298,
+      "to": 297
+    },
+    {
+      "from": 299,
+      "to": 298
+    },
+    {
+      "from": 300,
+      "to": 296
+    },
+    {
+      "from": 300,
+      "to": 299
+    },
+    {
+      "from": 301,
+      "to": 300
+    },
+    {
+      "from": 302,
+      "to": 298
+    },
+    {
+      "from": 302,
+      "to": 301
+    },
+    {
+      "from": 303,
+      "to": 301
+    },
+    {
+      "from": 303,
+      "to": 302
+    },
+    {
+      "from": 304,
+      "to": 301
+    },
+    {
+      "from": 304,
+      "to": 302
+    },
+    {
+      "from": 305,
+      "to": 304
+    },
+    {
+      "from": 306,
+      "to": 302
+    },
+    {
+      "from": 306,
+      "to": 305
+    },
+    {
+      "from": 307,
+      "to": 5
+    },
+    {
+      "from": 308,
+      "to": 307
+    },
+    {
+      "from": 309,
+      "to": 308
+    },
+    {
+      "from": 310,
+      "to": 308
+    },
+    {
+      "from": 311,
+      "to": 307
+    },
+    {
+      "from": 311,
+      "to": 310
+    },
+    {
+      "from": 312,
+      "to": 311
+    },
+    {
+      "from": 313,
+      "to": 311
+    },
+    {
+      "from": 313,
+      "to": 312
+    },
+    {
+      "from": 314,
+      "to": 312
+    },
+    {
+      "from": 314,
+      "to": 313
+    },
+    {
+      "from": 315,
+      "to": 6
+    },
+    {
+      "from": 315,
+      "to": 27
+    },
+    {
+      "from": 315,
+      "to": 313
+    },
+    {
+      "from": 315,
+      "to": 314
+    },
+    {
+      "from": 316,
+      "to": 313
+    },
+    {
+      "from": 316,
+      "to": 315
+    },
+    {
+      "from": 317,
+      "to": 316
+    },
+    {
+      "from": 318,
+      "to": 316
+    },
+    {
+      "from": 318,
+      "to": 317
+    },
+    {
+      "from": 319,
+      "to": 316
+    },
+    {
+      "from": 319,
+      "to": 317
+    },
+    {
+      "from": 320,
+      "to": 319
+    },
+    {
+      "from": 321,
+      "to": 320
+    },
+    {
+      "from": 322,
+      "to": 320
+    },
+    {
+      "from": 323,
+      "to": 322
+    },
+    {
+      "from": 324,
+      "to": 323
+    },
+    {
+      "from": 325,
+      "to": 323
+    },
+    {
+      "from": 325,
+      "to": 324
+    },
+    {
+      "from": 326,
+      "to": 323
+    },
+    {
+      "from": 326,
+      "to": 324
+    },
+    {
+      "from": 327,
+      "to": 326
+    },
+    {
+      "from": 328,
+      "to": 326
+    },
+    {
+      "from": 329,
+      "to": 328
+    },
+    {
+      "from": 330,
+      "to": 329
+    },
+    {
+      "from": 331,
+      "to": 330
+    },
+    {
+      "from": 332,
+      "to": 328
+    },
+    {
+      "from": 332,
+      "to": 331
+    },
+    {
+      "from": 333,
+      "to": 332
+    },
+    {
+      "from": 334,
+      "to": 333
+    },
+    {
+      "from": 335,
+      "to": 332
+    },
+    {
+      "from": 335,
+      "to": 334
+    },
+    {
+      "from": 336,
+      "to": 332
+    },
+    {
+      "from": 336,
+      "to": 334
+    },
+    {
+      "from": 337,
+      "to": 336
+    },
+    {
+      "from": 338,
+      "to": 337
+    },
+    {
+      "from": 339,
+      "to": 338
+    },
+    {
+      "from": 340,
+      "to": 315
+    },
+    {
+      "from": 340,
+      "to": 339
+    },
+    {
+      "from": 341,
+      "to": 315
+    },
+    {
+      "from": 341,
+      "to": 340
+    },
+    {
+      "from": 342,
+      "to": 341
+    },
+    {
+      "from": 343,
+      "to": 342
+    },
+    {
+      "from": 344,
+      "to": 224
+    },
+    {
+      "from": 344,
+      "to": 340
+    },
+    {
+      "from": 344,
+      "to": 342
+    },
+    {
+      "from": 345,
+      "to": 344
+    },
+    {
+      "from": 346,
+      "to": 345
+    },
+    {
+      "from": 347,
+      "to": 345
+    },
+    {
+      "from": 348,
+      "to": 347
+    },
+    {
+      "from": 349,
+      "to": 348
+    },
+    {
+      "from": 350,
+      "to": 349
+    },
+    {
+      "from": 351,
+      "to": 227
+    },
+    {
+      "from": 351,
+      "to": 350
+    },
+    {
+      "from": 352,
+      "to": 2
+    },
+    {
+      "from": 352,
+      "to": 5
+    },
+    {
+      "from": 353,
+      "to": 352
+    },
+    {
+      "from": 354,
+      "to": 353
+    },
+    {
+      "from": 355,
+      "to": 6
+    },
+    {
+      "from": 355,
+      "to": 354
+    },
+    {
+      "from": 356,
+      "to": 6
+    },
+    {
+      "from": 356,
+      "to": 352
+    },
+    {
+      "from": 356,
+      "to": 354
+    },
+    {
+      "from": 357,
+      "to": 356
+    },
+    {
+      "from": 358,
+      "to": 6
+    },
+    {
+      "from": 358,
+      "to": 357
+    },
+    {
+      "from": 359,
+      "to": 357
+    },
+    {
+      "from": 359,
+      "to": 358
+    },
+    {
+      "from": 360,
+      "to": 359
+    },
+    {
+      "from": 361,
+      "to": 360
+    },
+    {
+      "from": 362,
+      "to": 358
+    },
+    {
+      "from": 362,
+      "to": 361
+    },
+    {
+      "from": 363,
+      "to": 362
+    },
+    {
+      "from": 364,
+      "to": 363
+    },
+    {
+      "from": 365,
+      "to": 363
+    },
+    {
+      "from": 365,
+      "to": 364
+    },
+    {
+      "from": 366,
+      "to": 362
+    },
+    {
+      "from": 366,
+      "to": 365
+    },
+    {
+      "from": 367,
+      "to": 365
+    },
+    {
+      "from": 367,
+      "to": 366
+    },
+    {
+      "from": 368,
+      "to": 364
+    },
+    {
+      "from": 368,
+      "to": 365
+    },
+    {
+      "from": 368,
+      "to": 367
+    },
+    {
+      "from": 369,
+      "to": 368
+    },
+    {
+      "from": 370,
+      "to": 366
+    },
+    {
+      "from": 370,
+      "to": 369
+    },
+    {
+      "from": 371,
+      "to": 367
+    },
+    {
+      "from": 371,
+      "to": 370
+    },
+    {
+      "from": 372,
+      "to": 371
+    },
+    {
+      "from": 373,
+      "to": 369
+    },
+    {
+      "from": 373,
+      "to": 371
+    },
+    {
+      "from": 374,
+      "to": 371
+    },
+    {
+      "from": 374,
+      "to": 373
+    },
+    {
+      "from": 375,
+      "to": 374
+    },
+    {
+      "from": 376,
+      "to": 375
+    },
+    {
+      "from": 377,
+      "to": 375
+    },
+    {
+      "from": 377,
+      "to": 376
+    },
+    {
+      "from": 378,
+      "to": 374
+    },
+    {
+      "from": 378,
+      "to": 377
+    },
+    {
+      "from": 379,
+      "to": 378
+    },
+    {
+      "from": 380,
+      "to": 376
+    },
+    {
+      "from": 380,
+      "to": 378
+    },
+    {
+      "from": 381,
+      "to": 377
+    },
+    {
+      "from": 381,
+      "to": 380
+    },
+    {
+      "from": 382,
+      "to": 380
+    },
+    {
+      "from": 382,
+      "to": 381
+    },
+    {
+      "from": 383,
+      "to": 382
+    },
+    {
+      "from": 384,
+      "to": 383
+    },
+    {
+      "from": 385,
+      "to": 382
+    },
+    {
+      "from": 385,
+      "to": 384
+    },
+    {
+      "from": 386,
+      "to": 382
+    },
+    {
+      "from": 386,
+      "to": 384
+    },
+    {
+      "from": 387,
+      "to": 386
+    },
+    {
+      "from": 388,
+      "to": 387
+    },
+    {
+      "from": 389,
+      "to": 224
+    },
+    {
+      "from": 389,
+      "to": 388
+    },
+    {
+      "from": 390,
+      "to": 387
+    },
+    {
+      "from": 390,
+      "to": 389
+    },
+    {
+      "from": 391,
+      "to": 227
+    },
+    {
+      "from": 391,
+      "to": 390
+    },
+    {
+      "from": 392,
+      "to": 391
+    },
+    {
+      "from": 393,
+      "to": 392
+    },
+    {
+      "from": 394,
+      "to": 392
+    },
+    {
+      "from": 395,
+      "to": 394
+    },
+    {
+      "from": 396,
+      "to": 395
+    },
+    {
+      "from": 397,
+      "to": 23
+    },
+    {
+      "from": 397,
+      "to": 183
+    },
+    {
+      "from": 398,
+      "to": 397
+    },
+    {
+      "from": 399,
+      "to": 23
+    },
+    {
+      "from": 399,
+      "to": 398
+    },
+    {
+      "from": 400,
+      "to": 23
+    },
+    {
+      "from": 400,
+      "to": 398
+    },
+    {
+      "from": 401,
+      "to": 400
+    },
+    {
+      "from": 402,
+      "to": 400
+    },
+    {
+      "from": 403,
+      "to": 402
+    },
+    {
+      "from": 404,
+      "to": 403
+    },
+    {
+      "from": 405,
+      "to": 402
+    },
+    {
+      "from": 405,
+      "to": 404
+    },
+    {
+      "from": 406,
+      "to": 405
+    },
+    {
+      "from": 407,
+      "to": 403
+    },
+    {
+      "from": 407,
+      "to": 405
+    },
+    {
+      "from": 408,
+      "to": 405
+    },
+    {
+      "from": 408,
+      "to": 407
+    },
+    {
+      "from": 409,
+      "to": 405
+    },
+    {
+      "from": 409,
+      "to": 408
+    },
+    {
+      "from": 410,
+      "to": 409
+    },
+    {
+      "from": 411,
+      "to": 409
+    },
+    {
+      "from": 412,
+      "to": 183
+    },
+    {
+      "from": 412,
+      "to": 411
+    },
+    {
+      "from": 413,
+      "to": 412
+    },
+    {
+      "from": 414,
+      "to": 412
+    },
+    {
+      "from": 414,
+      "to": 413
+    },
+    {
+      "from": 415,
+      "to": 412
+    },
+    {
+      "from": 415,
+      "to": 414
+    },
+    {
+      "from": 416,
+      "to": 413
+    },
+    {
+      "from": 416,
+      "to": 415
+    },
+    {
+      "from": 417,
+      "to": 416
+    },
+    {
+      "from": 418,
+      "to": 416
+    },
+    {
+      "from": 419,
+      "to": 416
+    },
+    {
+      "from": 419,
+      "to": 418
+    },
+    {
+      "from": 420,
+      "to": 416
+    },
+    {
+      "from": 420,
+      "to": 419
+    },
+    {
+      "from": 421,
+      "to": 419
+    },
+    {
+      "from": 421,
+      "to": 420
+    },
+    {
+      "from": 422,
+      "to": 92
+    },
+    {
+      "from": 422,
+      "to": 94
+    },
+    {
+      "from": 422,
+      "to": 419
+    },
+    {
+      "from": 422,
+      "to": 421
+    },
+    {
+      "from": 423,
+      "to": 95
+    },
+    {
+      "from": 423,
+      "to": 419
+    },
+    {
+      "from": 423,
+      "to": 422
+    },
+    {
+      "from": 424,
+      "to": 422
+    },
+    {
+      "from": 424,
+      "to": 423
+    },
+    {
+      "from": 425,
+      "to": 424
+    },
+    {
+      "from": 426,
+      "to": 422
+    },
+    {
+      "from": 426,
+      "to": 424
+    },
+    {
+      "from": 427,
+      "to": 426
+    },
+    {
+      "from": 428,
+      "to": 427
+    },
+    {
+      "from": 429,
+      "to": 428
+    },
+    {
+      "from": 430,
+      "to": 429
+    },
+    {
+      "from": 431,
+      "to": 430
+    },
+    {
+      "from": 432,
+      "to": 431
+    },
+    {
+      "from": 433,
+      "to": 432
+    },
+    {
+      "from": 434,
+      "to": 430
+    },
+    {
+      "from": 434,
+      "to": 432
+    },
+    {
+      "from": 435,
+      "to": 183
+    },
+    {
+      "from": 435,
+      "to": 227
+    },
+    {
+      "from": 435,
+      "to": 434
+    },
+    {
+      "from": 436,
+      "to": 434
+    },
+    {
+      "from": 436,
+      "to": 435
+    },
+    {
+      "from": 437,
+      "to": 183
+    },
+    {
+      "from": 438,
+      "to": 437
+    },
+    {
+      "from": 439,
+      "to": 183
+    },
+    {
+      "from": 439,
+      "to": 437
+    },
+    {
+      "from": 440,
+      "to": 437
+    },
+    {
+      "from": 440,
+      "to": 439
+    },
+    {
+      "from": 441,
+      "to": 437
+    },
+    {
+      "from": 441,
+      "to": 439
+    },
+    {
+      "from": 442,
+      "to": 441
+    },
+    {
+      "from": 443,
+      "to": 439
+    },
+    {
+      "from": 443,
+      "to": 442
+    },
+    {
+      "from": 444,
+      "to": 443
+    },
+    {
+      "from": 445,
+      "to": 443
+    },
+    {
+      "from": 446,
+      "to": 445
+    },
+    {
+      "from": 447,
+      "to": 446
+    },
+    {
+      "from": 448,
+      "to": 445
+    },
+    {
+      "from": 448,
+      "to": 447
+    },
+    {
+      "from": 449,
+      "to": 437
+    },
+    {
+      "from": 449,
+      "to": 445
+    },
+    {
+      "from": 449,
+      "to": 447
+    },
+    {
+      "from": 450,
+      "to": 446
+    },
+    {
+      "from": 450,
+      "to": 449
+    },
+    {
+      "from": 451,
+      "to": 450
+    },
+    {
+      "from": 452,
+      "to": 450
+    },
+    {
+      "from": 452,
+      "to": 451
+    },
+    {
+      "from": 453,
+      "to": 452
+    },
+    {
+      "from": 454,
+      "to": 452
+    },
+    {
+      "from": 454,
+      "to": 453
+    },
+    {
+      "from": 455,
+      "to": 451
+    },
+    {
+      "from": 455,
+      "to": 454
+    },
+    {
+      "from": 456,
+      "to": 455
+    },
+    {
+      "from": 457,
+      "to": 455
+    },
+    {
+      "from": 458,
+      "to": 457
+    },
+    {
+      "from": 459,
+      "to": 458
+    },
+    {
+      "from": 460,
+      "to": 458
+    },
+    {
+      "from": 461,
+      "to": 460
+    },
+    {
+      "from": 462,
+      "to": 461
+    },
+    {
+      "from": 463,
+      "to": 462
+    },
+    {
+      "from": 464,
+      "to": 463
+    },
+    {
+      "from": 465,
+      "to": 464
+    },
+    {
+      "from": 466,
+      "to": 464
+    },
+    {
+      "from": 466,
+      "to": 465
+    },
+    {
+      "from": 467,
+      "to": 466
+    },
+    {
+      "from": 468,
+      "to": 464
+    },
+    {
+      "from": 468,
+      "to": 467
+    },
+    {
+      "from": 469,
+      "to": 464
+    },
+    {
+      "from": 469,
+      "to": 467
+    },
+    {
+      "from": 470,
+      "to": 466
+    },
+    {
+      "from": 470,
+      "to": 469
+    },
+    {
+      "from": 471,
+      "to": 467
+    },
+    {
+      "from": 471,
+      "to": 470
+    },
+    {
+      "from": 472,
+      "to": 471
+    },
+    {
+      "from": 473,
+      "to": 472
+    },
+    {
+      "from": 474,
+      "to": 227
+    },
+    {
+      "from": 474,
+      "to": 471
+    },
+    {
+      "from": 474,
+      "to": 473
+    },
+    {
+      "from": 475,
+      "to": 474
+    },
+    {
+      "from": 476,
+      "to": 461
+    },
+    {
+      "from": 476,
+      "to": 475
+    },
+    {
+      "from": 477,
+      "to": 213
+    },
+    {
+      "from": 477,
+      "to": 227
+    },
+    {
+      "from": 478,
+      "to": 182
+    },
+    {
+      "from": 478,
+      "to": 477
+    },
+    {
+      "from": 479,
+      "to": 478
+    },
+    {
+      "from": 480,
+      "to": 479
+    },
+    {
+      "from": 481,
+      "to": 480
+    },
+    {
+      "from": 482,
+      "to": 478
+    },
+    {
+      "from": 482,
+      "to": 481
+    },
+    {
+      "from": 483,
+      "to": 480
+    },
+    {
+      "from": 483,
+      "to": 482
+    },
+    {
+      "from": 484,
+      "to": 480
+    },
+    {
+      "from": 484,
+      "to": 483
+    },
+    {
+      "from": 485,
+      "to": 484
+    },
+    {
+      "from": 486,
+      "to": 484
+    },
+    {
+      "from": 486,
+      "to": 485
+    },
+    {
+      "from": 487,
+      "to": 483
+    },
+    {
+      "from": 487,
+      "to": 486
+    },
+    {
+      "from": 488,
+      "to": 487
+    },
+    {
+      "from": 489,
+      "to": 487
+    },
+    {
+      "from": 489,
+      "to": 488
+    },
+    {
+      "from": 490,
+      "to": 489
+    },
+    {
+      "from": 491,
+      "to": 487
+    },
+    {
+      "from": 491,
+      "to": 490
+    },
+    {
+      "from": 492,
+      "to": 491
+    },
+    {
+      "from": 493,
+      "to": 492
+    },
+    {
+      "from": 494,
+      "to": 493
+    },
+    {
+      "from": 495,
+      "to": 485
+    },
+    {
+      "from": 495,
+      "to": 493
+    },
+    {
+      "from": 496,
+      "to": 493
+    },
+    {
+      "from": 496,
+      "to": 495
+    },
+    {
+      "from": 497,
+      "to": 496
+    },
+    {
+      "from": 498,
+      "to": 497
+    },
+    {
+      "from": 499,
+      "to": 498
+    },
+    {
+      "from": 500,
+      "to": 499
+    },
+    {
+      "from": 501,
+      "to": 500
+    },
+    {
+      "from": 502,
+      "to": 501
+    },
+    {
+      "from": 503,
+      "to": 502
+    },
+    {
+      "from": 504,
+      "to": 500
+    },
+    {
+      "from": 504,
+      "to": 503
+    },
+    {
+      "from": 505,
+      "to": 501
+    },
+    {
+      "from": 505,
+      "to": 504
+    },
+    {
+      "from": 506,
+      "to": 505
+    },
+    {
+      "from": 507,
+      "to": 506
+    },
+    {
+      "from": 508,
+      "to": 505
+    },
+    {
+      "from": 508,
+      "to": 507
+    },
+    {
+      "from": 509,
+      "to": 508
+    },
+    {
+      "from": 510,
+      "to": 509
+    },
+    {
+      "from": 511,
+      "to": 509
+    },
+    {
+      "from": 511,
+      "to": 510
+    },
+    {
+      "from": 512,
+      "to": 511
+    },
+    {
+      "from": 513,
+      "to": 512
+    },
+    {
+      "from": 514,
+      "to": 513
+    },
+    {
+      "from": 515,
+      "to": 514
+    },
+    {
+      "from": 516,
+      "to": 514
+    },
+    {
+      "from": 517,
+      "to": 227
+    },
+    {
+      "from": 517,
+      "to": 495
+    },
+    {
+      "from": 518,
+      "to": 517
+    },
+    {
+      "from": 519,
+      "to": 257
+    },
+    {
+      "from": 519,
+      "to": 518
+    },
+    {
+      "from": 520,
+      "to": 257
+    },
+    {
+      "from": 520,
+      "to": 483
+    },
+    {
+      "from": 520,
+      "to": 518
+    },
+    {
+      "from": 521,
+      "to": 501
+    },
+    {
+      "from": 521,
+      "to": 517
+    },
+    {
+      "from": 521,
+      "to": 520
+    },
+    {
+      "from": 522,
+      "to": 521
+    },
+    {
+      "from": 523,
+      "to": 521
+    },
+    {
+      "from": 523,
+      "to": 522
+    },
+    {
+      "from": 524,
+      "to": 523
+    },
+    {
+      "from": 525,
+      "to": 258
+    },
+    {
+      "from": 525,
+      "to": 523
+    },
+    {
+      "from": 526,
+      "to": 525
+    },
+    {
+      "from": 527,
+      "to": 525
+    },
+    {
+      "from": 528,
+      "to": 527
+    },
+    {
+      "from": 529,
+      "to": 200
+    },
+    {
+      "from": 529,
+      "to": 528
+    },
+    {
+      "from": 530,
+      "to": 529
+    },
+    {
+      "from": 531,
+      "to": 221
+    },
+    {
+      "from": 531,
+      "to": 529
+    },
+    {
+      "from": 532,
+      "to": 222
+    },
+    {
+      "from": 532,
+      "to": 531
+    },
+    {
+      "from": 533,
+      "to": 532
+    },
+    {
+      "from": 534,
+      "to": 532
+    },
+    {
+      "from": 535,
+      "to": 532
+    },
+    {
+      "from": 536,
+      "to": 535
+    },
+    {
+      "from": 537,
+      "to": 536
+    },
+    {
+      "from": 538,
+      "to": 537
+    },
+    {
+      "from": 539,
+      "to": 537
+    },
+    {
+      "from": 539,
+      "to": 538
+    },
+    {
+      "from": 540,
+      "to": 539
+    },
+    {
+      "from": 541,
+      "to": 512
+    },
+    {
+      "from": 541,
+      "to": 538
+    },
+    {
+      "from": 541,
+      "to": 540
+    },
+    {
+      "from": 542,
+      "to": 541
+    },
+    {
+      "from": 543,
+      "to": 542
+    },
+    {
+      "from": 544,
+      "to": 543
+    },
+    {
+      "from": 545,
+      "to": 543
+    },
+    {
+      "from": 545,
+      "to": 544
+    },
+    {
+      "from": 546,
+      "to": 545
+    },
+    {
+      "from": 547,
+      "to": 546
+    },
+    {
+      "from": 548,
+      "to": 545
+    },
+    {
+      "from": 548,
+      "to": 547
+    },
+    {
+      "from": 549,
+      "to": 545
+    },
+    {
+      "from": 549,
+      "to": 547
+    },
+    {
+      "from": 550,
+      "to": 345
+    },
+    {
+      "from": 550,
+      "to": 390
+    },
+    {
+      "from": 550,
+      "to": 517
+    },
+    {
+      "from": 550,
+      "to": 549
+    },
+    {
+      "from": 551,
+      "to": 259
+    },
+    {
+      "from": 551,
+      "to": 267
+    },
+    {
+      "from": 551,
+      "to": 550
+    },
+    {
+      "from": 552,
+      "to": 183
+    },
+    {
+      "from": 552,
+      "to": 224
+    },
+    {
+      "from": 552,
+      "to": 551
+    },
+    {
+      "from": 553,
+      "to": 184
+    },
+    {
+      "from": 553,
+      "to": 227
+    },
+    {
+      "from": 553,
+      "to": 552
+    },
+    {
+      "from": 554,
+      "to": 495
+    },
+    {
+      "from": 554,
+      "to": 553
+    },
+    {
+      "from": 555,
+      "to": 554
+    },
+    {
+      "from": 556,
+      "to": 539
+    },
+    {
+      "from": 556,
+      "to": 554
+    },
+    {
+      "from": 557,
+      "to": 505
+    },
+    {
+      "from": 557,
+      "to": 556
+    },
+    {
+      "from": 558,
+      "to": 540
+    },
+    {
+      "from": 558,
+      "to": 541
+    },
+    {
+      "from": 558,
+      "to": 554
+    },
+    {
+      "from": 558,
+      "to": 557
+    },
+    {
+      "from": 559,
+      "to": 558
+    },
+    {
+      "from": 560,
+      "to": 556
+    },
+    {
+      "from": 560,
+      "to": 559
+    },
+    {
+      "from": 561,
+      "to": 559
+    },
+    {
+      "from": 561,
+      "to": 560
+    }
+  ]
+}

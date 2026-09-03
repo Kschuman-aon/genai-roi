@@ -1,0 +1,15 @@
+{
+  "FOUND": "Generative AI & LLM Foundations",
+  "TOKEN": "Tokenization & Token Economics",
+  "INFRA": "Compute, Infrastructure & Pricing",
+  "EFFIC": "Token & Cost Efficiency Techniques",
+  "FINRO": "Financial & ROI Fundamentals",
+  "METRC": "ROI Metrics & KPIs",
+  "DATOP": "Data Collection, Instrumentation & Observability",
+  "SDLC": "Software Development Lifecycle Cost Optimization",
+  "DSLC": "Data Science Lifecycle Cost Optimization",
+  "VNDR": "Vendor, Model & Build-vs-Buy Economics",
+  "RISK": "Risk, Governance & Hidden Costs",
+  "COMM": "Executive Communication & Financial Literacy",
+  "RPRT": "Report Design, Visualization & Capstone"
+}
