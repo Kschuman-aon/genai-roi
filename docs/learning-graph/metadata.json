@@ -1,0 +1,10 @@
+{
+  "title": "Measuring GenAI ROI: Token Efficiency and Executive Financial Reporting",
+  "description": "A learning graph of 561 concepts for an IT-professional course that teaches how to measure the ROI of generative AI systems, understand token efficiency, optimize cost across the software development and data science lifecycles, and produce a high-quality, executive-ready financial ROI report.",
+  "creator": "Katie Jo Schuman",
+  "date": "2026-08-20",
+  "version": "1.0",
+  "format": "Learning Graph JSON v1.0",
+  "schema": "https://raw.githubusercontent.com/dmccreary/learning-graphs/refs/heads/main/src/schema/learning-graph-schema.json",
+  "license": "CC BY-NC-SA 4.0 DEED"
+}
