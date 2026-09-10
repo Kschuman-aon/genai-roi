@@ -1,0 +1,4385 @@
+{
+  "terms": [
+    {
+      "term": "A/B Testing Prompts",
+      "related_terms": [
+        "Prompt Optimization"
+      ],
+      "contrasts_with": [],
+      "category": "Token & Cost Efficiency Techniques"
+    },
+    {
+      "term": "Access Control Cost",
+      "related_terms": [],
+      "contrasts_with": [],
+      "category": "Risk, Governance & Hidden Costs"
+    },
+    {
+      "term": "Actionable Insight Development",
+      "related_terms": [
+        "Recommendation Framing"
+      ],
+      "contrasts_with": [],
+      "category": "Executive Communication & Financial Literacy"
+    },
+    {
+      "term": "Active Learning Cost Reduction",
+      "related_terms": [
+        "Data Labeling Cost"
+      ],
+      "contrasts_with": [],
+      "category": "Data Science Lifecycle Cost Optimization"
+    },
+    {
+      "term": "Adoption Rate Metric",
+      "related_terms": [],
+      "contrasts_with": [],
+      "category": "ROI Metrics & KPIs"
+    },
+    {
+      "term": "AI Governance Framework",
+      "related_terms": [
+        "Model Governance Board"
+      ],
+      "contrasts_with": [],
+      "category": "Risk, Governance & Hidden Costs"
+    },
+    {
+      "term": "AI Pair Programming",
+      "related_terms": [],
+      "contrasts_with": [
+        "AI-Assisted Code Generation"
+      ],
+      "category": "Software Development Lifecycle Cost Optimization"
+    },
+    {
+      "term": "AI Risk Register",
+      "related_terms": [
+        "Risk Reporting To Executives"
+      ],
+      "contrasts_with": [],
+      "category": "Risk, Governance & Hidden Costs"
+    },
+    {
+      "term": "AI-Assisted Code Generation",
+      "related_terms": [
+        "Coding Phase Cost",
+        "Technical Debt From AI Code"
+      ],
+      "contrasts_with": [],
+      "category": "Software Development Lifecycle Cost Optimization"
+    },
+    {
+      "term": "AI-Assisted Data Labeling",
+      "related_terms": [
+        "Data Labeling Cost"
+      ],
+      "contrasts_with": [],
+      "category": "Data Science Lifecycle Cost Optimization"
+    },
+    {
+      "term": "AI-Assisted Feature Engineering",
+      "related_terms": [
+        "Feature Engineering Cost"
+      ],
+      "contrasts_with": [],
+      "category": "Data Science Lifecycle Cost Optimization"
+    },
+    {
+      "term": "AI-Assisted Requirements",
+      "related_terms": [
+        "Requirements Phase Cost"
+      ],
+      "contrasts_with": [],
+      "category": "Software Development Lifecycle Cost Optimization"
+    },
+    {
+      "term": "AI-Generated Test Cases",
+      "related_terms": [
+        "Test Coverage Automation"
+      ],
+      "contrasts_with": [],
+      "category": "Software Development Lifecycle Cost Optimization"
+    },
+    {
+      "term": "Alerting Threshold Design",
+      "related_terms": [
+        "Real-Time Alert Fatigue"
+      ],
+      "contrasts_with": [],
+      "category": "Data Collection, Instrumentation & Observability"
+    },
+    {
+      "term": "Amortization",
+      "related_terms": [],
+      "contrasts_with": [
+        "Depreciation"
+      ],
+      "category": "Financial & ROI Fundamentals"
+    },
+    {
+      "term": "Annotation Vendor Management",
+      "related_terms": [
+        "Data Annotation Quality Control"
+      ],
+      "contrasts_with": [],
+      "category": "Data Science Lifecycle Cost Optimization"
+    },
+    {
+      "term": "Anomaly Detection In Spend",
+      "related_terms": [
+        "Real-Time Cost Monitoring"
+      ],
+      "contrasts_with": [],
+      "category": "Data Collection, Instrumentation & Observability"
+    },
+    {
+      "term": "API Abstraction Layer",
+      "related_terms": [
+        "Model Portability"
+      ],
+      "contrasts_with": [],
+      "category": "Vendor, Model & Build-vs-Buy Economics"
+    },
+    {
+      "term": "API Call Logging",
+      "related_terms": [],
+      "contrasts_with": [
+        "Token Usage Logging"
+      ],
+      "category": "Data Collection, Instrumentation & Observability"
+    },
+    {
+      "term": "API Endpoint",
+      "related_terms": [],
+      "contrasts_with": [],
+      "category": "Generative AI & LLM Foundations"
+    },
+    {
+      "term": "Appendix Design",
+      "related_terms": [],
+      "contrasts_with": [],
+      "category": "Report Design, Visualization & Capstone"
+    },
+    {
+      "term": "Artificial Intelligence",
+      "related_terms": [
+        "Machine Learning",
+        "Generative AI"
+      ],
+      "contrasts_with": [],
+      "category": "Generative AI & LLM Foundations"
+    },
+    {
+      "term": "Assumption Transparency",
+      "related_terms": [
+        "Sensitivity Analysis"
+      ],
+      "contrasts_with": [],
+      "category": "Executive Communication & Financial Literacy"
+    },
+    {
+      "term": "Asynchronous Processing",
+      "related_terms": [],
+      "contrasts_with": [
+        "Streaming Response"
+      ],
+      "category": "Token & Cost Efficiency Techniques"
+    },
+    {
+      "term": "Attention Mechanism",
+      "related_terms": [
+        "Self-Attention",
+        "Context Length"
+      ],
+      "contrasts_with": [],
+      "category": "Generative AI & LLM Foundations"
+    },
+    {
+      "term": "Audience-Specific Framing",
+      "related_terms": [
+        "CFO Perspective",
+        "CTO Perspective"
+      ],
+      "contrasts_with": [],
+      "category": "Executive Communication & Financial Literacy"
+    },
+    {
+      "term": "Audit Requirement Cost",
+      "related_terms": [],
+      "contrasts_with": [
+        "Model Validation Cost"
+      ],
+      "category": "Risk, Governance & Hidden Costs"
+    },
+    {
+      "term": "Audit Trail For Spend",
+      "related_terms": [
+        "Audit Requirement Cost"
+      ],
+      "contrasts_with": [],
+      "category": "Data Collection, Instrumentation & Observability"
+    },
+    {
+      "term": "Automated Code Review",
+      "related_terms": [
+        "Code Review Time Saved"
+      ],
+      "contrasts_with": [],
+      "category": "Software Development Lifecycle Cost Optimization"
+    },
+    {
+      "term": "Automated Documentation",
+      "related_terms": [],
+      "contrasts_with": [],
+      "category": "Software Development Lifecycle Cost Optimization"
+    },
+    {
+      "term": "Automation Rate Metric",
+      "related_terms": [
+        "Deflection Rate Metric"
+      ],
+      "contrasts_with": [],
+      "category": "ROI Metrics & KPIs"
+    },
+    {
+      "term": "AutoML Cost Tradeoff",
+      "related_terms": [
+        "Hyperparameter Tuning Cost"
+      ],
+      "contrasts_with": [],
+      "category": "Data Science Lifecycle Cost Optimization"
+    },
+    {
+      "term": "Autoscaling",
+      "related_terms": [
+        "Peak Load Provisioning"
+      ],
+      "contrasts_with": [],
+      "category": "Compute, Infrastructure & Pricing"
+    },
+    {
+      "term": "Avoiding Overstated Claims",
+      "related_terms": [
+        "Ethical Findings Communication"
+      ],
+      "contrasts_with": [],
+      "category": "Executive Communication & Financial Literacy"
+    },
+    {
+      "term": "Balance Sheet Basics",
+      "related_terms": [
+        "Income Statement"
+      ],
+      "contrasts_with": [],
+      "category": "Financial & ROI Fundamentals"
+    },
+    {
+      "term": "Bar Chart For Cost Comparison",
+      "related_terms": [],
+      "contrasts_with": [
+        "Line Chart For Trend Analysis"
+      ],
+      "category": "Report Design, Visualization & Capstone"
+    },
+    {
+      "term": "Baseline Cost Model",
+      "related_terms": [
+        "Counterfactual Cost Estimate"
+      ],
+      "contrasts_with": [],
+      "category": "Financial & ROI Fundamentals"
+    },
+    {
+      "term": "Batch API Discount",
+      "related_terms": [],
+      "contrasts_with": [
+        "Cached Token Discount"
+      ],
+      "category": "Tokenization & Token Economics"
+    },
+    {
+      "term": "Batch Inference",
+      "related_terms": [],
+      "contrasts_with": [
+        "Streaming Response"
+      ],
+      "category": "Generative AI & LLM Foundations"
+    },
+    {
+      "term": "Batch Processing Strategy",
+      "related_terms": [
+        "Batch Inference"
+      ],
+      "contrasts_with": [],
+      "category": "Token & Cost Efficiency Techniques"
+    },
+    {
+      "term": "Batch Size Tuning",
+      "related_terms": [],
+      "contrasts_with": [
+        "Batch Inference"
+      ],
+      "category": "Compute, Infrastructure & Pricing"
+    },
+    {
+      "term": "Benchmarking Against Peers",
+      "related_terms": [
+        "Industry Comparison Framing"
+      ],
+      "contrasts_with": [],
+      "category": "Executive Communication & Financial Literacy"
+    },
+    {
+      "term": "Bias And Fairness Risk",
+      "related_terms": [
+        "Explainability Requirement Cost"
+      ],
+      "contrasts_with": [],
+      "category": "Risk, Governance & Hidden Costs"
+    },
+    {
+      "term": "Billing API Integration",
+      "related_terms": [
+        "Vendor Invoice Reconciliation"
+      ],
+      "contrasts_with": [],
+      "category": "Data Collection, Instrumentation & Observability"
+    },
+    {
+      "term": "Blended Token Rate",
+      "related_terms": [
+        "Token Cost Benchmark"
+      ],
+      "contrasts_with": [],
+      "category": "Tokenization & Token Economics"
+    },
+    {
+      "term": "Board-Level Communication",
+      "related_terms": [
+        "Bottom-Line-Up-Front Principle"
+      ],
+      "contrasts_with": [],
+      "category": "Executive Communication & Financial Literacy"
+    },
+    {
+      "term": "Bottom-Line-Up-Front Principle",
+      "related_terms": [
+        "Executive Attention Span",
+        "One-Page Summary Technique"
+      ],
+      "contrasts_with": [],
+      "category": "Executive Communication & Financial Literacy"
+    },
+    {
+      "term": "Break-Even Analysis",
+      "related_terms": [
+        "Payback Period"
+      ],
+      "contrasts_with": [],
+      "category": "Financial & ROI Fundamentals"
+    },
+    {
+      "term": "Budget Cycle",
+      "related_terms": [],
+      "contrasts_with": [],
+      "category": "Financial & ROI Fundamentals"
+    },
+    {
+      "term": "Budget Threshold",
+      "related_terms": [
+        "Cost Alerting"
+      ],
+      "contrasts_with": [],
+      "category": "Compute, Infrastructure & Pricing"
+    },
+    {
+      "term": "Budget Variance Analysis",
+      "related_terms": [
+        "Spend Forecasting"
+      ],
+      "contrasts_with": [],
+      "category": "Data Collection, Instrumentation & Observability"
+    },
+    {
+      "term": "Bug Triage Automation",
+      "related_terms": [
+        "Mean Time To Resolution"
+      ],
+      "contrasts_with": [],
+      "category": "Software Development Lifecycle Cost Optimization"
+    },
+    {
+      "term": "Build Time Reduction",
+      "related_terms": [
+        "CI/CD Pipeline Cost"
+      ],
+      "contrasts_with": [],
+      "category": "Software Development Lifecycle Cost Optimization"
+    },
+    {
+      "term": "Build Vs Buy Case Study",
+      "related_terms": [
+        "Build Vs Buy Decision"
+      ],
+      "contrasts_with": [],
+      "category": "Vendor, Model & Build-vs-Buy Economics"
+    },
+    {
+      "term": "Build Vs Buy Decision",
+      "related_terms": [
+        "Total Vendor Cost Model"
+      ],
+      "contrasts_with": [],
+      "category": "Vendor, Model & Build-vs-Buy Economics"
+    },
+    {
+      "term": "Business Case",
+      "related_terms": [
+        "Cost-Benefit Analysis"
+      ],
+      "contrasts_with": [],
+      "category": "Financial & ROI Fundamentals"
+    },
+    {
+      "term": "Byte Pair Encoding",
+      "related_terms": [],
+      "contrasts_with": [
+        "Subword Tokenization"
+      ],
+      "category": "Tokenization & Token Economics"
+    },
+    {
+      "term": "Cached Token Discount",
+      "related_terms": [],
+      "contrasts_with": [
+        "Batch API Discount"
+      ],
+      "category": "Tokenization & Token Economics"
+    },
+    {
+      "term": "Canary Release For Models",
+      "related_terms": [],
+      "contrasts_with": [
+        "Champion-Challenger Testing"
+      ],
+      "category": "Data Science Lifecycle Cost Optimization"
+    },
+    {
+      "term": "Capacity Planning",
+      "related_terms": [
+        "Compute Utilization Rate"
+      ],
+      "contrasts_with": [],
+      "category": "Compute, Infrastructure & Pricing"
+    },
+    {
+      "term": "Capital Expenditure",
+      "related_terms": [],
+      "contrasts_with": [
+        "Operating Expenditure"
+      ],
+      "category": "Financial & ROI Fundamentals"
+    },
+    {
+      "term": "Capstone Cost Model Build",
+      "related_terms": [
+        "Baseline Cost Model"
+      ],
+      "contrasts_with": [],
+      "category": "Report Design, Visualization & Capstone"
+    },
+    {
+      "term": "Capstone Data Collection",
+      "related_terms": [
+        "Metric Baseline Capture"
+      ],
+      "contrasts_with": [],
+      "category": "Report Design, Visualization & Capstone"
+    },
+    {
+      "term": "Capstone Executive Summary Draft",
+      "related_terms": [
+        "Executive Summary Writing"
+      ],
+      "contrasts_with": [],
+      "category": "Report Design, Visualization & Capstone"
+    },
+    {
+      "term": "Capstone Peer Critique",
+      "related_terms": [
+        "Peer Review Process"
+      ],
+      "contrasts_with": [],
+      "category": "Report Design, Visualization & Capstone"
+    },
+    {
+      "term": "Capstone Presentation Delivery",
+      "related_terms": [
+        "Executive Presentation Design"
+      ],
+      "contrasts_with": [],
+      "category": "Report Design, Visualization & Capstone"
+    },
+    {
+      "term": "Capstone Report Finalization",
+      "related_terms": [
+        "Iterative Report Refinement"
+      ],
+      "contrasts_with": [],
+      "category": "Report Design, Visualization & Capstone"
+    },
+    {
+      "term": "Capstone Report Full Draft",
+      "related_terms": [
+        "Executive Report Structure"
+      ],
+      "contrasts_with": [],
+      "category": "Report Design, Visualization & Capstone"
+    },
+    {
+      "term": "Capstone Report Planning",
+      "related_terms": [
+        "Report Scope Definition"
+      ],
+      "contrasts_with": [],
+      "category": "Report Design, Visualization & Capstone"
+    },
+    {
+      "term": "Capstone ROI Calculation",
+      "related_terms": [
+        "Return On Investment"
+      ],
+      "contrasts_with": [],
+      "category": "Report Design, Visualization & Capstone"
+    },
+    {
+      "term": "Carbon Cost Of Compute",
+      "related_terms": [],
+      "contrasts_with": [],
+      "category": "Compute, Infrastructure & Pricing"
+    },
+    {
+      "term": "Career Application Of Skills",
+      "related_terms": [],
+      "contrasts_with": [],
+      "category": "Report Design, Visualization & Capstone"
+    },
+    {
+      "term": "CFO Perspective",
+      "related_terms": [],
+      "contrasts_with": [
+        "CTO Perspective"
+      ],
+      "category": "Executive Communication & Financial Literacy"
+    },
+    {
+      "term": "Chain-Of-Thought Prompting",
+      "related_terms": [
+        "Quality-Cost Tradeoff"
+      ],
+      "contrasts_with": [],
+      "category": "Generative AI & LLM Foundations"
+    },
+    {
+      "term": "Champion-Challenger Testing",
+      "related_terms": [],
+      "contrasts_with": [
+        "Canary Release For Models"
+      ],
+      "category": "Data Science Lifecycle Cost Optimization"
+    },
+    {
+      "term": "Change Management Cost",
+      "related_terms": [
+        "Staff Retraining Cost"
+      ],
+      "contrasts_with": [],
+      "category": "Risk, Governance & Hidden Costs"
+    },
+    {
+      "term": "Chargeback Model",
+      "related_terms": [],
+      "contrasts_with": [
+        "Showback Model"
+      ],
+      "category": "Financial & ROI Fundamentals"
+    },
+    {
+      "term": "Chart Labeling Best Practice",
+      "related_terms": [],
+      "contrasts_with": [],
+      "category": "Report Design, Visualization & Capstone"
+    },
+    {
+      "term": "Chart Type Selection",
+      "related_terms": [
+        "Data Visualization Principles"
+      ],
+      "contrasts_with": [],
+      "category": "Report Design, Visualization & Capstone"
+    },
+    {
+      "term": "Chunking Strategy",
+      "related_terms": [
+        "Retrieval Chunk Size"
+      ],
+      "contrasts_with": [],
+      "category": "Tokenization & Token Economics"
+    },
+    {
+      "term": "CI/CD Pipeline Cost",
+      "related_terms": [
+        "Build Time Reduction"
+      ],
+      "contrasts_with": [],
+      "category": "Software Development Lifecycle Cost Optimization"
+    },
+    {
+      "term": "CIO Perspective",
+      "related_terms": [],
+      "contrasts_with": [
+        "CTO Perspective"
+      ],
+      "category": "Executive Communication & Financial Literacy"
+    },
+    {
+      "term": "Cloud Compute Pricing",
+      "related_terms": [
+        "On-Demand Pricing",
+        "Reserved Capacity Pricing"
+      ],
+      "contrasts_with": [],
+      "category": "Compute, Infrastructure & Pricing"
+    },
+    {
+      "term": "Cloud-Hosted Model",
+      "related_terms": [],
+      "contrasts_with": [
+        "On-Premises Deployment"
+      ],
+      "category": "Generative AI & LLM Foundations"
+    },
+    {
+      "term": "Code Completion Tool Cost",
+      "related_terms": [
+        "Seat-Based Licensing"
+      ],
+      "contrasts_with": [],
+      "category": "Software Development Lifecycle Cost Optimization"
+    },
+    {
+      "term": "Code Generation Quality Review",
+      "related_terms": [
+        "Vibe Coding Risk"
+      ],
+      "contrasts_with": [],
+      "category": "Software Development Lifecycle Cost Optimization"
+    },
+    {
+      "term": "Code Quality Regression Risk",
+      "related_terms": [
+        "Technical Debt From AI Code"
+      ],
+      "contrasts_with": [],
+      "category": "Software Development Lifecycle Cost Optimization"
+    },
+    {
+      "term": "Code Review Cycle Time",
+      "related_terms": [
+        "Pull Request Turnaround"
+      ],
+      "contrasts_with": [],
+      "category": "Software Development Lifecycle Cost Optimization"
+    },
+    {
+      "term": "Code Review Time Saved",
+      "related_terms": [
+        "Automated Code Review"
+      ],
+      "contrasts_with": [],
+      "category": "ROI Metrics & KPIs"
+    },
+    {
+      "term": "Coding Phase Cost",
+      "related_terms": [
+        "AI-Assisted Code Generation"
+      ],
+      "contrasts_with": [],
+      "category": "Software Development Lifecycle Cost Optimization"
+    },
+    {
+      "term": "Cold Start Latency",
+      "related_terms": [
+        "Warm Pool"
+      ],
+      "contrasts_with": [],
+      "category": "Compute, Infrastructure & Pricing"
+    },
+    {
+      "term": "Color Use In Financial Charts",
+      "related_terms": [
+        "Data Visualization Principles"
+      ],
+      "contrasts_with": [],
+      "category": "Report Design, Visualization & Capstone"
+    },
+    {
+      "term": "Committed Spend Discount",
+      "related_terms": [],
+      "contrasts_with": [
+        "Reserved Capacity Pricing"
+      ],
+      "category": "Vendor, Model & Build-vs-Buy Economics"
+    },
+    {
+      "term": "Communication Feedback Loop",
+      "related_terms": [
+        "Iterative Report Refinement"
+      ],
+      "contrasts_with": [],
+      "category": "Executive Communication & Financial Literacy"
+    },
+    {
+      "term": "Community Support Risk",
+      "related_terms": [],
+      "contrasts_with": [],
+      "category": "Vendor, Model & Build-vs-Buy Economics"
+    },
+    {
+      "term": "Competitive Bidding Process",
+      "related_terms": [
+        "Vendor Pricing Comparison"
+      ],
+      "contrasts_with": [],
+      "category": "Vendor, Model & Build-vs-Buy Economics"
+    },
+    {
+      "term": "Compliance Risk",
+      "related_terms": [
+        "Regulatory Uncertainty Cost"
+      ],
+      "contrasts_with": [],
+      "category": "Risk, Governance & Hidden Costs"
+    },
+    {
+      "term": "Compute Cost",
+      "related_terms": [
+        "Cloud Compute Pricing"
+      ],
+      "contrasts_with": [],
+      "category": "Compute, Infrastructure & Pricing"
+    },
+    {
+      "term": "Compute Reuse Across Experiments",
+      "related_terms": [],
+      "contrasts_with": [],
+      "category": "Data Science Lifecycle Cost Optimization"
+    },
+    {
+      "term": "Compute Utilization Rate",
+      "related_terms": [
+        "Idle Capacity Cost"
+      ],
+      "contrasts_with": [],
+      "category": "Compute, Infrastructure & Pricing"
+    },
+    {
+      "term": "Concurrency Limit",
+      "related_terms": [],
+      "contrasts_with": [],
+      "category": "Compute, Infrastructure & Pricing"
+    },
+    {
+      "term": "Confidence Interval Framing",
+      "related_terms": [
+        "Uncertainty Communication"
+      ],
+      "contrasts_with": [],
+      "category": "Executive Communication & Financial Literacy"
+    },
+    {
+      "term": "Confounding Factor",
+      "related_terms": [
+        "Metric Attribution"
+      ],
+      "contrasts_with": [],
+      "category": "ROI Metrics & KPIs"
+    },
+    {
+      "term": "Content Filtering Cost",
+      "related_terms": [],
+      "contrasts_with": [
+        "Guardrail Overhead Cost"
+      ],
+      "category": "Token & Cost Efficiency Techniques"
+    },
+    {
+      "term": "Context Compression",
+      "related_terms": [
+        "Prompt Compression"
+      ],
+      "contrasts_with": [],
+      "category": "Token & Cost Efficiency Techniques"
+    },
+    {
+      "term": "Context Length",
+      "related_terms": [
+        "Context Window"
+      ],
+      "contrasts_with": [],
+      "category": "Tokenization & Token Economics"
+    },
+    {
+      "term": "Context Pruning",
+      "related_terms": [],
+      "contrasts_with": [
+        "Token Truncation"
+      ],
+      "category": "Token & Cost Efficiency Techniques"
+    },
+    {
+      "term": "Context Window",
+      "related_terms": [
+        "Token Limit",
+        "Context Length"
+      ],
+      "contrasts_with": [],
+      "category": "Generative AI & LLM Foundations"
+    },
+    {
+      "term": "Context Window Cost",
+      "related_terms": [
+        "Long-Context Pricing"
+      ],
+      "contrasts_with": [],
+      "category": "Tokenization & Token Economics"
+    },
+    {
+      "term": "Contingency Budget",
+      "related_terms": [
+        "AI Risk Register"
+      ],
+      "contrasts_with": [],
+      "category": "Risk, Governance & Hidden Costs"
+    },
+    {
+      "term": "Continuous Cost Optimization",
+      "related_terms": [
+        "Token Efficiency Audit"
+      ],
+      "contrasts_with": [],
+      "category": "Token & Cost Efficiency Techniques"
+    },
+    {
+      "term": "Continuous Improvement Plan",
+      "related_terms": [
+        "Continuous Cost Optimization"
+      ],
+      "contrasts_with": [],
+      "category": "Report Design, Visualization & Capstone"
+    },
+    {
+      "term": "Contract Term Length Tradeoff",
+      "related_terms": [
+        "Long-Term Contract Risk"
+      ],
+      "contrasts_with": [],
+      "category": "Vendor, Model & Build-vs-Buy Economics"
+    },
+    {
+      "term": "Control Group Comparison",
+      "related_terms": [],
+      "contrasts_with": [
+        "Pre/Post Comparison Study"
+      ],
+      "category": "ROI Metrics & KPIs"
+    },
+    {
+      "term": "Conversation History Cost",
+      "related_terms": [
+        "Multi-Turn Token Growth"
+      ],
+      "contrasts_with": [],
+      "category": "Tokenization & Token Economics"
+    },
+    {
+      "term": "Cost Alerting",
+      "related_terms": [
+        "Budget Threshold"
+      ],
+      "contrasts_with": [],
+      "category": "Compute, Infrastructure & Pricing"
+    },
+    {
+      "term": "Cost Allocation",
+      "related_terms": [
+        "Cost Center",
+        "Chargeback Model"
+      ],
+      "contrasts_with": [],
+      "category": "Financial & ROI Fundamentals"
+    },
+    {
+      "term": "Cost Attribution Tagging",
+      "related_terms": [
+        "Cost Tagging Taxonomy"
+      ],
+      "contrasts_with": [],
+      "category": "Data Collection, Instrumentation & Observability"
+    },
+    {
+      "term": "Cost Avoidance",
+      "related_terms": [
+        "Cost Reduction Vs Avoidance"
+      ],
+      "contrasts_with": [],
+      "category": "Financial & ROI Fundamentals"
+    },
+    {
+      "term": "Cost Center",
+      "related_terms": [
+        "Cost Allocation"
+      ],
+      "contrasts_with": [],
+      "category": "Financial & ROI Fundamentals"
+    },
+    {
+      "term": "Cost Dashboard Design",
+      "related_terms": [
+        "Infrastructure Cost Dashboard"
+      ],
+      "contrasts_with": [],
+      "category": "Data Collection, Instrumentation & Observability"
+    },
+    {
+      "term": "Cost Data Normalization",
+      "related_terms": [
+        "Cross-Provider Cost Aggregation"
+      ],
+      "contrasts_with": [],
+      "category": "Data Collection, Instrumentation & Observability"
+    },
+    {
+      "term": "Cost Data Warehouse",
+      "related_terms": [
+        "Cross-Provider Cost Aggregation"
+      ],
+      "contrasts_with": [],
+      "category": "Data Collection, Instrumentation & Observability"
+    },
+    {
+      "term": "Cost Driver Tree Diagram",
+      "related_terms": [],
+      "contrasts_with": [],
+      "category": "Report Design, Visualization & Capstone"
+    },
+    {
+      "term": "Cost Observability Roadmap",
+      "related_terms": [
+        "Instrumentation Maturity Model"
+      ],
+      "contrasts_with": [],
+      "category": "Data Collection, Instrumentation & Observability"
+    },
+    {
+      "term": "Cost Per Outcome",
+      "related_terms": [],
+      "contrasts_with": [
+        "Cost Per Transaction"
+      ],
+      "category": "ROI Metrics & KPIs"
+    },
+    {
+      "term": "Cost Per Query",
+      "related_terms": [],
+      "contrasts_with": [
+        "Cost Per User"
+      ],
+      "category": "Financial & ROI Fundamentals"
+    },
+    {
+      "term": "Cost Per Transaction",
+      "related_terms": [
+        "Unit Economics"
+      ],
+      "contrasts_with": [],
+      "category": "Financial & ROI Fundamentals"
+    },
+    {
+      "term": "Cost Per User",
+      "related_terms": [],
+      "contrasts_with": [
+        "Cost Per Query"
+      ],
+      "category": "Financial & ROI Fundamentals"
+    },
+    {
+      "term": "Cost Predictability Assessment",
+      "related_terms": [],
+      "contrasts_with": [],
+      "category": "Vendor, Model & Build-vs-Buy Economics"
+    },
+    {
+      "term": "Cost Reduction Vs Avoidance",
+      "related_terms": [
+        "Cost Avoidance"
+      ],
+      "contrasts_with": [],
+      "category": "Financial & ROI Fundamentals"
+    },
+    {
+      "term": "Cost Regression Testing",
+      "related_terms": [],
+      "contrasts_with": [],
+      "category": "Token & Cost Efficiency Techniques"
+    },
+    {
+      "term": "Cost Tagging Taxonomy",
+      "related_terms": [
+        "Cost Attribution Tagging"
+      ],
+      "contrasts_with": [],
+      "category": "Data Collection, Instrumentation & Observability"
+    },
+    {
+      "term": "Cost-Benefit Analysis",
+      "related_terms": [
+        "Return On Investment"
+      ],
+      "contrasts_with": [],
+      "category": "Financial & ROI Fundamentals"
+    },
+    {
+      "term": "Cost-Per-Task Benchmarking",
+      "related_terms": [
+        "Token Cost Benchmark"
+      ],
+      "contrasts_with": [],
+      "category": "Token & Cost Efficiency Techniques"
+    },
+    {
+      "term": "Counterfactual Cost Estimate",
+      "related_terms": [
+        "Cost Avoidance",
+        "Baseline Cost Model"
+      ],
+      "contrasts_with": [],
+      "category": "Financial & ROI Fundamentals"
+    },
+    {
+      "term": "Cover Page And Framing",
+      "related_terms": [
+        "Report Scope Definition"
+      ],
+      "contrasts_with": [],
+      "category": "Report Design, Visualization & Capstone"
+    },
+    {
+      "term": "CPU Inference",
+      "related_terms": [],
+      "contrasts_with": [
+        "GPU Compute"
+      ],
+      "category": "Compute, Infrastructure & Pricing"
+    },
+    {
+      "term": "Credibility Building Technique",
+      "related_terms": [
+        "Data-Driven Persuasion"
+      ],
+      "contrasts_with": [],
+      "category": "Executive Communication & Financial Literacy"
+    },
+    {
+      "term": "Cross-Provider Comparison",
+      "related_terms": [
+        "Token Cost Benchmark"
+      ],
+      "contrasts_with": [],
+      "category": "Tokenization & Token Economics"
+    },
+    {
+      "term": "Cross-Provider Cost Aggregation",
+      "related_terms": [
+        "Cost Data Normalization"
+      ],
+      "contrasts_with": [],
+      "category": "Data Collection, Instrumentation & Observability"
+    },
+    {
+      "term": "Cross-Team Model Reuse",
+      "related_terms": [],
+      "contrasts_with": [],
+      "category": "Data Science Lifecycle Cost Optimization"
+    },
+    {
+      "term": "CTO Perspective",
+      "related_terms": [],
+      "contrasts_with": [
+        "CFO Perspective"
+      ],
+      "category": "Executive Communication & Financial Literacy"
+    },
+    {
+      "term": "Customer Satisfaction Metric",
+      "related_terms": [
+        "Net Promoter Score"
+      ],
+      "contrasts_with": [],
+      "category": "ROI Metrics & KPIs"
+    },
+    {
+      "term": "Cycle Time Reduction",
+      "related_terms": [
+        "Task Completion Time"
+      ],
+      "contrasts_with": [],
+      "category": "ROI Metrics & KPIs"
+    },
+    {
+      "term": "Dashboard Mockup For Report",
+      "related_terms": [
+        "KPI Dashboard Design"
+      ],
+      "contrasts_with": [],
+      "category": "Report Design, Visualization & Capstone"
+    },
+    {
+      "term": "Dashboard Refresh Cadence",
+      "related_terms": [],
+      "contrasts_with": [
+        "Metric Reporting Cadence"
+      ],
+      "category": "Data Collection, Instrumentation & Observability"
+    },
+    {
+      "term": "Data Annotation Quality Control",
+      "related_terms": [],
+      "contrasts_with": [],
+      "category": "Data Science Lifecycle Cost Optimization"
+    },
+    {
+      "term": "Data Cleaning Cost",
+      "related_terms": [],
+      "contrasts_with": [],
+      "category": "Data Science Lifecycle Cost Optimization"
+    },
+    {
+      "term": "Data Collection Cost",
+      "related_terms": [
+        "Synthetic Data Generation"
+      ],
+      "contrasts_with": [],
+      "category": "Data Science Lifecycle Cost Optimization"
+    },
+    {
+      "term": "Data Drift Detection",
+      "related_terms": [],
+      "contrasts_with": [
+        "Model Drift Detection"
+      ],
+      "category": "Data Science Lifecycle Cost Optimization"
+    },
+    {
+      "term": "Data Governance For Metrics",
+      "related_terms": [
+        "Metric Definition Documentation"
+      ],
+      "contrasts_with": [],
+      "category": "Data Collection, Instrumentation & Observability"
+    },
+    {
+      "term": "Data Labeling Cost",
+      "related_terms": [
+        "AI-Assisted Data Labeling"
+      ],
+      "contrasts_with": [],
+      "category": "Data Science Lifecycle Cost Optimization"
+    },
+    {
+      "term": "Data Lineage For Cost Metrics",
+      "related_terms": [
+        "Data Quality For Cost Metrics"
+      ],
+      "contrasts_with": [],
+      "category": "Data Collection, Instrumentation & Observability"
+    },
+    {
+      "term": "Data Pipeline For Cost Analytics",
+      "related_terms": [
+        "ETL For Usage Data"
+      ],
+      "contrasts_with": [],
+      "category": "Data Collection, Instrumentation & Observability"
+    },
+    {
+      "term": "Data Privacy Risk",
+      "related_terms": [],
+      "contrasts_with": [
+        "Data Security Risk"
+      ],
+      "category": "Risk, Governance & Hidden Costs"
+    },
+    {
+      "term": "Data Quality For Cost Metrics",
+      "related_terms": [
+        "Vendor Invoice Reconciliation"
+      ],
+      "contrasts_with": [],
+      "category": "Data Collection, Instrumentation & Observability"
+    },
+    {
+      "term": "Data Residency Requirement",
+      "related_terms": [
+        "Multi-Region Deployment"
+      ],
+      "contrasts_with": [],
+      "category": "Risk, Governance & Hidden Costs"
+    },
+    {
+      "term": "Data Retention Policy",
+      "related_terms": [],
+      "contrasts_with": [],
+      "category": "Data Collection, Instrumentation & Observability"
+    },
+    {
+      "term": "Data Science Lifecycle",
+      "related_terms": [
+        "Software Development Lifecycle"
+      ],
+      "contrasts_with": [],
+      "category": "Data Science Lifecycle Cost Optimization"
+    },
+    {
+      "term": "Data Science Team Utilization",
+      "related_terms": [],
+      "contrasts_with": [
+        "Compute Utilization Rate"
+      ],
+      "category": "Data Science Lifecycle Cost Optimization"
+    },
+    {
+      "term": "Data Science Technical Debt",
+      "related_terms": [],
+      "contrasts_with": [
+        "Technical Debt From AI Code"
+      ],
+      "category": "Data Science Lifecycle Cost Optimization"
+    },
+    {
+      "term": "Data Science Tooling Cost",
+      "related_terms": [
+        "Notebook Environment Cost"
+      ],
+      "contrasts_with": [],
+      "category": "Data Science Lifecycle Cost Optimization"
+    },
+    {
+      "term": "Data Security Risk",
+      "related_terms": [],
+      "contrasts_with": [
+        "Data Privacy Risk"
+      ],
+      "category": "Risk, Governance & Hidden Costs"
+    },
+    {
+      "term": "Data Table Design",
+      "related_terms": [],
+      "contrasts_with": [
+        "Chart Type Selection"
+      ],
+      "category": "Report Design, Visualization & Capstone"
+    },
+    {
+      "term": "Data Transfer Cost",
+      "related_terms": [
+        "Network Egress Cost"
+      ],
+      "contrasts_with": [],
+      "category": "Compute, Infrastructure & Pricing"
+    },
+    {
+      "term": "Data Versioning Cost",
+      "related_terms": [],
+      "contrasts_with": [
+        "Prompt Version Control"
+      ],
+      "category": "Data Science Lifecycle Cost Optimization"
+    },
+    {
+      "term": "Data Visualization Principles",
+      "related_terms": [
+        "Chart Type Selection"
+      ],
+      "contrasts_with": [],
+      "category": "Report Design, Visualization & Capstone"
+    },
+    {
+      "term": "Data-Driven Persuasion",
+      "related_terms": [
+        "Ethical Findings Communication"
+      ],
+      "contrasts_with": [],
+      "category": "Executive Communication & Financial Literacy"
+    },
+    {
+      "term": "Dedicated Endpoint",
+      "related_terms": [],
+      "contrasts_with": [
+        "Multi-Tenant Endpoint"
+      ],
+      "category": "Compute, Infrastructure & Pricing"
+    },
+    {
+      "term": "Deep Learning",
+      "related_terms": [],
+      "contrasts_with": [
+        "Machine Learning"
+      ],
+      "category": "Generative AI & LLM Foundations"
+    },
+    {
+      "term": "Defect Reduction Rate",
+      "related_terms": [],
+      "contrasts_with": [],
+      "category": "ROI Metrics & KPIs"
+    },
+    {
+      "term": "Deflection Rate Metric",
+      "related_terms": [],
+      "contrasts_with": [
+        "First-Contact Resolution Rate"
+      ],
+      "category": "ROI Metrics & KPIs"
+    },
+    {
+      "term": "Departmental Cost Rollup",
+      "related_terms": [
+        "Project-Level Cost Tracking"
+      ],
+      "contrasts_with": [],
+      "category": "Data Collection, Instrumentation & Observability"
+    },
+    {
+      "term": "Deployment Automation Cost",
+      "related_terms": [],
+      "contrasts_with": [
+        "CI/CD Pipeline Cost"
+      ],
+      "category": "Software Development Lifecycle Cost Optimization"
+    },
+    {
+      "term": "Deployment Phase Cost",
+      "related_terms": [
+        "CI/CD Pipeline Cost"
+      ],
+      "contrasts_with": [],
+      "category": "Software Development Lifecycle Cost Optimization"
+    },
+    {
+      "term": "Depreciation",
+      "related_terms": [
+        "Amortization"
+      ],
+      "contrasts_with": [],
+      "category": "Financial & ROI Fundamentals"
+    },
+    {
+      "term": "Design Phase Cost",
+      "related_terms": [],
+      "contrasts_with": [],
+      "category": "Software Development Lifecycle Cost Optimization"
+    },
+    {
+      "term": "Deterministic Caching",
+      "related_terms": [],
+      "contrasts_with": [
+        "Semantic Caching"
+      ],
+      "category": "Token & Cost Efficiency Techniques"
+    },
+    {
+      "term": "Developer Onboarding Cost",
+      "related_terms": [],
+      "contrasts_with": [],
+      "category": "Software Development Lifecycle Cost Optimization"
+    },
+    {
+      "term": "Developer Productivity Index",
+      "related_terms": [
+        "Developer Velocity Metric"
+      ],
+      "contrasts_with": [],
+      "category": "Software Development Lifecycle Cost Optimization"
+    },
+    {
+      "term": "Developer Time Reallocation",
+      "related_terms": [],
+      "contrasts_with": [],
+      "category": "Software Development Lifecycle Cost Optimization"
+    },
+    {
+      "term": "Developer Velocity Metric",
+      "related_terms": [
+        "Story Points Delivered",
+        "Lead Time For Changes"
+      ],
+      "contrasts_with": [],
+      "category": "ROI Metrics & KPIs"
+    },
+    {
+      "term": "Discount Rate",
+      "related_terms": [
+        "Net Present Value",
+        "Time Value Of Money"
+      ],
+      "contrasts_with": [],
+      "category": "Financial & ROI Fundamentals"
+    },
+    {
+      "term": "Distillation For Cost Cutting",
+      "related_terms": [
+        "Knowledge Distillation"
+      ],
+      "contrasts_with": [],
+      "category": "Token & Cost Efficiency Techniques"
+    },
+    {
+      "term": "Distributed Tracing",
+      "related_terms": [],
+      "contrasts_with": [],
+      "category": "Data Collection, Instrumentation & Observability"
+    },
+    {
+      "term": "DSLC Cost Baseline",
+      "related_terms": [
+        "DSLC Cost Reduction Roadmap"
+      ],
+      "contrasts_with": [],
+      "category": "Data Science Lifecycle Cost Optimization"
+    },
+    {
+      "term": "DSLC Cost Reduction Roadmap",
+      "related_terms": [
+        "DSLC Cost Baseline"
+      ],
+      "contrasts_with": [],
+      "category": "Data Science Lifecycle Cost Optimization"
+    },
+    {
+      "term": "DSLC ROI Case Study",
+      "related_terms": [
+        "SDLC ROI Case Study"
+      ],
+      "contrasts_with": [],
+      "category": "Data Science Lifecycle Cost Optimization"
+    },
+    {
+      "term": "Edge Deployment",
+      "related_terms": [],
+      "contrasts_with": [
+        "Cloud-Hosted Model"
+      ],
+      "category": "Compute, Infrastructure & Pricing"
+    },
+    {
+      "term": "Efficiency Gain Tracking",
+      "related_terms": [
+        "Continuous Cost Optimization"
+      ],
+      "contrasts_with": [],
+      "category": "Token & Cost Efficiency Techniques"
+    },
+    {
+      "term": "Elevator Pitch For Findings",
+      "related_terms": [],
+      "contrasts_with": [],
+      "category": "Executive Communication & Financial Literacy"
+    },
+    {
+      "term": "Embedding",
+      "related_terms": [
+        "Vector Database"
+      ],
+      "contrasts_with": [],
+      "category": "Generative AI & LLM Foundations"
+    },
+    {
+      "term": "Embedding Reuse",
+      "related_terms": [],
+      "contrasts_with": [],
+      "category": "Token & Cost Efficiency Techniques"
+    },
+    {
+      "term": "Employee Satisfaction Metric",
+      "related_terms": [],
+      "contrasts_with": [],
+      "category": "ROI Metrics & KPIs"
+    },
+    {
+      "term": "Energy Cost Per Query",
+      "related_terms": [],
+      "contrasts_with": [],
+      "category": "Compute, Infrastructure & Pricing"
+    },
+    {
+      "term": "Ensemble Cost Tradeoff",
+      "related_terms": [
+        "Self-Consistency Cost"
+      ],
+      "contrasts_with": [],
+      "category": "Token & Cost Efficiency Techniques"
+    },
+    {
+      "term": "Enterprise License Agreement",
+      "related_terms": [
+        "Committed Spend Discount"
+      ],
+      "contrasts_with": [],
+      "category": "Vendor, Model & Build-vs-Buy Economics"
+    },
+    {
+      "term": "Error Rate Metric",
+      "related_terms": [
+        "Rework Rate Metric"
+      ],
+      "contrasts_with": [],
+      "category": "ROI Metrics & KPIs"
+    },
+    {
+      "term": "Ethical Findings Communication",
+      "related_terms": [
+        "Avoiding Overstated Claims"
+      ],
+      "contrasts_with": [],
+      "category": "Executive Communication & Financial Literacy"
+    },
+    {
+      "term": "ETL For Usage Data",
+      "related_terms": [
+        "Data Pipeline For Cost Analytics"
+      ],
+      "contrasts_with": [],
+      "category": "Data Collection, Instrumentation & Observability"
+    },
+    {
+      "term": "Executive Attention Span",
+      "related_terms": [
+        "Bottom-Line-Up-Front Principle"
+      ],
+      "contrasts_with": [],
+      "category": "Executive Communication & Financial Literacy"
+    },
+    {
+      "term": "Executive Audience Analysis",
+      "related_terms": [
+        "Audience-Specific Framing"
+      ],
+      "contrasts_with": [],
+      "category": "Executive Communication & Financial Literacy"
+    },
+    {
+      "term": "Executive Presentation Design",
+      "related_terms": [
+        "Slide Design For Financial Data"
+      ],
+      "contrasts_with": [],
+      "category": "Executive Communication & Financial Literacy"
+    },
+    {
+      "term": "Executive Report Structure",
+      "related_terms": [
+        "Report Scope Definition"
+      ],
+      "contrasts_with": [],
+      "category": "Report Design, Visualization & Capstone"
+    },
+    {
+      "term": "Executive Summary Writing",
+      "related_terms": [
+        "Bottom-Line-Up-Front Principle"
+      ],
+      "contrasts_with": [],
+      "category": "Executive Communication & Financial Literacy"
+    },
+    {
+      "term": "Experiment Reproducibility Cost",
+      "related_terms": [
+        "Experiment Tracking Cost"
+      ],
+      "contrasts_with": [],
+      "category": "Data Science Lifecycle Cost Optimization"
+    },
+    {
+      "term": "Experiment Tracking Cost",
+      "related_terms": [
+        "Experiment Reproducibility Cost"
+      ],
+      "contrasts_with": [],
+      "category": "Data Science Lifecycle Cost Optimization"
+    },
+    {
+      "term": "Explainability Requirement Cost",
+      "related_terms": [
+        "Bias And Fairness Risk"
+      ],
+      "contrasts_with": [],
+      "category": "Risk, Governance & Hidden Costs"
+    },
+    {
+      "term": "Fact-Checking Financial Claims",
+      "related_terms": [
+        "Footnote And Source Citation"
+      ],
+      "contrasts_with": [],
+      "category": "Report Design, Visualization & Capstone"
+    },
+    {
+      "term": "Fallback Model Strategy",
+      "related_terms": [],
+      "contrasts_with": [
+        "Model Cascading"
+      ],
+      "category": "Token & Cost Efficiency Techniques"
+    },
+    {
+      "term": "Feature Engineering Cost",
+      "related_terms": [
+        "AI-Assisted Feature Engineering"
+      ],
+      "contrasts_with": [],
+      "category": "Data Science Lifecycle Cost Optimization"
+    },
+    {
+      "term": "Feature Flag Cost Management",
+      "related_terms": [],
+      "contrasts_with": [],
+      "category": "Software Development Lifecycle Cost Optimization"
+    },
+    {
+      "term": "Feature Store Cost",
+      "related_terms": [
+        "Feature Engineering Cost"
+      ],
+      "contrasts_with": [],
+      "category": "Data Science Lifecycle Cost Optimization"
+    },
+    {
+      "term": "Few-Shot Prompting",
+      "related_terms": [],
+      "contrasts_with": [
+        "Zero-Shot Prompting"
+      ],
+      "category": "Generative AI & LLM Foundations"
+    },
+    {
+      "term": "Few-Shot Token Overhead",
+      "related_terms": [
+        "Few-Shot Prompting"
+      ],
+      "contrasts_with": [],
+      "category": "Tokenization & Token Economics"
+    },
+    {
+      "term": "Financial Forecasting",
+      "related_terms": [
+        "Spend Forecasting"
+      ],
+      "contrasts_with": [],
+      "category": "Financial & ROI Fundamentals"
+    },
+    {
+      "term": "Financial KPI",
+      "related_terms": [
+        "GenAI ROI Metric"
+      ],
+      "contrasts_with": [],
+      "category": "Financial & ROI Fundamentals"
+    },
+    {
+      "term": "Financial Literacy For Engineers",
+      "related_terms": [],
+      "contrasts_with": [],
+      "category": "Executive Communication & Financial Literacy"
+    },
+    {
+      "term": "Financial Statement Basics",
+      "related_terms": [
+        "Income Statement",
+        "Balance Sheet Basics"
+      ],
+      "contrasts_with": [],
+      "category": "Financial & ROI Fundamentals"
+    },
+    {
+      "term": "Findings Section Design",
+      "related_terms": [
+        "Data Visualization Principles"
+      ],
+      "contrasts_with": [],
+      "category": "Report Design, Visualization & Capstone"
+    },
+    {
+      "term": "Fine-Tuning",
+      "related_terms": [
+        "Instruction Tuning",
+        "Fine-Tuning Vs Prompting"
+      ],
+      "contrasts_with": [],
+      "category": "Generative AI & LLM Foundations"
+    },
+    {
+      "term": "Fine-Tuning Vs Prompting",
+      "related_terms": [
+        "Fine-Tuning",
+        "Prompt Engineering"
+      ],
+      "contrasts_with": [],
+      "category": "Token & Cost Efficiency Techniques"
+    },
+    {
+      "term": "First-Contact Resolution Rate",
+      "related_terms": [],
+      "contrasts_with": [
+        "Deflection Rate Metric"
+      ],
+      "category": "ROI Metrics & KPIs"
+    },
+    {
+      "term": "Fixed Cost",
+      "related_terms": [],
+      "contrasts_with": [
+        "Variable Cost"
+      ],
+      "category": "Financial & ROI Fundamentals"
+    },
+    {
+      "term": "Footnote And Source Citation",
+      "related_terms": [
+        "Fact-Checking Financial Claims"
+      ],
+      "contrasts_with": [],
+      "category": "Report Design, Visualization & Capstone"
+    },
+    {
+      "term": "Foundation Model",
+      "related_terms": [],
+      "contrasts_with": [
+        "Large Language Model"
+      ],
+      "category": "Generative AI & LLM Foundations"
+    },
+    {
+      "term": "Function Calling",
+      "related_terms": [
+        "Tool Use Efficiency"
+      ],
+      "contrasts_with": [],
+      "category": "Token & Cost Efficiency Techniques"
+    },
+    {
+      "term": "GenAI ROI Metric",
+      "related_terms": [
+        "Return On Investment"
+      ],
+      "contrasts_with": [],
+      "category": "ROI Metrics & KPIs"
+    },
+    {
+      "term": "Generative AI",
+      "related_terms": [
+        "Large Language Model",
+        "Foundation Model"
+      ],
+      "contrasts_with": [],
+      "category": "Generative AI & LLM Foundations"
+    },
+    {
+      "term": "Governance Maturity Model",
+      "related_terms": [],
+      "contrasts_with": [
+        "Instrumentation Maturity Model"
+      ],
+      "category": "Risk, Governance & Hidden Costs"
+    },
+    {
+      "term": "Governance Overhead Cost",
+      "related_terms": [
+        "AI Governance Framework"
+      ],
+      "contrasts_with": [],
+      "category": "Risk, Governance & Hidden Costs"
+    },
+    {
+      "term": "Governance ROI Tradeoff",
+      "related_terms": [],
+      "contrasts_with": [],
+      "category": "Risk, Governance & Hidden Costs"
+    },
+    {
+      "term": "GPU Compute",
+      "related_terms": [
+        "Hardware Accelerator"
+      ],
+      "contrasts_with": [],
+      "category": "Compute, Infrastructure & Pricing"
+    },
+    {
+      "term": "GPU Memory Constraint",
+      "related_terms": [
+        "Model Quantization"
+      ],
+      "contrasts_with": [],
+      "category": "Compute, Infrastructure & Pricing"
+    },
+    {
+      "term": "Guardrail Overhead Cost",
+      "related_terms": [
+        "Content Filtering Cost"
+      ],
+      "contrasts_with": [],
+      "category": "Token & Cost Efficiency Techniques"
+    },
+    {
+      "term": "Hallucination Rate Metric",
+      "related_terms": [
+        "Model Hallucination"
+      ],
+      "contrasts_with": [],
+      "category": "ROI Metrics & KPIs"
+    },
+    {
+      "term": "Hardware Accelerator",
+      "related_terms": [
+        "GPU Compute"
+      ],
+      "contrasts_with": [],
+      "category": "Compute, Infrastructure & Pricing"
+    },
+    {
+      "term": "Hidden Cost Discovery Checklist",
+      "related_terms": [
+        "Hidden Cost Of AI Systems"
+      ],
+      "contrasts_with": [],
+      "category": "Risk, Governance & Hidden Costs"
+    },
+    {
+      "term": "Hidden Cost Of AI Systems",
+      "related_terms": [
+        "Hidden Cost Discovery Checklist"
+      ],
+      "contrasts_with": [],
+      "category": "Risk, Governance & Hidden Costs"
+    },
+    {
+      "term": "Hurdle Rate",
+      "related_terms": [
+        "Internal Rate Of Return"
+      ],
+      "contrasts_with": [],
+      "category": "Financial & ROI Fundamentals"
+    },
+    {
+      "term": "Hybrid Cloud Strategy",
+      "related_terms": [],
+      "contrasts_with": [],
+      "category": "Compute, Infrastructure & Pricing"
+    },
+    {
+      "term": "Hybrid Sourcing Strategy",
+      "related_terms": [
+        "Multi-Vendor Strategy"
+      ],
+      "contrasts_with": [],
+      "category": "Vendor, Model & Build-vs-Buy Economics"
+    },
+    {
+      "term": "Hyperparameter Tuning Cost",
+      "related_terms": [
+        "Model Training Cost"
+      ],
+      "contrasts_with": [],
+      "category": "Data Science Lifecycle Cost Optimization"
+    },
+    {
+      "term": "IDE Integration Cost",
+      "related_terms": [],
+      "contrasts_with": [
+        "Tooling License Cost"
+      ],
+      "category": "Software Development Lifecycle Cost Optimization"
+    },
+    {
+      "term": "Idle Capacity Cost",
+      "related_terms": [
+        "Compute Utilization Rate"
+      ],
+      "contrasts_with": [],
+      "category": "Compute, Infrastructure & Pricing"
+    },
+    {
+      "term": "Incident Response Cost",
+      "related_terms": [
+        "Mean Time To Resolution"
+      ],
+      "contrasts_with": [],
+      "category": "Software Development Lifecycle Cost Optimization"
+    },
+    {
+      "term": "Incident Response Planning",
+      "related_terms": [
+        "Incident Response Cost"
+      ],
+      "contrasts_with": [],
+      "category": "Risk, Governance & Hidden Costs"
+    },
+    {
+      "term": "Income Statement",
+      "related_terms": [
+        "Financial Statement Basics"
+      ],
+      "contrasts_with": [],
+      "category": "Financial & ROI Fundamentals"
+    },
+    {
+      "term": "Industry Comparison Framing",
+      "related_terms": [
+        "Benchmarking Against Peers"
+      ],
+      "contrasts_with": [],
+      "category": "Executive Communication & Financial Literacy"
+    },
+    {
+      "term": "Inference",
+      "related_terms": [],
+      "contrasts_with": [
+        "Training Vs Inference Cost"
+      ],
+      "category": "Generative AI & LLM Foundations"
+    },
+    {
+      "term": "Inference Server",
+      "related_terms": [
+        "Model Serving Framework"
+      ],
+      "contrasts_with": [],
+      "category": "Compute, Infrastructure & Pricing"
+    },
+    {
+      "term": "Infrastructure As Code",
+      "related_terms": [],
+      "contrasts_with": [],
+      "category": "Compute, Infrastructure & Pricing"
+    },
+    {
+      "term": "Infrastructure Cost Dashboard",
+      "related_terms": [],
+      "contrasts_with": [
+        "Cost Dashboard Design"
+      ],
+      "category": "Compute, Infrastructure & Pricing"
+    },
+    {
+      "term": "Infrastructure Monitoring",
+      "related_terms": [
+        "Observability Platform"
+      ],
+      "contrasts_with": [],
+      "category": "Compute, Infrastructure & Pricing"
+    },
+    {
+      "term": "Input Token",
+      "related_terms": [],
+      "contrasts_with": [
+        "Output Token"
+      ],
+      "category": "Tokenization & Token Economics"
+    },
+    {
+      "term": "Input Token Pricing",
+      "related_terms": [],
+      "contrasts_with": [
+        "Output Token Pricing"
+      ],
+      "category": "Tokenization & Token Economics"
+    },
+    {
+      "term": "Instruction Tuning",
+      "related_terms": [],
+      "contrasts_with": [
+        "RLHF Alignment"
+      ],
+      "category": "Generative AI & LLM Foundations"
+    },
+    {
+      "term": "Instrumentation Maturity Model",
+      "related_terms": [
+        "Cost Observability Roadmap"
+      ],
+      "contrasts_with": [],
+      "category": "Data Collection, Instrumentation & Observability"
+    },
+    {
+      "term": "Instrumentation Ownership Model",
+      "related_terms": [
+        "Data Governance For Metrics"
+      ],
+      "contrasts_with": [],
+      "category": "Data Collection, Instrumentation & Observability"
+    },
+    {
+      "term": "Insurance Cost For AI Risk",
+      "related_terms": [
+        "Security Incident Cost Estimate"
+      ],
+      "contrasts_with": [],
+      "category": "Risk, Governance & Hidden Costs"
+    },
+    {
+      "term": "Intellectual Property Risk",
+      "related_terms": [
+        "License Compliance Of AI Code"
+      ],
+      "contrasts_with": [],
+      "category": "Risk, Governance & Hidden Costs"
+    },
+    {
+      "term": "Internal Rate Of Return",
+      "related_terms": [
+        "Net Present Value"
+      ],
+      "contrasts_with": [],
+      "category": "Financial & ROI Fundamentals"
+    },
+    {
+      "term": "Investment Appraisal",
+      "related_terms": [
+        "Net Present Value",
+        "Payback Period"
+      ],
+      "contrasts_with": [],
+      "category": "Financial & ROI Fundamentals"
+    },
+    {
+      "term": "Iterative Report Refinement",
+      "related_terms": [
+        "Communication Feedback Loop"
+      ],
+      "contrasts_with": [],
+      "category": "Executive Communication & Financial Literacy"
+    },
+    {
+      "term": "Jargon Reduction Technique",
+      "related_terms": [
+        "Technical-Financial Translation"
+      ],
+      "contrasts_with": [],
+      "category": "Executive Communication & Financial Literacy"
+    },
+    {
+      "term": "JSON Mode Output",
+      "related_terms": [],
+      "contrasts_with": [
+        "Structured Output Format"
+      ],
+      "category": "Token & Cost Efficiency Techniques"
+    },
+    {
+      "term": "Key Message Development",
+      "related_terms": [
+        "So-What Statement"
+      ],
+      "contrasts_with": [],
+      "category": "Executive Communication & Financial Literacy"
+    },
+    {
+      "term": "Knowledge Distillation",
+      "related_terms": [],
+      "contrasts_with": [
+        "Model Quantization"
+      ],
+      "category": "Generative AI & LLM Foundations"
+    },
+    {
+      "term": "KPI Dashboard Design",
+      "related_terms": [
+        "Data Visualization Principles"
+      ],
+      "contrasts_with": [],
+      "category": "ROI Metrics & KPIs"
+    },
+    {
+      "term": "KV Cache Optimization",
+      "related_terms": [],
+      "contrasts_with": [
+        "Prompt Caching"
+      ],
+      "category": "Token & Cost Efficiency Techniques"
+    },
+    {
+      "term": "Labor Cost Savings",
+      "related_terms": [
+        "Productivity Gain"
+      ],
+      "contrasts_with": [],
+      "category": "Financial & ROI Fundamentals"
+    },
+    {
+      "term": "Large Language Model",
+      "related_terms": [
+        "Foundation Model",
+        "Token"
+      ],
+      "contrasts_with": [],
+      "category": "Generative AI & LLM Foundations"
+    },
+    {
+      "term": "Latency-Cost Tradeoff",
+      "related_terms": [
+        "Quality-Cost Tradeoff"
+      ],
+      "contrasts_with": [],
+      "category": "Token & Cost Efficiency Techniques"
+    },
+    {
+      "term": "Lead Time For Changes",
+      "related_terms": [
+        "Developer Velocity Metric"
+      ],
+      "contrasts_with": [],
+      "category": "ROI Metrics & KPIs"
+    },
+    {
+      "term": "Leading Vs Lagging Indicator",
+      "related_terms": [],
+      "contrasts_with": [],
+      "category": "ROI Metrics & KPIs"
+    },
+    {
+      "term": "Legacy Code Migration Cost",
+      "related_terms": [
+        "Refactoring Cost"
+      ],
+      "contrasts_with": [],
+      "category": "Software Development Lifecycle Cost Optimization"
+    },
+    {
+      "term": "Legacy Integration Risk",
+      "related_terms": [],
+      "contrasts_with": [],
+      "category": "Risk, Governance & Hidden Costs"
+    },
+    {
+      "term": "License Compliance Of AI Code",
+      "related_terms": [
+        "Intellectual Property Risk"
+      ],
+      "contrasts_with": [],
+      "category": "Software Development Lifecycle Cost Optimization"
+    },
+    {
+      "term": "Licensing Cost Structure",
+      "related_terms": [
+        "Usage-Based Licensing",
+        "Seat-Based Licensing"
+      ],
+      "contrasts_with": [],
+      "category": "Vendor, Model & Build-vs-Buy Economics"
+    },
+    {
+      "term": "Line Chart For Trend Analysis",
+      "related_terms": [],
+      "contrasts_with": [
+        "Bar Chart For Cost Comparison"
+      ],
+      "category": "Report Design, Visualization & Capstone"
+    },
+    {
+      "term": "Load Balancing",
+      "related_terms": [],
+      "contrasts_with": [],
+      "category": "Compute, Infrastructure & Pricing"
+    },
+    {
+      "term": "Logging Strategy",
+      "related_terms": [
+        "Token Usage Logging"
+      ],
+      "contrasts_with": [],
+      "category": "Data Collection, Instrumentation & Observability"
+    },
+    {
+      "term": "Long-Context Pricing",
+      "related_terms": [
+        "Context Window Cost"
+      ],
+      "contrasts_with": [],
+      "category": "Tokenization & Token Economics"
+    },
+    {
+      "term": "Long-Term Contract Risk",
+      "related_terms": [
+        "Contract Term Length Tradeoff"
+      ],
+      "contrasts_with": [],
+      "category": "Vendor, Model & Build-vs-Buy Economics"
+    },
+    {
+      "term": "Longitudinal Tracking",
+      "related_terms": [],
+      "contrasts_with": [],
+      "category": "ROI Metrics & KPIs"
+    },
+    {
+      "term": "Machine Learning",
+      "related_terms": [
+        "Deep Learning",
+        "Neural Network"
+      ],
+      "contrasts_with": [],
+      "category": "Generative AI & LLM Foundations"
+    },
+    {
+      "term": "Maintenance Phase Cost",
+      "related_terms": [
+        "Incident Response Cost"
+      ],
+      "contrasts_with": [],
+      "category": "Software Development Lifecycle Cost Optimization"
+    },
+    {
+      "term": "Managed Service Economics",
+      "related_terms": [],
+      "contrasts_with": [
+        "Self-Hosted Model Economics"
+      ],
+      "category": "Vendor, Model & Build-vs-Buy Economics"
+    },
+    {
+      "term": "Marginal Cost",
+      "related_terms": [],
+      "contrasts_with": [
+        "Fixed Cost"
+      ],
+      "category": "Financial & ROI Fundamentals"
+    },
+    {
+      "term": "Max Tokens Parameter",
+      "related_terms": [
+        "Output Length Control"
+      ],
+      "contrasts_with": [],
+      "category": "Token & Cost Efficiency Techniques"
+    },
+    {
+      "term": "Mean Time To Resolution",
+      "related_terms": [
+        "Incident Response Cost"
+      ],
+      "contrasts_with": [],
+      "category": "ROI Metrics & KPIs"
+    },
+    {
+      "term": "Message Framing",
+      "related_terms": [
+        "Audience-Specific Framing"
+      ],
+      "contrasts_with": [],
+      "category": "Executive Communication & Financial Literacy"
+    },
+    {
+      "term": "Methodology Section Design",
+      "related_terms": [],
+      "contrasts_with": [],
+      "category": "Report Design, Visualization & Capstone"
+    },
+    {
+      "term": "Metric Attribution",
+      "related_terms": [
+        "Confounding Factor"
+      ],
+      "contrasts_with": [],
+      "category": "ROI Metrics & KPIs"
+    },
+    {
+      "term": "Metric Baseline Capture",
+      "related_terms": [
+        "Baseline Cost Model"
+      ],
+      "contrasts_with": [],
+      "category": "ROI Metrics & KPIs"
+    },
+    {
+      "term": "Metric Definition Documentation",
+      "related_terms": [
+        "Data Governance For Metrics"
+      ],
+      "contrasts_with": [],
+      "category": "Data Collection, Instrumentation & Observability"
+    },
+    {
+      "term": "Metric Instrumentation Plan",
+      "related_terms": [
+        "Usage Telemetry"
+      ],
+      "contrasts_with": [],
+      "category": "ROI Metrics & KPIs"
+    },
+    {
+      "term": "Metric Reporting Cadence",
+      "related_terms": [],
+      "contrasts_with": [
+        "Dashboard Refresh Cadence"
+      ],
+      "category": "ROI Metrics & KPIs"
+    },
+    {
+      "term": "Mixture Of Experts",
+      "related_terms": [],
+      "contrasts_with": [
+        "Sparse Model Techniques"
+      ],
+      "category": "Token & Cost Efficiency Techniques"
+    },
+    {
+      "term": "MLOps Pipeline Cost",
+      "related_terms": [
+        "CI/CD Pipeline Cost"
+      ],
+      "contrasts_with": [],
+      "category": "Data Science Lifecycle Cost Optimization"
+    },
+    {
+      "term": "Model Accuracy Metric",
+      "related_terms": [
+        "Precision And Recall"
+      ],
+      "contrasts_with": [],
+      "category": "ROI Metrics & KPIs"
+    },
+    {
+      "term": "Model Benchmarking For Selection",
+      "related_terms": [
+        "Model Selection Criteria"
+      ],
+      "contrasts_with": [],
+      "category": "Vendor, Model & Build-vs-Buy Economics"
+    },
+    {
+      "term": "Model Cascading",
+      "related_terms": [
+        "Model Routing",
+        "Small Model First Strategy"
+      ],
+      "contrasts_with": [],
+      "category": "Token & Cost Efficiency Techniques"
+    },
+    {
+      "term": "Model Deployment",
+      "related_terms": [
+        "On-Premises Deployment",
+        "Cloud-Hosted Model"
+      ],
+      "contrasts_with": [],
+      "category": "Generative AI & LLM Foundations"
+    },
+    {
+      "term": "Model Deployment Cost",
+      "related_terms": [
+        "Deployment Phase Cost"
+      ],
+      "contrasts_with": [],
+      "category": "Data Science Lifecycle Cost Optimization"
+    },
+    {
+      "term": "Model Deprecation Planning",
+      "related_terms": [
+        "Model Lifecycle Management"
+      ],
+      "contrasts_with": [],
+      "category": "Data Science Lifecycle Cost Optimization"
+    },
+    {
+      "term": "Model Drift Detection",
+      "related_terms": [],
+      "contrasts_with": [
+        "Data Drift Detection"
+      ],
+      "category": "Data Science Lifecycle Cost Optimization"
+    },
+    {
+      "term": "Model Evaluation Cost",
+      "related_terms": [],
+      "contrasts_with": [
+        "Model Validation Cost"
+      ],
+      "category": "Data Science Lifecycle Cost Optimization"
+    },
+    {
+      "term": "Model Governance Board",
+      "related_terms": [
+        "AI Governance Framework"
+      ],
+      "contrasts_with": [],
+      "category": "Risk, Governance & Hidden Costs"
+    },
+    {
+      "term": "Model Hallucination",
+      "related_terms": [
+        "Hallucination Rate Metric"
+      ],
+      "contrasts_with": [],
+      "category": "Generative AI & LLM Foundations"
+    },
+    {
+      "term": "Model Latency",
+      "related_terms": [],
+      "contrasts_with": [
+        "Model Throughput"
+      ],
+      "category": "Generative AI & LLM Foundations"
+    },
+    {
+      "term": "Model Lifecycle Management",
+      "related_terms": [
+        "Model Deprecation Planning"
+      ],
+      "contrasts_with": [],
+      "category": "Data Science Lifecycle Cost Optimization"
+    },
+    {
+      "term": "Model Monitoring Cost",
+      "related_terms": [
+        "Model Drift Detection"
+      ],
+      "contrasts_with": [],
+      "category": "Data Science Lifecycle Cost Optimization"
+    },
+    {
+      "term": "Model Parameter Count",
+      "related_terms": [],
+      "contrasts_with": [],
+      "category": "Generative AI & LLM Foundations"
+    },
+    {
+      "term": "Model Parameters",
+      "related_terms": [],
+      "contrasts_with": [
+        "Token Count"
+      ],
+      "category": "Generative AI & LLM Foundations"
+    },
+    {
+      "term": "Model Portability",
+      "related_terms": [
+        "Vendor Lock-In Risk"
+      ],
+      "contrasts_with": [],
+      "category": "Vendor, Model & Build-vs-Buy Economics"
+    },
+    {
+      "term": "Model Provider",
+      "related_terms": [],
+      "contrasts_with": [],
+      "category": "Generative AI & LLM Foundations"
+    },
+    {
+      "term": "Model Quantization",
+      "related_terms": [
+        "Knowledge Distillation"
+      ],
+      "contrasts_with": [],
+      "category": "Generative AI & LLM Foundations"
+    },
+    {
+      "term": "Model Registry Cost",
+      "related_terms": [
+        "Model Lifecycle Management"
+      ],
+      "contrasts_with": [],
+      "category": "Data Science Lifecycle Cost Optimization"
+    },
+    {
+      "term": "Model Retirement Cost",
+      "related_terms": [
+        "Model Deprecation Planning"
+      ],
+      "contrasts_with": [],
+      "category": "Risk, Governance & Hidden Costs"
+    },
+    {
+      "term": "Model Retraining Trigger",
+      "related_terms": [
+        "Model Drift Detection"
+      ],
+      "contrasts_with": [],
+      "category": "Data Science Lifecycle Cost Optimization"
+    },
+    {
+      "term": "Model Right-Sizing",
+      "related_terms": [
+        "Small Model First Strategy"
+      ],
+      "contrasts_with": [],
+      "category": "Generative AI & LLM Foundations"
+    },
+    {
+      "term": "Model Risk Management",
+      "related_terms": [
+        "AI Governance Framework"
+      ],
+      "contrasts_with": [],
+      "category": "Risk, Governance & Hidden Costs"
+    },
+    {
+      "term": "Model Routing",
+      "related_terms": [
+        "Model Cascading"
+      ],
+      "contrasts_with": [],
+      "category": "Token & Cost Efficiency Techniques"
+    },
+    {
+      "term": "Model Selection Criteria",
+      "related_terms": [
+        "Model Benchmarking For Selection"
+      ],
+      "contrasts_with": [],
+      "category": "Vendor, Model & Build-vs-Buy Economics"
+    },
+    {
+      "term": "Model Serving Framework",
+      "related_terms": [
+        "Inference Server"
+      ],
+      "contrasts_with": [],
+      "category": "Compute, Infrastructure & Pricing"
+    },
+    {
+      "term": "Model Throughput",
+      "related_terms": [],
+      "contrasts_with": [
+        "Model Latency"
+      ],
+      "category": "Generative AI & LLM Foundations"
+    },
+    {
+      "term": "Model Training Cost",
+      "related_terms": [
+        "Hyperparameter Tuning Cost"
+      ],
+      "contrasts_with": [],
+      "category": "Data Science Lifecycle Cost Optimization"
+    },
+    {
+      "term": "Model Update Cadence Risk",
+      "related_terms": [
+        "Model Versioning"
+      ],
+      "contrasts_with": [],
+      "category": "Vendor, Model & Build-vs-Buy Economics"
+    },
+    {
+      "term": "Model Validation Cost",
+      "related_terms": [],
+      "contrasts_with": [
+        "Model Evaluation Cost"
+      ],
+      "category": "Data Science Lifecycle Cost Optimization"
+    },
+    {
+      "term": "Model Versioning",
+      "related_terms": [
+        "Tokenizer Version Drift"
+      ],
+      "contrasts_with": [],
+      "category": "Generative AI & LLM Foundations"
+    },
+    {
+      "term": "Multi-Model Orchestration",
+      "related_terms": [
+        "Model Routing"
+      ],
+      "contrasts_with": [],
+      "category": "Vendor, Model & Build-vs-Buy Economics"
+    },
+    {
+      "term": "Multi-Region Deployment",
+      "related_terms": [],
+      "contrasts_with": [],
+      "category": "Compute, Infrastructure & Pricing"
+    },
+    {
+      "term": "Multi-Tenant Cost Attribution",
+      "related_terms": [
+        "Cost Attribution Tagging"
+      ],
+      "contrasts_with": [],
+      "category": "Data Collection, Instrumentation & Observability"
+    },
+    {
+      "term": "Multi-Tenant Endpoint",
+      "related_terms": [],
+      "contrasts_with": [
+        "Dedicated Endpoint"
+      ],
+      "category": "Compute, Infrastructure & Pricing"
+    },
+    {
+      "term": "Multi-Turn Token Growth",
+      "related_terms": [
+        "Conversation History Cost"
+      ],
+      "contrasts_with": [],
+      "category": "Tokenization & Token Economics"
+    },
+    {
+      "term": "Multi-Vendor Strategy",
+      "related_terms": [
+        "Vendor Lock-In Risk"
+      ],
+      "contrasts_with": [],
+      "category": "Vendor, Model & Build-vs-Buy Economics"
+    },
+    {
+      "term": "Multimodal Model",
+      "related_terms": [],
+      "contrasts_with": [],
+      "category": "Generative AI & LLM Foundations"
+    },
+    {
+      "term": "Narrative Arc For Reports",
+      "related_terms": [
+        "Storytelling With Data"
+      ],
+      "contrasts_with": [],
+      "category": "Executive Communication & Financial Literacy"
+    },
+    {
+      "term": "Net Present Value",
+      "related_terms": [
+        "Discount Rate",
+        "Time Value Of Money"
+      ],
+      "contrasts_with": [],
+      "category": "Financial & ROI Fundamentals"
+    },
+    {
+      "term": "Net Promoter Score",
+      "related_terms": [
+        "Customer Satisfaction Metric"
+      ],
+      "contrasts_with": [],
+      "category": "ROI Metrics & KPIs"
+    },
+    {
+      "term": "Network Egress Cost",
+      "related_terms": [],
+      "contrasts_with": [
+        "Data Transfer Cost"
+      ],
+      "category": "Compute, Infrastructure & Pricing"
+    },
+    {
+      "term": "Neural Network",
+      "related_terms": [],
+      "contrasts_with": [],
+      "category": "Generative AI & LLM Foundations"
+    },
+    {
+      "term": "North Star Metric",
+      "related_terms": [],
+      "contrasts_with": [],
+      "category": "ROI Metrics & KPIs"
+    },
+    {
+      "term": "Notebook Environment Cost",
+      "related_terms": [
+        "Data Science Tooling Cost"
+      ],
+      "contrasts_with": [],
+      "category": "Data Science Lifecycle Cost Optimization"
+    },
+    {
+      "term": "Objection Anticipation",
+      "related_terms": [
+        "Q&A Presentation Prep"
+      ],
+      "contrasts_with": [],
+      "category": "Executive Communication & Financial Literacy"
+    },
+    {
+      "term": "Observability Platform",
+      "related_terms": [
+        "Infrastructure Monitoring"
+      ],
+      "contrasts_with": [],
+      "category": "Data Collection, Instrumentation & Observability"
+    },
+    {
+      "term": "Off-Peak Scheduling",
+      "related_terms": [],
+      "contrasts_with": [],
+      "category": "Token & Cost Efficiency Techniques"
+    },
+    {
+      "term": "On-Demand Pricing",
+      "related_terms": [],
+      "contrasts_with": [
+        "Reserved Capacity Pricing"
+      ],
+      "category": "Compute, Infrastructure & Pricing"
+    },
+    {
+      "term": "On-Premises Deployment",
+      "related_terms": [],
+      "contrasts_with": [
+        "Cloud-Hosted Model"
+      ],
+      "category": "Generative AI & LLM Foundations"
+    },
+    {
+      "term": "One-Page Summary Technique",
+      "related_terms": [
+        "Executive Attention Span"
+      ],
+      "contrasts_with": [],
+      "category": "Executive Communication & Financial Literacy"
+    },
+    {
+      "term": "Open-Source Model",
+      "related_terms": [],
+      "contrasts_with": [
+        "Proprietary Model"
+      ],
+      "category": "Generative AI & LLM Foundations"
+    },
+    {
+      "term": "Open-Source Vs Proprietary Cost",
+      "related_terms": [
+        "Build Vs Buy Decision"
+      ],
+      "contrasts_with": [],
+      "category": "Vendor, Model & Build-vs-Buy Economics"
+    },
+    {
+      "term": "Operating Expenditure",
+      "related_terms": [],
+      "contrasts_with": [
+        "Capital Expenditure"
+      ],
+      "category": "Financial & ROI Fundamentals"
+    },
+    {
+      "term": "Opportunity Cost",
+      "related_terms": [],
+      "contrasts_with": [],
+      "category": "Financial & ROI Fundamentals"
+    },
+    {
+      "term": "Output Length Control",
+      "related_terms": [
+        "Max Tokens Parameter"
+      ],
+      "contrasts_with": [],
+      "category": "Token & Cost Efficiency Techniques"
+    },
+    {
+      "term": "Output Token",
+      "related_terms": [],
+      "contrasts_with": [
+        "Input Token"
+      ],
+      "category": "Tokenization & Token Economics"
+    },
+    {
+      "term": "Output Token Pricing",
+      "related_terms": [],
+      "contrasts_with": [
+        "Input Token Pricing"
+      ],
+      "category": "Tokenization & Token Economics"
+    },
+    {
+      "term": "Overreliance Risk",
+      "related_terms": [
+        "Skill Erosion Risk"
+      ],
+      "contrasts_with": [],
+      "category": "Risk, Governance & Hidden Costs"
+    },
+    {
+      "term": "Parallel Sampling Cost",
+      "related_terms": [
+        "Self-Consistency Cost"
+      ],
+      "contrasts_with": [],
+      "category": "Token & Cost Efficiency Techniques"
+    },
+    {
+      "term": "Payback Period",
+      "related_terms": [],
+      "contrasts_with": [
+        "Net Present Value"
+      ],
+      "category": "Financial & ROI Fundamentals"
+    },
+    {
+      "term": "Peak Load Provisioning",
+      "related_terms": [
+        "Autoscaling"
+      ],
+      "contrasts_with": [],
+      "category": "Compute, Infrastructure & Pricing"
+    },
+    {
+      "term": "Peer Review Process",
+      "related_terms": [],
+      "contrasts_with": [
+        "Report Editing Pass"
+      ],
+      "category": "Report Design, Visualization & Capstone"
+    },
+    {
+      "term": "Per-Feature Cost Tracking",
+      "related_terms": [],
+      "contrasts_with": [],
+      "category": "Data Collection, Instrumentation & Observability"
+    },
+    {
+      "term": "Per-Token Pricing",
+      "related_terms": [
+        "Token Pricing Model"
+      ],
+      "contrasts_with": [],
+      "category": "Tokenization & Token Economics"
+    },
+    {
+      "term": "Per-User Cost Tracking",
+      "related_terms": [
+        "Cost Per User"
+      ],
+      "contrasts_with": [],
+      "category": "Data Collection, Instrumentation & Observability"
+    },
+    {
+      "term": "Pilot Program Design",
+      "related_terms": [],
+      "contrasts_with": [
+        "Proof-Of-Concept Cost"
+      ],
+      "category": "Vendor, Model & Build-vs-Buy Economics"
+    },
+    {
+      "term": "Policy Enforcement Automation",
+      "related_terms": [
+        "Governance Overhead Cost"
+      ],
+      "contrasts_with": [],
+      "category": "Risk, Governance & Hidden Costs"
+    },
+    {
+      "term": "Post-Capstone Reflection",
+      "related_terms": [],
+      "contrasts_with": [],
+      "category": "Report Design, Visualization & Capstone"
+    },
+    {
+      "term": "Post-Deployment Monitoring Cost",
+      "related_terms": [
+        "Rollback Cost"
+      ],
+      "contrasts_with": [],
+      "category": "Software Development Lifecycle Cost Optimization"
+    },
+    {
+      "term": "Pre/Post Comparison Study",
+      "related_terms": [],
+      "contrasts_with": [
+        "Control Group Comparison"
+      ],
+      "category": "ROI Metrics & KPIs"
+    },
+    {
+      "term": "Precision And Recall",
+      "related_terms": [],
+      "contrasts_with": [
+        "Model Accuracy Metric"
+      ],
+      "category": "ROI Metrics & KPIs"
+    },
+    {
+      "term": "Pretrained Model Reuse",
+      "related_terms": [
+        "Transfer Learning Cost Savings"
+      ],
+      "contrasts_with": [],
+      "category": "Data Science Lifecycle Cost Optimization"
+    },
+    {
+      "term": "Pretraining",
+      "related_terms": [],
+      "contrasts_with": [
+        "Fine-Tuning"
+      ],
+      "category": "Generative AI & LLM Foundations"
+    },
+    {
+      "term": "Procurement Cycle Impact",
+      "related_terms": [],
+      "contrasts_with": [],
+      "category": "Vendor, Model & Build-vs-Buy Economics"
+    },
+    {
+      "term": "Productivity Gain",
+      "related_terms": [
+        "Labor Cost Savings"
+      ],
+      "contrasts_with": [],
+      "category": "Financial & ROI Fundamentals"
+    },
+    {
+      "term": "Project-Level Cost Tracking",
+      "related_terms": [
+        "Departmental Cost Rollup"
+      ],
+      "contrasts_with": [],
+      "category": "Data Collection, Instrumentation & Observability"
+    },
+    {
+      "term": "Prompt",
+      "related_terms": [
+        "System Prompt",
+        "Prompt Length"
+      ],
+      "contrasts_with": [],
+      "category": "Generative AI & LLM Foundations"
+    },
+    {
+      "term": "Prompt Caching",
+      "related_terms": [
+        "Cached Token Discount"
+      ],
+      "contrasts_with": [],
+      "category": "Tokenization & Token Economics"
+    },
+    {
+      "term": "Prompt Compression",
+      "related_terms": [
+        "Prompt Summarization",
+        "Context Compression"
+      ],
+      "contrasts_with": [],
+      "category": "Tokenization & Token Economics"
+    },
+    {
+      "term": "Prompt Engineering",
+      "related_terms": [
+        "Prompt Optimization",
+        "Fine-Tuning Vs Prompting"
+      ],
+      "contrasts_with": [],
+      "category": "Generative AI & LLM Foundations"
+    },
+    {
+      "term": "Prompt Length",
+      "related_terms": [
+        "Prompt Compression"
+      ],
+      "contrasts_with": [],
+      "category": "Tokenization & Token Economics"
+    },
+    {
+      "term": "Prompt Optimization",
+      "related_terms": [
+        "Prompt Engineering"
+      ],
+      "contrasts_with": [],
+      "category": "Token & Cost Efficiency Techniques"
+    },
+    {
+      "term": "Prompt Reuse Library",
+      "related_terms": [
+        "Prompt Template Design",
+        "Prompt Version Control"
+      ],
+      "contrasts_with": [],
+      "category": "Token & Cost Efficiency Techniques"
+    },
+    {
+      "term": "Prompt Summarization",
+      "related_terms": [
+        "Summarization Preprocessing"
+      ],
+      "contrasts_with": [],
+      "category": "Tokenization & Token Economics"
+    },
+    {
+      "term": "Prompt Template Design",
+      "related_terms": [
+        "Prompt Reuse Library"
+      ],
+      "contrasts_with": [],
+      "category": "Token & Cost Efficiency Techniques"
+    },
+    {
+      "term": "Prompt Version Control",
+      "related_terms": [
+        "Prompt Reuse Library"
+      ],
+      "contrasts_with": [],
+      "category": "Token & Cost Efficiency Techniques"
+    },
+    {
+      "term": "Prompt-Driven Development Cost",
+      "related_terms": [],
+      "contrasts_with": [
+        "Code Completion Tool Cost"
+      ],
+      "category": "Software Development Lifecycle Cost Optimization"
+    },
+    {
+      "term": "Proof-Of-Concept Cost",
+      "related_terms": [],
+      "contrasts_with": [
+        "Pilot Program Design"
+      ],
+      "category": "Vendor, Model & Build-vs-Buy Economics"
+    },
+    {
+      "term": "Proprietary Model",
+      "related_terms": [],
+      "contrasts_with": [
+        "Open-Source Model"
+      ],
+      "category": "Generative AI & LLM Foundations"
+    },
+    {
+      "term": "Provider Rate Card",
+      "related_terms": [
+        "Vendor Pricing Comparison"
+      ],
+      "contrasts_with": [],
+      "category": "Tokenization & Token Economics"
+    },
+    {
+      "term": "Pull Request Turnaround",
+      "related_terms": [
+        "Code Review Cycle Time"
+      ],
+      "contrasts_with": [],
+      "category": "Software Development Lifecycle Cost Optimization"
+    },
+    {
+      "term": "Q&A Presentation Prep",
+      "related_terms": [
+        "Objection Anticipation"
+      ],
+      "contrasts_with": [],
+      "category": "Executive Communication & Financial Literacy"
+    },
+    {
+      "term": "Quality Score Metric",
+      "related_terms": [
+        "Model Accuracy Metric"
+      ],
+      "contrasts_with": [],
+      "category": "ROI Metrics & KPIs"
+    },
+    {
+      "term": "Quality-Cost Tradeoff",
+      "related_terms": [
+        "Latency-Cost Tradeoff"
+      ],
+      "contrasts_with": [],
+      "category": "Token & Cost Efficiency Techniques"
+    },
+    {
+      "term": "Quantization For Cost Cutting",
+      "related_terms": [],
+      "contrasts_with": [
+        "Distillation For Cost Cutting"
+      ],
+      "category": "Token & Cost Efficiency Techniques"
+    },
+    {
+      "term": "Query Rewriting",
+      "related_terms": [],
+      "contrasts_with": [],
+      "category": "Token & Cost Efficiency Techniques"
+    },
+    {
+      "term": "RAG Cost Tradeoff",
+      "related_terms": [
+        "Retrieval-Augmented Generation"
+      ],
+      "contrasts_with": [],
+      "category": "Token & Cost Efficiency Techniques"
+    },
+    {
+      "term": "Real-Time Alert Fatigue",
+      "related_terms": [
+        "Alerting Threshold Design"
+      ],
+      "contrasts_with": [],
+      "category": "Data Collection, Instrumentation & Observability"
+    },
+    {
+      "term": "Real-Time Cost Monitoring",
+      "related_terms": [
+        "Cost Alerting"
+      ],
+      "contrasts_with": [],
+      "category": "Data Collection, Instrumentation & Observability"
+    },
+    {
+      "term": "Recommendation Framing",
+      "related_terms": [],
+      "contrasts_with": [],
+      "category": "Executive Communication & Financial Literacy"
+    },
+    {
+      "term": "Recommendations Section Design",
+      "related_terms": [
+        "Recommendation Framing"
+      ],
+      "contrasts_with": [],
+      "category": "Report Design, Visualization & Capstone"
+    },
+    {
+      "term": "Redundant Token Usage",
+      "related_terms": [
+        "Token Wastage"
+      ],
+      "contrasts_with": [],
+      "category": "Tokenization & Token Economics"
+    },
+    {
+      "term": "Refactoring Cost",
+      "related_terms": [
+        "Technical Debt From AI Code"
+      ],
+      "contrasts_with": [],
+      "category": "Software Development Lifecycle Cost Optimization"
+    },
+    {
+      "term": "Regulatory Uncertainty Cost",
+      "related_terms": [
+        "Compliance Risk"
+      ],
+      "contrasts_with": [],
+      "category": "Risk, Governance & Hidden Costs"
+    },
+    {
+      "term": "Release Cadence Cost Impact",
+      "related_terms": [
+        "Deployment Phase Cost"
+      ],
+      "contrasts_with": [],
+      "category": "Software Development Lifecycle Cost Optimization"
+    },
+    {
+      "term": "Report Accessibility",
+      "related_terms": [],
+      "contrasts_with": [],
+      "category": "Report Design, Visualization & Capstone"
+    },
+    {
+      "term": "Report Archiving Practice",
+      "related_terms": [
+        "Data Retention Policy"
+      ],
+      "contrasts_with": [],
+      "category": "Report Design, Visualization & Capstone"
+    },
+    {
+      "term": "Report Distribution Strategy",
+      "related_terms": [
+        "One-Page Summary Technique"
+      ],
+      "contrasts_with": [],
+      "category": "Report Design, Visualization & Capstone"
+    },
+    {
+      "term": "Report Editing Pass",
+      "related_terms": [],
+      "contrasts_with": [
+        "Peer Review Process"
+      ],
+      "category": "Report Design, Visualization & Capstone"
+    },
+    {
+      "term": "Report Feedback Incorporation",
+      "related_terms": [
+        "Communication Feedback Loop"
+      ],
+      "contrasts_with": [],
+      "category": "Report Design, Visualization & Capstone"
+    },
+    {
+      "term": "Report Length Calibration",
+      "related_terms": [
+        "Executive Attention Span"
+      ],
+      "contrasts_with": [],
+      "category": "Report Design, Visualization & Capstone"
+    },
+    {
+      "term": "Report Localization Note",
+      "related_terms": [],
+      "contrasts_with": [],
+      "category": "Report Design, Visualization & Capstone"
+    },
+    {
+      "term": "Report Review Checklist",
+      "related_terms": [
+        "Report Editing Pass"
+      ],
+      "contrasts_with": [],
+      "category": "Report Design, Visualization & Capstone"
+    },
+    {
+      "term": "Report Scope Definition",
+      "related_terms": [],
+      "contrasts_with": [],
+      "category": "Report Design, Visualization & Capstone"
+    },
+    {
+      "term": "Report Template Library",
+      "related_terms": [],
+      "contrasts_with": [],
+      "category": "Report Design, Visualization & Capstone"
+    },
+    {
+      "term": "Report Version Control",
+      "related_terms": [],
+      "contrasts_with": [
+        "Prompt Version Control"
+      ],
+      "category": "Report Design, Visualization & Capstone"
+    },
+    {
+      "term": "Reputational Risk",
+      "related_terms": [],
+      "contrasts_with": [],
+      "category": "Risk, Governance & Hidden Costs"
+    },
+    {
+      "term": "Requirements Phase Cost",
+      "related_terms": [
+        "AI-Assisted Requirements"
+      ],
+      "contrasts_with": [],
+      "category": "Software Development Lifecycle Cost Optimization"
+    },
+    {
+      "term": "Reserved Capacity Pricing",
+      "related_terms": [],
+      "contrasts_with": [
+        "On-Demand Pricing"
+      ],
+      "category": "Compute, Infrastructure & Pricing"
+    },
+    {
+      "term": "Response Caching",
+      "related_terms": [
+        "Deterministic Caching",
+        "Semantic Caching"
+      ],
+      "contrasts_with": [],
+      "category": "Token & Cost Efficiency Techniques"
+    },
+    {
+      "term": "Responsible AI Policy",
+      "related_terms": [
+        "Model Governance Board"
+      ],
+      "contrasts_with": [],
+      "category": "Risk, Governance & Hidden Costs"
+    },
+    {
+      "term": "Retraining Cadence Tuning",
+      "related_terms": [
+        "Model Retraining Trigger"
+      ],
+      "contrasts_with": [],
+      "category": "Data Science Lifecycle Cost Optimization"
+    },
+    {
+      "term": "Retrieval Chunk Size",
+      "related_terms": [],
+      "contrasts_with": [
+        "Chunking Strategy"
+      ],
+      "category": "Tokenization & Token Economics"
+    },
+    {
+      "term": "Retrieval Optimization",
+      "related_terms": [
+        "RAG Cost Tradeoff"
+      ],
+      "contrasts_with": [],
+      "category": "Token & Cost Efficiency Techniques"
+    },
+    {
+      "term": "Retrieval-Augmented Generation",
+      "related_terms": [
+        "Vector Database",
+        "RAG Cost Tradeoff"
+      ],
+      "contrasts_with": [],
+      "category": "Generative AI & LLM Foundations"
+    },
+    {
+      "term": "Return On Investment",
+      "related_terms": [
+        "GenAI ROI Metric"
+      ],
+      "contrasts_with": [],
+      "category": "Financial & ROI Fundamentals"
+    },
+    {
+      "term": "Revenue Impact",
+      "related_terms": [],
+      "contrasts_with": [],
+      "category": "Financial & ROI Fundamentals"
+    },
+    {
+      "term": "Rework Rate Metric",
+      "related_terms": [
+        "Error Rate Metric"
+      ],
+      "contrasts_with": [],
+      "category": "ROI Metrics & KPIs"
+    },
+    {
+      "term": "Right-Sizing Review Cycle",
+      "related_terms": [
+        "Model Right-Sizing"
+      ],
+      "contrasts_with": [],
+      "category": "Token & Cost Efficiency Techniques"
+    },
+    {
+      "term": "Risk Appetite Statement",
+      "related_terms": [],
+      "contrasts_with": [],
+      "category": "Risk, Governance & Hidden Costs"
+    },
+    {
+      "term": "Risk Communication To Executives",
+      "related_terms": [],
+      "contrasts_with": [
+        "Risk Reporting To Executives"
+      ],
+      "category": "Executive Communication & Financial Literacy"
+    },
+    {
+      "term": "Risk Mitigation Cost-Benefit",
+      "related_terms": [
+        "AI Risk Register"
+      ],
+      "contrasts_with": [],
+      "category": "Risk, Governance & Hidden Costs"
+    },
+    {
+      "term": "Risk Reporting To Executives",
+      "related_terms": [
+        "Technical-Financial Translation"
+      ],
+      "contrasts_with": [],
+      "category": "Risk, Governance & Hidden Costs"
+    },
+    {
+      "term": "Risk-Adjusted Cost Model",
+      "related_terms": [
+        "Risk-Adjusted TCO"
+      ],
+      "contrasts_with": [],
+      "category": "Risk, Governance & Hidden Costs"
+    },
+    {
+      "term": "Risk-Adjusted Return",
+      "related_terms": [
+        "Discount Rate"
+      ],
+      "contrasts_with": [],
+      "category": "Financial & ROI Fundamentals"
+    },
+    {
+      "term": "Risk-Adjusted TCO",
+      "related_terms": [
+        "Total Cost Of Ownership",
+        "Risk-Adjusted Cost Model"
+      ],
+      "contrasts_with": [],
+      "category": "Risk, Governance & Hidden Costs"
+    },
+    {
+      "term": "RLHF Alignment",
+      "related_terms": [],
+      "contrasts_with": [
+        "Instruction Tuning"
+      ],
+      "category": "Generative AI & LLM Foundations"
+    },
+    {
+      "term": "Rollback Cost",
+      "related_terms": [
+        "Software Delivery Risk"
+      ],
+      "contrasts_with": [],
+      "category": "Software Development Lifecycle Cost Optimization"
+    },
+    {
+      "term": "Sampling Strategy For Telemetry",
+      "related_terms": [
+        "Telemetry Sampling Bias"
+      ],
+      "contrasts_with": [],
+      "category": "Data Collection, Instrumentation & Observability"
+    },
+    {
+      "term": "Scenario Analysis",
+      "related_terms": [],
+      "contrasts_with": [
+        "Sensitivity Analysis"
+      ],
+      "category": "Financial & ROI Fundamentals"
+    },
+    {
+      "term": "Scenario Comparison Table",
+      "related_terms": [
+        "Scenario Analysis"
+      ],
+      "contrasts_with": [],
+      "category": "Report Design, Visualization & Capstone"
+    },
+    {
+      "term": "SDLC Automation Maturity",
+      "related_terms": [
+        "Software Development Lifecycle"
+      ],
+      "contrasts_with": [],
+      "category": "Software Development Lifecycle Cost Optimization"
+    },
+    {
+      "term": "SDLC Cost Baseline",
+      "related_terms": [
+        "SDLC Cost Reduction Roadmap"
+      ],
+      "contrasts_with": [],
+      "category": "Software Development Lifecycle Cost Optimization"
+    },
+    {
+      "term": "SDLC Cost Reduction Roadmap",
+      "related_terms": [
+        "SDLC Cost Baseline"
+      ],
+      "contrasts_with": [],
+      "category": "Software Development Lifecycle Cost Optimization"
+    },
+    {
+      "term": "SDLC ROI Case Study",
+      "related_terms": [
+        "Software Development Lifecycle"
+      ],
+      "contrasts_with": [],
+      "category": "Software Development Lifecycle Cost Optimization"
+    },
+    {
+      "term": "Seat-Based Licensing",
+      "related_terms": [],
+      "contrasts_with": [
+        "Usage-Based Licensing"
+      ],
+      "category": "Vendor, Model & Build-vs-Buy Economics"
+    },
+    {
+      "term": "Security Incident Cost Estimate",
+      "related_terms": [
+        "Insurance Cost For AI Risk"
+      ],
+      "contrasts_with": [],
+      "category": "Risk, Governance & Hidden Costs"
+    },
+    {
+      "term": "Security Review Of AI Code",
+      "related_terms": [
+        "Code Generation Quality Review"
+      ],
+      "contrasts_with": [],
+      "category": "Software Development Lifecycle Cost Optimization"
+    },
+    {
+      "term": "Self-Attention",
+      "related_terms": [],
+      "contrasts_with": [
+        "Attention Mechanism"
+      ],
+      "category": "Generative AI & LLM Foundations"
+    },
+    {
+      "term": "Self-Consistency Cost",
+      "related_terms": [],
+      "contrasts_with": [
+        "Parallel Sampling Cost"
+      ],
+      "category": "Token & Cost Efficiency Techniques"
+    },
+    {
+      "term": "Self-Hosted Model Economics",
+      "related_terms": [],
+      "contrasts_with": [
+        "Managed Service Economics"
+      ],
+      "category": "Vendor, Model & Build-vs-Buy Economics"
+    },
+    {
+      "term": "Semantic Caching",
+      "related_terms": [],
+      "contrasts_with": [
+        "Deterministic Caching"
+      ],
+      "category": "Tokenization & Token Economics"
+    },
+    {
+      "term": "Semantic Deduplication",
+      "related_terms": [
+        "Redundant Token Usage"
+      ],
+      "contrasts_with": [],
+      "category": "Token & Cost Efficiency Techniques"
+    },
+    {
+      "term": "Sensitivity Analysis",
+      "related_terms": [
+        "Scenario Analysis"
+      ],
+      "contrasts_with": [],
+      "category": "Financial & ROI Fundamentals"
+    },
+    {
+      "term": "Sensitivity Analysis Chart",
+      "related_terms": [
+        "Sensitivity Analysis"
+      ],
+      "contrasts_with": [],
+      "category": "Report Design, Visualization & Capstone"
+    },
+    {
+      "term": "Serverless Inference",
+      "related_terms": [],
+      "contrasts_with": [
+        "Dedicated Endpoint"
+      ],
+      "category": "Compute, Infrastructure & Pricing"
+    },
+    {
+      "term": "Shadow AI Usage Risk",
+      "related_terms": [
+        "Data Security Risk"
+      ],
+      "contrasts_with": [],
+      "category": "Risk, Governance & Hidden Costs"
+    },
+    {
+      "term": "Shadow Deployment Cost",
+      "related_terms": [
+        "Champion-Challenger Testing"
+      ],
+      "contrasts_with": [],
+      "category": "Data Science Lifecycle Cost Optimization"
+    },
+    {
+      "term": "Showback Model",
+      "related_terms": [],
+      "contrasts_with": [
+        "Chargeback Model"
+      ],
+      "category": "Financial & ROI Fundamentals"
+    },
+    {
+      "term": "Single Source Of Truth",
+      "related_terms": [],
+      "contrasts_with": [],
+      "category": "Data Collection, Instrumentation & Observability"
+    },
+    {
+      "term": "Skill Erosion Risk",
+      "related_terms": [
+        "Overreliance Risk"
+      ],
+      "contrasts_with": [],
+      "category": "Risk, Governance & Hidden Costs"
+    },
+    {
+      "term": "Slide Design For Financial Data",
+      "related_terms": [
+        "Data Visualization Principles"
+      ],
+      "contrasts_with": [],
+      "category": "Executive Communication & Financial Literacy"
+    },
+    {
+      "term": "Small Model First Strategy",
+      "related_terms": [
+        "Model Cascading"
+      ],
+      "contrasts_with": [],
+      "category": "Token & Cost Efficiency Techniques"
+    },
+    {
+      "term": "So-What Statement",
+      "related_terms": [
+        "Key Message Development"
+      ],
+      "contrasts_with": [],
+      "category": "Executive Communication & Financial Literacy"
+    },
+    {
+      "term": "Software Delivery Risk",
+      "related_terms": [],
+      "contrasts_with": [],
+      "category": "Software Development Lifecycle Cost Optimization"
+    },
+    {
+      "term": "Software Development Lifecycle",
+      "related_terms": [
+        "Requirements Phase Cost",
+        "Maintenance Phase Cost"
+      ],
+      "contrasts_with": [],
+      "category": "Software Development Lifecycle Cost Optimization"
+    },
+    {
+      "term": "Sourcing Strategy Roadmap",
+      "related_terms": [
+        "Build Vs Buy Decision"
+      ],
+      "contrasts_with": [],
+      "category": "Vendor, Model & Build-vs-Buy Economics"
+    },
+    {
+      "term": "Sparse Model Techniques",
+      "related_terms": [
+        "Mixture Of Experts"
+      ],
+      "contrasts_with": [],
+      "category": "Token & Cost Efficiency Techniques"
+    },
+    {
+      "term": "Speculative Decoding",
+      "related_terms": [],
+      "contrasts_with": [],
+      "category": "Token & Cost Efficiency Techniques"
+    },
+    {
+      "term": "Spend Forecasting",
+      "related_terms": [
+        "Financial Forecasting"
+      ],
+      "contrasts_with": [],
+      "category": "Data Collection, Instrumentation & Observability"
+    },
+    {
+      "term": "Spot Instance Pricing",
+      "related_terms": [],
+      "contrasts_with": [
+        "Reserved Capacity Pricing"
+      ],
+      "category": "Compute, Infrastructure & Pricing"
+    },
+    {
+      "term": "Staff Retraining Cost",
+      "related_terms": [],
+      "contrasts_with": [],
+      "category": "Risk, Governance & Hidden Costs"
+    },
+    {
+      "term": "Stakeholder Mapping",
+      "related_terms": [
+        "Executive Audience Analysis"
+      ],
+      "contrasts_with": [],
+      "category": "Executive Communication & Financial Literacy"
+    },
+    {
+      "term": "Statistical Significance Check",
+      "related_terms": [
+        "Metric Attribution"
+      ],
+      "contrasts_with": [],
+      "category": "ROI Metrics & KPIs"
+    },
+    {
+      "term": "Storage Cost",
+      "related_terms": [
+        "Vector Store Cost"
+      ],
+      "contrasts_with": [],
+      "category": "Compute, Infrastructure & Pricing"
+    },
+    {
+      "term": "Story Points Delivered",
+      "related_terms": [
+        "Developer Velocity Metric"
+      ],
+      "contrasts_with": [],
+      "category": "ROI Metrics & KPIs"
+    },
+    {
+      "term": "Storytelling With Data",
+      "related_terms": [
+        "Narrative Arc For Reports"
+      ],
+      "contrasts_with": [],
+      "category": "Executive Communication & Financial Literacy"
+    },
+    {
+      "term": "Streaming Response",
+      "related_terms": [],
+      "contrasts_with": [
+        "Batch Inference"
+      ],
+      "category": "Generative AI & LLM Foundations"
+    },
+    {
+      "term": "Structured Output Format",
+      "related_terms": [
+        "JSON Mode Output"
+      ],
+      "contrasts_with": [],
+      "category": "Token & Cost Efficiency Techniques"
+    },
+    {
+      "term": "Subword Tokenization",
+      "related_terms": [
+        "Byte Pair Encoding"
+      ],
+      "contrasts_with": [],
+      "category": "Tokenization & Token Economics"
+    },
+    {
+      "term": "Summarization Preprocessing",
+      "related_terms": [
+        "Prompt Summarization"
+      ],
+      "contrasts_with": [],
+      "category": "Token & Cost Efficiency Techniques"
+    },
+    {
+      "term": "Sunk Cost",
+      "related_terms": [],
+      "contrasts_with": [],
+      "category": "Financial & ROI Fundamentals"
+    },
+    {
+      "term": "Switching Cost Estimate",
+      "related_terms": [
+        "Vendor Lock-In Risk"
+      ],
+      "contrasts_with": [],
+      "category": "Vendor, Model & Build-vs-Buy Economics"
+    },
+    {
+      "term": "Synthetic Data Cost Tradeoff",
+      "related_terms": [
+        "Synthetic Data Generation"
+      ],
+      "contrasts_with": [],
+      "category": "Data Science Lifecycle Cost Optimization"
+    },
+    {
+      "term": "Synthetic Data Generation",
+      "related_terms": [
+        "Synthetic Data Cost Tradeoff"
+      ],
+      "contrasts_with": [],
+      "category": "Data Science Lifecycle Cost Optimization"
+    },
+    {
+      "term": "System Prompt",
+      "related_terms": [],
+      "contrasts_with": [
+        "Prompt"
+      ],
+      "category": "Generative AI & LLM Foundations"
+    },
+    {
+      "term": "System Prompt Overhead",
+      "related_terms": [
+        "System Prompt",
+        "Prompt Caching"
+      ],
+      "contrasts_with": [],
+      "category": "Tokenization & Token Economics"
+    },
+    {
+      "term": "Table Of Contents Design",
+      "related_terms": [],
+      "contrasts_with": [],
+      "category": "Report Design, Visualization & Capstone"
+    },
+    {
+      "term": "Task Completion Time",
+      "related_terms": [
+        "Cycle Time Reduction"
+      ],
+      "contrasts_with": [],
+      "category": "ROI Metrics & KPIs"
+    },
+    {
+      "term": "Technical Debt From AI Code",
+      "related_terms": [
+        "Refactoring Cost"
+      ],
+      "contrasts_with": [],
+      "category": "Software Development Lifecycle Cost Optimization"
+    },
+    {
+      "term": "Technical Debt Risk",
+      "related_terms": [
+        "Technical Debt From AI Code"
+      ],
+      "contrasts_with": [],
+      "category": "Risk, Governance & Hidden Costs"
+    },
+    {
+      "term": "Technical-Financial Translation",
+      "related_terms": [
+        "Jargon Reduction Technique"
+      ],
+      "contrasts_with": [],
+      "category": "Executive Communication & Financial Literacy"
+    },
+    {
+      "term": "Telemetry Sampling Bias",
+      "related_terms": [
+        "Sampling Strategy For Telemetry"
+      ],
+      "contrasts_with": [],
+      "category": "Data Collection, Instrumentation & Observability"
+    },
+    {
+      "term": "Temperature Setting",
+      "related_terms": [],
+      "contrasts_with": [],
+      "category": "Token & Cost Efficiency Techniques"
+    },
+    {
+      "term": "Test Coverage Automation",
+      "related_terms": [
+        "AI-Generated Test Cases"
+      ],
+      "contrasts_with": [],
+      "category": "Software Development Lifecycle Cost Optimization"
+    },
+    {
+      "term": "Testing Phase Cost",
+      "related_terms": [
+        "AI-Generated Test Cases"
+      ],
+      "contrasts_with": [],
+      "category": "Software Development Lifecycle Cost Optimization"
+    },
+    {
+      "term": "Third-Party Risk Assessment",
+      "related_terms": [],
+      "contrasts_with": [
+        "Vendor Risk Assessment"
+      ],
+      "category": "Risk, Governance & Hidden Costs"
+    },
+    {
+      "term": "Throughput Improvement Metric",
+      "related_terms": [],
+      "contrasts_with": [],
+      "category": "ROI Metrics & KPIs"
+    },
+    {
+      "term": "Throughput-Latency Tradeoff",
+      "related_terms": [
+        "Model Latency",
+        "Model Throughput"
+      ],
+      "contrasts_with": [],
+      "category": "Compute, Infrastructure & Pricing"
+    },
+    {
+      "term": "Time Value Of Money",
+      "related_terms": [
+        "Discount Rate"
+      ],
+      "contrasts_with": [],
+      "category": "Financial & ROI Fundamentals"
+    },
+    {
+      "term": "Time-To-Value Metric",
+      "related_terms": [],
+      "contrasts_with": [
+        "Payback Period"
+      ],
+      "category": "ROI Metrics & KPIs"
+    },
+    {
+      "term": "Token",
+      "related_terms": [
+        "Tokenization",
+        "Token Pricing Model"
+      ],
+      "contrasts_with": [],
+      "category": "Tokenization & Token Economics"
+    },
+    {
+      "term": "Token Budget",
+      "related_terms": [
+        "Budget Threshold"
+      ],
+      "contrasts_with": [],
+      "category": "Tokenization & Token Economics"
+    },
+    {
+      "term": "Token Consumption Rate",
+      "related_terms": [
+        "Token Count"
+      ],
+      "contrasts_with": [],
+      "category": "Tokenization & Token Economics"
+    },
+    {
+      "term": "Token Cost Benchmark",
+      "related_terms": [
+        "Cross-Provider Comparison"
+      ],
+      "contrasts_with": [],
+      "category": "Tokenization & Token Economics"
+    },
+    {
+      "term": "Token Count",
+      "related_terms": [
+        "Token Consumption Rate"
+      ],
+      "contrasts_with": [],
+      "category": "Tokenization & Token Economics"
+    },
+    {
+      "term": "Token Efficiency",
+      "related_terms": [
+        "Token Efficiency Score",
+        "Token Efficiency Audit"
+      ],
+      "contrasts_with": [],
+      "category": "Tokenization & Token Economics"
+    },
+    {
+      "term": "Token Efficiency Audit",
+      "related_terms": [
+        "Token Wastage",
+        "Continuous Cost Optimization"
+      ],
+      "contrasts_with": [],
+      "category": "Token & Cost Efficiency Techniques"
+    },
+    {
+      "term": "Token Efficiency Score",
+      "related_terms": [
+        "Token Efficiency"
+      ],
+      "contrasts_with": [],
+      "category": "Tokenization & Token Economics"
+    },
+    {
+      "term": "Token Limit",
+      "related_terms": [],
+      "contrasts_with": [
+        "Context Window"
+      ],
+      "category": "Tokenization & Token Economics"
+    },
+    {
+      "term": "Token Metering",
+      "related_terms": [
+        "Token Usage Logging"
+      ],
+      "contrasts_with": [],
+      "category": "Tokenization & Token Economics"
+    },
+    {
+      "term": "Token Pricing Model",
+      "related_terms": [
+        "Per-Token Pricing"
+      ],
+      "contrasts_with": [],
+      "category": "Tokenization & Token Economics"
+    },
+    {
+      "term": "Token Rate Limit",
+      "related_terms": [],
+      "contrasts_with": [],
+      "category": "Tokenization & Token Economics"
+    },
+    {
+      "term": "Token Truncation",
+      "related_terms": [],
+      "contrasts_with": [
+        "Context Pruning"
+      ],
+      "category": "Tokenization & Token Economics"
+    },
+    {
+      "term": "Token Usage Logging",
+      "related_terms": [],
+      "contrasts_with": [
+        "API Call Logging"
+      ],
+      "category": "Data Collection, Instrumentation & Observability"
+    },
+    {
+      "term": "Token Vocabulary",
+      "related_terms": [],
+      "contrasts_with": [],
+      "category": "Tokenization & Token Economics"
+    },
+    {
+      "term": "Token Wastage",
+      "related_terms": [
+        "Token Efficiency Audit"
+      ],
+      "contrasts_with": [],
+      "category": "Tokenization & Token Economics"
+    },
+    {
+      "term": "Token-To-Word Ratio",
+      "related_terms": [],
+      "contrasts_with": [],
+      "category": "Tokenization & Token Economics"
+    },
+    {
+      "term": "Tokenization",
+      "related_terms": [
+        "Subword Tokenization",
+        "Token"
+      ],
+      "contrasts_with": [],
+      "category": "Tokenization & Token Economics"
+    },
+    {
+      "term": "Tokenizer Choice",
+      "related_terms": [],
+      "contrasts_with": [],
+      "category": "Tokenization & Token Economics"
+    },
+    {
+      "term": "Tokenizer Version Drift",
+      "related_terms": [
+        "Model Versioning"
+      ],
+      "contrasts_with": [],
+      "category": "Tokenization & Token Economics"
+    },
+    {
+      "term": "Tool Use Efficiency",
+      "related_terms": [
+        "Function Calling"
+      ],
+      "contrasts_with": [],
+      "category": "Token & Cost Efficiency Techniques"
+    },
+    {
+      "term": "Tooling License Cost",
+      "related_terms": [
+        "IDE Integration Cost"
+      ],
+      "contrasts_with": [],
+      "category": "Software Development Lifecycle Cost Optimization"
+    },
+    {
+      "term": "Total Addressable Cost Savings",
+      "related_terms": [],
+      "contrasts_with": [],
+      "category": "Vendor, Model & Build-vs-Buy Economics"
+    },
+    {
+      "term": "Total Compute Footprint",
+      "related_terms": [
+        "Compute Cost"
+      ],
+      "contrasts_with": [],
+      "category": "Compute, Infrastructure & Pricing"
+    },
+    {
+      "term": "Total Cost Of Ownership",
+      "related_terms": [
+        "Return On Investment"
+      ],
+      "contrasts_with": [],
+      "category": "Financial & ROI Fundamentals"
+    },
+    {
+      "term": "Total Vendor Cost Model",
+      "related_terms": [
+        "Build Vs Buy Decision"
+      ],
+      "contrasts_with": [],
+      "category": "Vendor, Model & Build-vs-Buy Economics"
+    },
+    {
+      "term": "Training Vs Inference Cost",
+      "related_terms": [
+        "Pretraining",
+        "Inference"
+      ],
+      "contrasts_with": [],
+      "category": "Generative AI & LLM Foundations"
+    },
+    {
+      "term": "Transfer Learning Cost Savings",
+      "related_terms": [
+        "Pretrained Model Reuse"
+      ],
+      "contrasts_with": [],
+      "category": "Data Science Lifecycle Cost Optimization"
+    },
+    {
+      "term": "Transformer Architecture",
+      "related_terms": [
+        "Attention Mechanism",
+        "Context Window"
+      ],
+      "contrasts_with": [],
+      "category": "Generative AI & LLM Foundations"
+    },
+    {
+      "term": "Uncertainty Communication",
+      "related_terms": [
+        "Confidence Interval Framing"
+      ],
+      "contrasts_with": [],
+      "category": "Executive Communication & Financial Literacy"
+    },
+    {
+      "term": "Unit Economics",
+      "related_terms": [
+        "Cost Per Query",
+        "Cost Per User"
+      ],
+      "contrasts_with": [],
+      "category": "Financial & ROI Fundamentals"
+    },
+    {
+      "term": "Usage Dashboard",
+      "related_terms": [],
+      "contrasts_with": [
+        "Cost Dashboard Design"
+      ],
+      "category": "Tokenization & Token Economics"
+    },
+    {
+      "term": "Usage Frequency Metric",
+      "related_terms": [],
+      "contrasts_with": [
+        "Adoption Rate Metric"
+      ],
+      "category": "ROI Metrics & KPIs"
+    },
+    {
+      "term": "Usage Telemetry",
+      "related_terms": [
+        "Metric Instrumentation Plan"
+      ],
+      "contrasts_with": [],
+      "category": "Data Collection, Instrumentation & Observability"
+    },
+    {
+      "term": "Usage-Based Licensing",
+      "related_terms": [],
+      "contrasts_with": [
+        "Seat-Based Licensing"
+      ],
+      "category": "Vendor, Model & Build-vs-Buy Economics"
+    },
+    {
+      "term": "User Retention Metric",
+      "related_terms": [
+        "Adoption Rate Metric"
+      ],
+      "contrasts_with": [],
+      "category": "ROI Metrics & KPIs"
+    },
+    {
+      "term": "Value Realization Metric",
+      "related_terms": [
+        "Business Case"
+      ],
+      "contrasts_with": [],
+      "category": "ROI Metrics & KPIs"
+    },
+    {
+      "term": "Variable Cost",
+      "related_terms": [],
+      "contrasts_with": [
+        "Fixed Cost"
+      ],
+      "category": "Financial & ROI Fundamentals"
+    },
+    {
+      "term": "Vector Database",
+      "related_terms": [
+        "Embedding",
+        "Retrieval-Augmented Generation"
+      ],
+      "contrasts_with": [],
+      "category": "Generative AI & LLM Foundations"
+    },
+    {
+      "term": "Vector Index Tuning",
+      "related_terms": [
+        "Retrieval Optimization"
+      ],
+      "contrasts_with": [],
+      "category": "Token & Cost Efficiency Techniques"
+    },
+    {
+      "term": "Vector Store Cost",
+      "related_terms": [
+        "Vector Database",
+        "Storage Cost"
+      ],
+      "contrasts_with": [],
+      "category": "Compute, Infrastructure & Pricing"
+    },
+    {
+      "term": "Vendor Consolidation Strategy",
+      "related_terms": [],
+      "contrasts_with": [
+        "Multi-Vendor Strategy"
+      ],
+      "category": "Vendor, Model & Build-vs-Buy Economics"
+    },
+    {
+      "term": "Vendor Deprecation Risk",
+      "related_terms": [
+        "Switching Cost Estimate"
+      ],
+      "contrasts_with": [],
+      "category": "Vendor, Model & Build-vs-Buy Economics"
+    },
+    {
+      "term": "Vendor Due Diligence",
+      "related_terms": [
+        "Vendor Risk Assessment"
+      ],
+      "contrasts_with": [],
+      "category": "Vendor, Model & Build-vs-Buy Economics"
+    },
+    {
+      "term": "Vendor Invoice Reconciliation",
+      "related_terms": [
+        "Billing API Integration"
+      ],
+      "contrasts_with": [],
+      "category": "Data Collection, Instrumentation & Observability"
+    },
+    {
+      "term": "Vendor Lock-In Risk",
+      "related_terms": [
+        "Switching Cost Estimate"
+      ],
+      "contrasts_with": [],
+      "category": "Vendor, Model & Build-vs-Buy Economics"
+    },
+    {
+      "term": "Vendor Pricing Comparison",
+      "related_terms": [
+        "Provider Rate Card"
+      ],
+      "contrasts_with": [],
+      "category": "Vendor, Model & Build-vs-Buy Economics"
+    },
+    {
+      "term": "Vendor Risk Assessment",
+      "related_terms": [
+        "Vendor Due Diligence"
+      ],
+      "contrasts_with": [],
+      "category": "Vendor, Model & Build-vs-Buy Economics"
+    },
+    {
+      "term": "Vendor Scorecard",
+      "related_terms": [],
+      "contrasts_with": [],
+      "category": "Vendor, Model & Build-vs-Buy Economics"
+    },
+    {
+      "term": "Vendor SLA Review",
+      "related_terms": [],
+      "contrasts_with": [],
+      "category": "Vendor, Model & Build-vs-Buy Economics"
+    },
+    {
+      "term": "Vendor Support Cost",
+      "related_terms": [],
+      "contrasts_with": [
+        "Total Vendor Cost Model"
+      ],
+      "category": "Vendor, Model & Build-vs-Buy Economics"
+    },
+    {
+      "term": "Verbal Presentation Technique",
+      "related_terms": [],
+      "contrasts_with": [
+        "Written Report Tone"
+      ],
+      "category": "Executive Communication & Financial Literacy"
+    },
+    {
+      "term": "Vibe Coding Risk",
+      "related_terms": [
+        "Technical Debt From AI Code"
+      ],
+      "contrasts_with": [],
+      "category": "Software Development Lifecycle Cost Optimization"
+    },
+    {
+      "term": "Volume Discount Negotiation",
+      "related_terms": [
+        "Vendor Pricing Comparison"
+      ],
+      "contrasts_with": [],
+      "category": "Vendor, Model & Build-vs-Buy Economics"
+    },
+    {
+      "term": "Warm Pool",
+      "related_terms": [
+        "Cold Start Latency"
+      ],
+      "contrasts_with": [],
+      "category": "Compute, Infrastructure & Pricing"
+    },
+    {
+      "term": "Waterfall Cost Breakdown Chart",
+      "related_terms": [],
+      "contrasts_with": [],
+      "category": "Report Design, Visualization & Capstone"
+    },
+    {
+      "term": "Written Report Tone",
+      "related_terms": [
+        "Credibility Building Technique"
+      ],
+      "contrasts_with": [],
+      "category": "Executive Communication & Financial Literacy"
+    },
+    {
+      "term": "Zero-Shot Prompting",
+      "related_terms": [],
+      "contrasts_with": [
+        "Few-Shot Prompting"
+      ],
+      "category": "Generative AI & LLM Foundations"
+    }
+  ]
+}
