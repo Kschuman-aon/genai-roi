@@ -446,3 +446,5 @@ With this vocabulary in place, Chapter 2 turns to the practical side of working 
 !!! mascot-celebration "Foundations: Built"
     ![Ledger celebrating](../../img/mascot/celebration.png){ class="mascot-admonition-img" }
     You just went from zero to fluent in the vocabulary that every remaining chapter of this book will assume you know — AI's family tree, the transformer's cost-driving self-attention, the training-versus-inference split, and the deployment landscape. That's this book's hardest conceptual chapter, done.
+
+[See Annotated References](./references.md)

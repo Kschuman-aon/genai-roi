@@ -41,9 +41,11 @@ nav:
       - 1. Core Concepts of Large Language Models:
           - Content: chapters/01-core-concepts-llms/index.md
           - Quiz: chapters/01-core-concepts-llms/quiz.md
+          - Annotated References: chapters/01-core-concepts-llms/references.md
       - 2. Prompting, Deployment, and Model Optimization Basics:
           - Content: chapters/02-prompting-deployment-optimization/index.md
           - Quiz: chapters/02-prompting-deployment-optimization/quiz.md
+          - Annotated References: chapters/02-prompting-deployment-optimization/references.md
       - 3. Tokenization and Token Pricing Fundamentals: chapters/03-tokenization-pricing-fundamentals/index.md
       - 4. Managing and Benchmarking Token Consumption: chapters/04-managing-benchmarking-tokens/index.md
       - 5. Compute Pricing and Scaling Fundamentals: chapters/05-compute-pricing-scaling/index.md

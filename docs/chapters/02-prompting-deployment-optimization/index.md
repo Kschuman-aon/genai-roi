@@ -422,3 +422,5 @@ Chapter 3 moves from these deployment and optimization ideas into the layer that
 !!! mascot-celebration "From Practice to Price"
     ![Ledger celebrating](../../img/mascot/celebration.png){ class="mascot-admonition-img" }
     You now know how prompts are engineered, how models stay grounded and get served in production, and how they're shrunk to save money. That's the full practical toolkit — next, we put a price tag on every piece of it.
+
+[See Annotated References](./references.md)
