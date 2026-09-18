@@ -1,0 +1,93 @@
+{
+  "project_path": "/home/a0909852/projects/genai-roi",
+  "scan_date": "2026-09-18T10:24:28.559623",
+  "mkdocs_yml_found": true,
+  "docs_dir_found": true,
+  "site_name": "Measuring GenAI ROI",
+  "site_description": "A practical guide to measuring and communicating the return on investment (ROI) of generative AI initiatives in an organization.",
+  "site_author": "Katie Jo Schuman",
+  "chapter_count": 27,
+  "microsim_count": 1,
+  "glossary_term_count": 561,
+  "faq_question_count": 0,
+  "quiz_file_count": 2,
+  "basic": {
+    "navigation_sidebar": true,
+    "search_functionality": true,
+    "table_of_contents": true,
+    "site_title": true,
+    "site_author": true,
+    "github_repo": true,
+    "custom_logo": false,
+    "custom_favicon": false,
+    "color_theme": true,
+    "footer_navigation": true,
+    "navigation_expand": true,
+    "back_to_top": true,
+    "breadcrumbs": true,
+    "section_index": true,
+    "license_page": true,
+    "contact_page": true,
+    "about_page": true,
+    "how_we_built": false,
+    "copyright_footer": true
+  },
+  "content_enhancement": {
+    "glightbox": false,
+    "katex": false,
+    "mathjax": false,
+    "admonitions": true,
+    "code_copy_button": true,
+    "syntax_highlighting": true,
+    "tabbed_content": false,
+    "task_lists": false,
+    "mark_highlight": false,
+    "strikethrough": false,
+    "magic_links": false,
+    "snippets": true,
+    "emoji": false,
+    "collapsible_details": true,
+    "mermaid": true
+  },
+  "site_resources": {
+    "glossary": true,
+    "faq": false,
+    "references": false,
+    "per_chapter_references": true,
+    "per_chapter_references_count": 2,
+    "custom_css": true,
+    "custom_js": false,
+    "google_analytics": false,
+    "document_status": true
+  },
+  "publishing": {
+    "social_media_cards": false,
+    "edit_page_button": true
+  },
+  "interactive_learning": {
+    "microsims": true,
+    "microsim_index": true,
+    "per_chapter_quizzes": true
+  },
+  "learning_graph": {
+    "course_description": true,
+    "learning_graph_csv": true,
+    "learning_graph_json": true,
+    "graph_viewer": true,
+    "concept_taxonomy": true,
+    "concept_list": true,
+    "quality_metrics": true,
+    "book_metrics": false,
+    "chapter_metrics": false,
+    "glossary_quality_report": true,
+    "faq_quality_report": false,
+    "faq_coverage_gaps": false,
+    "quiz_generation_report": true,
+    "reading_level_analysis": false
+  },
+  "content_generation": {
+    "chapters": true,
+    "pedagogical_agent": true,
+    "prompts_collection": false
+  }
+}

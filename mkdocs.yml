@@ -89,6 +89,7 @@ nav:
 
   - Glossary: glossary.md
   - Instructor's Guide: instructors-guide/index.md
+  - Feature Checklist: feature-checklist.md
   - License: license.md
   - Contact: contact.md
 
@@ -155,6 +156,9 @@ markdown_extensions:
   - pymdownx.snippets
   - pymdownx.arithmatex:
       generic: true
+  - pymdownx.emoji:
+      emoji_index: !!python/name:material.extensions.emoji.twemoji
+      emoji_generator: !!python/name:material.extensions.emoji.to_svg
 
 # Custom CSS — file is created by init-textbook
 extra_css:
