@@ -1,0 +1,2158 @@
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+        <meta name="description" content="How prompts are engineered, how models are given external knowledge and served in production, and the compression techniques used to make them cheaper to run.">
+      
+      
+        <meta name="author" content="Katie Jo Schuman">
+      
+      
+        <link rel="canonical" href="https://Kschuman-aon.github.io/genai-roi/chapters/02-prompting-deployment-optimization/">
+      
+      
+        <link rel="prev" href="../01-core-concepts-llms/references/">
+      
+      
+        <link rel="next" href="quiz/">
+      
+      
+      <link rel="icon" href="../../assets/images/favicon.png">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.6.4">
+    
+    
+      
+        <title>Prompting, Deployment, and Model Optimization Basics - Measuring GenAI ROI</title>
+      
+    
+    
+      <link rel="stylesheet" href="../../assets/stylesheets/main.8608ea7d.min.css">
+      
+        
+        <link rel="stylesheet" href="../../assets/stylesheets/palette.06af60db.min.css">
+      
+      
+
+
+    
+    
+      
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+      
+    
+    
+      <link rel="stylesheet" href="../../css/extra.css">
+    
+      <link rel="stylesheet" href="../../css/mascot.css">
+    
+    <script>__md_scope=new URL("../..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+    
+  </head>
+  
+  
+    
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="default" data-md-color-primary="indigo" data-md-color-accent="orange">
+  
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#prompting-deployment-and-model-optimization-basics" class="md-skip">
+          Skip to content
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+  
+
+<header class="md-header md-header--shadow" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Header">
+    <a href="../.." title="Measuring GenAI ROI" class="md-header__button md-logo" aria-label="Measuring GenAI ROI" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3zm0 5h18v2H3zm0 5h18v2H3z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            Measuring GenAI ROI
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              Prompting, Deployment, and Model Optimization Basics
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+      
+    
+    
+    
+    
+      <label class="md-header__button md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+      </label>
+      <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Search">
+        
+          <a href="javascript:void(0)" class="md-search__icon md-icon" title="Share" aria-label="Share" data-clipboard data-clipboard-text="" data-md-component="search-share" tabindex="-1">
+            
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M18 16.08c-.76 0-1.44.3-1.96.77L8.91 12.7c.05-.23.09-.46.09-.7s-.04-.47-.09-.7l7.05-4.11c.54.5 1.25.81 2.04.81a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3c0 .24.04.47.09.7L8.04 9.81C7.5 9.31 6.79 9 6 9a3 3 0 0 0-3 3 3 3 0 0 0 3 3c.79 0 1.5-.31 2.04-.81l7.12 4.15c-.05.21-.08.43-.08.66 0 1.61 1.31 2.91 2.92 2.91s2.92-1.3 2.92-2.91A2.92 2.92 0 0 0 18 16.08"/></svg>
+          </a>
+        
+        <button type="reset" class="md-search__icon md-icon" title="Clear" aria-label="Clear" tabindex="-1">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"/></svg>
+        </button>
+      </nav>
+      
+        <div class="md-search__suggest" data-md-component="search-suggest"></div>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" tabindex="0" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Initializing search
+          </div>
+          <ol class="md-search-result__list" role="presentation"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+    
+    
+      <div class="md-header__source">
+        <a href="https://github.com/Kschuman-aon/genai-roi" title="Go to repository" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 6.7.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2024 Fonticons, Inc.--><path d="M439.55 236.05 244 40.45a28.87 28.87 0 0 0-40.81 0l-40.66 40.63 51.52 51.52c27.06-9.14 52.68 16.77 43.39 43.68l49.66 49.66c34.23-11.8 61.18 31 35.47 56.69-26.49 26.49-70.21-2.87-56-37.34L240.22 199v121.85c25.3 12.54 22.26 41.85 9.08 55a34.34 34.34 0 0 1-48.55 0c-17.57-17.6-11.07-46.91 11.25-56v-123c-20.8-8.51-24.6-30.74-18.64-45L142.57 101 8.45 235.14a28.86 28.86 0 0 0 0 40.81l195.61 195.6a28.86 28.86 0 0 0 40.8 0l194.69-194.69a28.86 28.86 0 0 0 0-40.81"/></svg>
+  </div>
+  <div class="md-source__repository">
+    GitHub Repo
+  </div>
+</a>
+      </div>
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+
+<nav class="md-nav md-nav--primary" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href="../.." title="Measuring GenAI ROI" class="md-nav__button md-logo" aria-label="Measuring GenAI ROI" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
+
+    </a>
+    Measuring GenAI ROI
+  </label>
+  
+    <div class="md-nav__source">
+      <a href="https://github.com/Kschuman-aon/genai-roi" title="Go to repository" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 6.7.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2024 Fonticons, Inc.--><path d="M439.55 236.05 244 40.45a28.87 28.87 0 0 0-40.81 0l-40.66 40.63 51.52 51.52c27.06-9.14 52.68 16.77 43.39 43.68l49.66 49.66c34.23-11.8 61.18 31 35.47 56.69-26.49 26.49-70.21-2.87-56-37.34L240.22 199v121.85c25.3 12.54 22.26 41.85 9.08 55a34.34 34.34 0 0 1-48.55 0c-17.57-17.6-11.07-46.91 11.25-56v-123c-20.8-8.51-24.6-30.74-18.64-45L142.57 101 8.45 235.14a28.86 28.86 0 0 0 0 40.81l195.61 195.6a28.86 28.86 0 0 0 40.8 0l194.69-194.69a28.86 28.86 0 0 0 0-40.81"/></svg>
+  </div>
+  <div class="md-source__repository">
+    GitHub Repo
+  </div>
+</a>
+    </div>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../.." class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Home
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../about/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    About
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../course-description/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Course Description
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+    
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+        
+      
+        
+          
+        
+      
+        
+          
+        
+      
+        
+          
+        
+      
+        
+          
+        
+      
+        
+          
+        
+      
+        
+          
+        
+      
+        
+          
+        
+      
+        
+          
+        
+      
+        
+          
+        
+      
+        
+          
+        
+      
+        
+          
+        
+      
+        
+          
+        
+      
+        
+          
+        
+      
+        
+          
+        
+      
+        
+          
+        
+      
+        
+          
+        
+      
+        
+          
+        
+      
+        
+          
+        
+      
+        
+          
+        
+      
+        
+          
+        
+      
+        
+          
+        
+      
+        
+          
+        
+      
+        
+          
+        
+      
+        
+          
+        
+      
+        
+          
+        
+      
+    
+    
+    
+      
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4" checked>
+        
+          
+          
+          <div class="md-nav__link md-nav__container">
+            <a href="../" class="md-nav__link ">
+              
+  
+  <span class="md-ellipsis">
+    Chapters
+    
+  </span>
+  
+
+            </a>
+            
+              
+              <label class="md-nav__link " for="__nav_4" id="__nav_4_label" tabindex="0">
+                <span class="md-nav__icon md-icon"></span>
+              </label>
+            
+          </div>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_4_label" aria-expanded="true">
+          <label class="md-nav__title" for="__nav_4">
+            <span class="md-nav__icon md-icon"></span>
+            Chapters
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+        
+      
+    
+    
+    
+      
+        
+        
+      
+    
+    <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
+      
+        
+  
+  
+    <a href="../01-core-concepts-llms/" class="md-nav__link">
+      
+  
+  <span class="md-ellipsis">
+    1. Core Concepts of Large Language Models
+    
+  </span>
+  
+
+      
+        <span class="md-nav__icon md-icon"></span>
+      
+    </a>
+  
+
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+    
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+        
+      
+    
+    
+    
+      
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4_3" checked>
+        
+          
+          
+          <div class="md-nav__link md-nav__container">
+            <a href="./" class="md-nav__link md-nav__link--active">
+              
+  
+  <span class="md-ellipsis">
+    2. Prompting, Deployment, and Model Optimization Basics
+    
+  </span>
+  
+
+            </a>
+            
+              
+              <label class="md-nav__link md-nav__link--active" for="__nav_4_3" id="__nav_4_3_label" tabindex="0">
+                <span class="md-nav__icon md-icon"></span>
+              </label>
+            
+          </div>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_4_3_label" aria-expanded="true">
+          <label class="md-nav__title" for="__nav_4_3">
+            <span class="md-nav__icon md-icon"></span>
+            2. Prompting, Deployment, and Model Optimization Basics
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="quiz/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Quiz
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="references/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Annotated References
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../03-tokenization-pricing-fundamentals/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    3. Tokenization and Token Pricing Fundamentals
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../04-managing-benchmarking-tokens/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    4. Managing and Benchmarking Token Consumption
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../05-compute-pricing-scaling/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    5. Compute Pricing and Scaling Fundamentals
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../06-infrastructure-planning-monitoring/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    6. Infrastructure Planning and Cost Monitoring
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../07-prompt-routing-retrieval-efficiency/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    7. Prompt, Routing, and Retrieval Efficiency Techniques
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../08-model-compression-testing-efficiency/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    8. Model Compression, Testing, and Continuous Efficiency
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../09-core-financial-roi-vocabulary/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    9. Core Financial and ROI Vocabulary
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../10-business-case-financial-forecasting/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    10. Business Case Development and Financial Forecasting
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../11-productivity-quality-metrics/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    11. Productivity and Quality Metrics for GenAI
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../12-measurement-rigor-kpi-reporting/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    12. Measurement Rigor and KPI Reporting
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../13-telemetry-logging-cost-dashboards/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    13. Telemetry, Logging, and Cost Dashboards
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../14-cost-attribution-observability-maturity/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    14. Cost Attribution, Governance, and Observability Maturity
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../15-ai-assisted-coding-sdlc/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    15. AI-Assisted Coding Across the SDLC
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../16-sdlc-productivity-risk-roadmapping/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    16. SDLC Productivity, Risk, and Cost Roadmapping
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../17-data-model-lifecycle-cost-drivers/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    17. Data and Model Lifecycle Cost Drivers
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../18-mlops-infrastructure-reuse-economics/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    18. MLOps Infrastructure and Reuse Economics
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../19-vendor-pricing-licensing-economics/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    19. Vendor Pricing and Licensing Economics
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../20-vendor-selection-sourcing-strategy/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    20. Vendor Selection and Sourcing Strategy
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../21-governance-compliance-security-risk/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    21. Governance, Compliance, and Security Risk
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../22-risk-adjusted-costing-reporting/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    22. Risk-Adjusted Costing and Executive Risk Reporting
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../23-audience-analysis-executive-framing/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    23. Audience Analysis and Executive Framing
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../24-presenting-defending-findings/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    24. Presenting and Defending Findings to Executives
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../25-designing-executive-roi-report/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    25. Designing the Executive ROI Report
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../26-data-visualization-storytelling/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    26. Data Visualization and Storytelling for Financial Audiences
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../27-report-production-review-capstone/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    27. Report Production, Review, and the Capstone Project
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+      
+        
+        
+      
+    
+    <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
+      
+        
+  
+  
+    <a href="../../learning-graph/" class="md-nav__link">
+      
+  
+  <span class="md-ellipsis">
+    Learning Graph
+    
+  </span>
+  
+
+      
+        <span class="md-nav__icon md-icon"></span>
+      
+    </a>
+  
+
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+          
+        
+      
+        
+          
+        
+      
+    
+    
+    
+      
+        
+        
+      
+    
+    <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
+      
+        
+  
+  
+    <a href="../../sims/" class="md-nav__link">
+      
+  
+  <span class="md-ellipsis">
+    MicroSims
+    
+  </span>
+  
+
+      
+        <span class="md-nav__icon md-icon"></span>
+      
+    </a>
+  
+
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../glossary/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Glossary
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../instructors-guide/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Instructor's Guide
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../feature-checklist/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Feature Checklist
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../license/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    License
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../contact/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Contact
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#summary" class="md-nav__link">
+    <span class="md-ellipsis">
+      Summary
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#concepts-covered" class="md-nav__link">
+    <span class="md-ellipsis">
+      Concepts Covered
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#prerequisites" class="md-nav__link">
+    <span class="md-ellipsis">
+      Prerequisites
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Prerequisites">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#what-is-a-prompt" class="md-nav__link">
+    <span class="md-ellipsis">
+      What Is a Prompt?
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="What Is a Prompt?">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#diagram-anatomy-of-a-prompt" class="md-nav__link">
+    <span class="md-ellipsis">
+      Diagram: Anatomy of a Prompt
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#prompting-techniques" class="md-nav__link">
+    <span class="md-ellipsis">
+      Prompting Techniques
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Prompting Techniques">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#diagram-same-task-three-prompting-strategies" class="md-nav__link">
+    <span class="md-ellipsis">
+      Diagram: Same Task, Three Prompting Strategies
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#grounding-the-model-rag-embeddings-vector-databases-and-hallucination" class="md-nav__link">
+    <span class="md-ellipsis">
+      Grounding the Model: RAG, Embeddings, Vector Databases, and Hallucination
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Grounding the Model: RAG, Embeddings, Vector Databases, and Hallucination">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#diagram-the-rag-pipeline" class="md-nav__link">
+    <span class="md-ellipsis">
+      Diagram: The RAG Pipeline
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#serving-speed-latency-and-throughput" class="md-nav__link">
+    <span class="md-ellipsis">
+      Serving Speed: Latency and Throughput
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Serving Speed: Latency and Throughput">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#diagram-the-batch-size-trade-off" class="md-nav__link">
+    <span class="md-ellipsis">
+      Diagram: The Batch-Size Trade-Off
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#getting-models-into-production" class="md-nav__link">
+    <span class="md-ellipsis">
+      Getting Models Into Production
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Getting Models Into Production">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#diagram-where-should-this-model-run" class="md-nav__link">
+    <span class="md-ellipsis">
+      Diagram: Where Should This Model Run?
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#shrinking-models-without-losing-too-much" class="md-nav__link">
+    <span class="md-ellipsis">
+      Shrinking Models Without Losing Too Much
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Shrinking Models Without Losing Too Much">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#diagram-three-ways-to-shrink-a-model" class="md-nav__link">
+    <span class="md-ellipsis">
+      Diagram: Three Ways to Shrink a Model
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#key-takeaways" class="md-nav__link">
+    <span class="md-ellipsis">
+      Key Takeaways
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+
+  
+    <a href="https://github.com/Kschuman-aon/genai-roi/blob/main/docs/chapters/02-prompting-deployment-optimization/index.md" title="Edit this page" class="md-content__button md-icon">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M10 20H6V4h7v5h5v3.1l2-2V8l-6-6H6c-1.1 0-2 .9-2 2v16c0 1.1.9 2 2 2h4zm10.2-7c.1 0 .3.1.4.2l1.3 1.3c.2.2.2.6 0 .8l-1 1-2.1-2.1 1-1c.1-.1.2-.2.4-.2m0 3.9L14.1 23H12v-2.1l6.1-6.1z"/></svg>
+    </a>
+  
+  
+
+
+<h1 id="prompting-deployment-and-model-optimization-basics">Prompting, Deployment, and Model Optimization Basics<a class="headerlink" href="#prompting-deployment-and-model-optimization-basics" title="Permanent link">&para;</a></h1>
+<h2 id="summary">Summary<a class="headerlink" href="#summary" title="Permanent link">&para;</a></h2>
+<p>Covers how prompts are engineered and models are deployed and optimized, from retrieval-augmented generation and hallucination through quantization and right-sizing. This chapter covers 21 concepts and builds directly on the concepts introduced in earlier chapters.</p>
+<h2 id="concepts-covered">Concepts Covered<a class="headerlink" href="#concepts-covered" title="Permanent link">&para;</a></h2>
+<p>This chapter covers the following 21 concepts from the learning graph:</p>
+<table>
+<thead>
+<tr>
+<th>Concept</th>
+<th>CIS Score</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Prompt</td>
+<td>206</td>
+</tr>
+<tr>
+<td>System Prompt</td>
+<td>1</td>
+</tr>
+<tr>
+<td>Prompt Engineering</td>
+<td>204</td>
+</tr>
+<tr>
+<td>Zero-Shot Prompting</td>
+<td>154</td>
+</tr>
+<tr>
+<td>Few-Shot Prompting</td>
+<td>153</td>
+</tr>
+<tr>
+<td>Chain-Of-Thought Prompting</td>
+<td>152</td>
+</tr>
+<tr>
+<td>Retrieval-Augmented Generation</td>
+<td>151</td>
+</tr>
+<tr>
+<td>Embedding</td>
+<td>150</td>
+</tr>
+<tr>
+<td>Vector Database</td>
+<td>149</td>
+</tr>
+<tr>
+<td>Model Hallucination</td>
+<td>148</td>
+</tr>
+<tr>
+<td>Model Latency</td>
+<td>147</td>
+</tr>
+<tr>
+<td>Model Throughput</td>
+<td>146</td>
+</tr>
+<tr>
+<td>Batch Inference</td>
+<td>145</td>
+</tr>
+<tr>
+<td>Streaming Response</td>
+<td>144</td>
+</tr>
+<tr>
+<td>Model Versioning</td>
+<td>143</td>
+</tr>
+<tr>
+<td>Model Deployment</td>
+<td>142</td>
+</tr>
+<tr>
+<td>On-Premises Deployment</td>
+<td>21</td>
+</tr>
+<tr>
+<td>Cloud-Hosted Model</td>
+<td>20</td>
+</tr>
+<tr>
+<td>Model Quantization</td>
+<td>19</td>
+</tr>
+<tr>
+<td>Knowledge Distillation</td>
+<td>18</td>
+</tr>
+<tr>
+<td>Model Right-Sizing</td>
+<td>17</td>
+</tr>
+</tbody>
+</table>
+<h2 id="prerequisites">Prerequisites<a class="headerlink" href="#prerequisites" title="Permanent link">&para;</a></h2>
+<p>This chapter builds on concepts from:</p>
+<ul>
+<li><a href="../01-core-concepts-llms/">Chapter 1: Core Concepts of Large Language Models</a></li>
+</ul>
+<hr />
+<p>Chapter 1 gave you the vocabulary for what a large language model is and how it comes to exist. This chapter shifts to what you actually do with one once it is available to you: how you talk to it, how you keep it from making things up, how it gets served to real users at scale, and how it gets made smaller and cheaper without losing too much of what makes it useful. Every idea here is something you will personally decide about — or at least evaluate a vendor's claims about — long before you ever touch a training run.</p>
+<div class="admonition mascot-welcome">
+<p class="admonition-title">From Vocabulary to Practice</p>
+<p><img alt="Ledger waving welcome" class="mascot-admonition-img" src="../../img/mascot/welcome.png" />
+Now that you can name the parts, let's put them to work. This chapter is where "knowing what an LLM is" turns into "knowing what it costs to actually run one well." Every token counts — let's see where they go.</p>
+</div>
+<h3 id="what-is-a-prompt">What Is a Prompt?<a class="headerlink" href="#what-is-a-prompt" title="Permanent link">&para;</a></h3>
+<p>A <strong>prompt</strong> is the text you send to a language model to request a response — a question, an instruction, a partial document you want continued, or any combination of these. It is the entire interface between you and the model: everything the model knows about what you want, it knows because it appeared somewhere in the prompt. This sounds almost too simple to name as a distinct concept, but its simplicity is exactly the point. Unlike traditional software, where you write code that specifies exact behavior, a language model is <em>steered</em> by natural-language text, and the quality, structure, and content of that text has an outsized effect on the quality of what comes back — and, just as importantly for this book, on how many tokens you pay for.</p>
+<p>Most real-world prompts are not one undifferentiated block of text; they are typically composed of at least two distinct parts. The <strong>system prompt</strong> is a special segment, usually invisible to the end user, that sets persistent instructions and context for the whole conversation — the model's role, tone, constraints, and any standing rules ("You are a customer support assistant for Acme Corp. Never discuss competitors."). It is set once by the application developer and typically resent with every request in that conversation, which matters directly for cost: a long system prompt is not a one-time expense, it is a recurring one, paid on every single turn. This is a narrow, mechanical concept — there is no deeper theory to it beyond knowing it exists and that it recurs — so it earns a brief definition here rather than an extended treatment.</p>
+<p><strong>Prompt engineering</strong> is the practice of deliberately designing prompts to reliably get better, more accurate, or more consistent output from a model. It sits at the intersection of writing clearly and understanding how a model tends to respond to certain patterns of instruction — being specific rather than vague, providing relevant context, specifying the desired output format, and iterating based on what the model actually returns. Prompt engineering is the single highest-leverage, lowest-cost lever available to reduce your GenAI spend: a well-engineered prompt that gets the right answer on the first try is nearly always cheaper than a vague one that requires three follow-up clarifications, each one a fresh, fully-priced request. Consider the difference between "Summarize this contract" and "Summarize this contract in 3 bullet points covering payment terms, termination clauses, and liability limits, for a non-lawyer executive." The first vague version often requires a follow-up round of clarifying questions — each one a fresh, billed request — while the second, more specific version is likely to get a usable answer on the first call, even though it costs a handful of extra input tokens to write.</p>
+<details>
+<summary>Quick check: system prompt or user prompt?</summary>
+<p>Type: markdown-list</p>
+<ul>
+<li>"You are a helpful assistant that only answers questions about our product catalog." — <strong>system prompt</strong></li>
+<li>"What's the return policy on the blue jacket?" — <strong>user prompt</strong> (part of the ongoing prompt, but not the persistent instruction layer)</li>
+<li>"Always respond in formal English and never use emoji." — <strong>system prompt</strong></li>
+</ul>
+</details>
+<h4 id="diagram-anatomy-of-a-prompt">Diagram: Anatomy of a Prompt<a class="headerlink" href="#diagram-anatomy-of-a-prompt" title="Permanent link">&para;</a></h4>
+<iframe src="../../sims/prompt-anatomy-explorer/main.html" width="100%" height="500px" scrolling="no"></iframe>
+
+<details>
+<summary>Anatomy of a Prompt</summary>
+<p>Type: infographic
+<strong>sim-id:</strong> prompt-anatomy-explorer<br/>
+<strong>Library:</strong> p5.js<br/>
+<strong>Status:</strong> Specified</p>
+<p>Bloom Taxonomy: Understand
+Bloom Taxonomy Verb: identify</p>
+<p>Learning objective: Learners will be able to identify the system-prompt, user-instruction, and context segments of a real assembled prompt and explain how each segment affects token cost differently.</p>
+<p>Purpose: Show one complete, realistic assembled prompt sent to a model, with its component segments color-coded and clickable to reveal what each one is and how it behaves cost-wise.</p>
+<p>Visual elements:
+- A single text block representing the full prompt as actually sent to the model, divided into three labeled, distinctly colored segments:
+  1. System Prompt segment (blue background): "You are a customer support assistant for Acme Corp. Be concise and never discuss competitors."
+  2. Context segment (green background): "Order #48213: blue jacket, size M, purchased 12 days ago."
+  3. User Instruction segment (orange background): "What's the return policy on this item?"</p>
+<p>Interactive controls:
+- Click any segment to open an infobox below the prompt
+- Toggle: "Send this prompt 100 times" — recalculates and displays a running token-cost estimate, making clear that the System Prompt segment's cost repeats on every one of the 100 calls while a one-off User Instruction does not persist unless resent</p>
+<p>Click content:
+- System Prompt segment: "Persistent across the whole conversation and resent on every request — its token cost recurs every single time."
+- Context segment: "Task-specific background inserted for this particular request; may or may not recur depending on the application."
+- User Instruction segment: "The specific ask for this turn; unique to this request."</p>
+<p>Instructional Rationale: A single concrete, fully-worked prompt with click-to-reveal segments is appropriate for an Understand-level identify objective — it lets the learner see a real example rather than an abstract description, directly reinforcing the recurring-cost point made in the surrounding prose.</p>
+<p>Canvas layout: Full width; prompt text block at top, infobox panel below; responsive, must reflow to a narrower single-column layout on small viewports</p>
+<p>Implementation notes:
+- Use p5.js for text layout, color-coded segment backgrounds, and click-region detection
+- Token-cost estimates are pre-computed illustrative values, not a live tokenizer call</p>
+</details>
+<h3 id="prompting-techniques">Prompting Techniques<a class="headerlink" href="#prompting-techniques" title="Permanent link">&para;</a></h3>
+<p>Beyond simply writing a clear prompt, a small set of well-established techniques change how much guidance you give the model before asking it to perform a task, and each one trades token cost against reliability differently.</p>
+<p><strong>Zero-shot prompting</strong> means asking the model to perform a task with no examples at all — just an instruction. "Translate this sentence into French" is a zero-shot prompt: it describes the task and trusts the model's existing training to know how to do it. Zero-shot is the cheapest possible prompting strategy in tokens, since it adds nothing beyond the instruction itself, and modern large language models handle a surprising range of tasks this way.</p>
+<p><strong>Few-shot prompting</strong> provides the model with a small number of worked examples of the task before asking it to perform the task itself — showing two or three sample input-output pairs, then presenting a new input and letting the model infer the pattern. Few-shot prompting reliably improves accuracy on tasks where the desired output format or style is unusual or hard to describe in words alone, but each example consumes real tokens on every single request, so the accuracy gain has a recurring, cumulative price tag. A five-example few-shot prompt sent a million times a month is five times the token cost of the same prompt sent zero-shot, before the model has even started generating a response.</p>
+<p><strong>Chain-of-thought prompting</strong> asks the model to work through a problem step by step, explicitly reasoning through intermediate stages before producing a final answer, rather than jumping straight to a conclusion. This measurably improves accuracy on tasks that require multi-step reasoning — arithmetic, logic puzzles, multi-part business questions — because it gives the model room to build toward the right answer instead of guessing it in one shot. The cost trade-off runs in the opposite direction from few-shot's added input tokens: chain-of-thought increases the length of the model's <em>output</em>, since the reasoning steps themselves are generated text the model produces and you pay for.</p>
+<div class="admonition mascot-tip">
+<p class="admonition-title">Start Cheap, Add Expense Only When Earned</p>
+<p><img alt="Ledger giving a tip" class="mascot-admonition-img" src="../../img/mascot/tip.png" />
+A good default order to try: zero-shot first, few-shot only if accuracy genuinely needs it, chain-of-thought only for tasks that actually require multi-step reasoning. Each upgrade adds real, recurring tokens — reach for it because the task demands it, not out of habit.</p>
+</div>
+<h4 id="diagram-same-task-three-prompting-strategies">Diagram: Same Task, Three Prompting Strategies<a class="headerlink" href="#diagram-same-task-three-prompting-strategies" title="Permanent link">&para;</a></h4>
+<iframe src="../../sims/prompting-technique-comparator/main.html" width="100%" height="500px" scrolling="no"></iframe>
+
+<details>
+<summary>Same Task, Three Prompting Strategies</summary>
+<p>Type: microsim
+<strong>sim-id:</strong> prompting-technique-comparator<br/>
+<strong>Library:</strong> p5.js<br/>
+<strong>Status:</strong> Specified</p>
+<p>Bloom Taxonomy: Analyze
+Bloom Taxonomy Verb: compare</p>
+<p>Learning objective: Learners will be able to compare zero-shot, few-shot, and chain-of-thought prompting on the same task by observing differences in prompt length, output length, and total token count.</p>
+<p>Purpose: Show the same simple math word problem solved three ways, with the full prompt and response text visible for each, plus a running token-count tally.</p>
+<p>Data Visibility Requirements:
+  Stage 1 (Zero-shot tab): Show prompt "A store had 120 apples. It sold 45 in the morning and 38 in the afternoon. How many are left?" and a one-line answer "37 apples." Token count badge: prompt ~28 tokens, response ~4 tokens, total ~32.
+  Stage 2 (Few-shot tab): Show two worked examples prepended to the same question, then the one-line answer. Token count badge: prompt ~95 tokens, response ~4 tokens, total ~99.
+  Stage 3 (Chain-of-thought tab): Show the same zero-shot-length prompt plus the instruction "think step by step," followed by a multi-line reasoning trace ending in "37 apples." Token count badge: prompt ~34 tokens, response ~48 tokens, total ~82.
+  Final: Side-by-side summary bar showing all three total token counts together.</p>
+<p>Interaction: Three tabs (Zero-Shot / Few-Shot / Chain-of-Thought) to switch views; a "Compare All Three" toggle shows the summary bar</p>
+<p>Instructional Rationale: A tabbed, step-through reveal is appropriate because the Analyze-level objective requires learners to directly compare concrete token counts across strategies, not watch an animation — the whole point is making the recurring per-request cost difference visible and comparable.</p>
+<p>Canvas layout: Full width; tab bar at top, prompt/response text area in the middle, token-count badges pinned at the bottom of each tab; responsive, must reflow to a stacked layout on narrow viewports</p>
+<p>Implementation notes:
+- Use p5.js for layout and tab switching; token counts are pre-computed illustrative values, not a live tokenizer call
+- Store each strategy's example text and token counts in a simple lookup object</p>
+</details>
+<h3 id="grounding-the-model-rag-embeddings-vector-databases-and-hallucination">Grounding the Model: RAG, Embeddings, Vector Databases, and Hallucination<a class="headerlink" href="#grounding-the-model-rag-embeddings-vector-databases-and-hallucination" title="Permanent link">&para;</a></h3>
+<p>A language model's knowledge is frozen at the end of its training — it knows nothing about events after that point, nothing about your company's private documents, and it does not "look anything up" by default. When asked something it does not actually know, a model does not reliably say "I don't know." Instead it can produce <strong>model hallucination</strong>: a confident, fluent, plausible-sounding response that is factually wrong or entirely fabricated. Hallucination is not a bug in the traditional sense — it is a direct consequence of how these models generate text, predicting statistically likely next words rather than consulting a source of truth, and it is one of the most consequential risks this book will ask you to price into any GenAI deployment.</p>
+<p><strong>Retrieval-augmented generation (RAG)</strong> is the primary architectural technique for reducing hallucination on tasks that depend on specific, current, or private information. Instead of relying solely on what the model memorized during training, a RAG system first retrieves relevant text from an external source — your company's documentation, a product catalog, recent news — and inserts that retrieved text directly into the prompt before asking the model to answer. The model is now grounded in real, current, verifiable source material rather than working from memory alone, which sharply reduces (though does not eliminate) hallucination on retrieval-covered topics.</p>
+<p>Making retrieval fast enough to run on every request requires two supporting pieces of infrastructure. An <strong>embedding</strong> is a numerical representation of a piece of text — a list of numbers that captures its meaning in a form a computer can compare mathematically, such that texts with similar meaning end up with similar embeddings even if they share no exact words in common. A <strong>vector database</strong> is a specialized data store built to hold millions of these embeddings and answer, in milliseconds, the question "which stored pieces of text are most similar in meaning to this new query?" Together, an embedding model and a vector database are what let a RAG system search an entire knowledge base for relevant context fast enough to insert it into a prompt before the user notices any delay.</p>
+<p>Before moving to how models are served, it helps to see how the whole pipeline connects.</p>
+<table>
+<thead>
+<tr>
+<th>Step</th>
+<th>What happens</th>
+<th>Who/what performs it</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>1. Query arrives</td>
+<td>User asks a question</td>
+<td>End user</td>
+</tr>
+<tr>
+<td>2. Query embedded</td>
+<td>Question converted to an embedding</td>
+<td>Embedding model</td>
+</tr>
+<tr>
+<td>3. Similarity search</td>
+<td>Vector database returns the most relevant stored text</td>
+<td>Vector database</td>
+</tr>
+<tr>
+<td>4. Prompt augmented</td>
+<td>Retrieved text inserted into the prompt alongside the question</td>
+<td>RAG system</td>
+</tr>
+<tr>
+<td>5. Grounded answer</td>
+<td>Model answers using both its training and the retrieved text</td>
+<td>Large language model</td>
+</tr>
+</tbody>
+</table>
+<div class="admonition mascot-thinking">
+<p class="admonition-title">RAG Reduces Hallucination — It Doesn't Eliminate It</p>
+<p><img alt="Ledger thinking" class="mascot-admonition-img" src="../../img/mascot/thinking.png" />
+Notice what RAG actually changes: it gives the model better source material to work from, not a guarantee of truthfulness. The model can still misread or misstate the retrieved text. Budgeting for hallucination risk — through review processes, not just RAG — stays necessary even after RAG is in place.</p>
+</div>
+<h4 id="diagram-the-rag-pipeline">Diagram: The RAG Pipeline<a class="headerlink" href="#diagram-the-rag-pipeline" title="Permanent link">&para;</a></h4>
+<iframe src="../../sims/rag-pipeline-workflow/main.html" width="100%" height="500px" scrolling="no"></iframe>
+
+<details>
+<summary>The RAG Pipeline</summary>
+<p>Type: workflow
+<strong>sim-id:</strong> rag-pipeline-workflow<br/>
+<strong>Library:</strong> Mermaid<br/>
+<strong>Status:</strong> Specified</p>
+<p>Bloom Taxonomy: Understand
+Bloom Taxonomy Verb: summarize</p>
+<p>Learning objective: Learners will be able to summarize the five-step RAG pipeline and explain, for each step, what would go wrong (in cost or accuracy) if that step were skipped.</p>
+<p>Purpose: Show the query-to-grounded-answer pipeline as a left-to-right flowchart, with each step's role and failure-if-skipped explained on click, and a branch showing what happens without RAG.</p>
+<p>Steps (main pipeline, left to right):
+1. "User Query" — click reveals: "The question or task as typed by the user."
+2. "Embed Query" — click reveals: "Converts the query into a numerical embedding so it can be compared for similarity. Skipping this means no way to search by meaning."
+3. "Vector Database Search" — click reveals: "Finds the most relevant stored text by comparing embeddings. Skipping this means no retrieval happens at all."
+4. "Augment Prompt" — click reveals: "Inserts the retrieved text into the prompt alongside the original query, at the cost of additional input tokens."
+5. "Grounded Answer" — click reveals: "The model answers using both its training and the retrieved context, sharply reducing hallucination risk on covered topics."</p>
+<p>Branch node (dashed, off to the side): "Without RAG" — click reveals: "The model answers from training memory alone. Cheaper per request (no retrieval step, shorter prompt) but far more exposed to hallucination on anything outside its training data."</p>
+<p>Every node MUST include a Mermaid <code>click</code> directive that opens the corresponding infobox text.</p>
+<p>Color coding:
+- Main pipeline: indigo
+- "Without RAG" branch: gray, dashed border to signal it is an alternative path, not part of the main flow</p>
+<p>Implementation: Mermaid flowchart syntax (<code>graph LR</code>) with <code>click</code> bindings on every node, including the branch node, to a JavaScript callback that populates an infobox below the diagram</p>
+</details>
+<h3 id="serving-speed-latency-and-throughput">Serving Speed: Latency and Throughput<a class="headerlink" href="#serving-speed-latency-and-throughput" title="Permanent link">&para;</a></h3>
+<p>Once a model can be prompted reliably, the next question is how fast and how efficiently it can actually respond to real traffic. Two related but distinct measurements describe this. <strong>Model latency</strong> is the time between sending a request and receiving the response — what an individual user actually experiences waiting for an answer. <strong>Model throughput</strong> is a different measurement entirely: the total number of requests (or tokens) a system can process across all users in a given period of time, which describes system-wide capacity rather than any one person's wait.</p>
+<p>These two measurements often trade against each other, and understanding that trade-off is directly relevant to cost. <strong>Batch inference</strong> processes multiple requests together in a single pass through the model rather than one at a time, which dramatically improves throughput — more total work gets done per unit of GPU time — but typically increases the latency any individual request experiences, since a request may sit waiting for a batch to fill before processing begins. This is precisely why batch inference is attractive for cost-sensitive, latency-tolerant workloads (overnight report generation, bulk document summarization) and unattractive for anything requiring an instant response.</p>
+<p><strong>Streaming response</strong> addresses the felt experience of latency without actually reducing the total time to generate a full answer: rather than waiting for the entire response to finish generating before showing anything, the model's output is sent to the user token by token as it is produced, the way ChatGPT's interface visibly "types" its answer. The total generation time is unchanged, but the user perceives the system as responsive because words start appearing almost immediately, which is why nearly every consumer-facing chat product uses streaming even though it does nothing to lower the underlying compute cost.</p>
+<details>
+<summary>Quick check: latency or throughput?</summary>
+<p>Type: markdown-list</p>
+<ul>
+<li>"This request took 800 milliseconds to get a response." — <strong>latency</strong></li>
+<li>"This deployment can handle 5,000 requests per second across all users." — <strong>throughput</strong></li>
+<li>"Turning on batch inference doubled our capacity but slowed individual responses." — describes a <strong>throughput</strong> gain traded against <strong>latency</strong></li>
+</ul>
+</details>
+<h4 id="diagram-the-batch-size-trade-off">Diagram: The Batch-Size Trade-Off<a class="headerlink" href="#diagram-the-batch-size-trade-off" title="Permanent link">&para;</a></h4>
+<iframe src="../../sims/latency-throughput-tradeoff-chart/main.html" width="100%" height="500px" scrolling="no"></iframe>
+
+<details>
+<summary>The Batch-Size Trade-Off</summary>
+<p>Type: chart
+<strong>sim-id:</strong> latency-throughput-tradeoff-chart<br/>
+<strong>Library:</strong> Chart.js<br/>
+<strong>Status:</strong> Specified</p>
+<p>Bloom Taxonomy: Analyze
+Bloom Taxonomy Verb: examine</p>
+<p>Learning objective: Learners will be able to examine how increasing batch size affects throughput and per-request latency in opposite directions.</p>
+<p>Chart type: Dual-axis line chart</p>
+<p>Purpose: Show throughput rising and latency rising together as batch size increases, making the trade-off visible on one chart rather than two separate ones.</p>
+<p>X-axis: Batch size (1, 4, 8, 16, 32, 64)
+Left Y-axis: Throughput (requests processed per second)
+Right Y-axis: Per-request latency (milliseconds)</p>
+<p>Data series:
+1. Throughput (solid indigo line, left axis), illustrative figures:
+ - Batch 1: 12 req/s
+ - Batch 4: 40 req/s
+ - Batch 8: 68 req/s
+ - Batch 16: 105 req/s
+ - Batch 32: 150 req/s
+ - Batch 64: 190 req/s</p>
+<ol>
+<li>Latency (dashed orange line, right axis), illustrative figures:</li>
+<li>Batch 1: 80ms</li>
+<li>Batch 4: 110ms</li>
+<li>Batch 8: 160ms</li>
+<li>Batch 16: 240ms</li>
+<li>Batch 32: 380ms</li>
+<li>Batch 64: 620ms</li>
+</ol>
+<p>Title: "Batch Size: More Throughput, More Latency"
+Legend: Position top-left, labeled by axis</p>
+<p>Annotations:
+- Footnote: "Figures are illustrative for teaching purposes, not benchmarked hardware results."</p>
+<p>Interactive features:
+- Hover any point on either line to see exact values for that batch size
+- Toggle to highlight a "sweet spot" band (batch size 8-16) where throughput gains are still steep but latency has not yet risen sharply</p>
+<p>Implementation: Chart.js line chart with two Y-axes (dual-axis configuration)</p>
+</details>
+<h3 id="getting-models-into-production">Getting Models Into Production<a class="headerlink" href="#getting-models-into-production" title="Permanent link">&para;</a></h3>
+<p>A model that works well in testing still has to be deployed — made available to run against real traffic — and kept that way as it changes over time. <strong>Model deployment</strong> is the general process of taking a trained or configured model and making it available to serve real requests: provisioning the necessary compute, exposing an interface (recall the API endpoint from Chapter 1), and monitoring that it continues to behave correctly. <strong>Model versioning</strong> is the practice of tracking distinct, identifiable releases of a model over time — v1, v2, a specific dated snapshot — so that behavior changes can be traced to a specific version, responses can be reproduced, and a team can roll back to a previous version if a new one regresses in quality or introduces unexpected cost.</p>
+<p>Deployment also involves a genuine choice about where the model physically runs. <strong>On-premises deployment</strong> means running the model on infrastructure your own organization owns and operates, typically inside your own data center. It maximizes control over data privacy and lets you fully own hardware costs, but it requires significant upfront capital investment and in-house expertise to operate reliably. <strong>Cloud-hosted model</strong> deployment means running the model on a third-party cloud provider's infrastructure instead — whether that is a provider's own proprietary model behind an API, or your own model running on rented cloud compute. Cloud hosting trades upfront capital cost for ongoing operating expense and shifts most infrastructure management responsibility onto the provider, at the cost of somewhat less control and an ongoing dependency on that provider's availability and pricing.</p>
+<div class="admonition mascot-warning">
+<p class="admonition-title">Versioning Silently Changes Your Bill</p>
+<p><img alt="Ledger warning the reader" class="mascot-admonition-img" src="../../img/mascot/warning.png" />
+A provider upgrading a model to a new version behind the same API name can quietly change both its behavior and its price — sometimes for the better, sometimes not. Pin and track the specific version you are billed against, and re-test before letting an auto-upgrade take effect in production.</p>
+</div>
+<h4 id="diagram-where-should-this-model-run">Diagram: Where Should This Model Run?<a class="headerlink" href="#diagram-where-should-this-model-run" title="Permanent link">&para;</a></h4>
+<iframe src="../../sims/deployment-model-landscape/main.html" width="100%" height="500px" scrolling="no"></iframe>
+
+<details>
+<summary>Where Should This Model Run?</summary>
+<p>Type: graph-model
+<strong>sim-id:</strong> deployment-model-landscape<br/>
+<strong>Library:</strong> vis-network<br/>
+<strong>Status:</strong> Specified</p>
+<p>Bloom Taxonomy: Analyze
+Bloom Taxonomy Verb: differentiate</p>
+<p>Learning objective: Learners will be able to differentiate on-premises and cloud-hosted deployment by their cost structure, control, and operational burden.</p>
+<p>Purpose: Present a Model node branching into two deployment paths, each annotated with cost-structure, control, and operational-burden properties revealed on click.</p>
+<p>Node types:
+1. "Deployed Model" (center, orange rounded rectangle) — the model version being deployed
+2. "On-Premises Deployment" (left branch, blue circle)
+3. "Cloud-Hosted Model" (right branch, green circle)</p>
+<p>Edge types:
+- "deployed via" (solid black arrows) from Deployed Model to each of the two deployment options</p>
+<p>Node click content:
+- "On-Premises Deployment" click reveals: "Cost structure: high upfront capital, lower marginal cost at scale. Control: full data and hardware control. Operational burden: high — your team runs everything."
+- "Cloud-Hosted Model" click reveals: "Cost structure: low upfront cost, ongoing operating expense that scales with usage. Control: shared with the provider. Operational burden: low — the provider manages most infrastructure."</p>
+<p>Layout: Model node centered at top, two branches fanning down-left and down-right</p>
+<p>Interactive features:
+- Hover either branch node: show a one-sentence summary
+- Click either branch node: open the full comparison text above in a side panel
+- Drag, zoom, and pan supported</p>
+<p>Visual styling:
+- Distinct colors per deployment path (blue vs. green) with a legend explaining what each color represents</p>
+<p>Implementation: vis-network JavaScript library, hierarchical top-down layout
+Canvas size: responsive, minimum 600x400px, must reflow on window resize</p>
+</details>
+<h3 id="shrinking-models-without-losing-too-much">Shrinking Models Without Losing Too Much<a class="headerlink" href="#shrinking-models-without-losing-too-much" title="Permanent link">&para;</a></h3>
+<p>The final cluster of concepts in this chapter addresses a direct cost lever: making a model smaller, faster, and cheaper to run without sacrificing more capability than necessary. These three techniques are closely related, and organizations often combine more than one.</p>
+<p><strong>Model quantization</strong> reduces the numerical precision used to store a model's parameters — for example, representing each parameter with fewer bits than it was trained with — which shrinks the model's memory footprint and speeds up inference, usually at a small, carefully managed cost to output quality. Because a model's size in memory directly drives the hardware needed to run it, quantization is one of the most immediately available cost levers available to a team already using a specific model: the same capability, running on cheaper or fewer GPUs.</p>
+<p><strong>Knowledge distillation</strong> takes a different approach: instead of compressing an existing model's own parameters, it trains an entirely new, smaller "student" model to mimic the behavior of a larger "teacher" model, using the teacher's outputs as training signal. The result is a smaller model that approximates the larger one's behavior on the tasks it was distilled for, often at a fraction of the original's inference cost, though typically with some gap in capability on tasks outside that focus.</p>
+<p><strong>Model right-sizing</strong> is the broader discipline these two techniques serve: deliberately choosing the smallest, cheapest model that still meets your accuracy and latency requirements for a given task, rather than defaulting to the largest, most capable (and most expensive) model available. A customer-facing chatbot answering simple FAQ questions rarely needs the same model as a system drafting complex legal analysis, and right-sizing means matching model choice to task difficulty rather than using one model for everything.</p>
+<div class="admonition mascot-encourage">
+<p class="admonition-title">Compression Vocabulary Piles Up Fast — That's Normal</p>
+<p><img alt="Ledger encouraging" class="mascot-admonition-img" src="../../img/mascot/encouraging.png" />
+Quantization, distillation, right-sizing — three new terms in quick succession. You don't need to implement any of these yourself for this course; you need to recognize them on a vendor's feature list and know, roughly, what cost lever each one pulls. That recognition is the actual skill.</p>
+</div>
+<h4 id="diagram-three-ways-to-shrink-a-model">Diagram: Three Ways to Shrink a Model<a class="headerlink" href="#diagram-three-ways-to-shrink-a-model" title="Permanent link">&para;</a></h4>
+<iframe src="../../sims/model-compression-tradeoffs-chart/main.html" width="100%" height="500px" scrolling="no"></iframe>
+
+<details>
+<summary>Three Ways to Shrink a Model</summary>
+<p>Type: chart
+<strong>sim-id:</strong> model-compression-tradeoffs-chart<br/>
+<strong>Library:</strong> Chart.js<br/>
+<strong>Status:</strong> Specified</p>
+<p>Bloom Taxonomy: Evaluate
+Bloom Taxonomy Verb: assess</p>
+<p>Learning objective: Learners will be able to assess the relative cost-reduction and quality-impact trade-offs of quantization, distillation, and right-sizing.</p>
+<p>Chart type: Grouped bar chart</p>
+<p>Purpose: Compare three compression approaches on two dimensions at once — inference cost reduction and typical quality impact — so learners see that bigger savings tend to come with bigger (though still often acceptable) quality trade-offs.</p>
+<p>X-axis: Technique (Quantization, Knowledge Distillation, Right-Sizing)
+Y-axis: Percentage (0-100%)</p>
+<p>Data series (two bars per technique), illustrative figures:
+1. "Typical Inference Cost Reduction" (indigo bars):
+ - Quantization: 40%
+ - Knowledge Distillation: 60%
+ - Right-Sizing: 70%</p>
+<ol>
+<li>"Typical Quality Impact" (orange bars, framed as "quality given up," not gained):</li>
+<li>Quantization: 5%</li>
+<li>Knowledge Distillation: 15%</li>
+<li>Right-Sizing: 10%</li>
+</ol>
+<p>Title: "Cost Savings vs. Quality Trade-off by Technique"
+Legend: Position top-right</p>
+<p>Annotations:
+- Footnote: "Figures are illustrative for teaching purposes; actual results vary widely by model, task, and implementation."</p>
+<p>Interactive features:
+- Hover any bar to see its exact percentage and a one-sentence reminder of what the technique does
+- Toggle button: sort bars by cost reduction (descending) or by quality impact (ascending)</p>
+<p>Implementation: Chart.js grouped bar chart</p>
+</details>
+<h3 id="key-takeaways">Key Takeaways<a class="headerlink" href="#key-takeaways" title="Permanent link">&para;</a></h3>
+<p>This chapter moved from vocabulary into practice: how you actually interact with a deployed model, keep it grounded in truth, serve it at scale, and shrink it to control cost.</p>
+<ul>
+<li>A prompt is your entire interface to the model; the system prompt is its persistent instruction layer, and prompt engineering is the highest-leverage, lowest-cost way to improve results.</li>
+<li>Zero-shot, few-shot, and chain-of-thought prompting trade token cost for reliability in different directions — few-shot spends more input tokens, chain-of-thought spends more output tokens.</li>
+<li>Hallucination is a structural risk of how language models generate text; retrieval-augmented generation, built on embeddings and a vector database, reduces but never eliminates that risk by grounding responses in retrieved source material.</li>
+<li>Latency (individual wait time) and throughput (system-wide capacity) trade against each other, most visibly through batch inference; streaming response improves the felt experience without changing total generation time or cost.</li>
+<li>Model deployment and versioning determine how a model reaches production and how its behavior — and its price — can change over time; on-premises and cloud-hosted deployment split that cost between upfront capital and ongoing operating expense.</li>
+<li>Quantization, knowledge distillation, and model right-sizing are three distinct levers for the same goal: doing the job with the smallest, cheapest model that still meets the bar.</li>
+</ul>
+<p>Chapter 3 moves from these deployment and optimization ideas into the layer that turns all of this into a literal, itemized bill: how text becomes tokens, and how those tokens are counted and priced.</p>
+<div class="admonition mascot-celebration">
+<p class="admonition-title">From Practice to Price</p>
+<p><img alt="Ledger celebrating" class="mascot-admonition-img" src="../../img/mascot/celebration.png" />
+You now know how prompts are engineered, how models stay grounded and get served in production, and how they're shrunk to save money. That's the full practical toolkit — next, we put a price tag on every piece of it.</p>
+</div>
+<p><a href="references/">See Annotated References</a></p>
+
+
+
+
+
+
+
+  
+  
+
+
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
+        </div>
+        
+          <button type="button" class="md-top md-icon" data-md-component="top" hidden>
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M13 20h-2V8l-5.5 5.5-1.42-1.42L12 4.16l7.92 7.92-1.42 1.42L13 8z"/></svg>
+  Back to top
+</button>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+    
+      
+      <nav class="md-footer__inner md-grid" aria-label="Footer" >
+        
+          
+          <a href="../01-core-concepts-llms/references/" class="md-footer__link md-footer__link--prev" aria-label="Previous: Annotated References">
+            <div class="md-footer__button md-icon">
+              
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
+            </div>
+            <div class="md-footer__title">
+              <span class="md-footer__direction">
+                Previous
+              </span>
+              <div class="md-ellipsis">
+                Annotated References
+              </div>
+            </div>
+          </a>
+        
+        
+          
+          <a href="quiz/" class="md-footer__link md-footer__link--next" aria-label="Next: Quiz">
+            <div class="md-footer__title">
+              <span class="md-footer__direction">
+                Next
+              </span>
+              <div class="md-ellipsis">
+                Quiz
+              </div>
+            </div>
+            <div class="md-footer__button md-icon">
+              
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M4 11v2h12l-5.5 5.5 1.42 1.42L19.84 12l-7.92-7.92L10.5 5.5 16 11z"/></svg>
+            </div>
+          </a>
+        
+      </nav>
+    
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+    <div class="md-copyright__highlight">
+      Copyright &copy; 2026 Katie Jo Schuman. Licensed under <a href="license/">CC BY-NC-SA 4.0</a> for non-commercial use.
+    </div>
+  
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    
+    <script id="__config" type="application/json">{"base": "../..", "features": ["content.code.copy", "content.action.edit", "navigation.expand", "navigation.path", "navigation.prune", "navigation.indexes", "navigation.top", "navigation.footer", "toc.follow", "search.suggest", "search.highlight", "search.share"], "search": "../../assets/javascripts/workers/search.f8cc74c7.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}}</script>
+    
+    
+      <script src="../../assets/javascripts/bundle.f1b6f286.min.js"></script>
+      
+    
+  </body>
+</html>

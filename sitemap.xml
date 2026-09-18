@@ -2,34 +2,230 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
     <url>
          <loc>https://Kschuman-aon.github.io/genai-roi/</loc>
-         <lastmod>2026-08-13</lastmod>
+         <lastmod>2026-09-18</lastmod>
     </url>
     <url>
          <loc>https://Kschuman-aon.github.io/genai-roi/about/</loc>
-         <lastmod>2026-08-13</lastmod>
+         <lastmod>2026-09-18</lastmod>
     </url>
     <url>
          <loc>https://Kschuman-aon.github.io/genai-roi/contact/</loc>
-         <lastmod>2026-08-13</lastmod>
+         <lastmod>2026-09-18</lastmod>
     </url>
     <url>
          <loc>https://Kschuman-aon.github.io/genai-roi/course-description/</loc>
-         <lastmod>2026-08-13</lastmod>
+         <lastmod>2026-09-18</lastmod>
+    </url>
+    <url>
+         <loc>https://Kschuman-aon.github.io/genai-roi/feature-checklist/</loc>
+         <lastmod>2026-09-18</lastmod>
+    </url>
+    <url>
+         <loc>https://Kschuman-aon.github.io/genai-roi/glossary/</loc>
+         <lastmod>2026-09-18</lastmod>
     </url>
     <url>
          <loc>https://Kschuman-aon.github.io/genai-roi/license/</loc>
-         <lastmod>2026-08-13</lastmod>
+         <lastmod>2026-09-18</lastmod>
     </url>
     <url>
          <loc>https://Kschuman-aon.github.io/genai-roi/chapters/</loc>
-         <lastmod>2026-08-13</lastmod>
+         <lastmod>2026-09-18</lastmod>
+    </url>
+    <url>
+         <loc>https://Kschuman-aon.github.io/genai-roi/chapters/01-core-concepts-llms/</loc>
+         <lastmod>2026-09-18</lastmod>
+    </url>
+    <url>
+         <loc>https://Kschuman-aon.github.io/genai-roi/chapters/01-core-concepts-llms/quiz/</loc>
+         <lastmod>2026-09-18</lastmod>
+    </url>
+    <url>
+         <loc>https://Kschuman-aon.github.io/genai-roi/chapters/01-core-concepts-llms/references/</loc>
+         <lastmod>2026-09-18</lastmod>
+    </url>
+    <url>
+         <loc>https://Kschuman-aon.github.io/genai-roi/chapters/02-prompting-deployment-optimization/</loc>
+         <lastmod>2026-09-18</lastmod>
+    </url>
+    <url>
+         <loc>https://Kschuman-aon.github.io/genai-roi/chapters/02-prompting-deployment-optimization/quiz/</loc>
+         <lastmod>2026-09-18</lastmod>
+    </url>
+    <url>
+         <loc>https://Kschuman-aon.github.io/genai-roi/chapters/02-prompting-deployment-optimization/references/</loc>
+         <lastmod>2026-09-18</lastmod>
+    </url>
+    <url>
+         <loc>https://Kschuman-aon.github.io/genai-roi/chapters/03-tokenization-pricing-fundamentals/</loc>
+         <lastmod>2026-09-18</lastmod>
+    </url>
+    <url>
+         <loc>https://Kschuman-aon.github.io/genai-roi/chapters/04-managing-benchmarking-tokens/</loc>
+         <lastmod>2026-09-18</lastmod>
+    </url>
+    <url>
+         <loc>https://Kschuman-aon.github.io/genai-roi/chapters/05-compute-pricing-scaling/</loc>
+         <lastmod>2026-09-18</lastmod>
+    </url>
+    <url>
+         <loc>https://Kschuman-aon.github.io/genai-roi/chapters/06-infrastructure-planning-monitoring/</loc>
+         <lastmod>2026-09-18</lastmod>
+    </url>
+    <url>
+         <loc>https://Kschuman-aon.github.io/genai-roi/chapters/07-prompt-routing-retrieval-efficiency/</loc>
+         <lastmod>2026-09-18</lastmod>
+    </url>
+    <url>
+         <loc>https://Kschuman-aon.github.io/genai-roi/chapters/08-model-compression-testing-efficiency/</loc>
+         <lastmod>2026-09-18</lastmod>
+    </url>
+    <url>
+         <loc>https://Kschuman-aon.github.io/genai-roi/chapters/09-core-financial-roi-vocabulary/</loc>
+         <lastmod>2026-09-18</lastmod>
+    </url>
+    <url>
+         <loc>https://Kschuman-aon.github.io/genai-roi/chapters/10-business-case-financial-forecasting/</loc>
+         <lastmod>2026-09-18</lastmod>
+    </url>
+    <url>
+         <loc>https://Kschuman-aon.github.io/genai-roi/chapters/11-productivity-quality-metrics/</loc>
+         <lastmod>2026-09-18</lastmod>
+    </url>
+    <url>
+         <loc>https://Kschuman-aon.github.io/genai-roi/chapters/12-measurement-rigor-kpi-reporting/</loc>
+         <lastmod>2026-09-18</lastmod>
+    </url>
+    <url>
+         <loc>https://Kschuman-aon.github.io/genai-roi/chapters/13-telemetry-logging-cost-dashboards/</loc>
+         <lastmod>2026-09-18</lastmod>
+    </url>
+    <url>
+         <loc>https://Kschuman-aon.github.io/genai-roi/chapters/14-cost-attribution-observability-maturity/</loc>
+         <lastmod>2026-09-18</lastmod>
+    </url>
+    <url>
+         <loc>https://Kschuman-aon.github.io/genai-roi/chapters/15-ai-assisted-coding-sdlc/</loc>
+         <lastmod>2026-09-18</lastmod>
+    </url>
+    <url>
+         <loc>https://Kschuman-aon.github.io/genai-roi/chapters/16-sdlc-productivity-risk-roadmapping/</loc>
+         <lastmod>2026-09-18</lastmod>
+    </url>
+    <url>
+         <loc>https://Kschuman-aon.github.io/genai-roi/chapters/17-data-model-lifecycle-cost-drivers/</loc>
+         <lastmod>2026-09-18</lastmod>
+    </url>
+    <url>
+         <loc>https://Kschuman-aon.github.io/genai-roi/chapters/18-mlops-infrastructure-reuse-economics/</loc>
+         <lastmod>2026-09-18</lastmod>
+    </url>
+    <url>
+         <loc>https://Kschuman-aon.github.io/genai-roi/chapters/19-vendor-pricing-licensing-economics/</loc>
+         <lastmod>2026-09-18</lastmod>
+    </url>
+    <url>
+         <loc>https://Kschuman-aon.github.io/genai-roi/chapters/20-vendor-selection-sourcing-strategy/</loc>
+         <lastmod>2026-09-18</lastmod>
+    </url>
+    <url>
+         <loc>https://Kschuman-aon.github.io/genai-roi/chapters/21-governance-compliance-security-risk/</loc>
+         <lastmod>2026-09-18</lastmod>
+    </url>
+    <url>
+         <loc>https://Kschuman-aon.github.io/genai-roi/chapters/22-risk-adjusted-costing-reporting/</loc>
+         <lastmod>2026-09-18</lastmod>
+    </url>
+    <url>
+         <loc>https://Kschuman-aon.github.io/genai-roi/chapters/23-audience-analysis-executive-framing/</loc>
+         <lastmod>2026-09-18</lastmod>
+    </url>
+    <url>
+         <loc>https://Kschuman-aon.github.io/genai-roi/chapters/24-presenting-defending-findings/</loc>
+         <lastmod>2026-09-18</lastmod>
+    </url>
+    <url>
+         <loc>https://Kschuman-aon.github.io/genai-roi/chapters/25-designing-executive-roi-report/</loc>
+         <lastmod>2026-09-18</lastmod>
+    </url>
+    <url>
+         <loc>https://Kschuman-aon.github.io/genai-roi/chapters/26-data-visualization-storytelling/</loc>
+         <lastmod>2026-09-18</lastmod>
+    </url>
+    <url>
+         <loc>https://Kschuman-aon.github.io/genai-roi/chapters/27-report-production-review-capstone/</loc>
+         <lastmod>2026-09-18</lastmod>
+    </url>
+    <url>
+         <loc>https://Kschuman-aon.github.io/genai-roi/img/cover-image-prompt/</loc>
+         <lastmod>2026-09-18</lastmod>
+    </url>
+    <url>
+         <loc>https://Kschuman-aon.github.io/genai-roi/img/mascot/character-sheet/</loc>
+         <lastmod>2026-09-18</lastmod>
+    </url>
+    <url>
+         <loc>https://Kschuman-aon.github.io/genai-roi/instructors-guide/</loc>
+         <lastmod>2026-09-18</lastmod>
     </url>
     <url>
          <loc>https://Kschuman-aon.github.io/genai-roi/learning-graph/</loc>
-         <lastmod>2026-08-13</lastmod>
+         <lastmod>2026-09-18</lastmod>
+    </url>
+    <url>
+         <loc>https://Kschuman-aon.github.io/genai-roi/learning-graph/concept-list/</loc>
+         <lastmod>2026-09-18</lastmod>
+    </url>
+    <url>
+         <loc>https://Kschuman-aon.github.io/genai-roi/learning-graph/concept-taxonomy/</loc>
+         <lastmod>2026-09-18</lastmod>
+    </url>
+    <url>
+         <loc>https://Kschuman-aon.github.io/genai-roi/learning-graph/course-description-assessment/</loc>
+         <lastmod>2026-09-18</lastmod>
+    </url>
+    <url>
+         <loc>https://Kschuman-aon.github.io/genai-roi/learning-graph/glossary-quality-report/</loc>
+         <lastmod>2026-09-18</lastmod>
+    </url>
+    <url>
+         <loc>https://Kschuman-aon.github.io/genai-roi/learning-graph/index-template/</loc>
+         <lastmod>2026-09-18</lastmod>
+    </url>
+    <url>
+         <loc>https://Kschuman-aon.github.io/genai-roi/learning-graph/mascot-test/</loc>
+         <lastmod>2026-09-18</lastmod>
+    </url>
+    <url>
+         <loc>https://Kschuman-aon.github.io/genai-roi/learning-graph/quality-metrics/</loc>
+         <lastmod>2026-09-18</lastmod>
+    </url>
+    <url>
+         <loc>https://Kschuman-aon.github.io/genai-roi/learning-graph/quiz-generation-report/</loc>
+         <lastmod>2026-09-18</lastmod>
+    </url>
+    <url>
+         <loc>https://Kschuman-aon.github.io/genai-roi/learning-graph/taxonomy-distribution/</loc>
+         <lastmod>2026-09-18</lastmod>
+    </url>
+    <url>
+         <loc>https://Kschuman-aon.github.io/genai-roi/learning-graph/logs/learning-graph-generator-0.05-2026-08-20/</loc>
+         <lastmod>2026-09-18</lastmod>
+    </url>
+    <url>
+         <loc>https://Kschuman-aon.github.io/genai-roi/learning-graph/logs/learning-graph-generator-1.07-2026-09-03/</loc>
+         <lastmod>2026-09-18</lastmod>
     </url>
     <url>
          <loc>https://Kschuman-aon.github.io/genai-roi/sims/</loc>
-         <lastmod>2026-08-13</lastmod>
+         <lastmod>2026-09-18</lastmod>
+    </url>
+    <url>
+         <loc>https://Kschuman-aon.github.io/genai-roi/sims/ai-family-tree/</loc>
+         <lastmod>2026-09-18</lastmod>
+    </url>
+    <url>
+         <loc>https://Kschuman-aon.github.io/genai-roi/sims/graph-viewer/</loc>
+         <lastmod>2026-09-18</lastmod>
     </url>
 </urlset>

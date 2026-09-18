@@ -1,0 +1,1922 @@
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+        <meta name="description" content="A practical guide to measuring and communicating the return on investment (ROI) of generative AI initiatives in an organization.">
+      
+      
+        <meta name="author" content="Katie Jo Schuman">
+      
+      
+        <link rel="canonical" href="https://Kschuman-aon.github.io/genai-roi/chapters/02-prompting-deployment-optimization/quiz/">
+      
+      
+        <link rel="prev" href="../">
+      
+      
+        <link rel="next" href="../references/">
+      
+      
+      <link rel="icon" href="../../../assets/images/favicon.png">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.6.4">
+    
+    
+      
+        <title>Quiz - Measuring GenAI ROI</title>
+      
+    
+    
+      <link rel="stylesheet" href="../../../assets/stylesheets/main.8608ea7d.min.css">
+      
+        
+        <link rel="stylesheet" href="../../../assets/stylesheets/palette.06af60db.min.css">
+      
+      
+
+
+    
+    
+      
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+      
+    
+    
+      <link rel="stylesheet" href="../../../css/extra.css">
+    
+      <link rel="stylesheet" href="../../../css/mascot.css">
+    
+    <script>__md_scope=new URL("../../..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+    
+  </head>
+  
+  
+    
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="default" data-md-color-primary="indigo" data-md-color-accent="orange">
+  
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#quiz-prompting-deployment-and-model-optimization-basics" class="md-skip">
+          Skip to content
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+  
+
+<header class="md-header md-header--shadow" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Header">
+    <a href="../../.." title="Measuring GenAI ROI" class="md-header__button md-logo" aria-label="Measuring GenAI ROI" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3zm0 5h18v2H3zm0 5h18v2H3z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            Measuring GenAI ROI
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              Quiz
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+      
+    
+    
+    
+    
+      <label class="md-header__button md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+      </label>
+      <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Search">
+        
+          <a href="javascript:void(0)" class="md-search__icon md-icon" title="Share" aria-label="Share" data-clipboard data-clipboard-text="" data-md-component="search-share" tabindex="-1">
+            
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M18 16.08c-.76 0-1.44.3-1.96.77L8.91 12.7c.05-.23.09-.46.09-.7s-.04-.47-.09-.7l7.05-4.11c.54.5 1.25.81 2.04.81a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3c0 .24.04.47.09.7L8.04 9.81C7.5 9.31 6.79 9 6 9a3 3 0 0 0-3 3 3 3 0 0 0 3 3c.79 0 1.5-.31 2.04-.81l7.12 4.15c-.05.21-.08.43-.08.66 0 1.61 1.31 2.91 2.92 2.91s2.92-1.3 2.92-2.91A2.92 2.92 0 0 0 18 16.08"/></svg>
+          </a>
+        
+        <button type="reset" class="md-search__icon md-icon" title="Clear" aria-label="Clear" tabindex="-1">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"/></svg>
+        </button>
+      </nav>
+      
+        <div class="md-search__suggest" data-md-component="search-suggest"></div>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" tabindex="0" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Initializing search
+          </div>
+          <ol class="md-search-result__list" role="presentation"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+    
+    
+      <div class="md-header__source">
+        <a href="https://github.com/Kschuman-aon/genai-roi" title="Go to repository" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 6.7.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2024 Fonticons, Inc.--><path d="M439.55 236.05 244 40.45a28.87 28.87 0 0 0-40.81 0l-40.66 40.63 51.52 51.52c27.06-9.14 52.68 16.77 43.39 43.68l49.66 49.66c34.23-11.8 61.18 31 35.47 56.69-26.49 26.49-70.21-2.87-56-37.34L240.22 199v121.85c25.3 12.54 22.26 41.85 9.08 55a34.34 34.34 0 0 1-48.55 0c-17.57-17.6-11.07-46.91 11.25-56v-123c-20.8-8.51-24.6-30.74-18.64-45L142.57 101 8.45 235.14a28.86 28.86 0 0 0 0 40.81l195.61 195.6a28.86 28.86 0 0 0 40.8 0l194.69-194.69a28.86 28.86 0 0 0 0-40.81"/></svg>
+  </div>
+  <div class="md-source__repository">
+    GitHub Repo
+  </div>
+</a>
+      </div>
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+
+<nav class="md-nav md-nav--primary" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href="../../.." title="Measuring GenAI ROI" class="md-nav__button md-logo" aria-label="Measuring GenAI ROI" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
+
+    </a>
+    Measuring GenAI ROI
+  </label>
+  
+    <div class="md-nav__source">
+      <a href="https://github.com/Kschuman-aon/genai-roi" title="Go to repository" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 6.7.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2024 Fonticons, Inc.--><path d="M439.55 236.05 244 40.45a28.87 28.87 0 0 0-40.81 0l-40.66 40.63 51.52 51.52c27.06-9.14 52.68 16.77 43.39 43.68l49.66 49.66c34.23-11.8 61.18 31 35.47 56.69-26.49 26.49-70.21-2.87-56-37.34L240.22 199v121.85c25.3 12.54 22.26 41.85 9.08 55a34.34 34.34 0 0 1-48.55 0c-17.57-17.6-11.07-46.91 11.25-56v-123c-20.8-8.51-24.6-30.74-18.64-45L142.57 101 8.45 235.14a28.86 28.86 0 0 0 0 40.81l195.61 195.6a28.86 28.86 0 0 0 40.8 0l194.69-194.69a28.86 28.86 0 0 0 0-40.81"/></svg>
+  </div>
+  <div class="md-source__repository">
+    GitHub Repo
+  </div>
+</a>
+    </div>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../.." class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Home
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../about/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    About
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../course-description/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Course Description
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+    
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+        
+      
+        
+          
+        
+      
+        
+          
+        
+      
+        
+          
+        
+      
+        
+          
+        
+      
+        
+          
+        
+      
+        
+          
+        
+      
+        
+          
+        
+      
+        
+          
+        
+      
+        
+          
+        
+      
+        
+          
+        
+      
+        
+          
+        
+      
+        
+          
+        
+      
+        
+          
+        
+      
+        
+          
+        
+      
+        
+          
+        
+      
+        
+          
+        
+      
+        
+          
+        
+      
+        
+          
+        
+      
+        
+          
+        
+      
+        
+          
+        
+      
+        
+          
+        
+      
+        
+          
+        
+      
+        
+          
+        
+      
+        
+          
+        
+      
+        
+          
+        
+      
+    
+    
+    
+      
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4" checked>
+        
+          
+          
+          <div class="md-nav__link md-nav__container">
+            <a href="../../" class="md-nav__link ">
+              
+  
+  <span class="md-ellipsis">
+    Chapters
+    
+  </span>
+  
+
+            </a>
+            
+              
+              <label class="md-nav__link " for="__nav_4" id="__nav_4_label" tabindex="0">
+                <span class="md-nav__icon md-icon"></span>
+              </label>
+            
+          </div>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_4_label" aria-expanded="true">
+          <label class="md-nav__title" for="__nav_4">
+            <span class="md-nav__icon md-icon"></span>
+            Chapters
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+        
+      
+    
+    
+    
+      
+        
+        
+      
+    
+    <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
+      
+        
+  
+  
+    <a href="../../01-core-concepts-llms/" class="md-nav__link">
+      
+  
+  <span class="md-ellipsis">
+    1. Core Concepts of Large Language Models
+    
+  </span>
+  
+
+      
+        <span class="md-nav__icon md-icon"></span>
+      
+    </a>
+  
+
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+    
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+        
+      
+    
+    
+    
+      
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4_3" checked>
+        
+          
+          
+          <div class="md-nav__link md-nav__container">
+            <a href="../" class="md-nav__link ">
+              
+  
+  <span class="md-ellipsis">
+    2. Prompting, Deployment, and Model Optimization Basics
+    
+  </span>
+  
+
+            </a>
+            
+              
+              <label class="md-nav__link " for="__nav_4_3" id="__nav_4_3_label" tabindex="0">
+                <span class="md-nav__icon md-icon"></span>
+              </label>
+            
+          </div>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_4_3_label" aria-expanded="true">
+          <label class="md-nav__title" for="__nav_4_3">
+            <span class="md-nav__icon md-icon"></span>
+            2. Prompting, Deployment, and Model Optimization Basics
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+            
+              
+                
+  
+  
+    
+  
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  <span class="md-ellipsis">
+    Quiz
+    
+  </span>
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
+        
+  
+  <span class="md-ellipsis">
+    Quiz
+    
+  </span>
+  
+
+      </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#1-what-is-a-system-prompt" class="md-nav__link">
+    <span class="md-ellipsis">
+      1. What is a system prompt?
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#2-what-is-prompt-engineering" class="md-nav__link">
+    <span class="md-ellipsis">
+      2. What is prompt engineering?
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#3-how-does-few-shot-prompting-differ-from-zero-shot-prompting-in-terms-of-cost" class="md-nav__link">
+    <span class="md-ellipsis">
+      3. How does few-shot prompting differ from zero-shot prompting in terms of cost?
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#4-why-does-chain-of-thought-prompting-typically-increase-cost-in-a-different-way-than-few-shot-prompting-does" class="md-nav__link">
+    <span class="md-ellipsis">
+      4. Why does chain-of-thought prompting typically increase cost in a different way than few-shot prompting does?
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#5-what-is-model-hallucination" class="md-nav__link">
+    <span class="md-ellipsis">
+      5. What is model hallucination?
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#6-what-is-the-primary-purpose-of-retrieval-augmented-generation-rag" class="md-nav__link">
+    <span class="md-ellipsis">
+      6. What is the primary purpose of retrieval-augmented generation (RAG)?
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#7-what-role-does-a-vector-database-play-in-a-rag-pipeline" class="md-nav__link">
+    <span class="md-ellipsis">
+      7. What role does a vector database play in a RAG pipeline?
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#8-a-deployment-team-turns-on-batch-inference-and-observes-that-system-wide-throughput-doubles-while-individual-request-latency-increases-significantly-what-is-the-underlying-reason-for-this-trade-off" class="md-nav__link">
+    <span class="md-ellipsis">
+      8. A deployment team turns on batch inference and observes that system-wide throughput doubles while individual request latency increases significantly. What is the underlying reason for this trade-off?
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#9-a-financial-services-company-has-strict-data-privacy-requirements-substantial-upfront-capital-available-and-an-experienced-in-house-infrastructure-team-which-deployment-approach-best-matches-these-circumstances" class="md-nav__link">
+    <span class="md-ellipsis">
+      9. A financial services company has strict data-privacy requirements, substantial upfront capital available, and an experienced in-house infrastructure team. Which deployment approach best matches these circumstances?
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#10-which-of-the-following-best-describes-model-right-sizing" class="md-nav__link">
+    <span class="md-ellipsis">
+      10. Which of the following best describes model right-sizing?
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../references/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Annotated References
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../03-tokenization-pricing-fundamentals/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    3. Tokenization and Token Pricing Fundamentals
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../04-managing-benchmarking-tokens/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    4. Managing and Benchmarking Token Consumption
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../05-compute-pricing-scaling/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    5. Compute Pricing and Scaling Fundamentals
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../06-infrastructure-planning-monitoring/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    6. Infrastructure Planning and Cost Monitoring
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../07-prompt-routing-retrieval-efficiency/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    7. Prompt, Routing, and Retrieval Efficiency Techniques
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../08-model-compression-testing-efficiency/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    8. Model Compression, Testing, and Continuous Efficiency
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../09-core-financial-roi-vocabulary/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    9. Core Financial and ROI Vocabulary
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../10-business-case-financial-forecasting/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    10. Business Case Development and Financial Forecasting
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../11-productivity-quality-metrics/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    11. Productivity and Quality Metrics for GenAI
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../12-measurement-rigor-kpi-reporting/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    12. Measurement Rigor and KPI Reporting
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../13-telemetry-logging-cost-dashboards/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    13. Telemetry, Logging, and Cost Dashboards
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../14-cost-attribution-observability-maturity/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    14. Cost Attribution, Governance, and Observability Maturity
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../15-ai-assisted-coding-sdlc/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    15. AI-Assisted Coding Across the SDLC
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../16-sdlc-productivity-risk-roadmapping/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    16. SDLC Productivity, Risk, and Cost Roadmapping
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../17-data-model-lifecycle-cost-drivers/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    17. Data and Model Lifecycle Cost Drivers
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../18-mlops-infrastructure-reuse-economics/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    18. MLOps Infrastructure and Reuse Economics
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../19-vendor-pricing-licensing-economics/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    19. Vendor Pricing and Licensing Economics
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../20-vendor-selection-sourcing-strategy/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    20. Vendor Selection and Sourcing Strategy
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../21-governance-compliance-security-risk/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    21. Governance, Compliance, and Security Risk
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../22-risk-adjusted-costing-reporting/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    22. Risk-Adjusted Costing and Executive Risk Reporting
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../23-audience-analysis-executive-framing/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    23. Audience Analysis and Executive Framing
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../24-presenting-defending-findings/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    24. Presenting and Defending Findings to Executives
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../25-designing-executive-roi-report/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    25. Designing the Executive ROI Report
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../26-data-visualization-storytelling/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    26. Data Visualization and Storytelling for Financial Audiences
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../27-report-production-review-capstone/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    27. Report Production, Review, and the Capstone Project
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+      
+        
+        
+      
+    
+    <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
+      
+        
+  
+  
+    <a href="../../../learning-graph/" class="md-nav__link">
+      
+  
+  <span class="md-ellipsis">
+    Learning Graph
+    
+  </span>
+  
+
+      
+        <span class="md-nav__icon md-icon"></span>
+      
+    </a>
+  
+
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+          
+        
+      
+        
+          
+        
+      
+    
+    
+    
+      
+        
+        
+      
+    
+    <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
+      
+        
+  
+  
+    <a href="../../../sims/" class="md-nav__link">
+      
+  
+  <span class="md-ellipsis">
+    MicroSims
+    
+  </span>
+  
+
+      
+        <span class="md-nav__icon md-icon"></span>
+      
+    </a>
+  
+
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../glossary/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Glossary
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../instructors-guide/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Instructor's Guide
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../feature-checklist/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Feature Checklist
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../license/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    License
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../contact/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Contact
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#1-what-is-a-system-prompt" class="md-nav__link">
+    <span class="md-ellipsis">
+      1. What is a system prompt?
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#2-what-is-prompt-engineering" class="md-nav__link">
+    <span class="md-ellipsis">
+      2. What is prompt engineering?
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#3-how-does-few-shot-prompting-differ-from-zero-shot-prompting-in-terms-of-cost" class="md-nav__link">
+    <span class="md-ellipsis">
+      3. How does few-shot prompting differ from zero-shot prompting in terms of cost?
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#4-why-does-chain-of-thought-prompting-typically-increase-cost-in-a-different-way-than-few-shot-prompting-does" class="md-nav__link">
+    <span class="md-ellipsis">
+      4. Why does chain-of-thought prompting typically increase cost in a different way than few-shot prompting does?
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#5-what-is-model-hallucination" class="md-nav__link">
+    <span class="md-ellipsis">
+      5. What is model hallucination?
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#6-what-is-the-primary-purpose-of-retrieval-augmented-generation-rag" class="md-nav__link">
+    <span class="md-ellipsis">
+      6. What is the primary purpose of retrieval-augmented generation (RAG)?
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#7-what-role-does-a-vector-database-play-in-a-rag-pipeline" class="md-nav__link">
+    <span class="md-ellipsis">
+      7. What role does a vector database play in a RAG pipeline?
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#8-a-deployment-team-turns-on-batch-inference-and-observes-that-system-wide-throughput-doubles-while-individual-request-latency-increases-significantly-what-is-the-underlying-reason-for-this-trade-off" class="md-nav__link">
+    <span class="md-ellipsis">
+      8. A deployment team turns on batch inference and observes that system-wide throughput doubles while individual request latency increases significantly. What is the underlying reason for this trade-off?
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#9-a-financial-services-company-has-strict-data-privacy-requirements-substantial-upfront-capital-available-and-an-experienced-in-house-infrastructure-team-which-deployment-approach-best-matches-these-circumstances" class="md-nav__link">
+    <span class="md-ellipsis">
+      9. A financial services company has strict data-privacy requirements, substantial upfront capital available, and an experienced in-house infrastructure team. Which deployment approach best matches these circumstances?
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#10-which-of-the-following-best-describes-model-right-sizing" class="md-nav__link">
+    <span class="md-ellipsis">
+      10. Which of the following best describes model right-sizing?
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+
+  
+    <a href="https://github.com/Kschuman-aon/genai-roi/blob/main/docs/chapters/02-prompting-deployment-optimization/quiz.md" title="Edit this page" class="md-content__button md-icon">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M10 20H6V4h7v5h5v3.1l2-2V8l-6-6H6c-1.1 0-2 .9-2 2v16c0 1.1.9 2 2 2h4zm10.2-7c.1 0 .3.1.4.2l1.3 1.3c.2.2.2.6 0 .8l-1 1-2.1-2.1 1-1c.1-.1.2-.2.4-.2m0 3.9L14.1 23H12v-2.1l6.1-6.1z"/></svg>
+    </a>
+  
+  
+
+
+<h1 id="quiz-prompting-deployment-and-model-optimization-basics">Quiz: Prompting, Deployment, and Model Optimization Basics<a class="headerlink" href="#quiz-prompting-deployment-and-model-optimization-basics" title="Permanent link">&para;</a></h1>
+<p>Test your understanding of prompting, deployment, and model optimization with these review questions.</p>
+<hr />
+<h4 id="1-what-is-a-system-prompt">1. What is a system prompt?<a class="headerlink" href="#1-what-is-a-system-prompt" title="Permanent link">&para;</a></h4>
+<div class="upper-alpha">
+<ol>
+<li>The end user's specific question submitted in a single request</li>
+<li>A numerical representation of a piece of text used for similarity search</li>
+<li>A persistent segment of instructions, usually invisible to the end user, that sets the model's role, tone, and constraints for the whole conversation</li>
+<li>The retrieved text a RAG system inserts into a prompt</li>
+</ol>
+</div>
+<details class="question">
+<summary>Show Answer</summary>
+<p>The correct answer is <strong>C</strong>. The system prompt is a persistent, usually invisible segment that sets the model's role, tone, and constraints across an entire conversation, and it is typically resent with every request. Option A describes an ordinary user prompt, not the persistent instruction layer. Option B describes an embedding. Option D describes retrieved context in a RAG pipeline, a separate mechanism entirely.</p>
+<p><strong>Concept Tested:</strong> System Prompt</p>
+</details>
+<hr />
+<h4 id="2-what-is-prompt-engineering">2. What is prompt engineering?<a class="headerlink" href="#2-what-is-prompt-engineering" title="Permanent link">&para;</a></h4>
+<div class="upper-alpha">
+<ol>
+<li>The practice of deliberately designing prompts to reliably get better, more accurate, or more consistent output from a model</li>
+<li>The process of permanently updating a model's internal weights through additional training</li>
+<li>The technique of compressing a model's parameters to reduce memory footprint</li>
+<li>The process of converting text into a numerical vector for similarity search</li>
+</ol>
+</div>
+<details class="question">
+<summary>Show Answer</summary>
+<p>The correct answer is <strong>A</strong>. Prompt engineering is the deliberate practice of designing prompts to reliably improve the accuracy, consistency, or usefulness of a model's output, and the chapter calls it the highest-leverage, lowest-cost lever for reducing spend. Option B describes fine-tuning, a fundamentally different and more expensive approach. Option C describes model quantization. Option D describes creating an embedding, unrelated to how a prompt itself is written.</p>
+<p><strong>Concept Tested:</strong> Prompt Engineering</p>
+</details>
+<hr />
+<h4 id="3-how-does-few-shot-prompting-differ-from-zero-shot-prompting-in-terms-of-cost">3. How does few-shot prompting differ from zero-shot prompting in terms of cost?<a class="headerlink" href="#3-how-does-few-shot-prompting-differ-from-zero-shot-prompting-in-terms-of-cost" title="Permanent link">&para;</a></h4>
+<div class="upper-alpha">
+<ol>
+<li>Few-shot prompting reduces the number of tokens needed because the model requires less explanation</li>
+<li>Few-shot prompting only affects the length of the model's generated output, not its input</li>
+<li>Few-shot and zero-shot prompting always cost exactly the same because the task is identical</li>
+<li>Few-shot prompting includes worked examples in the prompt, consuming additional input tokens on every request compared to zero-shot's plain instruction</li>
+</ol>
+</div>
+<details class="question">
+<summary>Show Answer</summary>
+<p>The correct answer is <strong>D</strong>. Few-shot prompting prepends a small number of worked examples before the actual task, and each example consumes real input tokens on every single request, unlike zero-shot's bare instruction. Option A reverses the cost effect; few-shot costs more, not less. Option B is incorrect because few-shot's added cost falls on input tokens, not output length. Option C ignores the token cost difference the chapter explicitly quantifies.</p>
+<p><strong>Concept Tested:</strong> Few-Shot Prompting</p>
+</details>
+<hr />
+<h4 id="4-why-does-chain-of-thought-prompting-typically-increase-cost-in-a-different-way-than-few-shot-prompting-does">4. Why does chain-of-thought prompting typically increase cost in a different way than few-shot prompting does?<a class="headerlink" href="#4-why-does-chain-of-thought-prompting-typically-increase-cost-in-a-different-way-than-few-shot-prompting-does" title="Permanent link">&para;</a></h4>
+<div class="upper-alpha">
+<ol>
+<li>It increases the number of examples included in the prompt, not the length of the response</li>
+<li>It increases the length of the model's generated output, since the reasoning steps themselves are generated text, rather than adding input tokens</li>
+<li>It requires a vector database to store reasoning steps</li>
+<li>It has no effect on token cost because reasoning happens internally without generating text</li>
+</ol>
+</div>
+<details class="question">
+<summary>Show Answer</summary>
+<p>The correct answer is <strong>B</strong>. Chain-of-thought prompting asks the model to reason through intermediate steps before its final answer, and those reasoning steps are generated text that lengthens the output, unlike few-shot's added input tokens. Option A describes few-shot prompting, not chain-of-thought. Option C invents a dependency on retrieval infrastructure that the technique does not require. Option D is false; the reasoning steps are visible, billed output tokens.</p>
+<p><strong>Concept Tested:</strong> Chain-Of-Thought Prompting</p>
+</details>
+<hr />
+<h4 id="5-what-is-model-hallucination">5. What is model hallucination?<a class="headerlink" href="#5-what-is-model-hallucination" title="Permanent link">&para;</a></h4>
+<div class="upper-alpha">
+<ol>
+<li>A deliberate error introduced by a provider to test system robustness</li>
+<li>The delay between sending a request and receiving a response</li>
+<li>The process of retrieving relevant text from an external source before answering</li>
+<li>A confident, fluent, plausible-sounding response that is factually wrong or entirely fabricated</li>
+</ol>
+</div>
+<details class="question">
+<summary>Show Answer</summary>
+<p>The correct answer is <strong>D</strong>. Model hallucination is a confident, fluent, plausible-sounding response that is factually wrong or entirely fabricated, arising because models predict statistically likely next words rather than consulting a source of truth. Option A wrongly frames it as intentional testing rather than a structural risk. Option B describes model latency. Option C describes retrieval, the technique used to reduce hallucination, not hallucination itself.</p>
+<p><strong>Concept Tested:</strong> Model Hallucination</p>
+</details>
+<hr />
+<h4 id="6-what-is-the-primary-purpose-of-retrieval-augmented-generation-rag">6. What is the primary purpose of retrieval-augmented generation (RAG)?<a class="headerlink" href="#6-what-is-the-primary-purpose-of-retrieval-augmented-generation-rag" title="Permanent link">&para;</a></h4>
+<div class="upper-alpha">
+<ol>
+<li>To reduce hallucination by grounding the model's response in text retrieved from an external source before generating an answer</li>
+<li>To permanently update a model's weights with new information</li>
+<li>To reduce a model's memory footprint by lowering numerical precision</li>
+<li>To increase a model's context window size automatically</li>
+</ol>
+</div>
+<details class="question">
+<summary>Show Answer</summary>
+<p>The correct answer is <strong>A</strong>. RAG retrieves relevant text from an external source and inserts it into the prompt before the model answers, grounding the response in verifiable material and sharply reducing, though not eliminating, hallucination on covered topics. Option B describes fine-tuning, not RAG, which changes nothing about the model's weights. Option C describes model quantization. Option D confuses RAG with a context-window change, which RAG does not perform.</p>
+<p><strong>Concept Tested:</strong> Retrieval-Augmented Generation</p>
+</details>
+<hr />
+<h4 id="7-what-role-does-a-vector-database-play-in-a-rag-pipeline">7. What role does a vector database play in a RAG pipeline?<a class="headerlink" href="#7-what-role-does-a-vector-database-play-in-a-rag-pipeline" title="Permanent link">&para;</a></h4>
+<div class="upper-alpha">
+<ol>
+<li>It permanently stores the model's trained parameters</li>
+<li>It stores millions of embeddings and quickly returns the stored text most similar in meaning to a new query</li>
+<li>It converts a user's query into a fluent natural-language response</li>
+<li>It tracks distinct, identifiable releases of a model over time</li>
+</ol>
+</div>
+<details class="question">
+<summary>Show Answer</summary>
+<p>The correct answer is <strong>B</strong>. A vector database is built to hold millions of embeddings and answer, in milliseconds, which stored pieces of text are most similar in meaning to a new query, making fast retrieval possible. Option A describes where a model's own weights live, not a vector database. Option C describes what the language model itself does, not the database. Option D describes model versioning, an unrelated deployment practice.</p>
+<p><strong>Concept Tested:</strong> Vector Database</p>
+</details>
+<hr />
+<h4 id="8-a-deployment-team-turns-on-batch-inference-and-observes-that-system-wide-throughput-doubles-while-individual-request-latency-increases-significantly-what-is-the-underlying-reason-for-this-trade-off">8. A deployment team turns on batch inference and observes that system-wide throughput doubles while individual request latency increases significantly. What is the underlying reason for this trade-off?<a class="headerlink" href="#8-a-deployment-team-turns-on-batch-inference-and-observes-that-system-wide-throughput-doubles-while-individual-request-latency-increases-significantly-what-is-the-underlying-reason-for-this-trade-off" title="Permanent link">&para;</a></h4>
+<div class="upper-alpha">
+<ol>
+<li>Batch inference reduces the total number of tokens generated per request</li>
+<li>Batch inference switches the model to a smaller, distilled version automatically</li>
+<li>Batch inference processes multiple requests together in a single pass, improving total work done per unit of GPU time, but an individual request may wait for a batch to fill before processing begins</li>
+<li>Batch inference eliminates the need for a vector database in retrieval tasks</li>
+</ol>
+</div>
+<details class="question">
+<summary>Show Answer</summary>
+<p>The correct answer is <strong>C</strong>. Batch inference groups multiple requests into a single pass through the model, which raises throughput by getting more total work done per unit of GPU time, but an individual request may sit waiting for its batch to fill, raising that request's latency. Option A misattributes the effect to token count rather than processing structure. Option B confuses batching with knowledge distillation. Option D is unrelated; batching has no bearing on retrieval infrastructure.</p>
+<p><strong>Concept Tested:</strong> Batch Inference</p>
+</details>
+<hr />
+<h4 id="9-a-financial-services-company-has-strict-data-privacy-requirements-substantial-upfront-capital-available-and-an-experienced-in-house-infrastructure-team-which-deployment-approach-best-matches-these-circumstances">9. A financial services company has strict data-privacy requirements, substantial upfront capital available, and an experienced in-house infrastructure team. Which deployment approach best matches these circumstances?<a class="headerlink" href="#9-a-financial-services-company-has-strict-data-privacy-requirements-substantial-upfront-capital-available-and-an-experienced-in-house-infrastructure-team-which-deployment-approach-best-matches-these-circumstances" title="Permanent link">&para;</a></h4>
+<div class="upper-alpha">
+<ol>
+<li>Cloud-hosted deployment, trading upfront capital for ongoing operating expense and less control</li>
+<li>On-premises deployment, maximizing control over data privacy by running the model on infrastructure the company owns and operates</li>
+<li>Knowledge distillation, to train a smaller student model from a larger teacher model</li>
+<li>Zero-shot prompting, to avoid the cost of writing worked examples</li>
+</ol>
+</div>
+<details class="question">
+<summary>Show Answer</summary>
+<p>The correct answer is <strong>B</strong>. On-premises deployment maximizes control over data privacy and lets an organization fully own hardware costs, at the price of significant upfront capital and in-house expertise — exactly the profile this company has. Option A describes the opposite trade-off, favored by teams without capital or infrastructure staff. Option C addresses model size and cost, not deployment location. Option D is a prompting technique, unrelated to where a model physically runs.</p>
+<p><strong>Concept Tested:</strong> On-Premises Deployment</p>
+</details>
+<hr />
+<h4 id="10-which-of-the-following-best-describes-model-right-sizing">10. Which of the following best describes model right-sizing?<a class="headerlink" href="#10-which-of-the-following-best-describes-model-right-sizing" title="Permanent link">&para;</a></h4>
+<div class="upper-alpha">
+<ol>
+<li>Reducing the numerical precision used to store a model's parameters</li>
+<li>Training a new, smaller model to mimic the outputs of a larger teacher model</li>
+<li>Increasing a model's context window to handle longer documents</li>
+<li>Deliberately choosing the smallest, cheapest model that still meets accuracy and latency requirements for a given task, rather than defaulting to the largest available model</li>
+</ol>
+</div>
+<details class="question">
+<summary>Show Answer</summary>
+<p>The correct answer is <strong>D</strong>. Model right-sizing is the discipline of deliberately choosing the smallest, cheapest model that still meets a task's accuracy and latency requirements, rather than defaulting to the largest, most capable, and most expensive option. Option A describes model quantization. Option B describes knowledge distillation, a related but distinct technique. Option C is unrelated to matching model choice to task difficulty.</p>
+<p><strong>Concept Tested:</strong> Model Right-Sizing</p>
+</details>
+<hr />
+
+
+
+
+
+
+
+
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
+        </div>
+        
+          <button type="button" class="md-top md-icon" data-md-component="top" hidden>
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M13 20h-2V8l-5.5 5.5-1.42-1.42L12 4.16l7.92 7.92-1.42 1.42L13 8z"/></svg>
+  Back to top
+</button>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+    
+      
+      <nav class="md-footer__inner md-grid" aria-label="Footer" >
+        
+          
+          <a href="../" class="md-footer__link md-footer__link--prev" aria-label="Previous: Content">
+            <div class="md-footer__button md-icon">
+              
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
+            </div>
+            <div class="md-footer__title">
+              <span class="md-footer__direction">
+                Previous
+              </span>
+              <div class="md-ellipsis">
+                Content
+              </div>
+            </div>
+          </a>
+        
+        
+          
+          <a href="../references/" class="md-footer__link md-footer__link--next" aria-label="Next: Annotated References">
+            <div class="md-footer__title">
+              <span class="md-footer__direction">
+                Next
+              </span>
+              <div class="md-ellipsis">
+                Annotated References
+              </div>
+            </div>
+            <div class="md-footer__button md-icon">
+              
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M4 11v2h12l-5.5 5.5 1.42 1.42L19.84 12l-7.92-7.92L10.5 5.5 16 11z"/></svg>
+            </div>
+          </a>
+        
+      </nav>
+    
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+    <div class="md-copyright__highlight">
+      Copyright &copy; 2026 Katie Jo Schuman. Licensed under <a href="license/">CC BY-NC-SA 4.0</a> for non-commercial use.
+    </div>
+  
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    
+    <script id="__config" type="application/json">{"base": "../../..", "features": ["content.code.copy", "content.action.edit", "navigation.expand", "navigation.path", "navigation.prune", "navigation.indexes", "navigation.top", "navigation.footer", "toc.follow", "search.suggest", "search.highlight", "search.share"], "search": "../../../assets/javascripts/workers/search.f8cc74c7.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}}</script>
+    
+    
+      <script src="../../../assets/javascripts/bundle.f1b6f286.min.js"></script>
+      
+    
+  </body>
+</html>

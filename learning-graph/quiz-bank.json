@@ -1,0 +1,308 @@
+{
+  "textbook_title": "Measuring GenAI ROI",
+  "generated_date": "2026-09-18",
+  "total_chapters": 2,
+  "total_questions": 20,
+  "questions": [
+    {
+      "id": "01-core-concepts-llms-q001",
+      "chapter": "Core Concepts of Large Language Models",
+      "question_text": "According to the chapter, what is the defining characteristic of artificial intelligence (AI) as a category?",
+      "options": {
+        "A": "It requires the use of deep neural networks with many layers",
+        "B": "It performs tasks that would otherwise be considered to require human intelligence",
+        "C": "It learns exclusively from labeled training data rather than hand-written rules",
+        "D": "It produces original content rather than merely classifying existing content"
+      },
+      "correct_answer": "B",
+      "explanation": "AI is defined in capability-based terms: any system that performs a task otherwise thought to require human intelligence, regardless of the underlying technique. Option A describes deep learning specifically, a much narrower subset of AI. Option C describes machine learning, which learns from data rather than AI as a whole. Option D describes generative AI, a further subset within deep learning. AI itself does not require any particular mechanism.",
+      "concept": "Artificial Intelligence",
+      "chapter_file": "docs/chapters/01-core-concepts-llms/index.md"
+    },
+    {
+      "id": "01-core-concepts-llms-q002",
+      "chapter": "Core Concepts of Large Language Models",
+      "question_text": "Which of the following best distinguishes machine learning from AI in general, as described in the chapter?",
+      "options": {
+        "A": "Machine learning systems improve performance by learning patterns from data rather than following hand-written rules",
+        "B": "Machine learning systems must be based on neural networks with multiple layers",
+        "C": "Machine learning refers only to systems that generate new content rather than classify it",
+        "D": "Machine learning is a marketing term with no meaningful technical distinction from AI"
+      },
+      "correct_answer": "A",
+      "explanation": "Machine learning is the subfield of AI in which a system improves performance by learning patterns from data, illustrated by a spam filter trained on labeled emails rather than hand-written rules. Option B describes deep learning, a narrower subset of ML. Option C describes generative AI, not machine learning generally. Option D is incorrect; the chapter treats the ML/AI distinction as economically significant because it changes what you actually pay for.",
+      "concept": "Machine Learning",
+      "chapter_file": "docs/chapters/01-core-concepts-llms/index.md"
+    },
+    {
+      "id": "01-core-concepts-llms-q003",
+      "chapter": "Core Concepts of Large Language Models",
+      "question_text": "Which statement correctly describes the relationship among artificial intelligence, machine learning, deep learning, and neural networks?",
+      "options": {
+        "A": "They are four separate, unrelated approaches to building intelligent systems",
+        "B": "Neural networks are a subset of deep learning, which is a subset of AI but not of machine learning",
+        "C": "Machine learning is a subset of deep learning, which is a subset of AI",
+        "D": "Each narrower term nests inside the broader one: deep learning is a subset of machine learning, which is a subset of AI, and neural networks are the mechanism deep learning is built on"
+      },
+      "correct_answer": "D",
+      "explanation": "The chapter describes these terms as nesting like Russian dolls: every neural network is deep learning, every deep learning system is machine learning, and every machine learning system is AI, but never the reverse. Option A ignores this nesting entirely. Option B skips over machine learning in the chain. Option C reverses which term contains which.",
+      "concept": "Deep Learning",
+      "chapter_file": "docs/chapters/01-core-concepts-llms/index.md"
+    },
+    {
+      "id": "01-core-concepts-llms-q004",
+      "chapter": "Core Concepts of Large Language Models",
+      "question_text": "What distinguishes a generative AI model from a discriminative model?",
+      "options": {
+        "A": "A generative model sorts inputs into predefined categories, while a discriminative model produces new examples",
+        "B": "A generative model requires no training data, while a discriminative model requires labeled data",
+        "C": "A generative model learns the underlying pattern of a class of data well enough to produce new, original examples, while a discriminative model sorts inputs into categories",
+        "D": "There is no meaningful difference; the terms are interchangeable"
+      },
+      "correct_answer": "C",
+      "explanation": "A generative AI model learns a class of data's underlying pattern well enough to produce new, original examples, while a discriminative model sorts inputs into existing categories, such as flagging spam or fraud. Option A reverses these two definitions. Option B is false; both approaches require training data. Option D is incorrect because the chapter treats this distinction as economically important, since generation requires substantially more computation than classification.",
+      "concept": "Generative AI",
+      "chapter_file": "docs/chapters/01-core-concepts-llms/index.md"
+    },
+    {
+      "id": "01-core-concepts-llms-q005",
+      "chapter": "Core Concepts of Large Language Models",
+      "question_text": "Why does processing a longer passage of text cost substantially more than twice as much when its length is doubled, according to the chapter's discussion of self-attention?",
+      "options": {
+        "A": "Longer passages require more pretraining data to be collected in advance",
+        "B": "Self-attention compares every word in the passage against every other word, so computation grows faster than the text length itself",
+        "C": "Longer passages always require a larger model with more parameters",
+        "D": "The model must fine-tune itself on the fly for each new passage it processes"
+      },
+      "correct_answer": "B",
+      "explanation": "Because self-attention compares every word against every other word, the computation it requires grows faster than the length of the input text, so doubling a passage's length more than doubles the processing cost. Option A confuses this with data collection for pretraining, an unrelated stage. Option C incorrectly ties passage length to parameter count. Option D describes fine-tuning, which does not occur automatically during inference.",
+      "concept": "Self-Attention",
+      "chapter_file": "docs/chapters/01-core-concepts-llms/index.md"
+    },
+    {
+      "id": "01-core-concepts-llms-q006",
+      "chapter": "Core Concepts of Large Language Models",
+      "question_text": "What happens during the pretraining stage of a large language model's development?",
+      "options": {
+        "A": "The model is adjusted using human preference comparisons between pairs of responses",
+        "B": "The model is trained on a small, domain-specific dataset such as a company's support transcripts",
+        "C": "The model is taught to treat prompts as instructions rather than text to continue",
+        "D": "The model is exposed to a massive, general corpus of text and learns broad language patterns by repeatedly predicting the next word"
+      },
+      "correct_answer": "D",
+      "explanation": "Pretraining is the first and most expensive stage, in which a model is exposed to a massive, general corpus of text and learns grammar, facts, and reasoning patterns by repeatedly predicting the next word. Option A describes RLHF alignment. Option B describes fine-tuning on a smaller, domain-specific dataset. Option C describes instruction tuning. Each of these later stages builds on, and costs far less than, pretraining.",
+      "concept": "Pretraining",
+      "chapter_file": "docs/chapters/01-core-concepts-llms/index.md"
+    },
+    {
+      "id": "01-core-concepts-llms-q007",
+      "chapter": "Core Concepts of Large Language Models",
+      "question_text": "How does RLHF (Reinforcement Learning from Human Feedback) alignment differ from instruction tuning?",
+      "options": {
+        "A": "RLHF refines model behavior using human preference judgments between response pairs, while instruction tuning trains on fixed instruction-response examples",
+        "B": "RLHF is a stage that occurs before pretraining, while instruction tuning occurs after",
+        "C": "RLHF trains an entirely new, smaller model, while instruction tuning compresses an existing model's parameters",
+        "D": "RLHF and instruction tuning are two names for the exact same process"
+      },
+      "correct_answer": "A",
+      "explanation": "RLHF alignment refines a model's behavior using human judgments about which of two responses is preferred, while instruction tuning trains on fixed pairs of instructions and correct responses. Option B misstates the sequence; both stages occur after pretraining. Option C describes an unrelated model-compression technique, not either of these fine-tuning stages. Option D wrongly treats the two stages as identical, when they use different training signals.",
+      "concept": "RLHF Alignment",
+      "chapter_file": "docs/chapters/01-core-concepts-llms/index.md"
+    },
+    {
+      "id": "01-core-concepts-llms-q008",
+      "chapter": "Core Concepts of Large Language Models",
+      "question_text": "A foundation model costs $10 million to pretrain and a fraction of a cent per query to run. What is the underlying reason its cumulative inference cost can eventually exceed its one-time training cost?",
+      "options": {
+        "A": "Inference requires more GPU memory per request than training does",
+        "B": "Providers deliberately price inference higher than training to recover costs faster",
+        "C": "Inference is a small, recurring per-request expense that accumulates without limit as usage volume grows, while training is a one-time cost",
+        "D": "Training costs are refunded once a model reaches a certain number of users"
+      },
+      "correct_answer": "C",
+      "explanation": "Training is typically a one-time or infrequent expense, while inference is a small per-request cost that recurs on every single use; at sufficient usage volume, the accumulated inference cost surpasses the one-time training cost. Option A misattributes the cause to memory requirements rather than cost structure. Option B assumes a deliberate pricing strategy the chapter does not describe. Option D describes a refund mechanism that does not exist.",
+      "concept": "Training Vs Inference Cost",
+      "chapter_file": "docs/chapters/01-core-concepts-llms/index.md"
+    },
+    {
+      "id": "01-core-concepts-llms-q009",
+      "chapter": "Core Concepts of Large Language Models",
+      "question_text": "What does a model's context window determine?",
+      "options": {
+        "A": "The total number of parameters the model has learned during training",
+        "B": "Whether the model can process images in addition to text",
+        "C": "The organization that hosts and provides access to the model",
+        "D": "The maximum amount of text, measured in tokens, that the model can consider at once, including both the prompt and its response"
+      },
+      "correct_answer": "D",
+      "explanation": "The context window is the maximum amount of text, measured in tokens, that a model can consider at once, covering both the prompt sent to it and the response it generates. Option A describes model parameter count, a distinct measure of learned scale. Option B describes multimodal capability. Option C describes the role of a model provider. None of these concern how much text a model can process in a single request.",
+      "concept": "Context Window",
+      "chapter_file": "docs/chapters/01-core-concepts-llms/index.md"
+    },
+    {
+      "id": "01-core-concepts-llms-q010",
+      "chapter": "Core Concepts of Large Language Models",
+      "question_text": "A small startup wants to deploy a large language model quickly but has no engineering staff available to provision or maintain GPU infrastructure. Based on the trade-offs described in the chapter, which deployment approach best fits this situation?",
+      "options": {
+        "A": "Download an open-source model's weights and host it on self-managed infrastructure",
+        "B": "Access a proprietary model through a provider's API endpoint, accepting a higher per-call price in exchange for no hosting burden",
+        "C": "Pretrain a new foundation model from scratch to have full control over costs",
+        "D": "Use a purely rule-based system instead of a large language model"
+      },
+      "correct_answer": "B",
+      "explanation": "A proprietary model accessed through a provider's API endpoint trades a higher per-call price for zero hosting burden, which fits a team without infrastructure capacity. Option A requires exactly the in-house engineering effort the startup lacks. Option C describes pretraining a foundation model from scratch, an enormously expensive undertaking unrelated to quick deployment. Option D abandons generative AI capability entirely, which does not meet the stated need.",
+      "concept": "Proprietary Model",
+      "chapter_file": "docs/chapters/01-core-concepts-llms/index.md"
+    },
+    {
+      "id": "02-prompting-deployment-optimization-q001",
+      "chapter": "Prompting, Deployment, and Model Optimization Basics",
+      "question_text": "What is a system prompt?",
+      "options": {
+        "A": "The end user's specific question submitted in a single request",
+        "B": "A numerical representation of a piece of text used for similarity search",
+        "C": "A persistent segment of instructions, usually invisible to the end user, that sets the model's role, tone, and constraints for the whole conversation",
+        "D": "The retrieved text a RAG system inserts into a prompt"
+      },
+      "correct_answer": "C",
+      "explanation": "The system prompt is a persistent, usually invisible segment that sets the model's role, tone, and constraints across an entire conversation, and it is typically resent with every request. Option A describes an ordinary user prompt, not the persistent instruction layer. Option B describes an embedding. Option D describes retrieved context in a RAG pipeline, a separate mechanism entirely.",
+      "concept": "System Prompt",
+      "chapter_file": "docs/chapters/02-prompting-deployment-optimization/index.md"
+    },
+    {
+      "id": "02-prompting-deployment-optimization-q002",
+      "chapter": "Prompting, Deployment, and Model Optimization Basics",
+      "question_text": "What is prompt engineering?",
+      "options": {
+        "A": "The practice of deliberately designing prompts to reliably get better, more accurate, or more consistent output from a model",
+        "B": "The process of permanently updating a model's internal weights through additional training",
+        "C": "The technique of compressing a model's parameters to reduce memory footprint",
+        "D": "The process of converting text into a numerical vector for similarity search"
+      },
+      "correct_answer": "A",
+      "explanation": "Prompt engineering is the deliberate practice of designing prompts to reliably improve the accuracy, consistency, or usefulness of a model's output, and the chapter calls it the highest-leverage, lowest-cost lever for reducing spend. Option B describes fine-tuning, a fundamentally different and more expensive approach. Option C describes model quantization. Option D describes creating an embedding, unrelated to how a prompt itself is written.",
+      "concept": "Prompt Engineering",
+      "chapter_file": "docs/chapters/02-prompting-deployment-optimization/index.md"
+    },
+    {
+      "id": "02-prompting-deployment-optimization-q003",
+      "chapter": "Prompting, Deployment, and Model Optimization Basics",
+      "question_text": "How does few-shot prompting differ from zero-shot prompting in terms of cost?",
+      "options": {
+        "A": "Few-shot prompting reduces the number of tokens needed because the model requires less explanation",
+        "B": "Few-shot prompting only affects the length of the model's generated output, not its input",
+        "C": "Few-shot and zero-shot prompting always cost exactly the same because the task is identical",
+        "D": "Few-shot prompting includes worked examples in the prompt, consuming additional input tokens on every request compared to zero-shot's plain instruction"
+      },
+      "correct_answer": "D",
+      "explanation": "Few-shot prompting prepends a small number of worked examples before the actual task, and each example consumes real input tokens on every single request, unlike zero-shot's bare instruction. Option A reverses the cost effect; few-shot costs more, not less. Option B is incorrect because few-shot's added cost falls on input tokens, not output length. Option C ignores the token cost difference the chapter explicitly quantifies.",
+      "concept": "Few-Shot Prompting",
+      "chapter_file": "docs/chapters/02-prompting-deployment-optimization/index.md"
+    },
+    {
+      "id": "02-prompting-deployment-optimization-q004",
+      "chapter": "Prompting, Deployment, and Model Optimization Basics",
+      "question_text": "Why does chain-of-thought prompting typically increase cost in a different way than few-shot prompting does?",
+      "options": {
+        "A": "It increases the number of examples included in the prompt, not the length of the response",
+        "B": "It increases the length of the model's generated output, since the reasoning steps themselves are generated text, rather than adding input tokens",
+        "C": "It requires a vector database to store reasoning steps",
+        "D": "It has no effect on token cost because reasoning happens internally without generating text"
+      },
+      "correct_answer": "B",
+      "explanation": "Chain-of-thought prompting asks the model to reason through intermediate steps before its final answer, and those reasoning steps are generated text that lengthens the output, unlike few-shot's added input tokens. Option A describes few-shot prompting, not chain-of-thought. Option C invents a dependency on retrieval infrastructure that the technique does not require. Option D is false; the reasoning steps are visible, billed output tokens.",
+      "concept": "Chain-Of-Thought Prompting",
+      "chapter_file": "docs/chapters/02-prompting-deployment-optimization/index.md"
+    },
+    {
+      "id": "02-prompting-deployment-optimization-q005",
+      "chapter": "Prompting, Deployment, and Model Optimization Basics",
+      "question_text": "What is model hallucination?",
+      "options": {
+        "A": "A deliberate error introduced by a provider to test system robustness",
+        "B": "The delay between sending a request and receiving a response",
+        "C": "The process of retrieving relevant text from an external source before answering",
+        "D": "A confident, fluent, plausible-sounding response that is factually wrong or entirely fabricated"
+      },
+      "correct_answer": "D",
+      "explanation": "Model hallucination is a confident, fluent, plausible-sounding response that is factually wrong or entirely fabricated, arising because models predict statistically likely next words rather than consulting a source of truth. Option A wrongly frames it as intentional testing rather than a structural risk. Option B describes model latency. Option C describes retrieval, the technique used to reduce hallucination, not hallucination itself.",
+      "concept": "Model Hallucination",
+      "chapter_file": "docs/chapters/02-prompting-deployment-optimization/index.md"
+    },
+    {
+      "id": "02-prompting-deployment-optimization-q006",
+      "chapter": "Prompting, Deployment, and Model Optimization Basics",
+      "question_text": "What is the primary purpose of retrieval-augmented generation (RAG)?",
+      "options": {
+        "A": "To reduce hallucination by grounding the model's response in text retrieved from an external source before generating an answer",
+        "B": "To permanently update a model's weights with new information",
+        "C": "To reduce a model's memory footprint by lowering numerical precision",
+        "D": "To increase a model's context window size automatically"
+      },
+      "correct_answer": "A",
+      "explanation": "RAG retrieves relevant text from an external source and inserts it into the prompt before the model answers, grounding the response in verifiable material and sharply reducing, though not eliminating, hallucination on covered topics. Option B describes fine-tuning, not RAG, which changes nothing about the model's weights. Option C describes model quantization. Option D confuses RAG with a context-window change, which RAG does not perform.",
+      "concept": "Retrieval-Augmented Generation",
+      "chapter_file": "docs/chapters/02-prompting-deployment-optimization/index.md"
+    },
+    {
+      "id": "02-prompting-deployment-optimization-q007",
+      "chapter": "Prompting, Deployment, and Model Optimization Basics",
+      "question_text": "What role does a vector database play in a RAG pipeline?",
+      "options": {
+        "A": "It permanently stores the model's trained parameters",
+        "B": "It stores millions of embeddings and quickly returns the stored text most similar in meaning to a new query",
+        "C": "It converts a user's query into a fluent natural-language response",
+        "D": "It tracks distinct, identifiable releases of a model over time"
+      },
+      "correct_answer": "B",
+      "explanation": "A vector database is built to hold millions of embeddings and answer, in milliseconds, which stored pieces of text are most similar in meaning to a new query, making fast retrieval possible. Option A describes where a model's own weights live, not a vector database. Option C describes what the language model itself does, not the database. Option D describes model versioning, an unrelated deployment practice.",
+      "concept": "Vector Database",
+      "chapter_file": "docs/chapters/02-prompting-deployment-optimization/index.md"
+    },
+    {
+      "id": "02-prompting-deployment-optimization-q008",
+      "chapter": "Prompting, Deployment, and Model Optimization Basics",
+      "question_text": "A deployment team turns on batch inference and observes that system-wide throughput doubles while individual request latency increases significantly. What is the underlying reason for this trade-off?",
+      "options": {
+        "A": "Batch inference reduces the total number of tokens generated per request",
+        "B": "Batch inference switches the model to a smaller, distilled version automatically",
+        "C": "Batch inference processes multiple requests together in a single pass, improving total work done per unit of GPU time, but an individual request may wait for a batch to fill before processing begins",
+        "D": "Batch inference eliminates the need for a vector database in retrieval tasks"
+      },
+      "correct_answer": "C",
+      "explanation": "Batch inference groups multiple requests into a single pass through the model, which raises throughput by getting more total work done per unit of GPU time, but an individual request may sit waiting for its batch to fill, raising that request's latency. Option A misattributes the effect to token count rather than processing structure. Option B confuses batching with knowledge distillation. Option D is unrelated; batching has no bearing on retrieval infrastructure.",
+      "concept": "Batch Inference",
+      "chapter_file": "docs/chapters/02-prompting-deployment-optimization/index.md"
+    },
+    {
+      "id": "02-prompting-deployment-optimization-q009",
+      "chapter": "Prompting, Deployment, and Model Optimization Basics",
+      "question_text": "A financial services company has strict data-privacy requirements, substantial upfront capital available, and an experienced in-house infrastructure team. Which deployment approach best matches these circumstances?",
+      "options": {
+        "A": "Cloud-hosted deployment, trading upfront capital for ongoing operating expense and less control",
+        "B": "On-premises deployment, maximizing control over data privacy by running the model on infrastructure the company owns and operates",
+        "C": "Knowledge distillation, to train a smaller student model from a larger teacher model",
+        "D": "Zero-shot prompting, to avoid the cost of writing worked examples"
+      },
+      "correct_answer": "B",
+      "explanation": "On-premises deployment maximizes control over data privacy and lets an organization fully own hardware costs, at the price of significant upfront capital and in-house expertise \u2014 exactly the profile this company has. Option A describes the opposite trade-off, favored by teams without capital or infrastructure staff. Option C addresses model size and cost, not deployment location. Option D is a prompting technique, unrelated to where a model physically runs.",
+      "concept": "On-Premises Deployment",
+      "chapter_file": "docs/chapters/02-prompting-deployment-optimization/index.md"
+    },
+    {
+      "id": "02-prompting-deployment-optimization-q010",
+      "chapter": "Prompting, Deployment, and Model Optimization Basics",
+      "question_text": "Which of the following best describes model right-sizing?",
+      "options": {
+        "A": "Reducing the numerical precision used to store a model's parameters",
+        "B": "Training a new, smaller model to mimic the outputs of a larger teacher model",
+        "C": "Increasing a model's context window to handle longer documents",
+        "D": "Deliberately choosing the smallest, cheapest model that still meets accuracy and latency requirements for a given task, rather than defaulting to the largest available model"
+      },
+      "correct_answer": "D",
+      "explanation": "Model right-sizing is the discipline of deliberately choosing the smallest, cheapest model that still meets a task's accuracy and latency requirements, rather than defaulting to the largest, most capable, and most expensive option. Option A describes model quantization. Option B describes knowledge distillation, a related but distinct technique. Option C is unrelated to matching model choice to task difficulty.",
+      "concept": "Model Right-Sizing",
+      "chapter_file": "docs/chapters/02-prompting-deployment-optimization/index.md"
+    }
+  ]
+}

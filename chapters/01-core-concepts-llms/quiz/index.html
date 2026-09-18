@@ -1,0 +1,1922 @@
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+        <meta name="description" content="A practical guide to measuring and communicating the return on investment (ROI) of generative AI initiatives in an organization.">
+      
+      
+        <meta name="author" content="Katie Jo Schuman">
+      
+      
+        <link rel="canonical" href="https://Kschuman-aon.github.io/genai-roi/chapters/01-core-concepts-llms/quiz/">
+      
+      
+        <link rel="prev" href="../">
+      
+      
+        <link rel="next" href="../references/">
+      
+      
+      <link rel="icon" href="../../../assets/images/favicon.png">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.6.4">
+    
+    
+      
+        <title>Quiz - Measuring GenAI ROI</title>
+      
+    
+    
+      <link rel="stylesheet" href="../../../assets/stylesheets/main.8608ea7d.min.css">
+      
+        
+        <link rel="stylesheet" href="../../../assets/stylesheets/palette.06af60db.min.css">
+      
+      
+
+
+    
+    
+      
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+      
+    
+    
+      <link rel="stylesheet" href="../../../css/extra.css">
+    
+      <link rel="stylesheet" href="../../../css/mascot.css">
+    
+    <script>__md_scope=new URL("../../..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+    
+  </head>
+  
+  
+    
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="default" data-md-color-primary="indigo" data-md-color-accent="orange">
+  
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#quiz-core-concepts-of-large-language-models" class="md-skip">
+          Skip to content
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+  
+
+<header class="md-header md-header--shadow" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Header">
+    <a href="../../.." title="Measuring GenAI ROI" class="md-header__button md-logo" aria-label="Measuring GenAI ROI" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3zm0 5h18v2H3zm0 5h18v2H3z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            Measuring GenAI ROI
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              Quiz
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+      
+    
+    
+    
+    
+      <label class="md-header__button md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+      </label>
+      <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Search">
+        
+          <a href="javascript:void(0)" class="md-search__icon md-icon" title="Share" aria-label="Share" data-clipboard data-clipboard-text="" data-md-component="search-share" tabindex="-1">
+            
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M18 16.08c-.76 0-1.44.3-1.96.77L8.91 12.7c.05-.23.09-.46.09-.7s-.04-.47-.09-.7l7.05-4.11c.54.5 1.25.81 2.04.81a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3c0 .24.04.47.09.7L8.04 9.81C7.5 9.31 6.79 9 6 9a3 3 0 0 0-3 3 3 3 0 0 0 3 3c.79 0 1.5-.31 2.04-.81l7.12 4.15c-.05.21-.08.43-.08.66 0 1.61 1.31 2.91 2.92 2.91s2.92-1.3 2.92-2.91A2.92 2.92 0 0 0 18 16.08"/></svg>
+          </a>
+        
+        <button type="reset" class="md-search__icon md-icon" title="Clear" aria-label="Clear" tabindex="-1">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"/></svg>
+        </button>
+      </nav>
+      
+        <div class="md-search__suggest" data-md-component="search-suggest"></div>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" tabindex="0" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Initializing search
+          </div>
+          <ol class="md-search-result__list" role="presentation"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+    
+    
+      <div class="md-header__source">
+        <a href="https://github.com/Kschuman-aon/genai-roi" title="Go to repository" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 6.7.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2024 Fonticons, Inc.--><path d="M439.55 236.05 244 40.45a28.87 28.87 0 0 0-40.81 0l-40.66 40.63 51.52 51.52c27.06-9.14 52.68 16.77 43.39 43.68l49.66 49.66c34.23-11.8 61.18 31 35.47 56.69-26.49 26.49-70.21-2.87-56-37.34L240.22 199v121.85c25.3 12.54 22.26 41.85 9.08 55a34.34 34.34 0 0 1-48.55 0c-17.57-17.6-11.07-46.91 11.25-56v-123c-20.8-8.51-24.6-30.74-18.64-45L142.57 101 8.45 235.14a28.86 28.86 0 0 0 0 40.81l195.61 195.6a28.86 28.86 0 0 0 40.8 0l194.69-194.69a28.86 28.86 0 0 0 0-40.81"/></svg>
+  </div>
+  <div class="md-source__repository">
+    GitHub Repo
+  </div>
+</a>
+      </div>
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+
+<nav class="md-nav md-nav--primary" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href="../../.." title="Measuring GenAI ROI" class="md-nav__button md-logo" aria-label="Measuring GenAI ROI" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
+
+    </a>
+    Measuring GenAI ROI
+  </label>
+  
+    <div class="md-nav__source">
+      <a href="https://github.com/Kschuman-aon/genai-roi" title="Go to repository" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 6.7.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2024 Fonticons, Inc.--><path d="M439.55 236.05 244 40.45a28.87 28.87 0 0 0-40.81 0l-40.66 40.63 51.52 51.52c27.06-9.14 52.68 16.77 43.39 43.68l49.66 49.66c34.23-11.8 61.18 31 35.47 56.69-26.49 26.49-70.21-2.87-56-37.34L240.22 199v121.85c25.3 12.54 22.26 41.85 9.08 55a34.34 34.34 0 0 1-48.55 0c-17.57-17.6-11.07-46.91 11.25-56v-123c-20.8-8.51-24.6-30.74-18.64-45L142.57 101 8.45 235.14a28.86 28.86 0 0 0 0 40.81l195.61 195.6a28.86 28.86 0 0 0 40.8 0l194.69-194.69a28.86 28.86 0 0 0 0-40.81"/></svg>
+  </div>
+  <div class="md-source__repository">
+    GitHub Repo
+  </div>
+</a>
+    </div>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../.." class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Home
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../about/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    About
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../course-description/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Course Description
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+    
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+        
+      
+        
+          
+        
+      
+        
+          
+        
+      
+        
+          
+        
+      
+        
+          
+        
+      
+        
+          
+        
+      
+        
+          
+        
+      
+        
+          
+        
+      
+        
+          
+        
+      
+        
+          
+        
+      
+        
+          
+        
+      
+        
+          
+        
+      
+        
+          
+        
+      
+        
+          
+        
+      
+        
+          
+        
+      
+        
+          
+        
+      
+        
+          
+        
+      
+        
+          
+        
+      
+        
+          
+        
+      
+        
+          
+        
+      
+        
+          
+        
+      
+        
+          
+        
+      
+        
+          
+        
+      
+        
+          
+        
+      
+        
+          
+        
+      
+        
+          
+        
+      
+    
+    
+    
+      
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4" checked>
+        
+          
+          
+          <div class="md-nav__link md-nav__container">
+            <a href="../../" class="md-nav__link ">
+              
+  
+  <span class="md-ellipsis">
+    Chapters
+    
+  </span>
+  
+
+            </a>
+            
+              
+              <label class="md-nav__link " for="__nav_4" id="__nav_4_label" tabindex="0">
+                <span class="md-nav__icon md-icon"></span>
+              </label>
+            
+          </div>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_4_label" aria-expanded="true">
+          <label class="md-nav__title" for="__nav_4">
+            <span class="md-nav__icon md-icon"></span>
+            Chapters
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+            
+              
+                
+  
+  
+    
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+        
+      
+    
+    
+    
+      
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4_2" checked>
+        
+          
+          
+          <div class="md-nav__link md-nav__container">
+            <a href="../" class="md-nav__link ">
+              
+  
+  <span class="md-ellipsis">
+    1. Core Concepts of Large Language Models
+    
+  </span>
+  
+
+            </a>
+            
+              
+              <label class="md-nav__link " for="__nav_4_2" id="__nav_4_2_label" tabindex="0">
+                <span class="md-nav__icon md-icon"></span>
+              </label>
+            
+          </div>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_4_2_label" aria-expanded="true">
+          <label class="md-nav__title" for="__nav_4_2">
+            <span class="md-nav__icon md-icon"></span>
+            1. Core Concepts of Large Language Models
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+            
+              
+                
+  
+  
+    
+  
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  <span class="md-ellipsis">
+    Quiz
+    
+  </span>
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
+        
+  
+  <span class="md-ellipsis">
+    Quiz
+    
+  </span>
+  
+
+      </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#1-according-to-the-chapter-what-is-the-defining-characteristic-of-artificial-intelligence-ai-as-a-category" class="md-nav__link">
+    <span class="md-ellipsis">
+      1. According to the chapter, what is the defining characteristic of artificial intelligence (AI) as a category?
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#2-which-of-the-following-best-distinguishes-machine-learning-from-ai-in-general-as-described-in-the-chapter" class="md-nav__link">
+    <span class="md-ellipsis">
+      2. Which of the following best distinguishes machine learning from AI in general, as described in the chapter?
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#3-which-statement-correctly-describes-the-relationship-among-artificial-intelligence-machine-learning-deep-learning-and-neural-networks" class="md-nav__link">
+    <span class="md-ellipsis">
+      3. Which statement correctly describes the relationship among artificial intelligence, machine learning, deep learning, and neural networks?
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#4-what-distinguishes-a-generative-ai-model-from-a-discriminative-model" class="md-nav__link">
+    <span class="md-ellipsis">
+      4. What distinguishes a generative AI model from a discriminative model?
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#5-why-does-processing-a-longer-passage-of-text-cost-substantially-more-than-twice-as-much-when-its-length-is-doubled-according-to-the-chapters-discussion-of-self-attention" class="md-nav__link">
+    <span class="md-ellipsis">
+      5. Why does processing a longer passage of text cost substantially more than twice as much when its length is doubled, according to the chapter's discussion of self-attention?
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#6-what-happens-during-the-pretraining-stage-of-a-large-language-models-development" class="md-nav__link">
+    <span class="md-ellipsis">
+      6. What happens during the pretraining stage of a large language model's development?
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#7-how-does-rlhf-reinforcement-learning-from-human-feedback-alignment-differ-from-instruction-tuning" class="md-nav__link">
+    <span class="md-ellipsis">
+      7. How does RLHF (Reinforcement Learning from Human Feedback) alignment differ from instruction tuning?
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#8-a-foundation-model-costs-10-million-to-pretrain-and-a-fraction-of-a-cent-per-query-to-run-what-is-the-underlying-reason-its-cumulative-inference-cost-can-eventually-exceed-its-one-time-training-cost" class="md-nav__link">
+    <span class="md-ellipsis">
+      8. A foundation model costs $10 million to pretrain and a fraction of a cent per query to run. What is the underlying reason its cumulative inference cost can eventually exceed its one-time training cost?
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#9-what-does-a-models-context-window-determine" class="md-nav__link">
+    <span class="md-ellipsis">
+      9. What does a model's context window determine?
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#10-a-small-startup-wants-to-deploy-a-large-language-model-quickly-but-has-no-engineering-staff-available-to-provision-or-maintain-gpu-infrastructure-based-on-the-trade-offs-described-in-the-chapter-which-deployment-approach-best-fits-this-situation" class="md-nav__link">
+    <span class="md-ellipsis">
+      10. A small startup wants to deploy a large language model quickly but has no engineering staff available to provision or maintain GPU infrastructure. Based on the trade-offs described in the chapter, which deployment approach best fits this situation?
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../references/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Annotated References
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+        
+      
+    
+    
+    
+      
+        
+        
+      
+    
+    <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
+      
+        
+  
+  
+    <a href="../../02-prompting-deployment-optimization/" class="md-nav__link">
+      
+  
+  <span class="md-ellipsis">
+    2. Prompting, Deployment, and Model Optimization Basics
+    
+  </span>
+  
+
+      
+        <span class="md-nav__icon md-icon"></span>
+      
+    </a>
+  
+
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../03-tokenization-pricing-fundamentals/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    3. Tokenization and Token Pricing Fundamentals
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../04-managing-benchmarking-tokens/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    4. Managing and Benchmarking Token Consumption
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../05-compute-pricing-scaling/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    5. Compute Pricing and Scaling Fundamentals
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../06-infrastructure-planning-monitoring/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    6. Infrastructure Planning and Cost Monitoring
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../07-prompt-routing-retrieval-efficiency/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    7. Prompt, Routing, and Retrieval Efficiency Techniques
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../08-model-compression-testing-efficiency/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    8. Model Compression, Testing, and Continuous Efficiency
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../09-core-financial-roi-vocabulary/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    9. Core Financial and ROI Vocabulary
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../10-business-case-financial-forecasting/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    10. Business Case Development and Financial Forecasting
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../11-productivity-quality-metrics/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    11. Productivity and Quality Metrics for GenAI
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../12-measurement-rigor-kpi-reporting/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    12. Measurement Rigor and KPI Reporting
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../13-telemetry-logging-cost-dashboards/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    13. Telemetry, Logging, and Cost Dashboards
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../14-cost-attribution-observability-maturity/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    14. Cost Attribution, Governance, and Observability Maturity
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../15-ai-assisted-coding-sdlc/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    15. AI-Assisted Coding Across the SDLC
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../16-sdlc-productivity-risk-roadmapping/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    16. SDLC Productivity, Risk, and Cost Roadmapping
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../17-data-model-lifecycle-cost-drivers/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    17. Data and Model Lifecycle Cost Drivers
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../18-mlops-infrastructure-reuse-economics/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    18. MLOps Infrastructure and Reuse Economics
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../19-vendor-pricing-licensing-economics/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    19. Vendor Pricing and Licensing Economics
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../20-vendor-selection-sourcing-strategy/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    20. Vendor Selection and Sourcing Strategy
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../21-governance-compliance-security-risk/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    21. Governance, Compliance, and Security Risk
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../22-risk-adjusted-costing-reporting/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    22. Risk-Adjusted Costing and Executive Risk Reporting
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../23-audience-analysis-executive-framing/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    23. Audience Analysis and Executive Framing
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../24-presenting-defending-findings/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    24. Presenting and Defending Findings to Executives
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../25-designing-executive-roi-report/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    25. Designing the Executive ROI Report
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../26-data-visualization-storytelling/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    26. Data Visualization and Storytelling for Financial Audiences
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../27-report-production-review-capstone/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    27. Report Production, Review, and the Capstone Project
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+      
+        
+        
+      
+    
+    <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
+      
+        
+  
+  
+    <a href="../../../learning-graph/" class="md-nav__link">
+      
+  
+  <span class="md-ellipsis">
+    Learning Graph
+    
+  </span>
+  
+
+      
+        <span class="md-nav__icon md-icon"></span>
+      
+    </a>
+  
+
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+          
+        
+      
+        
+          
+        
+      
+    
+    
+    
+      
+        
+        
+      
+    
+    <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
+      
+        
+  
+  
+    <a href="../../../sims/" class="md-nav__link">
+      
+  
+  <span class="md-ellipsis">
+    MicroSims
+    
+  </span>
+  
+
+      
+        <span class="md-nav__icon md-icon"></span>
+      
+    </a>
+  
+
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../glossary/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Glossary
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../instructors-guide/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Instructor's Guide
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../feature-checklist/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Feature Checklist
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../license/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    License
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../contact/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Contact
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#1-according-to-the-chapter-what-is-the-defining-characteristic-of-artificial-intelligence-ai-as-a-category" class="md-nav__link">
+    <span class="md-ellipsis">
+      1. According to the chapter, what is the defining characteristic of artificial intelligence (AI) as a category?
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#2-which-of-the-following-best-distinguishes-machine-learning-from-ai-in-general-as-described-in-the-chapter" class="md-nav__link">
+    <span class="md-ellipsis">
+      2. Which of the following best distinguishes machine learning from AI in general, as described in the chapter?
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#3-which-statement-correctly-describes-the-relationship-among-artificial-intelligence-machine-learning-deep-learning-and-neural-networks" class="md-nav__link">
+    <span class="md-ellipsis">
+      3. Which statement correctly describes the relationship among artificial intelligence, machine learning, deep learning, and neural networks?
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#4-what-distinguishes-a-generative-ai-model-from-a-discriminative-model" class="md-nav__link">
+    <span class="md-ellipsis">
+      4. What distinguishes a generative AI model from a discriminative model?
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#5-why-does-processing-a-longer-passage-of-text-cost-substantially-more-than-twice-as-much-when-its-length-is-doubled-according-to-the-chapters-discussion-of-self-attention" class="md-nav__link">
+    <span class="md-ellipsis">
+      5. Why does processing a longer passage of text cost substantially more than twice as much when its length is doubled, according to the chapter's discussion of self-attention?
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#6-what-happens-during-the-pretraining-stage-of-a-large-language-models-development" class="md-nav__link">
+    <span class="md-ellipsis">
+      6. What happens during the pretraining stage of a large language model's development?
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#7-how-does-rlhf-reinforcement-learning-from-human-feedback-alignment-differ-from-instruction-tuning" class="md-nav__link">
+    <span class="md-ellipsis">
+      7. How does RLHF (Reinforcement Learning from Human Feedback) alignment differ from instruction tuning?
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#8-a-foundation-model-costs-10-million-to-pretrain-and-a-fraction-of-a-cent-per-query-to-run-what-is-the-underlying-reason-its-cumulative-inference-cost-can-eventually-exceed-its-one-time-training-cost" class="md-nav__link">
+    <span class="md-ellipsis">
+      8. A foundation model costs $10 million to pretrain and a fraction of a cent per query to run. What is the underlying reason its cumulative inference cost can eventually exceed its one-time training cost?
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#9-what-does-a-models-context-window-determine" class="md-nav__link">
+    <span class="md-ellipsis">
+      9. What does a model's context window determine?
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#10-a-small-startup-wants-to-deploy-a-large-language-model-quickly-but-has-no-engineering-staff-available-to-provision-or-maintain-gpu-infrastructure-based-on-the-trade-offs-described-in-the-chapter-which-deployment-approach-best-fits-this-situation" class="md-nav__link">
+    <span class="md-ellipsis">
+      10. A small startup wants to deploy a large language model quickly but has no engineering staff available to provision or maintain GPU infrastructure. Based on the trade-offs described in the chapter, which deployment approach best fits this situation?
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+
+  
+    <a href="https://github.com/Kschuman-aon/genai-roi/blob/main/docs/chapters/01-core-concepts-llms/quiz.md" title="Edit this page" class="md-content__button md-icon">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M10 20H6V4h7v5h5v3.1l2-2V8l-6-6H6c-1.1 0-2 .9-2 2v16c0 1.1.9 2 2 2h4zm10.2-7c.1 0 .3.1.4.2l1.3 1.3c.2.2.2.6 0 .8l-1 1-2.1-2.1 1-1c.1-.1.2-.2.4-.2m0 3.9L14.1 23H12v-2.1l6.1-6.1z"/></svg>
+    </a>
+  
+  
+
+
+<h1 id="quiz-core-concepts-of-large-language-models">Quiz: Core Concepts of Large Language Models<a class="headerlink" href="#quiz-core-concepts-of-large-language-models" title="Permanent link">&para;</a></h1>
+<p>Test your understanding of the foundational vocabulary of generative AI with these review questions.</p>
+<hr />
+<h4 id="1-according-to-the-chapter-what-is-the-defining-characteristic-of-artificial-intelligence-ai-as-a-category">1. According to the chapter, what is the defining characteristic of artificial intelligence (AI) as a category?<a class="headerlink" href="#1-according-to-the-chapter-what-is-the-defining-characteristic-of-artificial-intelligence-ai-as-a-category" title="Permanent link">&para;</a></h4>
+<div class="upper-alpha">
+<ol>
+<li>It requires the use of deep neural networks with many layers</li>
+<li>It performs tasks that would otherwise be considered to require human intelligence</li>
+<li>It learns exclusively from labeled training data rather than hand-written rules</li>
+<li>It produces original content rather than merely classifying existing content</li>
+</ol>
+</div>
+<details class="question">
+<summary>Show Answer</summary>
+<p>The correct answer is <strong>B</strong>. AI is defined in capability-based terms: any system that performs a task otherwise thought to require human intelligence, regardless of the underlying technique. Option A describes deep learning specifically, a much narrower subset of AI. Option C describes machine learning, which learns from data rather than AI as a whole. Option D describes generative AI, a further subset within deep learning. AI itself does not require any particular mechanism.</p>
+<p><strong>Concept Tested:</strong> Artificial Intelligence</p>
+</details>
+<hr />
+<h4 id="2-which-of-the-following-best-distinguishes-machine-learning-from-ai-in-general-as-described-in-the-chapter">2. Which of the following best distinguishes machine learning from AI in general, as described in the chapter?<a class="headerlink" href="#2-which-of-the-following-best-distinguishes-machine-learning-from-ai-in-general-as-described-in-the-chapter" title="Permanent link">&para;</a></h4>
+<div class="upper-alpha">
+<ol>
+<li>Machine learning systems improve performance by learning patterns from data rather than following hand-written rules</li>
+<li>Machine learning systems must be based on neural networks with multiple layers</li>
+<li>Machine learning refers only to systems that generate new content rather than classify it</li>
+<li>Machine learning is a marketing term with no meaningful technical distinction from AI</li>
+</ol>
+</div>
+<details class="question">
+<summary>Show Answer</summary>
+<p>The correct answer is <strong>A</strong>. Machine learning is the subfield of AI in which a system improves performance by learning patterns from data, illustrated by a spam filter trained on labeled emails rather than hand-written rules. Option B describes deep learning, a narrower subset of ML. Option C describes generative AI, not machine learning generally. Option D is incorrect; the chapter treats the ML/AI distinction as economically significant because it changes what you actually pay for.</p>
+<p><strong>Concept Tested:</strong> Machine Learning</p>
+</details>
+<hr />
+<h4 id="3-which-statement-correctly-describes-the-relationship-among-artificial-intelligence-machine-learning-deep-learning-and-neural-networks">3. Which statement correctly describes the relationship among artificial intelligence, machine learning, deep learning, and neural networks?<a class="headerlink" href="#3-which-statement-correctly-describes-the-relationship-among-artificial-intelligence-machine-learning-deep-learning-and-neural-networks" title="Permanent link">&para;</a></h4>
+<div class="upper-alpha">
+<ol>
+<li>They are four separate, unrelated approaches to building intelligent systems</li>
+<li>Neural networks are a subset of deep learning, which is a subset of AI but not of machine learning</li>
+<li>Machine learning is a subset of deep learning, which is a subset of AI</li>
+<li>Each narrower term nests inside the broader one: deep learning is a subset of machine learning, which is a subset of AI, and neural networks are the mechanism deep learning is built on</li>
+</ol>
+</div>
+<details class="question">
+<summary>Show Answer</summary>
+<p>The correct answer is <strong>D</strong>. The chapter describes these terms as nesting like Russian dolls: every neural network is deep learning, every deep learning system is machine learning, and every machine learning system is AI, but never the reverse. Option A ignores this nesting entirely. Option B skips over machine learning in the chain. Option C reverses which term contains which.</p>
+<p><strong>Concept Tested:</strong> Deep Learning</p>
+</details>
+<hr />
+<h4 id="4-what-distinguishes-a-generative-ai-model-from-a-discriminative-model">4. What distinguishes a generative AI model from a discriminative model?<a class="headerlink" href="#4-what-distinguishes-a-generative-ai-model-from-a-discriminative-model" title="Permanent link">&para;</a></h4>
+<div class="upper-alpha">
+<ol>
+<li>A generative model sorts inputs into predefined categories, while a discriminative model produces new examples</li>
+<li>A generative model requires no training data, while a discriminative model requires labeled data</li>
+<li>A generative model learns the underlying pattern of a class of data well enough to produce new, original examples, while a discriminative model sorts inputs into categories</li>
+<li>There is no meaningful difference; the terms are interchangeable</li>
+</ol>
+</div>
+<details class="question">
+<summary>Show Answer</summary>
+<p>The correct answer is <strong>C</strong>. A generative AI model learns a class of data's underlying pattern well enough to produce new, original examples, while a discriminative model sorts inputs into existing categories, such as flagging spam or fraud. Option A reverses these two definitions. Option B is false; both approaches require training data. Option D is incorrect because the chapter treats this distinction as economically important, since generation requires substantially more computation than classification.</p>
+<p><strong>Concept Tested:</strong> Generative AI</p>
+</details>
+<hr />
+<h4 id="5-why-does-processing-a-longer-passage-of-text-cost-substantially-more-than-twice-as-much-when-its-length-is-doubled-according-to-the-chapters-discussion-of-self-attention">5. Why does processing a longer passage of text cost substantially more than twice as much when its length is doubled, according to the chapter's discussion of self-attention?<a class="headerlink" href="#5-why-does-processing-a-longer-passage-of-text-cost-substantially-more-than-twice-as-much-when-its-length-is-doubled-according-to-the-chapters-discussion-of-self-attention" title="Permanent link">&para;</a></h4>
+<div class="upper-alpha">
+<ol>
+<li>Longer passages require more pretraining data to be collected in advance</li>
+<li>Self-attention compares every word in the passage against every other word, so computation grows faster than the text length itself</li>
+<li>Longer passages always require a larger model with more parameters</li>
+<li>The model must fine-tune itself on the fly for each new passage it processes</li>
+</ol>
+</div>
+<details class="question">
+<summary>Show Answer</summary>
+<p>The correct answer is <strong>B</strong>. Because self-attention compares every word against every other word, the computation it requires grows faster than the length of the input text, so doubling a passage's length more than doubles the processing cost. Option A confuses this with data collection for pretraining, an unrelated stage. Option C incorrectly ties passage length to parameter count. Option D describes fine-tuning, which does not occur automatically during inference.</p>
+<p><strong>Concept Tested:</strong> Self-Attention</p>
+</details>
+<hr />
+<h4 id="6-what-happens-during-the-pretraining-stage-of-a-large-language-models-development">6. What happens during the pretraining stage of a large language model's development?<a class="headerlink" href="#6-what-happens-during-the-pretraining-stage-of-a-large-language-models-development" title="Permanent link">&para;</a></h4>
+<div class="upper-alpha">
+<ol>
+<li>The model is adjusted using human preference comparisons between pairs of responses</li>
+<li>The model is trained on a small, domain-specific dataset such as a company's support transcripts</li>
+<li>The model is taught to treat prompts as instructions rather than text to continue</li>
+<li>The model is exposed to a massive, general corpus of text and learns broad language patterns by repeatedly predicting the next word</li>
+</ol>
+</div>
+<details class="question">
+<summary>Show Answer</summary>
+<p>The correct answer is <strong>D</strong>. Pretraining is the first and most expensive stage, in which a model is exposed to a massive, general corpus of text and learns grammar, facts, and reasoning patterns by repeatedly predicting the next word. Option A describes RLHF alignment. Option B describes fine-tuning on a smaller, domain-specific dataset. Option C describes instruction tuning. Each of these later stages builds on, and costs far less than, pretraining.</p>
+<p><strong>Concept Tested:</strong> Pretraining</p>
+</details>
+<hr />
+<h4 id="7-how-does-rlhf-reinforcement-learning-from-human-feedback-alignment-differ-from-instruction-tuning">7. How does RLHF (Reinforcement Learning from Human Feedback) alignment differ from instruction tuning?<a class="headerlink" href="#7-how-does-rlhf-reinforcement-learning-from-human-feedback-alignment-differ-from-instruction-tuning" title="Permanent link">&para;</a></h4>
+<div class="upper-alpha">
+<ol>
+<li>RLHF refines model behavior using human preference judgments between response pairs, while instruction tuning trains on fixed instruction-response examples</li>
+<li>RLHF is a stage that occurs before pretraining, while instruction tuning occurs after</li>
+<li>RLHF trains an entirely new, smaller model, while instruction tuning compresses an existing model's parameters</li>
+<li>RLHF and instruction tuning are two names for the exact same process</li>
+</ol>
+</div>
+<details class="question">
+<summary>Show Answer</summary>
+<p>The correct answer is <strong>A</strong>. RLHF alignment refines a model's behavior using human judgments about which of two responses is preferred, while instruction tuning trains on fixed pairs of instructions and correct responses. Option B misstates the sequence; both stages occur after pretraining. Option C describes an unrelated model-compression technique, not either of these fine-tuning stages. Option D wrongly treats the two stages as identical, when they use different training signals.</p>
+<p><strong>Concept Tested:</strong> RLHF Alignment</p>
+</details>
+<hr />
+<h4 id="8-a-foundation-model-costs-10-million-to-pretrain-and-a-fraction-of-a-cent-per-query-to-run-what-is-the-underlying-reason-its-cumulative-inference-cost-can-eventually-exceed-its-one-time-training-cost">8. A foundation model costs $10 million to pretrain and a fraction of a cent per query to run. What is the underlying reason its cumulative inference cost can eventually exceed its one-time training cost?<a class="headerlink" href="#8-a-foundation-model-costs-10-million-to-pretrain-and-a-fraction-of-a-cent-per-query-to-run-what-is-the-underlying-reason-its-cumulative-inference-cost-can-eventually-exceed-its-one-time-training-cost" title="Permanent link">&para;</a></h4>
+<div class="upper-alpha">
+<ol>
+<li>Inference requires more GPU memory per request than training does</li>
+<li>Providers deliberately price inference higher than training to recover costs faster</li>
+<li>Inference is a small, recurring per-request expense that accumulates without limit as usage volume grows, while training is a one-time cost</li>
+<li>Training costs are refunded once a model reaches a certain number of users</li>
+</ol>
+</div>
+<details class="question">
+<summary>Show Answer</summary>
+<p>The correct answer is <strong>C</strong>. Training is typically a one-time or infrequent expense, while inference is a small per-request cost that recurs on every single use; at sufficient usage volume, the accumulated inference cost surpasses the one-time training cost. Option A misattributes the cause to memory requirements rather than cost structure. Option B assumes a deliberate pricing strategy the chapter does not describe. Option D describes a refund mechanism that does not exist.</p>
+<p><strong>Concept Tested:</strong> Training Vs Inference Cost</p>
+</details>
+<hr />
+<h4 id="9-what-does-a-models-context-window-determine">9. What does a model's context window determine?<a class="headerlink" href="#9-what-does-a-models-context-window-determine" title="Permanent link">&para;</a></h4>
+<div class="upper-alpha">
+<ol>
+<li>The total number of parameters the model has learned during training</li>
+<li>Whether the model can process images in addition to text</li>
+<li>The organization that hosts and provides access to the model</li>
+<li>The maximum amount of text, measured in tokens, that the model can consider at once, including both the prompt and its response</li>
+</ol>
+</div>
+<details class="question">
+<summary>Show Answer</summary>
+<p>The correct answer is <strong>D</strong>. The context window is the maximum amount of text, measured in tokens, that a model can consider at once, covering both the prompt sent to it and the response it generates. Option A describes model parameter count, a distinct measure of learned scale. Option B describes multimodal capability. Option C describes the role of a model provider. None of these concern how much text a model can process in a single request.</p>
+<p><strong>Concept Tested:</strong> Context Window</p>
+</details>
+<hr />
+<h4 id="10-a-small-startup-wants-to-deploy-a-large-language-model-quickly-but-has-no-engineering-staff-available-to-provision-or-maintain-gpu-infrastructure-based-on-the-trade-offs-described-in-the-chapter-which-deployment-approach-best-fits-this-situation">10. A small startup wants to deploy a large language model quickly but has no engineering staff available to provision or maintain GPU infrastructure. Based on the trade-offs described in the chapter, which deployment approach best fits this situation?<a class="headerlink" href="#10-a-small-startup-wants-to-deploy-a-large-language-model-quickly-but-has-no-engineering-staff-available-to-provision-or-maintain-gpu-infrastructure-based-on-the-trade-offs-described-in-the-chapter-which-deployment-approach-best-fits-this-situation" title="Permanent link">&para;</a></h4>
+<div class="upper-alpha">
+<ol>
+<li>Download an open-source model's weights and host it on self-managed infrastructure</li>
+<li>Access a proprietary model through a provider's API endpoint, accepting a higher per-call price in exchange for no hosting burden</li>
+<li>Pretrain a new foundation model from scratch to have full control over costs</li>
+<li>Use a purely rule-based system instead of a large language model</li>
+</ol>
+</div>
+<details class="question">
+<summary>Show Answer</summary>
+<p>The correct answer is <strong>B</strong>. A proprietary model accessed through a provider's API endpoint trades a higher per-call price for zero hosting burden, which fits a team without infrastructure capacity. Option A requires exactly the in-house engineering effort the startup lacks. Option C describes pretraining a foundation model from scratch, an enormously expensive undertaking unrelated to quick deployment. Option D abandons generative AI capability entirely, which does not meet the stated need.</p>
+<p><strong>Concept Tested:</strong> Proprietary Model</p>
+</details>
+<hr />
+
+
+
+
+
+
+
+
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
+        </div>
+        
+          <button type="button" class="md-top md-icon" data-md-component="top" hidden>
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M13 20h-2V8l-5.5 5.5-1.42-1.42L12 4.16l7.92 7.92-1.42 1.42L13 8z"/></svg>
+  Back to top
+</button>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+    
+      
+      <nav class="md-footer__inner md-grid" aria-label="Footer" >
+        
+          
+          <a href="../" class="md-footer__link md-footer__link--prev" aria-label="Previous: Content">
+            <div class="md-footer__button md-icon">
+              
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
+            </div>
+            <div class="md-footer__title">
+              <span class="md-footer__direction">
+                Previous
+              </span>
+              <div class="md-ellipsis">
+                Content
+              </div>
+            </div>
+          </a>
+        
+        
+          
+          <a href="../references/" class="md-footer__link md-footer__link--next" aria-label="Next: Annotated References">
+            <div class="md-footer__title">
+              <span class="md-footer__direction">
+                Next
+              </span>
+              <div class="md-ellipsis">
+                Annotated References
+              </div>
+            </div>
+            <div class="md-footer__button md-icon">
+              
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M4 11v2h12l-5.5 5.5 1.42 1.42L19.84 12l-7.92-7.92L10.5 5.5 16 11z"/></svg>
+            </div>
+          </a>
+        
+      </nav>
+    
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+    <div class="md-copyright__highlight">
+      Copyright &copy; 2026 Katie Jo Schuman. Licensed under <a href="license/">CC BY-NC-SA 4.0</a> for non-commercial use.
+    </div>
+  
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    
+    <script id="__config" type="application/json">{"base": "../../..", "features": ["content.code.copy", "content.action.edit", "navigation.expand", "navigation.path", "navigation.prune", "navigation.indexes", "navigation.top", "navigation.footer", "toc.follow", "search.suggest", "search.highlight", "search.share"], "search": "../../../assets/javascripts/workers/search.f8cc74c7.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}}</script>
+    
+    
+      <script src="../../../assets/javascripts/bundle.f1b6f286.min.js"></script>
+      
+    
+  </body>
+</html>

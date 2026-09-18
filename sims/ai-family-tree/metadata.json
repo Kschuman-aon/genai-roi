@@ -1,0 +1,81 @@
+{
+  "title": "The AI Family Tree",
+  "creator": "Katie Jo Schuman",
+  "subject": "Generative AI Economics",
+  "description": "An interactive vis-network diagram showing how Artificial Intelligence, Machine Learning, Deep Learning, Neural Networks, Generative AI, Foundation Models, and Large Language Models nest inside one another, with a dashed 'built on' edge distinguishing the neural network mechanism from the chain of nested scopes.",
+  "date": "2026-09-18",
+  "educational": {
+    "gradeLevel": [
+      "Undergraduate",
+      "Professional"
+    ],
+    "subjectArea": "Generative AI Economics",
+    "topic": "The AI Family Tree",
+    "learningObjectives": [
+      "Classify Artificial Intelligence, Machine Learning, Deep Learning, Neural Network, Generative AI, Foundation Model, and Large Language Model according to their nested is-a-subset-of relationships",
+      "Explain why every LLM is a foundation model while not every foundation model is an LLM",
+      "Distinguish the 'built on' relationship between Deep Learning and Neural Network from the 'contains' relationship linking the other terms",
+      "Identify which level of the tree a given cost claim applies to"
+    ],
+    "bloomsTaxonomy": "Understand",
+    "bloomsVerb": "classify",
+    "duration": "10-15 minutes",
+    "prerequisites": [],
+    "standards": []
+  },
+  "technical": {
+    "framework": "vis-network",
+    "version": "1.0",
+    "canvasHeight": 560,
+    "canvasDimensions": {
+      "width": "responsive",
+      "height": 560
+    },
+    "responsive": true,
+    "dependencies": [
+      "vis-network@9.1.9"
+    ],
+    "accessibility": {
+      "hasAltText": false,
+      "keyboardNavigable": true
+    }
+  },
+  "pedagogical": {
+    "teachingStrategy": "Predict-then-reveal step-through followed by free exploration",
+    "keyQuestions": [
+      "Which of these seven terms is the broadest, and which is the narrowest?",
+      "Is every foundation model a large language model?",
+      "Why is the arrow to Neural Network drawn differently from the others?",
+      "If a vendor says their product is 'AI-powered', what have they actually told you about its cost?"
+    ],
+    "commonMisconceptions": [
+      "Treating AI, ML, DL, and LLM as interchangeable synonyms rather than nested categories",
+      "Assuming every foundation model is a large language model",
+      "Reading 'Deep Learning is built on Neural Networks' as another level of nesting",
+      "Believing that the label 'AI' implies anything specific about running cost"
+    ],
+    "assessmentOpportunities": [
+      "Have students reconstruct the nesting order from memory",
+      "Ask for a counterexample to 'every foundation model is an LLM'",
+      "Give a cost claim and ask which level of the tree it belongs to"
+    ]
+  },
+  "keywords": [
+    "artificial intelligence",
+    "machine learning",
+    "deep learning",
+    "neural network",
+    "generative AI",
+    "foundation model",
+    "large language model",
+    "taxonomy",
+    "nested categories"
+  ],
+  "nodeCount": 7,
+  "edgeCount": 6,
+  "rights": "CC BY-NC-SA 4.0",
+  "language": "en",
+  "interactivityType": "active",
+  "learningResourceType": "simulation",
+  "chapter": "01-core-concepts-llms"
+}

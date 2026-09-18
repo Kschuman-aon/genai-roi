@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="schema" content="https://dmccreary.github.io/intelligent-textbooks/ns/microsim/v1">
+    <title>The AI Family Tree using vis-network</title>
+    <script src="https://cdn.jsdelivr.net/npm/vis-network@9.1.9/standalone/umd/vis-network.min.js"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/vis-network@9.1.9/styles/vis-network.min.css">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <main class="container">
+        <!-- Network canvas - overlays below are SIBLINGS, never children
+             (vis-network replaces the innerHTML of its container) -->
+        <div id="network"></div>
+
+        <!-- Title at top center -->
+        <div class="title">The AI Family Tree</div>
+
+        <!-- Legend, lower left (graph occupies the upper-left vertical band) -->
+        <div class="legend">
+            <div class="legend-item">
+                <span class="legend-gradient"></span>Color deepens as scope narrows
+            </div>
+            <div class="legend-item">
+                <span class="legend-line solid"></span>contains (is a subset of)
+            </div>
+            <div class="legend-item">
+                <span class="legend-line dashed"></span>built on (mechanism, not a subset)
+            </div>
+            <div class="legend-item">
+                <span class="legend-color color-orange"></span>highlighted chain
+            </div>
+        </div>
+
+        <!-- Right panel with controls and info -->
+        <div class="right-panel">
+            <div class="controls">
+                <div class="stats" id="stats">All 7 levels shown</div>
+                <div class="button-row">
+                    <button class="btn btn-secondary" id="back-btn" disabled>&#9664; Back</button>
+                    <button class="btn btn-primary" id="next-btn">Narrow &#9654;</button>
+                    <button class="btn btn-secondary" id="reset-btn">Show All</button>
+                </div>
+            </div>
+
+            <div class="info-panel" id="info-panel">
+                <div class="info-title" id="info-term">Start at the top</div>
+                <div class="info-content" id="info-content">
+                    <p class="info-placeholder">Hover or click any term to see its definition, or step down the tree one level at a time.</p>
+                </div>
+            </div>
+
+            <div class="status-panel">
+                <div class="status-title">How to Use:</div>
+                <div class="status-text">
+                    <ul>
+                        <li><strong>Hover</strong> a term for its definition</li>
+                        <li><strong>Click</strong> a term to highlight the full chain above and below it</li>
+                        <li><strong>Narrow &#9654;</strong> reveals one level at a time</li>
+                        <li>Use the on-screen arrows to pan and zoom</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <script src="ai-family-tree.js"></script>
+</body>
+</html>
