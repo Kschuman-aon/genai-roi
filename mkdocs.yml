@@ -38,8 +38,12 @@ nav:
 
   - Chapters:
       - List of Chapters: chapters/index.md
-      - 1. Core Concepts of Large Language Models: chapters/01-core-concepts-llms/index.md
-      - 2. Prompting, Deployment, and Model Optimization Basics: chapters/02-prompting-deployment-optimization/index.md
+      - 1. Core Concepts of Large Language Models:
+          - Content: chapters/01-core-concepts-llms/index.md
+          - Quiz: chapters/01-core-concepts-llms/quiz.md
+      - 2. Prompting, Deployment, and Model Optimization Basics:
+          - Content: chapters/02-prompting-deployment-optimization/index.md
+          - Quiz: chapters/02-prompting-deployment-optimization/quiz.md
       - 3. Tokenization and Token Pricing Fundamentals: chapters/03-tokenization-pricing-fundamentals/index.md
       - 4. Managing and Benchmarking Token Consumption: chapters/04-managing-benchmarking-tokens/index.md
       - 5. Compute Pricing and Scaling Fundamentals: chapters/05-compute-pricing-scaling/index.md
@@ -75,6 +79,7 @@ nav:
       - Taxonomy Distribution: learning-graph/taxonomy-distribution.md
       - Mascot Rendering Test: learning-graph/mascot-test.md
       - Glossary Quality Report: learning-graph/glossary-quality-report.md
+      - Quiz Generation Report: learning-graph/quiz-generation-report.md
 
   - MicroSims:
       - List of MicroSims: sims/index.md
