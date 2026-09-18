@@ -1,0 +1,311 @@
+/* The AI Family Tree - vis-network MicroSim Stylesheet
+ * ====================================================
+ * Layout: full-height network canvas with absolutely positioned overlays
+ * - Network canvas fills the container
+ * - Title overlay at top center
+ * - Legend overlay at lower left
+ * - Control / info / help panel on the right
+ *
+ * Overlays are absolutely positioned so they never steal vertical space
+ * from the graph inside the iframe.
+ */
+
+/* ===========================================
+   RESET & BASE STYLES
+   =========================================== */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html, body {
+    height: 100%;
+}
+
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    background-color: aliceblue;
+}
+
+/* ===========================================
+   MAIN CONTAINER & NETWORK CANVAS
+   =========================================== */
+.container {
+    position: relative;
+    width: 100%;
+    height: 100vh;
+}
+
+#network {
+    width: 100%;
+    height: 100%;
+    background-color: aliceblue;
+}
+
+/* ===========================================
+   TITLE (Top Center)
+   =========================================== */
+.title {
+    position: absolute;
+    top: 8px;
+    left: 50%;
+    transform: translateX(-50%);
+    font-size: 18px;
+    font-weight: bold;
+    color: black;
+    background-color: aliceblue;
+    padding: 4px 12px;
+    white-space: nowrap;
+    z-index: 10;
+}
+
+/* ===========================================
+   LEGEND (Lower Left)
+   =========================================== */
+.legend {
+    position: absolute;
+    bottom: 10px;
+    left: 10px;
+    padding: 8px 10px;
+    background-color: rgba(255, 255, 255, 0.95);
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+    z-index: 10;
+}
+
+.legend-item {
+    display: flex;
+    align-items: center;
+    margin: 3px 0;
+    font-size: 11px;
+    color: #333;
+}
+
+.legend-color {
+    width: 14px;
+    height: 14px;
+    border-radius: 50%;
+    margin-right: 6px;
+    border: 2px solid #333;
+    flex-shrink: 0;
+}
+
+.color-orange { background-color: #ff9800; border-color: #e65100; }
+
+/* Gradient chip showing light-to-dark scope narrowing */
+.legend-gradient {
+    width: 42px;
+    height: 12px;
+    margin-right: 6px;
+    border-radius: 3px;
+    border: 1px solid #999;
+    flex-shrink: 0;
+    background: linear-gradient(to right, #e3f2fd, #90caf9, #26a69a, #00695c);
+}
+
+/* Line chips showing the two edge styles */
+.legend-line {
+    width: 42px;
+    height: 0;
+    margin-right: 6px;
+    flex-shrink: 0;
+}
+
+.legend-line.solid {
+    border-top: 3px solid #222222;
+}
+
+.legend-line.dashed {
+    border-top: 3px dashed #888888;
+}
+
+/* ===========================================
+   RIGHT PANEL (Controls & Info)
+   =========================================== */
+.right-panel {
+    position: absolute;
+    top: 46px;
+    right: 10px;
+    width: 272px;
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+    z-index: 10;
+}
+
+/* ===========================================
+   CONTROLS
+   =========================================== */
+.controls {
+    background-color: rgba(255, 255, 255, 0.95);
+    padding: 10px 12px;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+}
+
+.stats {
+    font-size: 12px;
+    font-weight: bold;
+    color: #333;
+    margin-bottom: 8px;
+}
+
+.button-row {
+    display: flex;
+    gap: 6px;
+    /* Buttons keep their label on one line, so they must be allowed to wrap
+       onto a second row rather than push past the panel at narrow widths. */
+    flex-wrap: wrap;
+}
+
+.btn {
+    padding: 7px 8px;
+    font-size: 12px;
+    font-weight: bold;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+    transition: background-color 0.2s;
+    flex: 1 1 auto;
+    min-width: 0;
+    white-space: nowrap;
+}
+
+.btn-primary {
+    background-color: #2196f3;
+    color: white;
+}
+
+.btn-primary:hover {
+    background-color: #1976d2;
+}
+
+.btn-primary:disabled {
+    background-color: #bbdefb;
+    color: #f5f5f5;
+    cursor: not-allowed;
+}
+
+.btn-secondary {
+    background-color: #616161;
+    color: white;
+}
+
+.btn-secondary:hover {
+    background-color: #424242;
+}
+
+.btn-secondary:disabled {
+    background-color: #cfcfcf;
+    color: #f5f5f5;
+    cursor: not-allowed;
+}
+
+/* ===========================================
+   INFO PANEL (Term Details)
+   =========================================== */
+.info-panel {
+    background-color: rgba(255, 255, 255, 0.95);
+    border-radius: 8px;
+    padding: 10px 12px;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+    border: 2px solid #2196f3;
+}
+
+.info-title {
+    font-weight: bold;
+    margin-bottom: 4px;
+    font-size: 13px;
+    color: #1565c0;
+}
+
+.info-scope {
+    font-size: 11px;
+    font-style: italic;
+    color: #666;
+    margin-bottom: 5px;
+}
+
+.info-content {
+    font-size: 12px;
+    line-height: 1.45;
+    color: #222;
+}
+
+.info-cost {
+    margin-top: 6px;
+    padding-top: 5px;
+    border-top: 1px solid #e0e0e0;
+    font-size: 11px;
+    color: #444;
+}
+
+.info-cost strong {
+    color: #b25000;
+}
+
+.info-placeholder {
+    color: #888;
+    font-style: italic;
+    font-size: 12px;
+}
+
+/* ===========================================
+   STATUS / HELP PANEL
+   =========================================== */
+.status-panel {
+    background-color: rgba(255, 255, 255, 0.95);
+    border-radius: 8px;
+    padding: 10px 12px;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+}
+
+.status-title {
+    font-weight: bold;
+    margin-bottom: 4px;
+    font-size: 12px;
+}
+
+.status-text {
+    font-size: 11px;
+    line-height: 1.4;
+    color: #333;
+}
+
+.status-text ul {
+    margin-left: 15px;
+    margin-top: 3px;
+}
+
+.status-text li {
+    margin-bottom: 3px;
+}
+
+/* ===========================================
+   RESPONSIVE STYLES
+   =========================================== */
+@media (max-width: 700px) {
+    .title {
+        font-size: 14px;
+        padding: 4px 8px;
+    }
+
+    .right-panel {
+        width: 210px;
+    }
+
+    .btn {
+        padding: 6px 6px;
+        font-size: 11px;
+    }
+
+    .legend-item {
+        font-size: 10px;
+    }
+
+    .legend-gradient,
+    .legend-line {
+        width: 28px;
+    }
+}

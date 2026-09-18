@@ -84,8 +84,11 @@ nav:
       - Quiz Generation Report: learning-graph/quiz-generation-report.md
 
   - MicroSims:
-      - List of MicroSims: sims/index.md
-      - Learning Graph Viewer: sims/graph-viewer/index.md
+    - List of MicroSims: sims/index.md
+    - Learning Graph Viewer: sims/graph-viewer/index.md
+    - The AI Family Tree: sims/ai-family-tree/index.md
+
+
 
   - Glossary: glossary.md
   - Instructor's Guide: instructors-guide/index.md

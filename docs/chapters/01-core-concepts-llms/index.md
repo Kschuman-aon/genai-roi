@@ -78,14 +78,14 @@ Before looking at how these four ideas relate to one another, it helps to see th
 
 #### Diagram: The AI Family Tree
 
-<iframe src="../../sims/ai-family-tree/main.html" width="100%" height="500px" scrolling="no"></iframe>
+<iframe src="../../sims/ai-family-tree/main.html" width="100%" height="602px" scrolling="no"></iframe>
 
 <details markdown="1">
 <summary>The AI Family Tree</summary>
 Type: graph-model
 **sim-id:** ai-family-tree<br/>
 **Library:** vis-network<br/>
-**Status:** Specified
+**Status:** Implemented
 
 Bloom Taxonomy: Understand
 Bloom Taxonomy Verb: classify
