@@ -73,7 +73,7 @@ Type: markdown-list
 
 #### Diagram: Anatomy of a Prompt
 
-<iframe src="../../sims/prompt-anatomy-explorer/main.html" width="100%" height="500px" scrolling="no"></iframe>
+<iframe src="../../sims/prompt-anatomy-explorer/main.html" width="100%" height="402px" scrolling="no"></iframe>
 
 <details markdown="1">
 <summary>Anatomy of a Prompt</summary>
@@ -129,7 +129,7 @@ Beyond simply writing a clear prompt, a small set of well-established techniques
 
 #### Diagram: Same Task, Three Prompting Strategies
 
-<iframe src="../../sims/prompting-technique-comparator/main.html" width="100%" height="500px" scrolling="no"></iframe>
+<iframe src="../../sims/prompting-technique-comparator/main.html" width="100%" height="412px" scrolling="no"></iframe>
 
 <details markdown="1">
 <summary>Same Task, Three Prompting Strategies</summary>
@@ -186,7 +186,7 @@ Before moving to how models are served, it helps to see how the whole pipeline c
 
 #### Diagram: The RAG Pipeline
 
-<iframe src="../../sims/rag-pipeline-workflow/main.html" width="100%" height="500px" scrolling="no"></iframe>
+<iframe src="../../sims/rag-pipeline-workflow/main.html" width="100%" height="422px" scrolling="no"></iframe>
 
 <details markdown="1">
 <summary>The RAG Pipeline</summary>
@@ -239,7 +239,7 @@ Type: markdown-list
 
 #### Diagram: The Batch-Size Trade-Off
 
-<iframe src="../../sims/latency-throughput-tradeoff-chart/main.html" width="100%" height="500px" scrolling="no"></iframe>
+<iframe src="../../sims/latency-throughput-tradeoff-chart/main.html" width="100%" height="502px" scrolling="no"></iframe>
 
 <details markdown="1">
 <summary>The Batch-Size Trade-Off</summary>
@@ -303,7 +303,7 @@ Deployment also involves a genuine choice about where the model physically runs.
 
 #### Diagram: Where Should This Model Run?
 
-<iframe src="../../sims/deployment-model-landscape/main.html" width="100%" height="500px" scrolling="no"></iframe>
+<iframe src="../../sims/deployment-model-landscape/main.html" width="100%" height="462px" scrolling="no"></iframe>
 
 <details markdown="1">
 <summary>Where Should This Model Run?</summary>
@@ -361,7 +361,7 @@ The final cluster of concepts in this chapter addresses a direct cost lever: mak
 
 #### Diagram: Three Ways to Shrink a Model
 
-<iframe src="../../sims/model-compression-tradeoffs-chart/main.html" width="100%" height="500px" scrolling="no"></iframe>
+<iframe src="../../sims/model-compression-tradeoffs-chart/main.html" width="100%" height="502px" scrolling="no"></iframe>
 
 <details markdown="1">
 <summary>Three Ways to Shrink a Model</summary>

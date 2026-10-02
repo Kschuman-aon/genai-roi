@@ -70,7 +70,7 @@ Before we look at how this plays out on a real sentence, let's trace one step at
 
 #### Diagram: Byte Pair Encoding Step-Through
 
-<iframe src="../../sims/bpe-tokenizer-explorer/main.html" width="100%" height="500px" scrolling="no"></iframe>
+<iframe src="../../sims/bpe-tokenizer-explorer/main.html" width="100%" height="382px" scrolling="no"></iframe>
 
 <details markdown="1">
 <summary>Byte Pair Encoding Step-Through</summary>
@@ -136,7 +136,7 @@ The table below shows why the token-to-word ratio is not a universal constant yo
 
 #### Diagram: Context Window Budget Allocation
 
-<iframe src="../../sims/context-window-budget-chart/main.html" width="100%" height="500px" scrolling="no"></iframe>
+<iframe src="../../sims/context-window-budget-chart/main.html" width="100%" height="422px" scrolling="no"></iframe>
 
 <details markdown="1">
 <summary>Context Window Budget Allocation</summary>
@@ -187,7 +187,7 @@ A single request costs a fraction of a cent — which is exactly why organizatio
 
 #### Diagram: Per-Request Token Cost Calculator
 
-<iframe src="../../sims/token-cost-calculator/main.html" width="100%" height="500px" scrolling="no"></iframe>
+<iframe src="../../sims/token-cost-calculator/main.html" width="100%" height="432px" scrolling="no"></iframe>
 
 <details markdown="1">
 <summary>Per-Request Token Cost Calculator</summary>
@@ -239,7 +239,7 @@ All of this rolls up into a single, book-wide goal: **token efficiency** — get
 
 #### Diagram: Token Budget Governance Workflow
 
-<iframe src="../../sims/token-budget-governance-workflow/main.html" width="100%" height="500px" scrolling="no"></iframe>
+<iframe src="../../sims/token-budget-governance-workflow/main.html" width="100%" height="422px" scrolling="no"></iframe>
 
 <details markdown="1">
 <summary>Token Budget Governance Workflow</summary>

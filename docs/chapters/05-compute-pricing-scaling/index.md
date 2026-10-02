@@ -101,7 +101,7 @@ To bridge serverless's elasticity with dedicated's consistency, providers use **
 
 #### Diagram: Autoscaling and Warm Pool Behavior Over a Traffic Day
 
-<iframe src="../../sims/autoscaling-traffic-simulator/main.html" width="100%" height="500px" scrolling="no"></iframe>
+<iframe src="../../sims/autoscaling-traffic-simulator/main.html" width="100%" height="492px" scrolling="no"></iframe>
 
 <details markdown="1">
 <summary>Autoscaling and Warm Pool Behavior Over a Traffic Day</summary>
@@ -141,7 +141,7 @@ When traffic is spread across multiple instances (whether dedicated, multi-tenan
 
 #### Diagram: Compute Utilization and Idle Cost Explorer
 
-<iframe src="../../sims/compute-utilization-explorer/main.html" width="100%" height="500px" scrolling="no"></iframe>
+<iframe src="../../sims/compute-utilization-explorer/main.html" width="100%" height="522px" scrolling="no"></iframe>
 
 <details markdown="1">
 <summary>Compute Utilization and Idle Cost Explorer</summary>

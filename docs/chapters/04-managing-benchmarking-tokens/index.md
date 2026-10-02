@@ -94,7 +94,7 @@ When none of these techniques are applied, two related failure patterns emerge. 
 
 #### Diagram: Prompt Compression Before/After Comparator
 
-<iframe src="../../sims/prompt-compression-comparator/main.html" width="100%" height="500px" scrolling="no"></iframe>
+<iframe src="../../sims/prompt-compression-comparator/main.html" width="100%" height="402px" scrolling="no"></iframe>
 
 <details markdown="1">
 <summary>Prompt Compression Before/After Comparator</summary>
@@ -175,7 +175,7 @@ One caution applies to any benchmark you run more than once: **tokenizer version
 
 #### Diagram: Cross-Provider Token Efficiency Dashboard
 
-<iframe src="../../sims/token-efficiency-dashboard/main.html" width="100%" height="500px" scrolling="no"></iframe>
+<iframe src="../../sims/token-efficiency-dashboard/main.html" width="100%" height="502px" scrolling="no"></iframe>
 
 <details markdown="1">
 <summary>Cross-Provider Token Efficiency Dashboard</summary>
