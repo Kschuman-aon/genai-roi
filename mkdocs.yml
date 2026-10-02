@@ -85,8 +85,15 @@ nav:
 
   - MicroSims:
     - List of MicroSims: sims/index.md
+    - From Raw Text to Helpful Assistant: sims/training-lifecycle-workflow/index.md
     - Learning Graph Viewer: sims/graph-viewer/index.md
+    - Model Scale Across Five Years: sims/model-parameter-scale-chart/index.md
+    - One-Time Training vs. Recurring Inference: sims/training-vs-inference-cost-chart/index.md
+    - Self-Attention, Qualitatively: sims/self-attention-explorer/index.md
     - The AI Family Tree: sims/ai-family-tree/index.md
+    - The GenAI Deployment Landscape: sims/model-deployment-landscape/index.md
+
+
 
 
 

@@ -156,7 +156,7 @@ A related, much narrower term is the **attention mechanism** itself â€” the gene
 
 #### Diagram: Self-Attention, Qualitatively
 
-<iframe src="../../sims/self-attention-explorer/main.html" width="100%" height="500px" scrolling="no"></iframe>
+<iframe src="../../sims/self-attention-explorer/main.html" width="100%" height="312px" scrolling="no"></iframe>
 
 <details markdown="1">
 <summary>Self-Attention, Qualitatively</summary>
@@ -217,7 +217,7 @@ A foundation model, fresh out of its initial training, is a remarkably capable b
 
 #### Diagram: From Raw Text to Helpful Assistant
 
-<iframe src="../../sims/training-lifecycle-workflow/main.html" width="100%" height="500px" scrolling="no"></iframe>
+<iframe src="../../sims/training-lifecycle-workflow/main.html" width="100%" height="422px" scrolling="no"></iframe>
 
 <details markdown="1">
 <summary>From Raw Text to Helpful Assistant</summary>
@@ -260,7 +260,7 @@ This distinction produces one of the most important economic facts in the entire
 
 #### Diagram: One-Time Training vs. Recurring Inference
 
-<iframe src="../../sims/training-vs-inference-cost-chart/main.html" width="100%" height="500px" scrolling="no"></iframe>
+<iframe src="../../sims/training-vs-inference-cost-chart/main.html" width="100%" height="502px" scrolling="no"></iframe>
 
 <details markdown="1">
 <summary>One-Time Training vs. Recurring Inference</summary>
@@ -326,7 +326,7 @@ Before moving on, it is worth comparing these size figures directly.
 
 #### Diagram: Model Scale Across Five Years
 
-<iframe src="../../sims/model-parameter-scale-chart/main.html" width="100%" height="500px" scrolling="no"></iframe>
+<iframe src="../../sims/model-parameter-scale-chart/main.html" width="100%" height="502px" scrolling="no"></iframe>
 
 <details markdown="1">
 <summary>Model Scale Across Five Years</summary>
@@ -382,7 +382,7 @@ A **model provider** is the organization that makes a model available for use â€
 
 #### Diagram: The GenAI Deployment Landscape
 
-<iframe src="../../sims/model-deployment-landscape/main.html" width="100%" height="500px" scrolling="no"></iframe>
+<iframe src="../../sims/model-deployment-landscape/main.html" width="100%" height="482px" scrolling="no"></iframe>
 
 <details markdown="1">
 <summary>The GenAI Deployment Landscape</summary>
