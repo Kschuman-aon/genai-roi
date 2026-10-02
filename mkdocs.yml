@@ -88,6 +88,9 @@ nav:
     - Learning Graph Viewer: sims/graph-viewer/index.md
     - The AI Family Tree: sims/ai-family-tree/index.md
 
+  - Stories:
+      - Overview: stories/index.md
+      - The Value Behind the Invoice: stories/the-value-behind-the-invoice/index.md
 
 
   - Glossary: glossary.md
