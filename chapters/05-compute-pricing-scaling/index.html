@@ -1367,6 +1367,62 @@
           
         
       
+        
+          
+        
+      
+        
+          
+        
+      
+        
+          
+        
+      
+        
+          
+        
+      
+        
+          
+        
+      
+        
+          
+        
+      
+        
+          
+        
+      
+        
+          
+        
+      
+        
+          
+        
+      
+        
+          
+        
+      
+        
+          
+        
+      
+        
+          
+        
+      
+        
+          
+        
+      
+        
+          
+        
+      
     
     
     
@@ -1839,7 +1895,7 @@ Production deployments rarely use a single pricing model exclusively. A common p
 </details>
 <p>To bridge serverless's elasticity with dedicated's consistency, providers use <strong>autoscaling</strong>: automatically adjusting the number of active compute instances up or down based on current demand, adding capacity as traffic rises and removing it as traffic falls. A <strong>warm pool</strong> — a small number of instances kept running and ready even during low-traffic periods — is the standard technique for avoiding cold-start latency on an autoscaled deployment: it costs a modest idle-capacity premium in exchange for guaranteeing at least some instant-response capacity at all times.</p>
 <h4 id="diagram-autoscaling-and-warm-pool-behavior-over-a-traffic-day">Diagram: Autoscaling and Warm Pool Behavior Over a Traffic Day<a class="headerlink" href="#diagram-autoscaling-and-warm-pool-behavior-over-a-traffic-day" title="Permanent link">&para;</a></h4>
-<iframe src="../../sims/autoscaling-traffic-simulator/main.html" width="100%" height="500px" scrolling="no"></iframe>
+<iframe src="../../sims/autoscaling-traffic-simulator/main.html" width="100%" height="492px" scrolling="no"></iframe>
 
 <details>
 <summary>Autoscaling and Warm Pool Behavior Over a Traffic Day</summary>
@@ -1869,7 +1925,7 @@ A common mistake is over-committing to reserved capacity based on peak traffic r
 </div>
 <p>When traffic is spread across multiple instances (whether dedicated, multi-tenant, or autoscaled), <strong>load balancing</strong> distributes incoming requests across them to keep utilization even and avoid overloading any single instance while others sit idle — a necessary complement to autoscaling, since adding instances only helps if traffic is actually routed to use them.</p>
 <h4 id="diagram-compute-utilization-and-idle-cost-explorer">Diagram: Compute Utilization and Idle Cost Explorer<a class="headerlink" href="#diagram-compute-utilization-and-idle-cost-explorer" title="Permanent link">&para;</a></h4>
-<iframe src="../../sims/compute-utilization-explorer/main.html" width="100%" height="500px" scrolling="no"></iframe>
+<iframe src="../../sims/compute-utilization-explorer/main.html" width="100%" height="522px" scrolling="no"></iframe>
 
 <details>
 <summary>Compute Utilization and Idle Cost Explorer</summary>

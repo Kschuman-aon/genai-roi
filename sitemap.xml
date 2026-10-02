@@ -225,7 +225,35 @@
          <lastmod>2026-10-02</lastmod>
     </url>
     <url>
+         <loc>https://Kschuman-aon.github.io/genai-roi/sims/autoscaling-traffic-simulator/</loc>
+         <lastmod>2026-10-02</lastmod>
+    </url>
+    <url>
+         <loc>https://Kschuman-aon.github.io/genai-roi/sims/bpe-tokenizer-explorer/</loc>
+         <lastmod>2026-10-02</lastmod>
+    </url>
+    <url>
+         <loc>https://Kschuman-aon.github.io/genai-roi/sims/compute-utilization-explorer/</loc>
+         <lastmod>2026-10-02</lastmod>
+    </url>
+    <url>
+         <loc>https://Kschuman-aon.github.io/genai-roi/sims/context-window-budget-chart/</loc>
+         <lastmod>2026-10-02</lastmod>
+    </url>
+    <url>
+         <loc>https://Kschuman-aon.github.io/genai-roi/sims/deployment-model-landscape/</loc>
+         <lastmod>2026-10-02</lastmod>
+    </url>
+    <url>
          <loc>https://Kschuman-aon.github.io/genai-roi/sims/graph-viewer/</loc>
+         <lastmod>2026-10-02</lastmod>
+    </url>
+    <url>
+         <loc>https://Kschuman-aon.github.io/genai-roi/sims/latency-throughput-tradeoff-chart/</loc>
+         <lastmod>2026-10-02</lastmod>
+    </url>
+    <url>
+         <loc>https://Kschuman-aon.github.io/genai-roi/sims/model-compression-tradeoffs-chart/</loc>
          <lastmod>2026-10-02</lastmod>
     </url>
     <url>
@@ -237,7 +265,35 @@
          <lastmod>2026-10-02</lastmod>
     </url>
     <url>
+         <loc>https://Kschuman-aon.github.io/genai-roi/sims/prompt-anatomy-explorer/</loc>
+         <lastmod>2026-10-02</lastmod>
+    </url>
+    <url>
+         <loc>https://Kschuman-aon.github.io/genai-roi/sims/prompt-compression-comparator/</loc>
+         <lastmod>2026-10-02</lastmod>
+    </url>
+    <url>
+         <loc>https://Kschuman-aon.github.io/genai-roi/sims/prompting-technique-comparator/</loc>
+         <lastmod>2026-10-02</lastmod>
+    </url>
+    <url>
+         <loc>https://Kschuman-aon.github.io/genai-roi/sims/rag-pipeline-workflow/</loc>
+         <lastmod>2026-10-02</lastmod>
+    </url>
+    <url>
          <loc>https://Kschuman-aon.github.io/genai-roi/sims/self-attention-explorer/</loc>
+         <lastmod>2026-10-02</lastmod>
+    </url>
+    <url>
+         <loc>https://Kschuman-aon.github.io/genai-roi/sims/token-budget-governance-workflow/</loc>
+         <lastmod>2026-10-02</lastmod>
+    </url>
+    <url>
+         <loc>https://Kschuman-aon.github.io/genai-roi/sims/token-cost-calculator/</loc>
+         <lastmod>2026-10-02</lastmod>
+    </url>
+    <url>
+         <loc>https://Kschuman-aon.github.io/genai-roi/sims/token-efficiency-dashboard/</loc>
          <lastmod>2026-10-02</lastmod>
     </url>
     <url>
