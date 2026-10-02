@@ -6,7 +6,7 @@
       <meta charset="utf-8">
       <meta name="viewport" content="width=device-width,initial-scale=1">
       
-        <meta name="description" content="A practical guide to measuring and communicating the return on investment (ROI) of generative AI initiatives in an organization.">
+        <meta name="description" content="How real usage patterns — long prompts, caching, chunking, and multi-turn conversations — drive token consumption, and how to benchmark efficiency across providers.">
       
       
         <meta name="author" content="Katie Jo Schuman">
@@ -26,7 +26,7 @@
     
     
       
-        <title>4. Managing and Benchmarking Token Consumption - Measuring GenAI ROI</title>
+        <title>Managing and Benchmarking Token Consumption - Measuring GenAI ROI</title>
       
     
     
@@ -116,7 +116,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              4. Managing and Benchmarking Token Consumption
+              Managing and Benchmarking Token Consumption
             
           </span>
         </div>
@@ -658,6 +658,96 @@
       Prerequisites
     </span>
   </a>
+  
+    <nav class="md-nav" aria-label="Prerequisites">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#what-drives-input-token-growth" class="md-nav__link">
+    <span class="md-ellipsis">
+      What Drives Input Token Growth
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#reducing-what-you-send-compression-summarization-and-caching-strategy" class="md-nav__link">
+    <span class="md-ellipsis">
+      Reducing What You Send: Compression, Summarization, and Caching Strategy
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Reducing What You Send: Compression, Summarization, and Caching Strategy">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#diagram-prompt-compression-beforeafter-comparator" class="md-nav__link">
+    <span class="md-ellipsis">
+      Diagram: Prompt Compression Before/After Comparator
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#retrieval-chunking-and-multi-turn-growth" class="md-nav__link">
+    <span class="md-ellipsis">
+      Retrieval, Chunking, and Multi-Turn Growth
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#measuring-and-monitoring-consumption" class="md-nav__link">
+    <span class="md-ellipsis">
+      Measuring and Monitoring Consumption
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#benchmarking-token-efficiency-across-providers" class="md-nav__link">
+    <span class="md-ellipsis">
+      Benchmarking Token Efficiency Across Providers
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Benchmarking Token Efficiency Across Providers">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#diagram-cross-provider-token-efficiency-dashboard" class="md-nav__link">
+    <span class="md-ellipsis">
+      Diagram: Cross-Provider Token Efficiency Dashboard
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#summary-and-quick-check" class="md-nav__link">
+    <span class="md-ellipsis">
+      Summary and Quick Check
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
   
 </li>
       
@@ -1266,6 +1356,26 @@
           
         
       
+        
+          
+        
+      
+        
+          
+        
+      
+        
+          
+        
+      
+        
+          
+        
+      
+        
+          
+        
+      
     
     
     
@@ -1455,6 +1565,96 @@
     </span>
   </a>
   
+    <nav class="md-nav" aria-label="Prerequisites">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#what-drives-input-token-growth" class="md-nav__link">
+    <span class="md-ellipsis">
+      What Drives Input Token Growth
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#reducing-what-you-send-compression-summarization-and-caching-strategy" class="md-nav__link">
+    <span class="md-ellipsis">
+      Reducing What You Send: Compression, Summarization, and Caching Strategy
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Reducing What You Send: Compression, Summarization, and Caching Strategy">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#diagram-prompt-compression-beforeafter-comparator" class="md-nav__link">
+    <span class="md-ellipsis">
+      Diagram: Prompt Compression Before/After Comparator
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#retrieval-chunking-and-multi-turn-growth" class="md-nav__link">
+    <span class="md-ellipsis">
+      Retrieval, Chunking, and Multi-Turn Growth
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#measuring-and-monitoring-consumption" class="md-nav__link">
+    <span class="md-ellipsis">
+      Measuring and Monitoring Consumption
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#benchmarking-token-efficiency-across-providers" class="md-nav__link">
+    <span class="md-ellipsis">
+      Benchmarking Token Efficiency Across Providers
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Benchmarking Token Efficiency Across Providers">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#diagram-cross-provider-token-efficiency-dashboard" class="md-nav__link">
+    <span class="md-ellipsis">
+      Diagram: Cross-Provider Token Efficiency Dashboard
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#summary-and-quick-check" class="md-nav__link">
+    <span class="md-ellipsis">
+      Summary and Quick Check
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
 </li>
       
     </ul>
@@ -1594,13 +1794,193 @@
 <li><a href="../03-tokenization-pricing-fundamentals/">Chapter 3: Tokenization and Token Pricing Fundamentals</a></li>
 </ul>
 <hr />
-<p>TODO: Generate Chapter Content</p>
+<p>Chapter 3 gave you the formula: tokens times rate equals cost. This chapter asks a harder question — where do the tokens in that formula actually come from in a running application? A single request is simple to reason about; a production system with retrieval, multi-turn chat, and repeated calls is where token consumption quietly compounds. This chapter traces each source of consumption growth and then shows you how to measure and compare efficiency once you've found it.</p>
+<div class="admonition mascot-welcome">
+<p class="admonition-title">From One Request to a Running System</p>
+<p><img alt="Ledger waving welcome" class="mascot-admonition-img" src="../../img/mascot/welcome.png" />
+Chapter 3 was arithmetic on a single request. This chapter is about what happens when that request runs a thousand times a day inside a real conversation. Every token counts — especially the ones you didn't notice you were resending.</p>
+</div>
+<h3 id="what-drives-input-token-growth">What Drives Input Token Growth<a class="headerlink" href="#what-drives-input-token-growth" title="Permanent link">&para;</a></h3>
+<p>The <strong>prompt length</strong> of a single request — the total token count of everything you send — is the starting point for every cost calculation, but it is rarely a fixed number in a real application; it grows from several compounding sources.</p>
+<p>The first is fixed overhead you pay on every single call: <strong>system prompt overhead</strong> is the token cost of the persistent instruction block introduced in Chapter 2, resent in full with every request regardless of what the user actually asked. A 500-token system prompt across 100,000 daily requests is 50 million tokens of pure overhead before a single user question is answered. Closely related is <strong>few-shot token overhead</strong> — the token cost of the example input/output pairs you include in a prompt to steer the model's behavior (few-shot prompting, from Chapter 2); each example is useful but also resent, in full, on every call that uses it.</p>
+<p>Beyond the system layer, <strong>context window cost</strong> refers to the cost impact of filling a large share of the available token limit with retrieved documents, instructions, or history rather than the user's actual question — every token spent on context is a token not spent on the part of the request that is unique to this call. Some providers additionally apply <strong>long-context pricing</strong>: a higher per-token rate once a request's total length crosses a threshold (for example, requests above 128,000 tokens priced at a premium rate), because serving very long contexts costs the provider more compute per token than shorter ones.</p>
+<div class="admonition mascot-thinking">
+<p class="admonition-title">Overhead Is Invisible Until You Multiply It</p>
+<p><img alt="Ledger thinking" class="mascot-admonition-img" src="../../img/mascot/thinking.png" />
+A single system prompt's token cost looks negligible on one request. The habit this book is building in you is to always multiply a per-request overhead by your request volume before judging whether it's negligible.</p>
+</div>
+<p>When a request would exceed the model's token limit, the application (or the provider) must apply <strong>token truncation</strong>: discarding tokens — usually from the oldest part of the conversation history or the least relevant retrieved passages — to fit within the limit. Truncation is a silent failure mode: the request still succeeds and returns an answer, but that answer may be based on incomplete context, with no error raised to tell you information was dropped.</p>
+<!-- bridge before table -->
+<p>The table below summarizes where these four overhead sources tend to show up and how to notice them.</p>
+<table>
+<thead>
+<tr>
+<th>Source</th>
+<th>Typical Size</th>
+<th>How to Notice It</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>System prompt overhead</td>
+<td>200-2,000 tokens, every call</td>
+<td>Compare a near-empty user message's total input tokens against expectation</td>
+</tr>
+<tr>
+<td>Few-shot token overhead</td>
+<td>100-500 tokens per example</td>
+<td>Count examples × average example length</td>
+</tr>
+<tr>
+<td>Context window cost</td>
+<td>Varies widely (retrieval-driven)</td>
+<td>Log retrieved-document token counts separately from user-message tokens</td>
+</tr>
+<tr>
+<td>Long-context pricing</td>
+<td>N/A (rate change, not token count)</td>
+<td>Check the provider rate card for a context-length pricing tier threshold</td>
+</tr>
+</tbody>
+</table>
+<h3 id="reducing-what-you-send-compression-summarization-and-caching-strategy">Reducing What You Send: Compression, Summarization, and Caching Strategy<a class="headerlink" href="#reducing-what-you-send-compression-summarization-and-caching-strategy" title="Permanent link">&para;</a></h3>
+<p>Two closely related techniques reduce prompt length directly rather than merely explaining it. <strong>Prompt compression</strong> rewrites or restructures a prompt to express the same instruction or context in fewer tokens — removing redundant phrasing, converting verbose natural-language instructions into terse structured formats, or dropping low-value boilerplate. <strong>Prompt summarization</strong> goes further for long inputs: rather than sending a full document or transcript, the application first summarizes it (often with a smaller, cheaper model) and sends the summary as context instead of the original.</p>
+<p>A third technique addresses repetition across <em>different</em> requests rather than within one: <strong>semantic caching</strong>. Unlike the prompt caching from Chapter 3 (which requires a byte-for-byte identical prefix), semantic caching stores the embeddings and answers to previously-asked questions and checks whether a new question is <em>semantically similar enough</em> to a cached one to reuse its answer without calling the model at all — a different mechanism, applied at the application layer rather than the provider's infrastructure layer.</p>
+<div class="admonition mascot-tip">
+<p class="admonition-title">Compress the Instructions, Not the Meaning</p>
+<p><img alt="Ledger with a tip" class="mascot-admonition-img" src="../../img/mascot/tip.png" />
+A fast first pass at prompt compression: replace full sentences of instruction with a terse structured format (bullet points, a JSON schema, a numbered checklist). Models follow structured instructions reliably and structured text is almost always fewer tokens than the prose version.</p>
+</div>
+<p>When none of these techniques are applied, two related failure patterns emerge. <strong>Redundant token usage</strong> is sending the same information more than once within a single request — for example, restating instructions already covered by the system prompt, or including a document twice across different context sections. <strong>Token wastage</strong> is the broader category: any tokens paid for that contribute nothing to the quality of the response, including redundant tokens, truncated-and-discarded tokens, and tokens spent retrieving documents the model never actually needed.</p>
+<h4 id="diagram-prompt-compression-beforeafter-comparator">Diagram: Prompt Compression Before/After Comparator<a class="headerlink" href="#diagram-prompt-compression-beforeafter-comparator" title="Permanent link">&para;</a></h4>
+<iframe src="../../sims/prompt-compression-comparator/main.html" width="100%" height="500px" scrolling="no"></iframe>
+
+<details>
+<summary>Prompt Compression Before/After Comparator</summary>
+<p>Type: microsim
+<strong>sim-id:</strong> prompt-compression-comparator<br/>
+<strong>Library:</strong> p5.js<br/>
+<strong>Status:</strong> Specified</p>
+<p>Bloom Level: Evaluate (L5) — assess
+Learning objective: Evaluate a verbose prompt against a compressed rewrite to judge whether meaning was preserved while token count dropped.</p>
+<p>Canvas layout:
+- Left (300): "Before" prompt text box with a live token-count readout
+- Right (300): "After" prompt text box with a live token-count readout
+- Bottom (600x60): a horizontal bar comparing the two token counts side by side</p>
+<p>Interactive controls:
+- Dropdown: choose one of 4 preset example pairs (verbose instruction vs. structured rewrite; prose document vs. its summary; repeated-context prompt vs. deduplicated version; few-shot with 5 examples vs. 2 curated examples)
+- Toggle: "Show token boundaries" — highlights each token as a separate colored segment in both text boxes
+- Display: percentage reduction in token count for the selected pair</p>
+<p>Default parameters: first preset pair selected, token boundaries off</p>
+<p>Behavior: switching the preset updates both text boxes and the comparison bar instantly; toggling token boundaries re-renders the text with alternating background colors per token.</p>
+<p>Implementation: p5.js, uses a precomputed token segmentation for each of the 4 preset pairs (no live tokenizer call required).</p>
+</details>
+<h3 id="retrieval-chunking-and-multi-turn-growth">Retrieval, Chunking, and Multi-Turn Growth<a class="headerlink" href="#retrieval-chunking-and-multi-turn-growth" title="Permanent link">&para;</a></h3>
+<p>Retrieval-augmented generation (Chapter 2) introduces its own consumption driver: a <strong>chunking strategy</strong> — the method used to split source documents into smaller pieces before embedding and storage, since an entire document is rarely retrieved and inserted whole into a prompt. The <strong>retrieval chunk size</strong> — how many tokens each chunk contains — directly trades off against both cost and quality: smaller chunks retrieve more precisely but require retrieving more of them to cover the same information, while larger chunks waste tokens on irrelevant surrounding text but need fewer of them.</p>
+<p>Multi-turn chat applications face a distinct and often underestimated driver: <strong>multi-turn token growth</strong>. Because most chat APIs are stateless between calls, the <em>entire</em> prior conversation must be resent as input on every new turn for the model to maintain context — turn 10 of a conversation resends all nine prior turns, not just the new message. This produces <strong>conversation history cost</strong>: the cumulative input-token cost of resending growing history, which increases roughly linearly (and in some application patterns, worse) with conversation length, even though the user only typed one new short message.</p>
+<div class="admonition mascot-warning">
+<p class="admonition-title">A Ten-Turn Conversation Is Not Ten Requests' Worth of Cost</p>
+<p><img alt="Ledger warning" class="mascot-admonition-img" src="../../img/mascot/warning.png" />
+A common mistake is budgeting a chat feature as "average request cost × expected request count." Because history resends on every turn, a long conversation's <em>total</em> cost grows faster than its turn count. Budget multi-turn features using a running cumulative-token model, not a flat per-request average.</p>
+</div>
+<p>Consider a concrete illustration: a chat where each user/assistant turn pair is 150 tokens. By turn 5, the resent history alone is \(4 \times 150 = 600\) input tokens before the new message is even added — and that overhead keeps growing every turn.</p>
+<h3 id="measuring-and-monitoring-consumption">Measuring and Monitoring Consumption<a class="headerlink" href="#measuring-and-monitoring-consumption" title="Permanent link">&para;</a></h3>
+<p>None of the levers above matter unless you can measure them. <strong>Token metering</strong> is the practice of recording token counts (input and output, per request) as structured telemetry rather than letting them exist only inside a provider's monthly invoice. Metered data feeds a <strong>usage dashboard</strong>: a real-time or near-real-time view of token consumption broken down by application, team, endpoint, or time period — the operational tool that turns the token budget and consumption rate from Chapter 3 into something a team actually watches day to day.</p>
+<p>Metering also protects against a specific operational risk: the <strong>token rate limit</strong>, a cap most providers enforce on tokens-per-minute (separate from your total budget), which, if exceeded, causes requests to be rejected or queued regardless of how much budget remains. A usage dashboard that tracks rate alongside volume catches rate-limit risk before it causes production failures.</p>
+<!-- bridge before quick-check -->
+<p>Before moving to benchmarking across providers, a quick check on the distinction this section just drew:</p>
+<details>
+<summary>Quick check: token budget vs. token rate limit</summary>
+<p>Type: markdown-list</p>
+<ul>
+<li><strong>Token budget</strong> — a planned ceiling on total tokens over a period (e.g., a month); exceeding it is a cost/governance problem.</li>
+<li><strong>Token rate limit</strong> — a provider-enforced ceiling on tokens <em>per minute</em>; exceeding it is an availability problem (requests get rejected or queued), independent of whether you're within budget.</li>
+</ul>
+</details>
+<h3 id="benchmarking-token-efficiency-across-providers">Benchmarking Token Efficiency Across Providers<a class="headerlink" href="#benchmarking-token-efficiency-across-providers" title="Permanent link">&para;</a></h3>
+<p>Every provider publishes a <strong>provider rate card</strong> — its official input and output per-token prices — but a rate card alone cannot tell you which provider is actually cheaper for <em>your</em> workload, because token-to-word ratios and response verbosity differ by model (Chapter 3). The discipline of answering that question properly is a <strong>token cost benchmark</strong>: running an identical, representative set of real tasks through multiple candidate models or providers and measuring actual token consumption and actual dollar cost, not advertised rates.</p>
+<!-- bridge before table -->
+<p>A benchmark produces a <strong>cross-provider comparison</strong> table like the one below — illustrative figures for the same 10-task representative workload run against three model tiers.</p>
+<table>
+<thead>
+<tr>
+<th>Model Tier</th>
+<th>Avg. Input Tokens/Task</th>
+<th>Avg. Output Tokens/Task</th>
+<th>Cost/Task</th>
+<th>Token Efficiency Score</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Small</td>
+<td>1,200</td>
+<td>180</td>
+<td>$0.0009</td>
+<td>0.91</td>
+</tr>
+<tr>
+<td>Standard</td>
+<td>1,200</td>
+<td>310</td>
+<td>$0.0038</td>
+<td>0.74</td>
+</tr>
+<tr>
+<td>Large</td>
+<td>1,200</td>
+<td>520</td>
+<td>$0.0122</td>
+<td>0.58</td>
+</tr>
+</tbody>
+</table>
+<p>The rightmost column is a <strong>token efficiency score</strong>: a normalized measure (here, scaled 0-1) combining task success rate against token cost, so that a cheaper model that fails the task more often does not look artificially efficient — efficiency must account for whether the tokens spent actually produced a usable result, not just how few of them were spent.</p>
+<p>One caution applies to any benchmark you run more than once: <strong>tokenizer version drift</strong>. Providers periodically update their tokenizers (to expand vocabulary, fix edge cases, or support new languages), which silently changes the token count for identical text between benchmark runs. A cost benchmark re-run six months later on an unchanged prompt can show a different token count purely from tokenizer drift, not from any change in your application — always re-baseline a benchmark rather than trusting an old one indefinitely.</p>
+<div class="admonition mascot-encourage">
+<p class="admonition-title">Benchmarking Takes Discipline, Not Genius</p>
+<p><img alt="Ledger encouraging" class="mascot-admonition-img" src="../../img/mascot/encouraging.png" />
+If building a fair cross-provider benchmark feels like a lot of moving parts, that's because it is — representative tasks, consistent prompts, and repeated runs. You don't need a perfect benchmark on the first try; even a rough one beats comparing providers by their rate cards alone.</p>
+</div>
+<h4 id="diagram-cross-provider-token-efficiency-dashboard">Diagram: Cross-Provider Token Efficiency Dashboard<a class="headerlink" href="#diagram-cross-provider-token-efficiency-dashboard" title="Permanent link">&para;</a></h4>
+<iframe src="../../sims/token-efficiency-dashboard/main.html" width="100%" height="500px" scrolling="no"></iframe>
+
+<details>
+<summary>Cross-Provider Token Efficiency Dashboard</summary>
+<p>Type: chart
+<strong>sim-id:</strong> token-efficiency-dashboard<br/>
+<strong>Library:</strong> Chart.js<br/>
+<strong>Status:</strong> Specified</p>
+<p>Bloom Level: Evaluate (L5) — justify
+Learning objective: Evaluate which model tier offers the best token efficiency score for a workload, justifying the choice against raw cost-per-task alone.</p>
+<p>Chart type: Combination chart — bar for cost/task, line overlay for token efficiency score, grouped by model tier</p>
+<p>Data to be plotted: the three model tiers and figures from the Cross-Provider Comparison table above</p>
+<p>X-axis: Model tier (Small, Standard, Large)
+Y-axis (left, bars): Cost per task (USD)
+Y-axis (right, line): Token efficiency score (0-1)</p>
+<p>Interactivity requirement: hovering a bar reveals average input/output tokens per task for that tier in a tooltip; hovering a line point reveals the task success rate and token cost that were combined to produce that tier's score. A toggle switches the dataset between 3 preset workload types (simple Q&amp;A, document summarization, multi-step reasoning) to show how the "most efficient" tier changes depending on task type.</p>
+<p>Implementation: Chart.js mixed bar/line chart with a workload-type dropdown re-rendering both datasets.</p>
+</details>
+<h3 id="summary-and-quick-check">Summary and Quick Check<a class="headerlink" href="#summary-and-quick-check" title="Permanent link">&para;</a></h3>
+<p>Token consumption in a real system is never just "one request's token count" — it accumulates from fixed per-call overhead, retrieval chunking decisions, and the compounding cost of multi-turn history, and it can be reduced through compression, summarization, and semantic caching. Measuring it requires metering and a usage dashboard, and comparing options fairly requires a real benchmark rather than trusting a rate card. Chapter 5 turns from the token layer to the compute layer beneath it — the infrastructure pricing models that determine what a provider's rate card is actually built on.</p>
+<details class="note">
+<summary>Quick check: name two different caching mechanisms covered so far and how they differ - Click to expand</summary>
+<p>Prompt caching (Chapter 3) reuses computation for a byte-for-byte identical prompt prefix at the provider's infrastructure layer. Semantic caching (this chapter) reuses a previous answer for a <em>semantically similar</em> — not identical — question, implemented at the application layer.</p>
+</details>
+<div class="admonition mascot-celebration">
+<p class="admonition-title">You Can Now Trace Consumption at the System Level</p>
+<p><img alt="Ledger celebrating" class="mascot-admonition-img" src="../../img/mascot/celebration.png" />
+You just moved from pricing a single request to tracing how a whole running application accumulates token cost — and how to benchmark your way to a genuinely cheaper option instead of guessing from a rate card.</p>
+</div>
 
 
 
 
 
 
+
+  
+  
 
 
 

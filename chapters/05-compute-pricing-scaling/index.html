@@ -6,7 +6,7 @@
       <meta charset="utf-8">
       <meta name="viewport" content="width=device-width,initial-scale=1">
       
-        <meta name="description" content="A practical guide to measuring and communicating the return on investment (ROI) of generative AI initiatives in an organization.">
+        <meta name="description" content="The compute pricing models beneath every generative AI bill — on-demand, reserved, spot, and serverless — along with autoscaling, utilization, and the supporting infrastructure costs.">
       
       
         <meta name="author" content="Katie Jo Schuman">
@@ -26,7 +26,7 @@
     
     
       
-        <title>5. Compute Pricing and Scaling Fundamentals - Measuring GenAI ROI</title>
+        <title>Compute Pricing and Scaling Fundamentals - Measuring GenAI ROI</title>
       
     
     
@@ -116,7 +116,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              5. Compute Pricing and Scaling Fundamentals
+              Compute Pricing and Scaling Fundamentals
             
           </span>
         </div>
@@ -680,6 +680,87 @@
       Prerequisites
     </span>
   </a>
+  
+    <nav class="md-nav" aria-label="Prerequisites">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#the-hardware-underneath-inference" class="md-nav__link">
+    <span class="md-ellipsis">
+      The Hardware Underneath Inference
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#serverless-dedicated-and-multi-tenant-serving" class="md-nav__link">
+    <span class="md-ellipsis">
+      Serverless, Dedicated, and Multi-Tenant Serving
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Serverless, Dedicated, and Multi-Tenant Serving">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#diagram-autoscaling-and-warm-pool-behavior-over-a-traffic-day" class="md-nav__link">
+    <span class="md-ellipsis">
+      Diagram: Autoscaling and Warm Pool Behavior Over a Traffic Day
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#utilization-idle-cost-and-load-balancing" class="md-nav__link">
+    <span class="md-ellipsis">
+      Utilization, Idle Cost, and Load Balancing
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Utilization, Idle Cost, and Load Balancing">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#diagram-compute-utilization-and-idle-cost-explorer" class="md-nav__link">
+    <span class="md-ellipsis">
+      Diagram: Compute Utilization and Idle Cost Explorer
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#the-supporting-costs-around-compute" class="md-nav__link">
+    <span class="md-ellipsis">
+      The Supporting Costs Around Compute
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#summary-and-quick-check" class="md-nav__link">
+    <span class="md-ellipsis">
+      Summary and Quick Check
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
   
 </li>
       
@@ -1266,6 +1347,26 @@
           
         
       
+        
+          
+        
+      
+        
+          
+        
+      
+        
+          
+        
+      
+        
+          
+        
+      
+        
+          
+        
+      
     
     
     
@@ -1455,6 +1556,87 @@
     </span>
   </a>
   
+    <nav class="md-nav" aria-label="Prerequisites">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#the-hardware-underneath-inference" class="md-nav__link">
+    <span class="md-ellipsis">
+      The Hardware Underneath Inference
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#serverless-dedicated-and-multi-tenant-serving" class="md-nav__link">
+    <span class="md-ellipsis">
+      Serverless, Dedicated, and Multi-Tenant Serving
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Serverless, Dedicated, and Multi-Tenant Serving">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#diagram-autoscaling-and-warm-pool-behavior-over-a-traffic-day" class="md-nav__link">
+    <span class="md-ellipsis">
+      Diagram: Autoscaling and Warm Pool Behavior Over a Traffic Day
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#utilization-idle-cost-and-load-balancing" class="md-nav__link">
+    <span class="md-ellipsis">
+      Utilization, Idle Cost, and Load Balancing
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Utilization, Idle Cost, and Load Balancing">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#diagram-compute-utilization-and-idle-cost-explorer" class="md-nav__link">
+    <span class="md-ellipsis">
+      Diagram: Compute Utilization and Idle Cost Explorer
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#the-supporting-costs-around-compute" class="md-nav__link">
+    <span class="md-ellipsis">
+      The Supporting Costs Around Compute
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#summary-and-quick-check" class="md-nav__link">
+    <span class="md-ellipsis">
+      Summary and Quick Check
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
 </li>
       
     </ul>
@@ -1582,13 +1764,167 @@
 <li><a href="../02-prompting-deployment-optimization/">Chapter 2: Prompting, Deployment, and Model Optimization Basics</a></li>
 </ul>
 <hr />
-<p>TODO: Generate Chapter Content</p>
+<p>Chapters 3 and 4 priced the token layer: what you pay per unit of text, and how real usage patterns drive that layer up or down. But a provider's per-token rate card did not fall from the sky — it is built on top of actual compute, actual hardware, sitting somewhere, costing money whether or not anyone is sending it a request right now. This chapter goes one layer deeper, to the infrastructure economics that determine why rate cards look the way they do, and what levers are available to you if you run or choose your own deployment rather than only consuming someone else's managed API.</p>
+<div class="admonition mascot-welcome">
+<p class="admonition-title">Beneath Every Rate Card Is a Server</p>
+<p><img alt="Ledger waving welcome" class="mascot-admonition-img" src="../../img/mascot/welcome.png" />
+Tokens were the unit of what you're buying. This chapter is about what you're actually buying it <em>with</em> — the compute, the capacity commitments, and the idle time nobody bills you for directly but somebody pays for anyway. Every token counts, and every token runs on a machine.</p>
+</div>
+<h3 id="the-hardware-underneath-inference">The Hardware Underneath Inference<a class="headerlink" href="#the-hardware-underneath-inference" title="Permanent link">&para;</a></h3>
+<p>Running a model to produce a response — <strong>inference</strong> — can execute on two broadly different categories of hardware. <strong>GPU compute</strong> uses graphics processing units, which perform the many parallel matrix multiplications a neural network requires far faster than general-purpose processors, and is the default choice for any model of meaningful size. <strong>CPU inference</strong> uses general-purpose processors instead; it is slower per request for the same model but requires no specialized hardware, making it viable for small models, low-traffic workloads, or situations where GPU capacity is scarce or prohibitively expensive.</p>
+<p>The combination of hardware type, how long a request occupies it, and the provider's rate for that hardware produces the <strong>compute cost</strong> of serving a request — the infrastructure-layer cost that, bundled with the provider's margin and amortized overhead, is what actually determines the per-token pricing you learned to read in Chapter 3. When you use a managed API, compute cost is hidden inside the token rate; when you deploy your own model, compute cost becomes a cost you manage directly.</p>
+<div class="admonition mascot-thinking">
+<p class="admonition-title">The Rate Card Is a Thin Wrapper Around This Chapter</p>
+<p><img alt="Ledger thinking" class="mascot-admonition-img" src="../../img/mascot/thinking.png" />
+Every per-token price in Chapter 3 is, underneath, a provider's compute cost plus margin, divided by expected token throughput. Understanding this chapter is what lets you sanity-check whether a rate card is reasonable rather than accepting it on faith.</p>
+</div>
+<p>Cloud providers publish <strong>cloud compute pricing</strong> — their rate schedules for renting GPU or CPU capacity by time — in several distinct models, each trading flexibility against cost:</p>
+<ul>
+<li><strong>On-demand pricing</strong>: pay a published hourly (or per-second) rate for capacity with no upfront commitment and no long-term obligation; the most flexible and most expensive per-hour option.</li>
+<li><strong>Reserved capacity pricing</strong>: commit to a fixed amount of capacity for a defined term (often 1 or 3 years) in exchange for a substantial discount off the on-demand rate — flexibility is traded for a lower rate, and the commitment is paid whether or not the capacity is fully used.</li>
+<li><strong>Spot instance pricing</strong>: bid for unused provider capacity at a steep discount (often 60-90% off on-demand), with the tradeoff that the provider can reclaim that capacity with little notice if a higher-priority customer needs it — the deepest discount, paired with the least reliability.</li>
+</ul>
+<!-- bridge before table -->
+<p>The table below makes the tradeoff concrete across the three models.</p>
+<table>
+<thead>
+<tr>
+<th>Pricing Model</th>
+<th>Relative Cost</th>
+<th>Commitment</th>
+<th>Reliability</th>
+<th>Best Fit</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>On-demand</td>
+<td>Highest</td>
+<td>None</td>
+<td>High</td>
+<td>Unpredictable or low-volume traffic</td>
+</tr>
+<tr>
+<td>Reserved capacity</td>
+<td>Lowest (steady use)</td>
+<td>1-3 year term</td>
+<td>High</td>
+<td>Stable, predictable baseline load</td>
+</tr>
+<tr>
+<td>Spot instance</td>
+<td>Lowest (opportunistic)</td>
+<td>None</td>
+<td>Low (can be reclaimed)</td>
+<td>Fault-tolerant batch or background work</td>
+</tr>
+</tbody>
+</table>
+<div class="admonition mascot-tip">
+<p class="admonition-title">Mix Pricing Models, Don't Pick One</p>
+<p><img alt="Ledger with a tip" class="mascot-admonition-img" src="../../img/mascot/tip.png" />
+Production deployments rarely use a single pricing model exclusively. A common pattern is reserved capacity for your predictable baseline load, with on-demand or spot capacity layered on top to absorb traffic spikes — covered next under autoscaling.</p>
+</div>
+<h3 id="serverless-dedicated-and-multi-tenant-serving">Serverless, Dedicated, and Multi-Tenant Serving<a class="headerlink" href="#serverless-dedicated-and-multi-tenant-serving" title="Permanent link">&para;</a></h3>
+<p>Beyond raw capacity pricing, providers differ in <em>how</em> they let you deploy a model. <strong>Serverless inference</strong> charges purely per-request or per-token with no capacity to provision or manage at all — the provider handles all scaling invisibly, and you never reserve or pay for idle hardware directly (its cost is folded into the per-token rate). The tradeoff is <strong>cold start latency</strong>: when no instance is currently warm to handle your request, the provider must spin one up, adding a noticeable delay (often hundreds of milliseconds to several seconds) to that first request.</p>
+<p>If serverless latency variance is unacceptable, you can instead provision a <strong>dedicated endpoint</strong>: hardware reserved exclusively for your workload, billed whether or not it is actively processing a request, which eliminates cold starts and multi-tenant interference at the cost of paying for capacity during idle periods. A cheaper middle ground is a <strong>multi-tenant endpoint</strong>: shared hardware serving multiple customers' requests, with the provider managing allocation across tenants — lower cost than a dedicated endpoint, at the cost of potential latency variance if another tenant's traffic spikes at the same time.</p>
+<details>
+<summary>Quick check: serverless, dedicated, or multi-tenant?</summary>
+<p>Type: markdown-list</p>
+<ul>
+<li>An internal tool used sporadically by a handful of employees, latency-tolerant — <strong>serverless</strong> (avoid paying for idle dedicated capacity)</li>
+<li>A customer-facing feature with a strict, consistent latency SLA — <strong>dedicated endpoint</strong></li>
+<li>A mid-volume internal application where occasional latency variance is acceptable in exchange for lower cost — <strong>multi-tenant endpoint</strong></li>
+</ul>
+</details>
+<p>To bridge serverless's elasticity with dedicated's consistency, providers use <strong>autoscaling</strong>: automatically adjusting the number of active compute instances up or down based on current demand, adding capacity as traffic rises and removing it as traffic falls. A <strong>warm pool</strong> — a small number of instances kept running and ready even during low-traffic periods — is the standard technique for avoiding cold-start latency on an autoscaled deployment: it costs a modest idle-capacity premium in exchange for guaranteeing at least some instant-response capacity at all times.</p>
+<h4 id="diagram-autoscaling-and-warm-pool-behavior-over-a-traffic-day">Diagram: Autoscaling and Warm Pool Behavior Over a Traffic Day<a class="headerlink" href="#diagram-autoscaling-and-warm-pool-behavior-over-a-traffic-day" title="Permanent link">&para;</a></h4>
+<iframe src="../../sims/autoscaling-traffic-simulator/main.html" width="100%" height="500px" scrolling="no"></iframe>
+
+<details>
+<summary>Autoscaling and Warm Pool Behavior Over a Traffic Day</summary>
+<p>Type: microsim
+<strong>sim-id:</strong> autoscaling-traffic-simulator<br/>
+<strong>Library:</strong> p5.js<br/>
+<strong>Status:</strong> Specified</p>
+<p>Bloom Level: Analyze (L4) — examine
+Learning objective: Analyze how autoscaling instance count, warm pool size, and cold-start events relate to a fluctuating traffic pattern over a 24-hour period.</p>
+<p>Canvas layout:
+- Top (600x200): a traffic-volume line chart across a 24-hour x-axis, with a draggable time-of-day marker
+- Bottom (600x250): a bar showing current active instance count, split into "warm pool" (always-on, distinct color) and "autoscaled" (demand-driven, distinct color) segments, updating as the time marker moves</p>
+<p>Interactive controls:
+- Draggable marker along the 24-hour traffic chart
+- Slider: Warm pool size (0-10 instances)
+- Toggle: "Show cold-start events" — flags a marker on the chart at every moment traffic exceeds current capacity before autoscaling can react</p>
+<p>Default parameters: warm pool size = 2, time marker at 9:00 AM (a rising-traffic period)</p>
+<p>Behavior: as the learner drags the time marker, the instance bar updates to reflect how many instances would be active at that moment; with warm pool size at 0, cold-start event markers appear far more often during sudden morning traffic ramps than with warm pool size at 2-3, making the cost/latency tradeoff of warm pool sizing directly visible.</p>
+<p>Implementation: p5.js, precomputed traffic curve (e.g., a typical business-hours sine-like pattern) driving a simple autoscaling-lag model.</p>
+</details>
+<h3 id="utilization-idle-cost-and-load-balancing">Utilization, Idle Cost, and Load Balancing<a class="headerlink" href="#utilization-idle-cost-and-load-balancing" title="Permanent link">&para;</a></h3>
+<p>A provisioned instance that sits unused is not free — this is the central economic fact autoscaling exists to manage. <strong>Compute utilization rate</strong> measures what fraction of provisioned compute capacity is actually processing requests versus sitting idle at any given moment. Low utilization directly produces <strong>idle capacity cost</strong>: money spent on reserved or dedicated capacity that was not doing useful work, the single largest source of waste in infrastructure spend that per-token pricing (where you only pay for what you use) was specifically designed to eliminate for API consumers — but which your own team still owns if you deploy your own infrastructure.</p>
+<div class="admonition mascot-warning">
+<p class="admonition-title">Reserved Capacity Discounts Can Become Idle Capacity Costs</p>
+<p><img alt="Ledger warning" class="mascot-admonition-img" src="../../img/mascot/warning.png" />
+A common mistake is over-committing to reserved capacity based on peak traffic rather than average traffic. The discount is real, but if utilization averages 40%, you may be paying more overall than on-demand pricing would have cost for the same actual usage. Always size reserved commitments against sustained baseline load, not peak load.</p>
+</div>
+<p>When traffic is spread across multiple instances (whether dedicated, multi-tenant, or autoscaled), <strong>load balancing</strong> distributes incoming requests across them to keep utilization even and avoid overloading any single instance while others sit idle — a necessary complement to autoscaling, since adding instances only helps if traffic is actually routed to use them.</p>
+<h4 id="diagram-compute-utilization-and-idle-cost-explorer">Diagram: Compute Utilization and Idle Cost Explorer<a class="headerlink" href="#diagram-compute-utilization-and-idle-cost-explorer" title="Permanent link">&para;</a></h4>
+<iframe src="../../sims/compute-utilization-explorer/main.html" width="100%" height="500px" scrolling="no"></iframe>
+
+<details>
+<summary>Compute Utilization and Idle Cost Explorer</summary>
+<p>Type: chart
+<strong>sim-id:</strong> compute-utilization-explorer<br/>
+<strong>Library:</strong> Chart.js<br/>
+<strong>Status:</strong> Specified</p>
+<p>Bloom Level: Evaluate (L5) — justify
+Learning objective: Evaluate whether a reserved-capacity commitment is cost-justified at a given sustained utilization rate compared to on-demand pricing.</p>
+<p>Chart type: Line chart, two series over a utilization-rate x-axis (0%-100%)</p>
+<p>Data to be plotted:
+- Series 1 ("Reserved capacity effective cost"): flat per-hour commitment cost, shown as constant regardless of utilization
+- Series 2 ("On-demand equivalent cost"): on-demand rate × utilization rate, rising linearly with utilization</p>
+<p>X-axis: Compute utilization rate (0%-100%)
+Y-axis: Effective cost per hour (USD)</p>
+<p>Interactivity requirement: hovering either line at any utilization percentage shows the exact cost and highlights the crossover point where reserved capacity becomes cheaper than on-demand; a slider lets the learner adjust the reserved-capacity discount percentage (30%-70% off on-demand) to see the crossover utilization rate shift.</p>
+<p>Implementation: Chart.js line chart with a discount-percentage slider re-rendering the reserved-capacity series.</p>
+</details>
+<h3 id="the-supporting-costs-around-compute">The Supporting Costs Around Compute<a class="headerlink" href="#the-supporting-costs-around-compute" title="Permanent link">&para;</a></h3>
+<p>Compute is the largest infrastructure line item, but three supporting costs routinely surprise teams that only budget for inference hardware. <strong>Data transfer cost</strong> is the charge for moving data into, out of, or between a provider's services — distinct from compute time entirely. Within that category, <strong>network egress cost</strong> specifically covers data leaving the provider's network (for example, sending a large response payload back to your application across the public internet), which is frequently priced per gigabyte and billed separately from both compute and token charges.</p>
+<p><strong>Storage cost</strong> covers persisting data at rest — model weights, logs, cached responses, uploaded documents — typically billed per gigabyte per month. A specific and increasingly significant storage line item for generative AI systems is <strong>vector store cost</strong>: the cost of storing and querying the embedding vectors that power retrieval-augmented generation (Chapter 2), which scales with both the number of stored documents and the dimensionality of the embeddings, and which many teams omit from their initial cost model entirely because it is not a token charge or a compute charge — it is a distinct infrastructure line.</p>
+<div class="admonition mascot-encourage">
+<p class="admonition-title">Supporting Costs Are Easy to Forget, Not Hard to Understand</p>
+<p><img alt="Ledger encouraging" class="mascot-admonition-img" src="../../img/mascot/encouraging.png" />
+If data transfer, storage, and vector store costs feel like an afterthought compared to compute and tokens, that's a completely normal first reaction — and exactly why they're the line items most ROI analyses miss. None of the ideas here are individually hard; the discipline is remembering to look for all of them.</p>
+</div>
+<!-- bridge before list -->
+<p>A complete infrastructure cost model for a generative AI deployment should therefore account for all of the following, not compute alone:</p>
+<ul>
+<li>GPU or CPU compute time (on-demand, reserved, or spot)</li>
+<li>Idle capacity cost from under-utilized reserved or dedicated endpoints</li>
+<li>Data transfer and network egress for request/response payloads</li>
+<li>Storage for logs, cached data, and model artifacts</li>
+<li>Vector store cost for any retrieval-augmented system</li>
+</ul>
+<h3 id="summary-and-quick-check">Summary and Quick Check<a class="headerlink" href="#summary-and-quick-check" title="Permanent link">&para;</a></h3>
+<p>Every per-token rate you read in Chapter 3 is built on the infrastructure economics covered here: a choice of hardware, a pricing model (on-demand, reserved, or spot), a serving pattern (serverless, dedicated, or multi-tenant), and an autoscaling strategy, all of which succeed or fail based on utilization — plus a set of supporting costs in data transfer, storage, and vector stores that are easy to omit from a first-pass budget. Chapter 6 builds directly on this foundation to cover the infrastructure planning and monitoring practices that keep these costs visible on an ongoing basis rather than discovered at invoice time.</p>
+<details class="note">
+<summary>Quick check: why can a reserved-capacity discount still end up costing more than on-demand pricing? - Click to expand</summary>
+<p>Because the reserved commitment is billed as a flat cost regardless of utilization. If actual utilization is low, the effective per-request cost of the reserved capacity can exceed what on-demand pricing would have charged for only the requests actually served — idle capacity cost erodes the discount.</p>
+</details>
+<div class="admonition mascot-celebration">
+<p class="admonition-title">You Can Now Read the Layer Beneath the Rate Card</p>
+<p><img alt="Ledger celebrating" class="mascot-admonition-img" src="../../img/mascot/celebration.png" />
+You just connected token pricing to the actual compute, capacity, and supporting infrastructure decisions that produce it — the layer most IT professionals never see because a managed API hides it. That visibility is exactly what lets you question a vendor's numbers instead of accepting them.</p>
+</div>
 
 
 
 
 
 
+
+  
+  
 
 
 
