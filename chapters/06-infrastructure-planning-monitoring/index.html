@@ -6,7 +6,7 @@
       <meta charset="utf-8">
       <meta name="viewport" content="width=device-width,initial-scale=1">
       
-        <meta name="description" content="A practical guide to measuring and communicating the return on investment (ROI) of generative AI initiatives in an organization.">
+        <meta name="description" content="How serving software, GPU memory, batching, and capacity planning set the cost of self-hosted inference, and how monitoring and alerting keep infrastructure spend visible.">
       
       
         <meta name="author" content="Katie Jo Schuman">
@@ -26,7 +26,7 @@
     
     
       
-        <title>6. Infrastructure Planning and Cost Monitoring - Measuring GenAI ROI</title>
+        <title>Infrastructure Planning and Cost Monitoring - Measuring GenAI ROI</title>
       
     
     
@@ -116,7 +116,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              6. Infrastructure Planning and Cost Monitoring
+              Infrastructure Planning and Cost Monitoring
             
           </span>
         </div>
@@ -702,6 +702,168 @@
       Prerequisites
     </span>
   </a>
+  
+    <nav class="md-nav" aria-label="Prerequisites">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#the-serving-stack-from-weights-to-answers" class="md-nav__link">
+    <span class="md-ellipsis">
+      The Serving Stack: From Weights to Answers
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="The Serving Stack: From Weights to Answers">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#what-fits-in-gpu-memory" class="md-nav__link">
+    <span class="md-ellipsis">
+      What Fits in GPU Memory
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#batching-concurrency-and-the-throughput-latency-tradeoff" class="md-nav__link">
+    <span class="md-ellipsis">
+      Batching, Concurrency, and the Throughput-Latency Tradeoff
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Batching, Concurrency, and the Throughput-Latency Tradeoff">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#diagram-serving-batch-size-tuner" class="md-nav__link">
+    <span class="md-ellipsis">
+      Diagram: Serving Batch Size Tuner
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#sizing-for-demand-peak-provisioning-and-capacity-planning" class="md-nav__link">
+    <span class="md-ellipsis">
+      Sizing for Demand: Peak Provisioning and Capacity Planning
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Sizing for Demand: Peak Provisioning and Capacity Planning">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#diagram-peak-capacity-planner" class="md-nav__link">
+    <span class="md-ellipsis">
+      Diagram: Peak Capacity Planner
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#infrastructure-as-code" class="md-nav__link">
+    <span class="md-ellipsis">
+      Infrastructure as Code
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#where-to-run-it-regions-edge-and-hybrid" class="md-nav__link">
+    <span class="md-ellipsis">
+      Where to Run It: Regions, Edge, and Hybrid
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Where to Run It: Regions, Edge, and Hybrid">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#diagram-deployment-placement-sorter" class="md-nav__link">
+    <span class="md-ellipsis">
+      Diagram: Deployment Placement Sorter
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#footprint-compute-energy-and-carbon" class="md-nav__link">
+    <span class="md-ellipsis">
+      Footprint: Compute, Energy, and Carbon
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#watching-the-spend-monitoring-alerts-and-dashboards" class="md-nav__link">
+    <span class="md-ellipsis">
+      Watching the Spend: Monitoring, Alerts, and Dashboards
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Watching the Spend: Monitoring, Alerts, and Dashboards">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#diagram-budget-burn-alert-simulator" class="md-nav__link">
+    <span class="md-ellipsis">
+      Diagram: Budget Burn Alert Simulator
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#dashboards" class="md-nav__link">
+    <span class="md-ellipsis">
+      Dashboards
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#summary-and-quick-check" class="md-nav__link">
+    <span class="md-ellipsis">
+      Summary and Quick Check
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
   
 </li>
       
@@ -1531,6 +1693,168 @@
     </span>
   </a>
   
+    <nav class="md-nav" aria-label="Prerequisites">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#the-serving-stack-from-weights-to-answers" class="md-nav__link">
+    <span class="md-ellipsis">
+      The Serving Stack: From Weights to Answers
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="The Serving Stack: From Weights to Answers">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#what-fits-in-gpu-memory" class="md-nav__link">
+    <span class="md-ellipsis">
+      What Fits in GPU Memory
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#batching-concurrency-and-the-throughput-latency-tradeoff" class="md-nav__link">
+    <span class="md-ellipsis">
+      Batching, Concurrency, and the Throughput-Latency Tradeoff
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Batching, Concurrency, and the Throughput-Latency Tradeoff">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#diagram-serving-batch-size-tuner" class="md-nav__link">
+    <span class="md-ellipsis">
+      Diagram: Serving Batch Size Tuner
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#sizing-for-demand-peak-provisioning-and-capacity-planning" class="md-nav__link">
+    <span class="md-ellipsis">
+      Sizing for Demand: Peak Provisioning and Capacity Planning
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Sizing for Demand: Peak Provisioning and Capacity Planning">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#diagram-peak-capacity-planner" class="md-nav__link">
+    <span class="md-ellipsis">
+      Diagram: Peak Capacity Planner
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#infrastructure-as-code" class="md-nav__link">
+    <span class="md-ellipsis">
+      Infrastructure as Code
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#where-to-run-it-regions-edge-and-hybrid" class="md-nav__link">
+    <span class="md-ellipsis">
+      Where to Run It: Regions, Edge, and Hybrid
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Where to Run It: Regions, Edge, and Hybrid">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#diagram-deployment-placement-sorter" class="md-nav__link">
+    <span class="md-ellipsis">
+      Diagram: Deployment Placement Sorter
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#footprint-compute-energy-and-carbon" class="md-nav__link">
+    <span class="md-ellipsis">
+      Footprint: Compute, Energy, and Carbon
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#watching-the-spend-monitoring-alerts-and-dashboards" class="md-nav__link">
+    <span class="md-ellipsis">
+      Watching the Spend: Monitoring, Alerts, and Dashboards
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Watching the Spend: Monitoring, Alerts, and Dashboards">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#diagram-budget-burn-alert-simulator" class="md-nav__link">
+    <span class="md-ellipsis">
+      Diagram: Budget Burn Alert Simulator
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#dashboards" class="md-nav__link">
+    <span class="md-ellipsis">
+      Dashboards
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#summary-and-quick-check" class="md-nav__link">
+    <span class="md-ellipsis">
+      Summary and Quick Check
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
 </li>
       
     </ul>
@@ -1658,13 +1982,841 @@
 <li><a href="../05-compute-pricing-scaling/">Chapter 5: Compute Pricing and Scaling Fundamentals</a></li>
 </ul>
 <hr />
-<p>TODO: Generate Chapter Content</p>
+<p>Chapter 5 told you what a GPU-hour costs and how pricing models, autoscaling, and utilization turn that rate into a monthly bill. It left one question open: how many GPU-hours do you actually need? That depends on how the model is served, how much memory it occupies, how many requests it handles at once, and how closely your provisioned capacity tracks real demand. This chapter works through those decisions in the order you would make them, then covers where to run the workload, what it consumes in energy, and how to keep watch on the spend once it is live.</p>
+<div class="admonition mascot-welcome">
+<p class="admonition-title">Sizing the Machine Before You Rent It</p>
+<p><img alt="Ledger waving welcome" class="mascot-admonition-img" src="../../img/mascot/welcome.png" />
+A GPU-hour price tells you nothing until you know how many tokens each hour produces. By the end of this chapter you will be able to size a deployment, defend the number to a finance reviewer, and set the alarms that tell you when the bill drifts. Every token counts, and so does every idle GPU.</p>
+</div>
+<h3 id="the-serving-stack-from-weights-to-answers">The Serving Stack: From Weights to Answers<a class="headerlink" href="#the-serving-stack-from-weights-to-answers" title="Permanent link">&para;</a></h3>
+<p>A trained model is a file of numbers, called weights. To answer requests it must be loaded onto a <strong>hardware accelerator</strong>: specialized processing hardware, such as a GPU, a TPU, or a custom AI chip, built to run the parallel matrix operations a neural network needs far faster than a general-purpose CPU. Chapter 5 priced GPUs and CPUs; the term "accelerator" simply covers the wider family, and the rest of this chapter says "GPU" whenever the reasoning applies to any of them.</p>
+<p>Loading weights is only the first job. Something must also queue incoming requests, group them into efficient batches, run the model, and stream tokens back. A <strong>model serving framework</strong> is the software that does this work: it loads the model into accelerator memory, batches requests, and executes inference efficiently on the available hardware. An <strong>inference server</strong> is one running instance of that framework on provisioned hardware, the process that actually receives your traffic. In cost terms, the framework determines how many tokens per second a given GPU can produce, and therefore how many GPU-hours your workload needs. Two teams renting the identical GPU can pay very different amounts per million tokens purely because one framework batches more cleverly than the other.</p>
+<details>
+<summary>Quick check: framework or server?</summary>
+<p>Type: markdown-list</p>
+<ul>
+<li>"The software package we adopted because it batches requests continuously" is the <strong>model serving framework</strong>.</li>
+<li>"The three GPU nodes currently answering production traffic" are three <strong>inference servers</strong>, each running the framework.</li>
+</ul>
+</details>
+<h4 id="what-fits-in-gpu-memory">What Fits in GPU Memory<a class="headerlink" href="#what-fits-in-gpu-memory" title="Permanent link">&para;</a></h4>
+<p>Before any tuning, the model has to fit. A <strong>GPU memory constraint</strong> is the limit that the accelerator's finite memory places on model size, batch size, and context length, because the weights and the working data of every in-flight request must live in that memory at the same time. Two quantities consume it:</p>
+<ul>
+<li><strong>Weights</strong>: parameter count multiplied by bytes per parameter. A 16-bit (FP16) weight takes 2 bytes, an 8-bit weight takes 1 byte, and a 4-bit weight takes half a byte.</li>
+<li><strong>KV cache</strong>: the stored attention keys and values for every token of every active request, so the model does not recompute them for each new token. It grows with context length and with the number of concurrent requests.</li>
+</ul>
+<p>The worked example below uses an 8-billion-parameter model whose architecture is similar to published open-weight models of that size (32 layers, 8 key-value heads, 128 values per head). The GPU has 80 GB of memory, and the example reserves 4 GB for the framework's own buffers. All figures use round numbers, and the GPU size is illustrative.</p>
+<table>
+<thead>
+<tr>
+<th>Step</th>
+<th>Calculation</th>
+<th>Result</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Weights at FP16</td>
+<td>8 billion parameters × 2 bytes</td>
+<td>16 GB</td>
+</tr>
+<tr>
+<td>Memory left for the KV cache</td>
+<td>80 GB − 16 GB weights − 4 GB buffers</td>
+<td>60 GB</td>
+</tr>
+<tr>
+<td>KV cache per token</td>
+<td>32 layers × 8 heads × 128 values × 2 (key and value) × 2 bytes</td>
+<td>about 0.125 MB</td>
+</tr>
+<tr>
+<td>KV cache per request at 4,000 tokens</td>
+<td>4,000 × 0.125 MB</td>
+<td>500 MB</td>
+</tr>
+<tr>
+<td>Maximum simultaneous requests</td>
+<td>60 GB ÷ 500 MB</td>
+<td>120</td>
+</tr>
+</tbody>
+</table>
+<p>The last row is the cost-relevant one: this GPU cannot serve more than 120 simultaneous 4,000-token conversations, whatever the traffic. Quantizing the weights to 8 bits (Chapter 2) frees 8 GB, which raises the ceiling to 136. Doubling the average context to 8,000 tokens halves it to 60. A 70-billion-parameter model at FP16 needs 140 GB for weights alone, so it cannot fit on one 80 GB GPU at all and must be split across at least two, which doubles the hourly cost before a single request is served.</p>
+<div class="admonition mascot-thinking">
+<p class="admonition-title">Memory, Not Compute, Often Sets the Ceiling</p>
+<p><img alt="Ledger thinking" class="mascot-admonition-img" src="../../img/mascot/thinking.png" />
+Notice that the table never mentioned compute speed: the 120-request ceiling comes entirely from memory arithmetic. When someone says a GPU "can handle" a workload, ask which resource runs out first.</p>
+</div>
+<h3 id="batching-concurrency-and-the-throughput-latency-tradeoff">Batching, Concurrency, and the Throughput-Latency Tradeoff<a class="headerlink" href="#batching-concurrency-and-the-throughput-latency-tradeoff" title="Permanent link">&para;</a></h3>
+<p>A GPU is most efficient when it works on many requests together. <strong>Batch size tuning</strong> is the choice of how many requests the server processes in a single inference pass. A larger batch spreads the fixed cost of reading the weights from memory across more requests, so aggregate output rises. It also makes each individual request slower, because every pass takes longer and uses more KV-cache memory.</p>
+<p>A related control is the <strong>concurrency limit</strong>: the maximum number of simultaneous requests the inference server accepts, beyond which new requests queue or are rejected. The limit protects two things, the latency promised to users and the memory ceiling from the previous section. In our example no concurrency limit above 120 is safe at 4,000-token contexts.</p>
+<p>These two controls produce the <strong>throughput-latency tradeoff</strong>: configuring a server for the most tokens per second generally raises the time each request waits, and the reverse. Before the table below, three terms. <strong>Inter-token latency</strong> is the time between consecutive output tokens for one request. <strong>Aggregate throughput</strong> is the total output tokens per second across all requests in the batch, equal to batch size divided by inter-token latency. <strong>Cost per million tokens</strong> is the GPU's hourly price converted to a per-second price and divided by aggregate throughput. The illustrative measurements below are for the 8-billion-parameter model on one GPU priced at $4.00 per hour, generating a 400-token response.</p>
+<table>
+<thead>
+<tr>
+<th style="text-align: right;">Batch size</th>
+<th style="text-align: right;">Inter-token latency</th>
+<th style="text-align: right;">Aggregate throughput</th>
+<th style="text-align: right;">Time for a 400-token response</th>
+<th style="text-align: right;">Cost per million tokens</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: right;">1</td>
+<td style="text-align: right;">20 ms</td>
+<td style="text-align: right;">50 tokens/s</td>
+<td style="text-align: right;">8 s</td>
+<td style="text-align: right;">$22.22</td>
+</tr>
+<tr>
+<td style="text-align: right;">8</td>
+<td style="text-align: right;">25 ms</td>
+<td style="text-align: right;">320 tokens/s</td>
+<td style="text-align: right;">10 s</td>
+<td style="text-align: right;">$3.47</td>
+</tr>
+<tr>
+<td style="text-align: right;">32</td>
+<td style="text-align: right;">40 ms</td>
+<td style="text-align: right;">800 tokens/s</td>
+<td style="text-align: right;">16 s</td>
+<td style="text-align: right;">$1.39</td>
+</tr>
+<tr>
+<td style="text-align: right;">64</td>
+<td style="text-align: right;">70 ms</td>
+<td style="text-align: right;">914 tokens/s</td>
+<td style="text-align: right;">28 s</td>
+<td style="text-align: right;">$1.22</td>
+</tr>
+<tr>
+<td style="text-align: right;">128</td>
+<td style="text-align: right;">140 ms</td>
+<td style="text-align: right;">914 tokens/s</td>
+<td style="text-align: right;">56 s</td>
+<td style="text-align: right;">$1.22</td>
+</tr>
+</tbody>
+</table>
+<p>Read down the throughput column: moving from batch 1 to batch 32 multiplies output sixteenfold while the response takes only twice as long, which is why the cost per million tokens falls by a factor of sixteen. Past batch 64 the GPU's compute is saturated, so throughput stops improving while latency keeps doubling. Batch 128 is also unusable here, since it exceeds the 120-request memory ceiling at 4,000-token contexts.</p>
+<p>Suppose the product requires a 400-token response within 20 seconds. Batch 32 meets that limit (16 s) at $1.39 per million tokens; batch 64 is cheaper but takes 28 s and breaks it. The cheapest batch size is the largest one that still satisfies the latency limit and fits in memory.</p>
+<div class="admonition mascot-tip">
+<p class="admonition-title">Pick the Batch Size From the Latency Limit</p>
+<p><img alt="Ledger with a tip" class="mascot-admonition-img" src="../../img/mascot/tip.png" />
+Write the latency limit down first, then choose the largest batch that meets it. Starting from "maximum throughput" and checking latency afterward is how teams ship a cheap service nobody can stand to use.</p>
+</div>
+<h4 id="diagram-serving-batch-size-tuner">Diagram: Serving Batch Size Tuner<a class="headerlink" href="#diagram-serving-batch-size-tuner" title="Permanent link">&para;</a></h4>
+<details>
+<summary>Serving Batch Size Tuner</summary>
+<p>Type: microsim
+<strong>sim-id:</strong> serving-batch-tuner<br/>
+<strong>Library:</strong> p5.js<br/>
+<strong>Status:</strong> Specified<br/>
+<strong>Bloom Level:</strong> Apply<br/>
+<strong>Bloom Verb:</strong> solve<br/>
+<strong>Learning Objective:</strong> The learner will solve for the batch size that gives the lowest cost per million tokens while a 400-token response finishes within a stated latency limit and the batch fits in GPU memory.</p>
+<p><strong>Prerequisites:</strong> batch size tuning, concurrency limit, throughput-latency tradeoff, inter-token latency, aggregate throughput, cost per million tokens, GPU memory constraint (all defined in the sections "What Fits in GPU Memory" and "Batching, Concurrency, and the Throughput-Latency Tradeoff" above).</p>
+<p><strong>Evidence of Mastery:</strong> For each of four challenges the learner commits one batch size before any row is highlighted. A commitment is correct when it equals the batch size with the lowest cost per million tokens among the batch sizes that satisfy both the latency limit (response time &lt;= limit) and the memory ceiling (batch size &lt;= 120). When two batch sizes tie on cost, the smaller one is correct. Mastery is 3 of 4 correct on the first attempt. Exploration (changing the selected batch size and reading the readouts) is not evidence.</p>
+<p><strong>Misconceptions:</strong> (1) The largest batch is always the cheapest. (2) Cost keeps falling as batch size rises. (3) A batch that is fast enough on latency must also fit in memory.</p>
+<p><strong>Instructional Rationale:</strong> Apply-level solving needs a procedure practiced against a checkable answer. The learner commits a batch size first, and the exploration mode that follows lets them see why the saturated and memory-limited rows were wrong.</p>
+<p><strong>Content:</strong></p>
+<p>The model is the 8-billion-parameter model on one GPU at $4.00 per hour, generating 400 output tokens per response with a 4,000-token context. The batch sizes the learner can choose are 1, 8, 32, 64 and 128, with these values:</p>
+<table>
+<thead>
+<tr>
+<th>Batch size</th>
+<th>Inter-token latency (ms)</th>
+<th>Aggregate throughput (tokens/s)</th>
+<th>Response time for 400 tokens (s)</th>
+<th>Cost per million tokens (USD)</th>
+<th>Fits in memory at 4,000-token context</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>1</td>
+<td>20</td>
+<td>50</td>
+<td>8</td>
+<td>22.22</td>
+<td>Yes</td>
+</tr>
+<tr>
+<td>8</td>
+<td>25</td>
+<td>320</td>
+<td>10</td>
+<td>3.47</td>
+<td>Yes</td>
+</tr>
+<tr>
+<td>32</td>
+<td>40</td>
+<td>800</td>
+<td>16</td>
+<td>1.39</td>
+<td>Yes</td>
+</tr>
+<tr>
+<td>64</td>
+<td>70</td>
+<td>914</td>
+<td>28</td>
+<td>1.22</td>
+<td>Yes</td>
+</tr>
+<tr>
+<td>128</td>
+<td>140</td>
+<td>914</td>
+<td>56</td>
+<td>1.22</td>
+<td>No (ceiling is 120)</td>
+</tr>
+</tbody>
+</table>
+<p>The four challenges, in this order:</p>
+<table>
+<thead>
+<tr>
+<th>#</th>
+<th>Latency limit for a 400-token response</th>
+<th>Correct batch size</th>
+<th>Why (shown as feedback)</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>1</td>
+<td>10 s</td>
+<td>8</td>
+<td>Batch 8 takes 10 s, which meets a limit of 10 s or less; batch 32 takes 16 s and breaks it.</td>
+</tr>
+<tr>
+<td>2</td>
+<td>20 s</td>
+<td>32</td>
+<td>Batch 32 takes 16 s and costs $1.39; batch 64 is cheaper but takes 28 s and breaks the limit.</td>
+</tr>
+<tr>
+<td>3</td>
+<td>30 s</td>
+<td>64</td>
+<td>Batch 64 takes 28 s and costs $1.22, the lowest cost among batch sizes that meet the limit.</td>
+</tr>
+<tr>
+<td>4</td>
+<td>60 s</td>
+<td>64</td>
+<td>Batch 128 meets the latency limit at 56 s but does not fit in memory, and it costs the same $1.22 because throughput is already saturated.</td>
+</tr>
+</tbody>
+</table>
+<p><strong>Provenance:</strong> Illustrative values, which the sim must label "illustrative", chosen to be consistent with the arithmetic in the chapter section "Batching, Concurrency, and the Throughput-Latency Tradeoff". Cost per million tokens is computed from the Rules and rounded to the cent. The memory ceiling of 120 comes from the chapter's worked example in "What Fits in GPU Memory".</p>
+<p><strong>Rules:</strong> Aggregate throughput = batch size ÷ inter-token latency (in seconds). Response time = 400 × inter-token latency. Cost per million tokens = ($4.00 ÷ 3,600) ÷ aggregate throughput × 1,000,000. A batch size is feasible when response time &lt;= the latency limit and batch size &lt;= 120. The correct answer is the feasible batch size with the lowest cost; ties go to the smaller batch size. If no batch size is feasible, the sim reports "no feasible batch size" (cannot occur with the four limits above because batch size 1 takes 8 s).</p>
+<p><strong>Learner Activity:</strong></p>
+<ol>
+<li>The learner reads the latency limit for the current challenge and the table of five batch sizes with all readouts visible.</li>
+<li>The learner chooses one batch size and presses Commit.</li>
+<li>The sim marks the chosen row and shows whether it was correct, with the feedback text.</li>
+<li>After four challenges, exploration mode unlocks: the learner picks any latency limit from 8 s to 60 s in steps of 1 s (default 20 s) and any context length from 2,000 to 8,000 tokens in steps of 2,000 (default 4,000); the sim marks every batch size as feasible or not and highlights the correct answer. The memory ceiling is 240 at 2,000 tokens, 120 at 4,000, 80 at 6,000 and 60 at 8,000.</li>
+<li>The learner should notice that raising the context length removes the larger batch sizes from the feasible set even when the latency limit is generous.</li>
+</ol>
+<p><strong>Feedback:</strong> Four challenges, fixed order, two attempts each. Correct: "Correct: batch <n> takes <t> s and costs $<c> per million tokens." Incorrect on the first attempt: the "Why" text for that challenge. After a second wrong attempt the correct row is highlighted with the "Why" text and the challenge counts as missed. A running count "Challenges correct on first attempt: n of 4" is shown.</p>
+<p><strong>Starting State:</strong> Challenge 1 is shown with no row selected. The question on screen is "Which batch size is cheapest while a 400-token response still finishes within 10 seconds?"</p>
+<p><strong>Chapter Anchors:</strong> The chapter states a $4.00 per hour GPU, a 400-token response, five batch sizes (1, 8, 32, 64, 128), a cost of $22.22 at batch 1 and $1.22 at batches 64 and 128, a 20-second example whose answer is batch 32 at $1.39, and a memory ceiling of 120 simultaneous 4,000-token requests.</p>
+</details>
+<h3 id="sizing-for-demand-peak-provisioning-and-capacity-planning">Sizing for Demand: Peak Provisioning and Capacity Planning<a class="headerlink" href="#sizing-for-demand-peak-provisioning-and-capacity-planning" title="Permanent link">&para;</a></h3>
+<p>Knowing what one inference server can do, you can ask how many you need. <strong>Peak load provisioning</strong> is the practice of sizing capacity for the highest expected demand rather than the average, so that service quality holds during spikes. It is safe and expensive: every instance you add for the peak sits idle the rest of the day, which is the idle capacity cost from Chapter 5. <strong>Capacity planning</strong> is the wider, forward-looking process of estimating future compute, storage, and throughput needs, then provisioning to balance idle cost against the risk of running short. It draws on historical utilization and on spend forecasts, a technique Chapter 10 develops.</p>
+<p>The worked example below chains the earlier arithmetic into a sizing decision. Each inference server runs at batch 32, producing 800 tokens per second (from the previous table). An average response is 400 tokens, so one server completes two responses per second. The team keeps utilization at or below 80% at peak, so a latency spike does not become an outage. Demand is 5 requests per second for 4 hours each day, and 1 request per second the other 20 hours.</p>
+<table>
+<thead>
+<tr>
+<th>Step</th>
+<th>Calculation</th>
+<th>Result</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Peak token demand</td>
+<td>5 requests/s × 400 tokens</td>
+<td>2,000 tokens/s</td>
+</tr>
+<tr>
+<td>Usable capacity per server</td>
+<td>800 tokens/s × 80%</td>
+<td>640 tokens/s</td>
+</tr>
+<tr>
+<td>Servers for the peak</td>
+<td>2,000 ÷ 640 = 3.13, rounded up</td>
+<td>4</td>
+</tr>
+<tr>
+<td>Servers for off-peak</td>
+<td>1 request/s × 400 = 400 tokens/s; 400 ÷ 640 = 0.63, rounded up</td>
+<td>1</td>
+</tr>
+<tr>
+<td>Cost, 4 servers around the clock</td>
+<td>4 × 720 hours × $4.00</td>
+<td>$11,520 per month</td>
+</tr>
+<tr>
+<td>Cost, 1 server always on plus 3 added for peak hours</td>
+<td>1 × 720 × $4.00 + 3 × (4 hours × 30 days) × $4.00 = $2,880 + $1,440</td>
+<td>$4,320 per month</td>
+</tr>
+<tr>
+<td>Average utilization if provisioned for the peak all day</td>
+<td>mean demand 667 tokens/s ÷ (4 × 800 = 3,200 tokens/s)</td>
+<td>about 21%</td>
+</tr>
+</tbody>
+</table>
+<p>Provisioning for the peak around the clock costs $7,200 a month more than adding capacity only when it is needed, which is 62.5% of the peak-provisioned bill, and runs at about 21% utilization. The elastic plan is not free of risk: the three added servers must start before the spike (a warm pool, from Chapter 5), and the team must confirm that traffic really follows the schedule.</p>
+<div class="admonition mascot-warning">
+<p class="admonition-title">Peak Is the Right Size Only for the Peak</p>
+<p><img alt="Ledger warning" class="mascot-admonition-img" src="../../img/mascot/warning.png" />
+A fleet sized for the busiest hour will look wasteful on every utilization report for the other twenty. Pair the peak number with a schedule or an autoscaling rule from day one, so finance sees a plan rather than a surprise.</p>
+</div>
+<h4 id="diagram-peak-capacity-planner">Diagram: Peak Capacity Planner<a class="headerlink" href="#diagram-peak-capacity-planner" title="Permanent link">&para;</a></h4>
+<details>
+<summary>Peak Capacity Planner</summary>
+<p>Type: microsim
+<strong>sim-id:</strong> peak-capacity-planner<br/>
+<strong>Library:</strong> p5.js<br/>
+<strong>Status:</strong> Specified<br/>
+<strong>Bloom Level:</strong> Apply<br/>
+<strong>Bloom Verb:</strong> calculate<br/>
+<strong>Learning Objective:</strong> The learner will calculate the number of inference servers needed for a stated peak request rate and utilization ceiling, and the monthly cost of provisioning for the peak around the clock, to the nearest whole server and dollar.</p>
+<p><strong>Prerequisites:</strong> inference server, peak load provisioning, capacity planning, idle capacity cost, utilization (all defined above or in Chapter 5).</p>
+<p><strong>Evidence of Mastery:</strong> For each of three scenarios the learner types the number of servers and the monthly cost of running that many servers around the clock before the sim reveals the model answer. A response is correct when the server count equals the model count and the cost equals the model cost within $1. Mastery is 3 of 3 correct on the first attempt. Exploration of the elastic plan is not evidence.</p>
+<p><strong>Misconceptions:</strong> (1) Servers needed = peak tokens ÷ raw capacity, with no utilization ceiling. (2) Rounding down is acceptable. (3) A peak-sized fleet has high average utilization.</p>
+<p><strong>Instructional Rationale:</strong> Apply-level calculation needs a checked procedure. Committing numbers before the reveal surfaces the rounding and headroom errors, and the exploration mode then lets the learner see how schedule changes alter the elastic plan.</p>
+<p><strong>Content:</strong></p>
+<p>Fixed facts shown in every scenario: each server produces 800 tokens per second, an average response is 400 tokens, a server costs $4.00 per hour, a month has 30 days of 24 hours (720 hours).</p>
+<table>
+<thead>
+<tr>
+<th>#</th>
+<th>Peak requests per second</th>
+<th>Utilization ceiling</th>
+<th>Model server count</th>
+<th>Model monthly cost (peak-provisioned)</th>
+<th>Why (shown as feedback)</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>1</td>
+<td>5</td>
+<td>80%</td>
+<td>4</td>
+<td>$11,520</td>
+<td>5 × 400 = 2,000 tokens/s; 2,000 ÷ (800 × 0.80 = 640) = 3.13, rounded up to 4; 4 × 720 × $4.00 = $11,520.</td>
+</tr>
+<tr>
+<td>2</td>
+<td>2</td>
+<td>80%</td>
+<td>2</td>
+<td>$5,760</td>
+<td>2 × 400 = 800 tokens/s; 800 ÷ 640 = 1.25, rounded up to 2; 2 × 720 × $4.00 = $5,760.</td>
+</tr>
+<tr>
+<td>3</td>
+<td>8</td>
+<td>80%</td>
+<td>5</td>
+<td>$14,400</td>
+<td>8 × 400 = 3,200 tokens/s; 3,200 ÷ 640 = 5.00, exactly 5; 5 × 720 × $4.00 = $14,400.</td>
+</tr>
+</tbody>
+</table>
+<p><strong>Provenance:</strong> Server throughput of 800 tokens per second comes from the chapter's batch table (batch 32). The other values are illustrative and the sim must label them "illustrative". Costs are computed from the Rules.</p>
+<p><strong>Rules:</strong> Servers = ceiling(peak requests per second × 400 ÷ (800 × utilization ceiling)). Peak-provisioned monthly cost = servers × 720 × hourly price. In exploration, the elastic monthly cost = off-peak servers × 720 × hourly price + (peak servers − off-peak servers) × peak hours per day × 30 × hourly price, where off-peak servers is computed by the same formula from the off-peak rate. Quantities the learner can change in exploration:</p>
+<table>
+<thead>
+<tr>
+<th>Quantity</th>
+<th>Min</th>
+<th>Max</th>
+<th>Step</th>
+<th>Default</th>
+<th>Unit</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Peak requests per second</td>
+<td>1</td>
+<td>10</td>
+<td>1</td>
+<td>5</td>
+<td>requests/s</td>
+</tr>
+<tr>
+<td>Off-peak requests per second</td>
+<td>0</td>
+<td>peak value</td>
+<td>1</td>
+<td>1</td>
+<td>requests/s</td>
+</tr>
+<tr>
+<td>Peak hours per day</td>
+<td>1</td>
+<td>12</td>
+<td>1</td>
+<td>4</td>
+<td>hours</td>
+</tr>
+<tr>
+<td>Utilization ceiling</td>
+<td>50</td>
+<td>90</td>
+<td>10</td>
+<td>80</td>
+<td>percent</td>
+</tr>
+<tr>
+<td>Hourly price</td>
+<td>2</td>
+<td>8</td>
+<td>1</td>
+<td>4</td>
+<td>USD per hour</td>
+</tr>
+</tbody>
+</table>
+<p>If the off-peak rate is 0, off-peak servers is 0 and the elastic plan has no always-on server (the sim notes that this gives cold starts).</p>
+<p><strong>Learner Activity:</strong></p>
+<ol>
+<li>The learner reads the scenario and types a server count and a monthly cost.</li>
+<li>The learner presses Check. The sim shows the model answer and the "Why" text beside the learner's numbers.</li>
+<li>After three scenarios, exploration unlocks. The learner changes the five quantities and watches the peak-provisioned cost, the elastic cost, the saving, and the average utilization of the peak-provisioned fleet update together.</li>
+<li>The learner should notice that shortening the peak window widens the gap between the two plans.</li>
+</ol>
+<p><strong>Feedback:</strong> Three scenarios, fixed order, two attempts each. Correct: "Correct: <servers> servers, $<cost> per month." Incorrect first attempt: the "Why" text with the arithmetic. After the second wrong attempt the model answer is shown and the scenario counts as missed. A running count "Scenarios correct on first attempt: n of 3" is shown.</p>
+<p><strong>Starting State:</strong> Scenario 1 with empty answer boxes. The question on screen is "How many servers do you need for a peak of 5 requests per second, and what do they cost per month if they run all month?"</p>
+<p><strong>Chapter Anchors:</strong> The chapter states 800 tokens per second per server at batch 32, 400-token responses, an 80% utilization ceiling, a peak of 5 requests per second for 4 hours and 1 request per second otherwise, 4 servers for the peak at $11,520 per month, an elastic plan at $4,320 per month, a saving of $7,200 per month (62.5%), and about 21% average utilization.</p>
+</details>
+<h4 id="infrastructure-as-code">Infrastructure as Code<a class="headerlink" href="#infrastructure-as-code" title="Permanent link">&para;</a></h4>
+<p>Capacity decisions only help if every environment actually matches them. <strong>Infrastructure as code</strong> is the practice of defining compute, network, and storage resources in machine-readable configuration files, rather than clicking through a console, so deployments are repeatable and version-controlled. For cost control its value is direct: the instance type, minimum and maximum counts, region, and cost-allocation tags live in a file that is reviewed like any other change, so a sizing decision becomes a code review rather than an undocumented console edit.</p>
+<p>The fragment below is illustrative YAML, not the syntax of any particular tool. Four fields matter for cost: <code>accelerator</code> selects the hardware, <code>min_instances</code> and <code>max_instances</code> bound the autoscaler (the minimum is your always-on floor, billed whether or not traffic arrives), and <code>tags.cost_center</code> tells the billing system whom to charge.</p>
+<div class="language-yaml highlight"><pre><span></span><code><span id="__span-0-1"><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a><span class="nt">inference_service</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">support-assistant</span>
+</span><span id="__span-0-2"><a id="__codelineno-0-2" name="__codelineno-0-2" href="#__codelineno-0-2"></a><span class="nt">accelerator</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">gpu-80gb</span>
+</span><span id="__span-0-3"><a id="__codelineno-0-3" name="__codelineno-0-3" href="#__codelineno-0-3"></a><span class="nt">region</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">us-east</span>
+</span><span id="__span-0-4"><a id="__codelineno-0-4" name="__codelineno-0-4" href="#__codelineno-0-4"></a><span class="nt">min_instances</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">1</span>
+</span><span id="__span-0-5"><a id="__codelineno-0-5" name="__codelineno-0-5" href="#__codelineno-0-5"></a><span class="nt">max_instances</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">4</span>
+</span><span id="__span-0-6"><a id="__codelineno-0-6" name="__codelineno-0-6" href="#__codelineno-0-6"></a><span class="nt">max_utilization</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">0.80</span>
+</span><span id="__span-0-7"><a id="__codelineno-0-7" name="__codelineno-0-7" href="#__codelineno-0-7"></a><span class="nt">tags</span><span class="p">:</span>
+</span><span id="__span-0-8"><a id="__codelineno-0-8" name="__codelineno-0-8" href="#__codelineno-0-8"></a><span class="w">  </span><span class="nt">cost_center</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">customer-support</span>
+</span><span id="__span-0-9"><a id="__codelineno-0-9" name="__codelineno-0-9" href="#__codelineno-0-9"></a><span class="w">  </span><span class="nt">environment</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">production</span>
+</span></code></pre></div>
+<p>This file encodes the elastic plan from the previous section: one always-on server, three more available for peaks, and a charge-back tag. Changing <code>min_instances</code> from 1 to 4 is a one-line diff that adds $7,200 a month, which is exactly the kind of change a reviewer should see before it ships.</p>
+<h3 id="where-to-run-it-regions-edge-and-hybrid">Where to Run It: Regions, Edge, and Hybrid<a class="headerlink" href="#where-to-run-it-regions-edge-and-hybrid" title="Permanent link">&para;</a></h3>
+<p>So far the workload has lived in one data center. Three alternatives change both the cost and the risk profile.</p>
+<p><strong>Multi-region deployment</strong> runs the same model in more than one geographic region at once. Teams choose it to cut latency for distributed users or to satisfy data residency obligations that require data to be processed in a given jurisdiction. Its costs are structural: every region needs its own always-on floor, so two regions double the minimum bill, and replicating data and models between regions adds data transfer charges. In our example, a floor of one server per region across two regions costs $5,760 a month against $2,880 for one. Latency is a weaker reason than it appears: a trans-Atlantic network round trip adds on the order of 100 milliseconds, small beside the 16-second generation time in the batch table, though it matters more for the delay before the first token appears. Residency rules are the more common real driver.</p>
+<p><strong>Edge deployment</strong> runs inference near where data is produced or consumed, for example on a user's device or a local gateway, instead of in a central data center. A 3-billion-parameter model quantized to 4 bits is about 1.5 GB (3 billion × 0.5 byte), small enough for a laptop or phone, and it removes the per-query cloud charge and the network egress for that traffic. The limits are the mirror image: edge hardware is much smaller than a data-center accelerator, so only compact models fit, and the team must distribute and update model files across many devices.</p>
+<p><strong>Hybrid cloud strategy</strong> combines on-premises hardware with cloud resources and routes each workload to whichever suits it. A common pattern runs the steady baseline on owned or reserved capacity, where the fixed cost is amortized over high utilization, and bursts into cloud capacity for spikes. Organizations also adopt it to limit dependence on a single vendor while keeping cloud elasticity.</p>
+<table>
+<thead>
+<tr>
+<th>Approach</th>
+<th>Main reason to choose it</th>
+<th>Main added cost or limit</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Single region</td>
+<td>Simplest and cheapest</td>
+<td>One geography, one failure domain</td>
+</tr>
+<tr>
+<td>Multi-region</td>
+<td>Latency for distant users, data residency, resilience</td>
+<td>Duplicate always-on floors, data transfer</td>
+</tr>
+<tr>
+<td>Edge</td>
+<td>Offline use, data stays on device, no per-query cloud charge</td>
+<td>Small models only, fleet updates</td>
+</tr>
+<tr>
+<td>Hybrid cloud</td>
+<td>Cheap steady baseline plus elastic bursts, less vendor dependence</td>
+<td>Operating two environments</td>
+</tr>
+</tbody>
+</table>
+<h4 id="diagram-deployment-placement-sorter">Diagram: Deployment Placement Sorter<a class="headerlink" href="#diagram-deployment-placement-sorter" title="Permanent link">&para;</a></h4>
+<details>
+<summary>Deployment Placement Sorter</summary>
+<p>Type: microsim
+<strong>sim-id:</strong> deployment-placement-sorter<br/>
+<strong>Library:</strong> p5.js<br/>
+<strong>Status:</strong> Specified<br/>
+<strong>Bloom Level:</strong> Analyze<br/>
+<strong>Bloom Verb:</strong> distinguish<br/>
+<strong>Learning Objective:</strong> The learner will distinguish which of four placement approaches (single region, multi-region, edge, hybrid cloud) best fits each of eight workload descriptions, by matching the deciding requirement in each description.</p>
+<p><strong>Prerequisites:</strong> multi-region deployment, edge deployment, hybrid cloud strategy, data residency, always-on floor (all defined in the section "Where to Run It: Regions, Edge, and Hybrid" above).</p>
+<p><strong>Evidence of Mastery:</strong> The learner assigns each of eight scenario cards to one of four bins and commits the assignment. An assignment is correct when it matches the answer column in Content. Mastery is 7 of 8 correct on the first attempt.</p>
+<p><strong>Misconceptions:</strong> (1) Multi-region is the default choice for reliability and always worth its cost. (2) Edge deployment is suitable for any model size. (3) Hybrid cloud is only about cost, not control or vendor dependence.</p>
+<p><strong>Instructional Rationale:</strong> Analyze-level distinction requires the learner to pick out the deciding requirement in a description and match it to an approach, which a sorting task with explained feedback makes explicit.</p>
+<p><strong>Content:</strong></p>
+<table>
+<thead>
+<tr>
+<th>#</th>
+<th>Scenario card shown to the learner</th>
+<th>Correct bin</th>
+<th>Why (shown as feedback)</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>1</td>
+<td>An internal summarizer used by one office in one country, tolerant of a delay of several seconds.</td>
+<td>Single region</td>
+<td>No distance, residency or resilience requirement justifies a second always-on floor.</td>
+</tr>
+<tr>
+<td>2</td>
+<td>A bank must process customer data inside two countries, each of which forbids moving it abroad.</td>
+<td>Multi-region</td>
+<td>Residency rules require processing in each jurisdiction, accepting two always-on floors.</td>
+</tr>
+<tr>
+<td>3</td>
+<td>A field-inspection app must classify photos with no network connection.</td>
+<td>Edge</td>
+<td>Offline use requires the model on the device.</td>
+</tr>
+<tr>
+<td>4</td>
+<td>A retailer runs a steady 2 million queries a day on owned servers and sends only holiday spikes to a cloud provider.</td>
+<td>Hybrid cloud</td>
+<td>Owned hardware is cheapest at steady load; cloud absorbs bursts.</td>
+</tr>
+<tr>
+<td>5</td>
+<td>A consumer app has users on three continents and needs the first token to appear quickly everywhere.</td>
+<td>Multi-region</td>
+<td>Placing capacity near users cuts the delay before the first token.</td>
+</tr>
+<tr>
+<td>6</td>
+<td>A hospital wants a 3-billion-parameter 4-bit model to run on clinicians' tablets so patient notes never leave the device.</td>
+<td>Edge</td>
+<td>Data stays on the device and the model is small enough to fit.</td>
+</tr>
+<tr>
+<td>7</td>
+<td>A company wants to keep a credible exit from its single cloud vendor while retaining elasticity for new projects.</td>
+<td>Hybrid cloud</td>
+<td>Spanning on-premises and cloud limits vendor dependence without giving up elasticity.</td>
+</tr>
+<tr>
+<td>8</td>
+<td>A prototype with 20 users, a weekly demo, and no data restrictions.</td>
+<td>Single region</td>
+<td>Spending on duplicate capacity before demand exists is waste.</td>
+</tr>
+</tbody>
+</table>
+<p><strong>Provenance:</strong> Scenarios are illustrative and the sim must label them "illustrative". The reasons follow the chapter section "Where to Run It: Regions, Edge, and Hybrid".</p>
+<p><strong>Rules:</strong> Each card goes to exactly one bin. Four bins: Single region, Multi-region, Edge, Hybrid cloud. Card order is shuffled with a fixed seed (7) so every learner sees the same order. A commitment is final only after all eight cards are placed and the learner presses Commit.</p>
+<p><strong>Learner Activity:</strong></p>
+<ol>
+<li>The learner reads each card and places it in one of the four bins.</li>
+<li>After placing all eight, the learner presses Commit.</li>
+<li>The sim marks each card correct or incorrect and shows the "Why" text for every incorrect card.</li>
+<li>The learner may then press Retry once; incorrect cards return to the pool and are re-placed, and the retry does not count toward mastery.</li>
+</ol>
+<p><strong>Feedback:</strong> One commitment (first attempt) is scored; one retry is allowed for practice. Correct cards show "Correct: <why>". Incorrect cards show the "Why" text for the correct bin. The score "n of 8 correct on the first attempt" is shown after the commitment.</p>
+<p><strong>Starting State:</strong> All eight cards are in the pool with the four bins empty. The question on screen is "Which approach does each workload need?"</p>
+<p><strong>Chapter Anchors:</strong> The chapter states four approaches (single region, multi-region, edge, hybrid cloud), a floor of $2,880 versus $5,760 for two regions, a 100-millisecond trans-Atlantic round trip, and a 3-billion-parameter 4-bit model of about 1.5 GB.</p>
+</details>
+<h3 id="footprint-compute-energy-and-carbon">Footprint: Compute, Energy, and Carbon<a class="headerlink" href="#footprint-compute-energy-and-carbon" title="Permanent link">&para;</a></h3>
+<p>Dollars are not the only unit infrastructure produces. The <strong>total compute footprint</strong> is the aggregate volume of compute your GenAI workloads consume, measured in GPU-hours or CPU-hours across training, fine-tuning, and inference. It is the physical counterpart of the dollar figures: in the capacity example, the peak-provisioned plan consumes 4 × 720 = 2,880 GPU-hours a month, while the elastic plan consumes 720 + 3 × 120 = 1,080 GPU-hours. The two plans differ in cost and in footprint by the same 62.5%.</p>
+<p>Footprint becomes energy through <strong>energy cost per query</strong>, the electricity expense of processing one inference request, found by dividing the system's power consumption by the number of queries it serves. <strong>Carbon cost of compute</strong> then converts that electricity into estimated greenhouse-gas emissions, using the carbon intensity of the power grid (kilograms of carbon dioxide equivalent per kilowatt-hour). Organizations increasingly report it beside financial cost in sustainability disclosures.</p>
+<p>Three inputs are needed beyond throughput: the GPU's power draw, the data center's overhead factor (called power usage effectiveness, or PUE, the ratio of total facility power to the power reaching the computing equipment), and the electricity price. The example uses 700 W for the GPU under load, a PUE of 1.3, 0.4 kg CO₂e per kWh, and $0.10 per kWh, all illustrative and ignoring the host server's own draw.</p>
+<table>
+<thead>
+<tr>
+<th>Step</th>
+<th>Calculation</th>
+<th>Result</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>GPU time per 400-token response</td>
+<td>400 tokens ÷ 800 tokens/s</td>
+<td>0.5 s</td>
+</tr>
+<tr>
+<td>Energy at the GPU</td>
+<td>700 W × 0.5 s = 350 J = 350 ÷ 3,600 Wh</td>
+<td>0.097 Wh</td>
+</tr>
+<tr>
+<td>Energy including facility overhead</td>
+<td>0.097 Wh × 1.3</td>
+<td>0.126 Wh per query</td>
+</tr>
+<tr>
+<td>Electricity cost per 10 million queries</td>
+<td>0.126 Wh × 10,000,000 = 1,264 kWh × $0.10</td>
+<td>about $126</td>
+</tr>
+<tr>
+<td>Carbon per 10 million queries</td>
+<td>1,264 kWh × 0.4 kg per kWh</td>
+<td>about 506 kg CO₂e</td>
+</tr>
+<tr>
+<td>GPU rental for the same queries</td>
+<td>4 billion tokens × $1.39 per million</td>
+<td>about $5,560</td>
+</tr>
+</tbody>
+</table>
+<p>The comparison in the last row is the point. Electricity is about 2% of what the rented GPU costs, so for a team renting cloud capacity, energy is not a lever on the dollar bill. It matters for an on-premises fleet, where you pay the electric bill directly, and for any organization that reports emissions; there, the number you can act on is the footprint, because fewer GPU-hours means proportionally less energy and carbon.</p>
+<h3 id="watching-the-spend-monitoring-alerts-and-dashboards">Watching the Spend: Monitoring, Alerts, and Dashboards<a class="headerlink" href="#watching-the-spend-monitoring-alerts-and-dashboards" title="Permanent link">&para;</a></h3>
+<p>A well-sized deployment still drifts: traffic grows, a retry loop multiplies requests, a developer leaves a test fleet running. <strong>Infrastructure monitoring</strong> is the continuous collection and display of operational metrics for the systems that run your workloads. For a GenAI deployment the most useful signals are:</p>
+<ul>
+<li>GPU utilization and GPU memory in use, the direct measures of idle capacity and of how close you are to the memory ceiling</li>
+<li>Request queue depth and 95th-percentile latency, which show whether the concurrency limit is being hit</li>
+<li>Error and timeout rates, which often rise before a capacity problem becomes visible to users</li>
+<li>Instance count over time, the number that most closely tracks the compute bill</li>
+</ul>
+<p>Monitoring tells you what the system is doing. <strong>Cost alerting</strong> turns spending into a signal: automated notifications that fire when spend or usage crosses a defined level, so people respond before costs run further. That level is the <strong>budget threshold</strong>, a predefined spend or usage figure that triggers a notification or an automated control such as throttling. Thresholds are usually set as percentages of an approved budget, for example 50%, 80%, and 100%.</p>
+<p>Absolute thresholds have a blind spot, shown by the worked example below. A team has a monthly infrastructure budget of $12,000 and normally spends $330 a day. On day 10 a runaway batch job pushes daily spend to $700 and nobody notices. Cumulative spend is $2,970 through day 9, and $700 more each day after.</p>
+<table>
+<thead>
+<tr>
+<th>Alert</th>
+<th>Fires when</th>
+<th style="text-align: right;">Day it fires</th>
+<th style="text-align: right;">Cumulative spend that day</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Forecast alert</td>
+<td>Projected month-end spend (cumulative ÷ day × 30) reaches $12,000</td>
+<td style="text-align: right;">12</td>
+<td style="text-align: right;">$5,070</td>
+</tr>
+<tr>
+<td>50% threshold</td>
+<td>Cumulative spend reaches $6,000</td>
+<td style="text-align: right;">14</td>
+<td style="text-align: right;">$6,470</td>
+</tr>
+<tr>
+<td>80% threshold</td>
+<td>Cumulative spend reaches $9,600</td>
+<td style="text-align: right;">19</td>
+<td style="text-align: right;">$9,970</td>
+</tr>
+<tr>
+<td>100% threshold</td>
+<td>Cumulative spend reaches $12,000</td>
+<td style="text-align: right;">22</td>
+<td style="text-align: right;">$12,070</td>
+</tr>
+</tbody>
+</table>
+<p>The 100% alert fires on day 22, with 8 days left and the budget already gone. By month end the team would have spent $17,670, which is $5,670 over. The forecast alert, which extrapolates the current average to the month's end, fires on day 12, ten days earlier, because it reacts to the rate rather than the total. On day 11 the projection is $11,918, just under the line; on day 12 it is $12,675.</p>
+<div class="admonition mascot-warning">
+<p class="admonition-title">A Total Alone Is Always Late</p>
+<p><img alt="Ledger warning" class="mascot-admonition-img" src="../../img/mascot/warning.png" />
+An alert on cumulative spend can only fire after the money is spent. Add at least one rate-based alert, such as a forecast against the month-end budget, and make sure each alert names an owner who can act on it.</p>
+</div>
+<h4 id="diagram-budget-burn-alert-simulator">Diagram: Budget Burn Alert Simulator<a class="headerlink" href="#diagram-budget-burn-alert-simulator" title="Permanent link">&para;</a></h4>
+<details>
+<summary>Budget Burn Alert Simulator</summary>
+<p>Type: microsim
+<strong>sim-id:</strong> budget-burn-alert-simulator<br/>
+<strong>Library:</strong> p5.js<br/>
+<strong>Status:</strong> Specified<br/>
+<strong>Bloom Level:</strong> Apply<br/>
+<strong>Bloom Verb:</strong> calculate<br/>
+<strong>Learning Objective:</strong> The learner will calculate the day on which each of four cost alerts (50%, 80%, 100% of budget, and month-end forecast) fires for a month with a runaway daily spend, to the exact day.</p>
+<p><strong>Prerequisites:</strong> cost alerting, budget threshold, cumulative spend, projected month-end spend (all defined in the section "Watching the Spend" above).</p>
+<p><strong>Evidence of Mastery:</strong> For each of the four alerts the learner types a day number before the sim plays the month. An answer is correct when it equals the day computed by the Rules. Mastery is 4 of 4 correct, with at most one wrong attempt across the four. Exploration is not evidence.</p>
+<p><strong>Misconceptions:</strong> (1) The 100% alert gives enough warning. (2) A forecast alert fires at the same time as the 50% alert. (3) Spend that is normal for 9 days means the month is on budget.</p>
+<p><strong>Instructional Rationale:</strong> Apply-level calculation requires the learner to run the threshold and forecast rules on a series. Committing days first exposes the difference between a total-based and a rate-based alert, and playing the month afterward shows the consequence.</p>
+<p><strong>Content:</strong></p>
+<p>A 30-day month with a $12,000 budget. Daily spend is $330 on days 1 through 9 and $700 on days 10 through 30. Cumulative spend is $2,970 at the end of day 9, so cumulative spend on day d &gt;= 10 is 2,970 + 700 × (d − 9).</p>
+<table>
+<thead>
+<tr>
+<th>Alert</th>
+<th>Rule</th>
+<th>Correct day</th>
+<th>Cumulative spend on that day</th>
+<th>Why (shown as feedback)</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Forecast</td>
+<td>cumulative ÷ d × 30 &gt;= 12,000</td>
+<td>12</td>
+<td>$5,070</td>
+<td>Day 11 projects $11,918, below $12,000; day 12 projects $12,675, which is at or above it.</td>
+</tr>
+<tr>
+<td>50% threshold</td>
+<td>cumulative &gt;= 6,000</td>
+<td>14</td>
+<td>$6,470</td>
+<td>Day 13 totals $5,770, below $6,000; day 14 totals $6,470.</td>
+</tr>
+<tr>
+<td>80% threshold</td>
+<td>cumulative &gt;= 9,600</td>
+<td>19</td>
+<td>$9,970</td>
+<td>Day 18 totals $9,270, below $9,600; day 19 totals $9,970.</td>
+</tr>
+<tr>
+<td>100% threshold</td>
+<td>cumulative &gt;= 12,000</td>
+<td>22</td>
+<td>$12,070</td>
+<td>Day 21 totals $11,370, below $12,000; day 22 totals $12,070.</td>
+</tr>
+</tbody>
+</table>
+<p>End-of-month total with no action: $17,670, which is $5,670 over budget.</p>
+<p><strong>Provenance:</strong> Synthetic data from the generating rule above (no random element); the sim must label it "synthetic". The numbers match the chapter section "Watching the Spend".</p>
+<p><strong>Rules:</strong> An alert fires on the first day d for which its rule is true (&gt;=). Forecast projection = cumulative ÷ d × 30, rounded to the dollar for display. In exploration the learner changes:</p>
+<table>
+<thead>
+<tr>
+<th>Quantity</th>
+<th>Min</th>
+<th>Max</th>
+<th>Step</th>
+<th>Default</th>
+<th>Unit</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Monthly budget</td>
+<td>6,000</td>
+<td>24,000</td>
+<td>1,000</td>
+<td>12,000</td>
+<td>USD</td>
+</tr>
+<tr>
+<td>Normal daily spend</td>
+<td>100</td>
+<td>600</td>
+<td>10</td>
+<td>330</td>
+<td>USD per day</td>
+</tr>
+<tr>
+<td>Runaway daily spend</td>
+<td>100</td>
+<td>1,200</td>
+<td>100</td>
+<td>700</td>
+<td>USD per day</td>
+</tr>
+<tr>
+<td>Runaway start day</td>
+<td>2</td>
+<td>28</td>
+<td>1</td>
+<td>10</td>
+<td>day</td>
+</tr>
+</tbody>
+</table>
+<p>If an alert never fires in the month, the sim shows "does not fire this month".</p>
+<p><strong>Learner Activity:</strong></p>
+<ol>
+<li>The learner reads the month's description and types a day for each of the four alerts.</li>
+<li>The learner presses Check; the sim plays the month day by day, marking each alert on the day it fires, beside the learner's answers.</li>
+<li>After the four checks, exploration unlocks: the learner changes the four quantities and sees all four firing days and the end-of-month total update.</li>
+<li>The learner should notice that the forecast alert moves earlier than every threshold alert whenever spend rises mid-month.</li>
+</ol>
+<p><strong>Feedback:</strong> Four alerts, fixed order, two attempts each. Correct: "Correct: day <d>, cumulative spend $<s>." Incorrect first attempt: the "Why" text for that alert. After a second wrong attempt the correct day is shown with the "Why" text and the alert counts as missed. A running count "Alerts correct: n of 4" is shown.</p>
+<p><strong>Starting State:</strong> The month is shown unplayed, with the budget and the spend pattern stated. The question on screen is "On which day does the forecast alert fire?"</p>
+<p><strong>Chapter Anchors:</strong> The chapter states a $12,000 monthly budget, $330 normal daily spend, $700 runaway spend from day 10, firing days of 12 (forecast), 14, 19 and 22, a month-end total of $17,670 and an overspend of $5,670.</p>
+</details>
+<h4 id="dashboards">Dashboards<a class="headerlink" href="#dashboards" title="Permanent link">&para;</a></h4>
+<p>An <strong>infrastructure cost dashboard</strong> is the visual interface for compute, storage, and networking spend, distinct from the broader cost dashboards of Chapter 13 that also show token and vendor-fee spend. Its job is to support the operational decisions in this chapter. A useful one answers four questions at a glance:</p>
+<table>
+<thead>
+<tr>
+<th>Panel</th>
+<th>Question it answers</th>
+<th>Decision it supports</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Instances and GPU-hours over time</td>
+<td>Is the fleet size tracking demand?</td>
+<td>Capacity planning, autoscaling limits</td>
+</tr>
+<tr>
+<td>Utilization by service</td>
+<td>Where is capacity idle?</td>
+<td>Right-sizing, reserved commitments</td>
+</tr>
+<tr>
+<td>Spend against budget, with forecast</td>
+<td>Will the month end on budget?</td>
+<td>Cost alerting, threshold settings</td>
+</tr>
+<tr>
+<td>Spend by cost-center tag</td>
+<td>Who is responsible for this spend?</td>
+<td>Attribution, showback (Chapter 9)</td>
+</tr>
+</tbody>
+</table>
+<p>The last panel depends on the tags written in the infrastructure-as-code file, which is why the cost-center tag in that fragment matters more than it appears.</p>
+<h3 id="summary-and-quick-check">Summary and Quick Check<a class="headerlink" href="#summary-and-quick-check" title="Permanent link">&para;</a></h3>
+<p>A self-hosted deployment's bill follows from a chain of decisions: the framework and hardware set tokens per GPU-hour; GPU memory sets the ceiling on batch size and concurrency; batch size trades latency for cost; capacity planning turns peak and off-peak demand into server counts; infrastructure as code makes those decisions reviewable; and placement (single region, multi-region, edge, hybrid) adds fixed floors or removes network cost. The footprint translates into energy and carbon, a small dollar cost for cloud renters but a real reporting dimension. Monitoring, rate-based alerts at sensible thresholds, and a tagged dashboard keep the result visible. Chapter 7 turns from the infrastructure to the requests it serves, covering prompt, routing, and retrieval techniques that reduce the tokens each request needs.</p>
+<details class="note">
+<summary>Quick check: why can a cheaper batch size be the wrong choice? - Click to expand</summary>
+<p>Because cost per million tokens is only one constraint. A larger batch lowers the cost but raises each request's response time, and past the memory ceiling it cannot run at all. The right batch size is the cheapest one that still meets the latency limit and fits in GPU memory.</p>
+</details>
+<details class="note">
+<summary>Quick check: why does a forecast alert fire before a 100% threshold alert? - Click to expand</summary>
+<p>A threshold alert reacts to the total already spent, so it fires only after the money is gone. A forecast extrapolates the current daily rate to month end, so it fires as soon as the rate is high enough to exceed the budget, which is days earlier.</p>
+</details>
+<div class="admonition mascot-celebration">
+<p class="admonition-title">You Can Size and Watch a Deployment</p>
+<p><img alt="Ledger celebrating" class="mascot-admonition-img" src="../../img/mascot/celebration.png" />
+You can now work from GPU memory to a batch size, a server count, and a monthly cost, and then set the alerts that catch drift. That is the full chain from a hardware spec to a number a finance reviewer can check.</p>
+</div>
 
 
 
 
 
 
+
+  
+  
 
 
 

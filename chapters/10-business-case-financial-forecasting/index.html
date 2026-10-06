@@ -6,7 +6,7 @@
       <meta charset="utf-8">
       <meta name="viewport" content="width=device-width,initial-scale=1">
       
-        <meta name="description" content="A practical guide to measuring and communicating the return on investment (ROI) of generative AI initiatives in an organization.">
+        <meta name="description" content="Unit economics, benefit categories, baselines and counterfactuals, forecasting, and the appraisal, sensitivity, and scenario techniques used to build and defend a GenAI business case.">
       
       
         <meta name="author" content="Katie Jo Schuman">
@@ -26,7 +26,7 @@
     
     
       
-        <title>10. Business Case Development and Financial Forecasting - Measuring GenAI ROI</title>
+        <title>Business Case Development and Financial Forecasting - Measuring GenAI ROI</title>
       
     
     
@@ -116,7 +116,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              10. Business Case Development and Financial Forecasting
+              Business Case Development and Financial Forecasting
             
           </span>
         </div>
@@ -790,6 +790,114 @@
       Prerequisites
     </span>
   </a>
+  
+    <nav class="md-nav" aria-label="Prerequisites">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#where-the-money-shows-up-financial-statements-and-the-budget-cycle" class="md-nav__link">
+    <span class="md-ellipsis">
+      Where the Money Shows Up: Financial Statements and the Budget Cycle
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#unit-measures-cost-per-query-transaction-and-user" class="md-nav__link">
+    <span class="md-ellipsis">
+      Unit Measures: Cost Per Query, Transaction, and User
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Unit Measures: Cost Per Query, Transaction, and User">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#diagram-unit-cost-metrics-calculator" class="md-nav__link">
+    <span class="md-ellipsis">
+      Diagram: Unit Cost Metrics Calculator
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#what-the-benefit-is-really-made-of" class="md-nav__link">
+    <span class="md-ellipsis">
+      What the Benefit Is Really Made Of
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#the-baseline-and-the-counterfactual" class="md-nav__link">
+    <span class="md-ellipsis">
+      The Baseline and the Counterfactual
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#forecasting-the-numbers-forward" class="md-nav__link">
+    <span class="md-ellipsis">
+      Forecasting the Numbers Forward
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#appraising-the-investment" class="md-nav__link">
+    <span class="md-ellipsis">
+      Appraising the Investment
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Appraising the Investment">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#diagram-sensitivity-tornado-ranker" class="md-nav__link">
+    <span class="md-ellipsis">
+      Diagram: Sensitivity Tornado Ranker
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#assembling-the-business-case" class="md-nav__link">
+    <span class="md-ellipsis">
+      Assembling the Business Case
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#summary-and-quick-check" class="md-nav__link">
+    <span class="md-ellipsis">
+      Summary and Quick Check
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
   
 </li>
       
@@ -1531,6 +1639,114 @@
     </span>
   </a>
   
+    <nav class="md-nav" aria-label="Prerequisites">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#where-the-money-shows-up-financial-statements-and-the-budget-cycle" class="md-nav__link">
+    <span class="md-ellipsis">
+      Where the Money Shows Up: Financial Statements and the Budget Cycle
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#unit-measures-cost-per-query-transaction-and-user" class="md-nav__link">
+    <span class="md-ellipsis">
+      Unit Measures: Cost Per Query, Transaction, and User
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Unit Measures: Cost Per Query, Transaction, and User">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#diagram-unit-cost-metrics-calculator" class="md-nav__link">
+    <span class="md-ellipsis">
+      Diagram: Unit Cost Metrics Calculator
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#what-the-benefit-is-really-made-of" class="md-nav__link">
+    <span class="md-ellipsis">
+      What the Benefit Is Really Made Of
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#the-baseline-and-the-counterfactual" class="md-nav__link">
+    <span class="md-ellipsis">
+      The Baseline and the Counterfactual
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#forecasting-the-numbers-forward" class="md-nav__link">
+    <span class="md-ellipsis">
+      Forecasting the Numbers Forward
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#appraising-the-investment" class="md-nav__link">
+    <span class="md-ellipsis">
+      Appraising the Investment
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Appraising the Investment">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#diagram-sensitivity-tornado-ranker" class="md-nav__link">
+    <span class="md-ellipsis">
+      Diagram: Sensitivity Tornado Ranker
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#assembling-the-business-case" class="md-nav__link">
+    <span class="md-ellipsis">
+      Assembling the Business Case
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#summary-and-quick-check" class="md-nav__link">
+    <span class="md-ellipsis">
+      Summary and Quick Check
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
 </li>
       
     </ul>
@@ -1666,13 +1882,583 @@
 <li><a href="../09-core-financial-roi-vocabulary/">Chapter 9: Core Financial and ROI Vocabulary</a></li>
 </ul>
 <hr />
-<p>TODO: Generate Chapter Content</p>
+<p>Chapter 9 gave you the vocabulary and applied it to one initiative: a generative AI assistant that drafts replies for support agents, with a <span class="arithmatex">\(60,000 investment, net cash flows of +\)</span>30,000, +<span class="arithmatex">\(45,000 and +\)</span>45,000, a 10% discount rate, an NPV of $38,272, and an ROI of 37.5%. A finance leader will now press on exactly where those numbers came from: where the benefit figure came from, how the baseline was measured, how confident you are, and what happens if you are wrong. This chapter builds the case so that it survives those questions. It continues with the same example, adding the operating data behind it.</p>
+<div class="admonition mascot-welcome">
+<p class="admonition-title">Numbers That Survive the Meeting</p>
+<p><img alt="Ledger waving welcome" class="mascot-admonition-img" src="../../img/mascot/welcome.png" />
+A business case is not a spreadsheet; it is a set of numbers you can defend line by line. By the end of this chapter you can show where each number came from, how it moves when assumptions change, and what you would still recommend if you are wrong by 20%. Every token counts, and every assumption gets tested.</p>
+</div>
+<h3 id="where-the-money-shows-up-financial-statements-and-the-budget-cycle">Where the Money Shows Up: Financial Statements and the Budget Cycle<a class="headerlink" href="#where-the-money-shows-up-financial-statements-and-the-budget-cycle" title="Permanent link">&para;</a></h3>
+<p>Finance teams judge an initiative partly by how it appears in their reports, so you need a working picture of two of them. <strong>Financial statement basics</strong> means knowing the two principal reports. The <strong>income statement</strong> summarizes revenues, expenses, and the resulting profit or loss over a period, such as a quarter or a year. The <strong>balance sheet</strong> reports assets, liabilities, and equity at a single date, and the balance sheet basics to remember are that it is a snapshot, not a flow. Operating expenditure goes straight to the income statement in the period it is incurred. Capital expenditure is recorded first as an asset on the balance sheet and reaches the income statement gradually, through the depreciation or amortization of Chapter 9.</p>
+<p>The running example's $60,000 investment, if capitalized and amortized over three years, shows the difference between cash and accounting profit:</p>
+<table>
+<thead>
+<tr>
+<th style="text-align: right;">Year</th>
+<th style="text-align: right;">Benefit</th>
+<th style="text-align: right;">Running cost</th>
+<th style="text-align: right;">Amortization</th>
+<th style="text-align: right;">Effect on operating profit</th>
+<th style="text-align: right;">Asset on balance sheet at year end</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: right;">0</td>
+<td style="text-align: right;">$0</td>
+<td style="text-align: right;">$0</td>
+<td style="text-align: right;">$0</td>
+<td style="text-align: right;">$0</td>
+<td style="text-align: right;">$60,000</td>
+</tr>
+<tr>
+<td style="text-align: right;">1</td>
+<td style="text-align: right;">$60,000</td>
+<td style="text-align: right;">$30,000</td>
+<td style="text-align: right;">$20,000</td>
+<td style="text-align: right;">+$10,000</td>
+<td style="text-align: right;">$40,000</td>
+</tr>
+<tr>
+<td style="text-align: right;">2</td>
+<td style="text-align: right;">$80,000</td>
+<td style="text-align: right;">$35,000</td>
+<td style="text-align: right;">$20,000</td>
+<td style="text-align: right;">+$25,000</td>
+<td style="text-align: right;">$20,000</td>
+</tr>
+<tr>
+<td style="text-align: right;">3</td>
+<td style="text-align: right;">$80,000</td>
+<td style="text-align: right;">$35,000</td>
+<td style="text-align: right;">$20,000</td>
+<td style="text-align: right;">+$25,000</td>
+<td style="text-align: right;">$0</td>
+</tr>
+</tbody>
+</table>
+<p>The profit effects total $60,000, the same as the net cash flows, but the timing differs: year 0 shows no profit effect although $60,000 of cash left, and year 1 shows $10,000 although the cash flow was $30,000. If the investment were instead expensed at once, year 0 would show a $60,000 hit. Knowing this tells you which view your finance partner is looking at when they question a figure.</p>
+<p>The <strong>budget cycle</strong> is the recurring, usually annual or quarterly, process of planning, approving, and reviewing spending. A business case timed to the cycle competes for funding along with every other request; one that arrives after the budget is set must wait for the next cycle or draw on a contingency fund that is usually small. Ask your finance partner for the calendar before you start writing, not after you finish.</p>
+<h3 id="unit-measures-cost-per-query-transaction-and-user">Unit Measures: Cost Per Query, Transaction, and User<a class="headerlink" href="#unit-measures-cost-per-query-transaction-and-user" title="Permanent link">&para;</a></h3>
+<p>Totals hide whether a system is getting more or less efficient, so finance leaders convert them to per-unit measures (Chapter 9 introduced unit economics). Three matter most. <strong>Cost per query</strong> is total token and infrastructure cost divided by the number of queries processed, a very granular measure. <strong>Cost per transaction</strong> is the average total cost to complete one business transaction, such as a resolved support ticket, and is the usual way to compare an automated process with a manual one. <strong>Cost per user</strong> is total cost divided by the number of distinct users of a feature, and normalizes by people rather than requests.</p>
+<p>The running example's operating data: in year 1 the 40 agents handle 120,000 tickets, averaging 6 assistant queries per ticket, or 720,000 queries; in year 2 volume grows to 160,000 tickets and 960,000 queries with the same 40 agents. Total running cost is $30,000 in year 1 and $35,000 in year 2, of which token and platform fees are $18,000 and $22,000.</p>
+<table>
+<thead>
+<tr>
+<th>Measure</th>
+<th style="text-align: right;">Year 1</th>
+<th style="text-align: right;">Year 2</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Cost per transaction (ticket)</td>
+<td style="text-align: right;">$30,000 ÷ 120,000 = $0.250</td>
+<td style="text-align: right;">$35,000 ÷ 160,000 = $0.219</td>
+</tr>
+<tr>
+<td>Cost per query, fully loaded</td>
+<td style="text-align: right;">$30,000 ÷ 720,000 = $0.0417</td>
+<td style="text-align: right;">$35,000 ÷ 960,000 = $0.0365</td>
+</tr>
+<tr>
+<td>Cost per query, fees only</td>
+<td style="text-align: right;">$18,000 ÷ 720,000 = $0.0250</td>
+<td style="text-align: right;">$22,000 ÷ 960,000 = $0.0229</td>
+</tr>
+<tr>
+<td>Cost per user (agent per year)</td>
+<td style="text-align: right;">$30,000 ÷ 40 = $750</td>
+<td style="text-align: right;">$35,000 ÷ 40 = $875</td>
+</tr>
+</tbody>
+</table>
+<p>The table shows two lessons. Cost per query and per ticket fall as volume grows, because fixed costs spread over more units, while cost per user rises, because the total grew and the number of users did not. And the fees-only query cost is only roughly 60% of the fully loaded one, so quoting it as "the" cost per query understates the cost that finance will compare against.</p>
+<p>These measures become <strong>financial KPIs</strong> when you track them over time: key performance indicators expressed in money or financial ratios, such as cost per ticket or ROI, as opposed to operational ones such as latency. A cost-per-ticket target of $0.25 or below, reviewed monthly, gives you an early signal long before the annual review.</p>
+<h4 id="diagram-unit-cost-metrics-calculator">Diagram: Unit Cost Metrics Calculator<a class="headerlink" href="#diagram-unit-cost-metrics-calculator" title="Permanent link">&para;</a></h4>
+<details>
+<summary>Unit Cost Metrics Calculator</summary>
+<p>Type: microsim
+<strong>sim-id:</strong> unit-cost-metrics-calculator<br/>
+<strong>Library:</strong> p5.js<br/>
+<strong>Status:</strong> Specified<br/>
+<strong>Bloom Level:</strong> Apply<br/>
+<strong>Bloom Verb:</strong> calculate<br/>
+<strong>Learning Objective:</strong> The learner will calculate cost per transaction, cost per query, and cost per user from the running example's operating data, distinguishing fully loaded cost from fees only.</p>
+<p><strong>Prerequisites:</strong> cost per query, cost per transaction, cost per user, financial KPI, fully loaded cost (all defined in the section "Unit Measures" above).</p>
+<p><strong>Evidence of Mastery:</strong> For each of five items the learner types a value before the answer is shown. A value is correct when within $0.0005 of the model value for per-ticket and per-query items and within $1 for the per-user item. Mastery is 4 of 5 correct on the first attempt. Exploration is not evidence.</p>
+<p><strong>Misconceptions:</strong> (1) Fees-only cost equals the full cost per query. (2) Cost per user falls whenever cost per ticket falls. (3) Cost per query and cost per transaction are interchangeable.</p>
+<p><strong>Instructional Rationale:</strong> Apply-level calculation needs a procedure and a check. Placing fees-only and fully loaded items side by side makes the denominator and numerator choices explicit.</p>
+<p><strong>Content:</strong></p>
+<table>
+<thead>
+<tr>
+<th></th>
+<th>Year 1</th>
+<th>Year 2</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Tickets</td>
+<td>120,000</td>
+<td>160,000</td>
+</tr>
+<tr>
+<td>Queries</td>
+<td>720,000</td>
+<td>960,000</td>
+</tr>
+<tr>
+<td>Agents (users)</td>
+<td>40</td>
+<td>40</td>
+</tr>
+<tr>
+<td>Total running cost</td>
+<td>$30,000</td>
+<td>$35,000</td>
+</tr>
+<tr>
+<td>Token and platform fees</td>
+<td>$18,000</td>
+<td>$22,000</td>
+</tr>
+</tbody>
+</table>
+<table>
+<thead>
+<tr>
+<th>#</th>
+<th>Item</th>
+<th>Model value</th>
+<th>Why (shown as feedback)</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>1</td>
+<td>Year 1 cost per ticket</td>
+<td>$0.2500</td>
+<td>30,000 ÷ 120,000.</td>
+</tr>
+<tr>
+<td>2</td>
+<td>Year 1 cost per query, fully loaded</td>
+<td>$0.0417</td>
+<td>30,000 ÷ 720,000 = 0.04167, using total running cost.</td>
+</tr>
+<tr>
+<td>3</td>
+<td>Year 2 cost per query, fully loaded</td>
+<td>$0.0365</td>
+<td>35,000 ÷ 960,000 = 0.03646.</td>
+</tr>
+<tr>
+<td>4</td>
+<td>Year 2 cost per query, fees only</td>
+<td>$0.0229</td>
+<td>22,000 ÷ 960,000 = 0.02292; this leaves out maintenance and governance cost.</td>
+</tr>
+<tr>
+<td>5</td>
+<td>Year 2 cost per user (per agent per year)</td>
+<td>$875</td>
+<td>35,000 ÷ 40.</td>
+</tr>
+</tbody>
+</table>
+<p><strong>Provenance:</strong> The data is the chapter's running example; the sim must label it "illustrative". Values are computed from the Rules and rounded to four decimals (per-ticket and per-query) or the dollar (per user).</p>
+<p><strong>Rules:</strong> Cost per ticket = total running cost ÷ tickets. Cost per query = cost ÷ queries, using total running cost for "fully loaded" and token and platform fees for "fees only". Cost per user = total running cost ÷ users. In exploration the learner changes:</p>
+<table>
+<thead>
+<tr>
+<th>Quantity</th>
+<th>Min</th>
+<th>Max</th>
+<th>Step</th>
+<th>Default</th>
+<th>Unit</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Tickets</td>
+<td>80,000</td>
+<td>240,000</td>
+<td>20,000</td>
+<td>120,000</td>
+<td>tickets</td>
+</tr>
+<tr>
+<td>Queries per ticket</td>
+<td>2</td>
+<td>10</td>
+<td>1</td>
+<td>6</td>
+<td>queries</td>
+</tr>
+<tr>
+<td>Agents</td>
+<td>20</td>
+<td>80</td>
+<td>10</td>
+<td>40</td>
+<td>users</td>
+</tr>
+<tr>
+<td>Total running cost</td>
+<td>20,000</td>
+<td>60,000</td>
+<td>5,000</td>
+<td>30,000</td>
+<td>USD</td>
+</tr>
+</tbody>
+</table>
+<p>Queries = tickets × queries per ticket. A denominator of 0 is not reachable within the ranges.</p>
+<p><strong>Learner Activity:</strong></p>
+<ol>
+<li>The learner reads the data table and the first item, types a value, and presses Check.</li>
+<li>The sim shows the model value, the arithmetic, and the "Why" text.</li>
+<li>After five items, exploration unlocks: the learner changes the four quantities and watches the three unit measures update.</li>
+<li>The learner should notice that raising tickets lowers cost per ticket and cost per query but leaves cost per user unchanged.</li>
+</ol>
+<p><strong>Feedback:</strong> Five items, fixed order, two attempts each. Correct: "Correct: $<value>." Incorrect first attempt: the "Why" text. After a second wrong attempt the model value is shown and the item counts as missed. A running count "Correct on first attempt: n of 5" is shown.</p>
+<p><strong>Starting State:</strong> The data table is shown and item 1 has an empty answer box. The question on screen is "What did each ticket cost to handle with the assistant in year 1?"</p>
+<p><strong>Chapter Anchors:</strong> The chapter states 120,000 and 160,000 tickets, 720,000 and 960,000 queries, 40 agents, running costs of $30,000 and $35,000, fees of $18,000 and $22,000, and unit costs of $0.250, $0.219, $0.0417, $0.0365, $0.0250, $0.0229, $750 and $875.</p>
+</details>
+<h3 id="what-the-benefit-is-really-made-of">What the Benefit Is Really Made Of<a class="headerlink" href="#what-the-benefit-is-really-made-of" title="Permanent link">&para;</a></h3>
+<p>The most common weak point in a business case is the benefit line, so it deserves a precise breakdown. A <strong>productivity gain</strong> is an improvement in output per unit of employee time from a GenAI tool. In the example, the assistant saves 1 minute of a 15-minute ticket, making agents about 6.7% faster. <strong>Labor cost savings</strong> convert that gain to money: hours saved multiplied by a fully loaded labor rate (salary plus benefits and overhead). In year 1: 120,000 tickets × 1 minute = 2,000 hours, and 2,000 × $30 per hour = $60,000, the year 1 benefit. In year 2, 160,000 tickets × 1 minute = 160,000 minutes, or about 2,667 hours, and 2,667 × $30 comes to $80,000 (rounded).</p>
+<div class="admonition mascot-warning">
+<p class="admonition-title">Saved Time Is Not Banked Money</p>
+<p><img alt="Ledger warning" class="mascot-admonition-img" src="../../img/mascot/warning.png" />
+Two thousand hours across 40 agents is 50 hours each, about one working week a year, spread in one-minute slices that cannot be sold or laid off. The labor saving counts as money only if the time shows up as reduced spend or redeployed output, so write down which one and who confirms it.</p>
+</div>
+<p>Savings come in two kinds that finance teams treat differently. A <strong>cost reduction</strong> lowers an expense you are currently paying. <strong>Cost avoidance</strong> prevents an expense that would otherwise have occurred in the future, and is measured against a counterfactual rather than a historical actual. <strong>Cost reduction versus avoidance</strong> is the distinction between them, and it matters because reductions can be seen in the ledger while avoidance must be argued. Suppose the year 1 benefit splits as follows:</p>
+<table>
+<thead>
+<tr>
+<th>Benefit</th>
+<th style="text-align: right;">Hours</th>
+<th style="text-align: right;">Value</th>
+<th>Kind</th>
+<th>Evidence a reviewer will want</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Contractor overtime no longer paid</td>
+<td style="text-align: right;">500</td>
+<td style="text-align: right;">$15,000</td>
+<td>Cost reduction</td>
+<td>Overtime payments fall against last year's actual</td>
+</tr>
+<tr>
+<td>Temporary staff not hired to absorb growth</td>
+<td style="text-align: right;">1,500</td>
+<td style="text-align: right;">$45,000</td>
+<td>Cost avoidance</td>
+<td>A documented hiring plan that would have happened without the assistant</td>
+</tr>
+<tr>
+<td><strong>Total</strong></td>
+<td style="text-align: right;"><strong>2,000</strong></td>
+<td style="text-align: right;"><strong>$60,000</strong></td>
+<td></td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<p>Report them in separate lines. Both are legitimate benefits, but the first is verifiable in the ledger and the second rests on a claim about what would have happened, which brings us to counterfactuals below.</p>
+<p>A third category, <strong>revenue impact</strong>, is the change in top-line revenue attributable to the initiative, such as better retention or conversion. It is the hardest to attribute and is usually measured with a control group (Chapter 12). It also needs converting to profit: if faster replies kept an extra 0.5% of 20,000 customers, that is 100 customers; at $400 a year each, $40,000 of revenue, and at a 30% margin only $12,000 of profit. The running example counts no revenue impact, which makes its case conservative.</p>
+<h3 id="the-baseline-and-the-counterfactual">The Baseline and the Counterfactual<a class="headerlink" href="#the-baseline-and-the-counterfactual" title="Permanent link">&para;</a></h3>
+<p>Every saving is a difference from something, and that something must be written down before the initiative starts. A <strong>baseline cost model</strong> is a documented representation of current costs before the initiative, against which savings are measured. In the example, handling a ticket takes 15 minutes at $30 an hour, so the baseline labor cost is $7.50 a ticket, or $900,000 across 120,000 tickets. With the assistant, labor falls to $7.00 and the assistant adds $0.25, so the cost per ticket goes from $7.50 to $7.25, a 3.3% drop.</p>
+<p>A <strong>counterfactual cost estimate</strong> is an estimate of what would have happened without the initiative, used to isolate its true effect from other changes. It matters most when conditions change. In year 2, volume grows to 160,000 tickets. With no assistant, the labor cost would have grown with it, to 160,000 × $7.50 = $1,200,000, not stayed at the year 1 actual of $900,000. If you compared year 2 actuals against year 1, the $300,000 growth would hide part of the saving and might wrongly look like an overrun. The savings must be measured against the $1,200,000 counterfactual.</p>
+<div class="admonition mascot-thinking">
+<p class="admonition-title">Compare Against What Would Have Happened</p>
+<p><img alt="Ledger thinking" class="mascot-admonition-img" src="../../img/mascot/thinking.png" />
+A saving is never a number you can look up; it is the gap between two numbers, and one of them, the counterfactual, is an estimate. Notice that the credibility of the whole case rests on how carefully that estimate is built and documented.</p>
+</div>
+<h3 id="forecasting-the-numbers-forward">Forecasting the Numbers Forward<a class="headerlink" href="#forecasting-the-numbers-forward" title="Permanent link">&para;</a></h3>
+<p><strong>Financial forecasting</strong> is projecting future costs, revenues, or usage from historical data, trends, and assumptions. It differs from the baseline model, which describes the present. Two approaches serve most GenAI cases. A trend forecast extends past values forward, which is quick but fails when something changes. A driver-based forecast models cost from the quantities that cause it, which keeps the assumptions visible and challengeable.</p>
+<p>The running example's fees follow a driver model: a fixed $6,000 a year of platform fees plus $1 for every 60 queries (about $0.0167 per query). That reproduces year 1 (720,000 ÷ 60 = $12,000, plus $6,000 = $18,000) and year 2 (960,000 ÷ 60 = $16,000, plus $6,000 = $22,000). If tickets grow to 200,000 in year 4, queries are 1,200,000, and the model forecasts fees of $20,000 + $6,000 = $26,000. The forecast is only as good as its drivers, so the discipline is to state them, record their source, and revisit the forecast each budget cycle against actuals.</p>
+<h3 id="appraising-the-investment">Appraising the Investment<a class="headerlink" href="#appraising-the-investment" title="Permanent link">&para;</a></h3>
+<p><strong>Investment appraisal</strong> is the discipline of deciding whether an investment is financially worthwhile using NPV, payback, and IRR (Chapter 9). The organization's <strong>hurdle rate</strong> is the minimum return it requires before approving an investment, often set above its cost of capital to allow for risk. An initiative's IRR must exceed it. If the hurdle is 15%, the running example's IRR of about 41% clears it, and its NPV at 15% is $29,702.</p>
+<p>A single set of estimates is a promise, not a forecast. <strong>Risk-adjusted return</strong> modifies a return to reflect the uncertainty of achieving it, typically by raising the discount rate for riskier projects or by discounting the benefits themselves. Using a 25% rate in place of 10% for a first deployment of an unproven tool gives an NPV of $15,840, which is still positive.</p>
+<p>Two techniques show how much the answer depends on the assumptions. <strong>Sensitivity analysis</strong> varies one input at a time to see how much the result changes and which assumptions matter most. For the running example at 10%, with each input moved in the adverse direction:</p>
+<table>
+<thead>
+<tr>
+<th>Change (one at a time)</th>
+<th style="text-align: right;">NPV</th>
+<th style="text-align: right;">Change from base ($38,272)</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Benefits 20% lower</td>
+<td style="text-align: right;">$2,119</td>
+<td style="text-align: right;">−$36,153</td>
+</tr>
+<tr>
+<td>Running costs 20% higher</td>
+<td style="text-align: right;">$21,773</td>
+<td style="text-align: right;">−$16,499</td>
+</tr>
+<tr>
+<td>Investment 20% higher</td>
+<td style="text-align: right;">$26,272</td>
+<td style="text-align: right;">−$12,000</td>
+</tr>
+<tr>
+<td>Discount rate 5 points higher (15%)</td>
+<td style="text-align: right;">$29,702</td>
+<td style="text-align: right;">−$8,570</td>
+</tr>
+</tbody>
+</table>
+<p>The benefit assumption dominates: a 20% shortfall in benefits removes about 94% of the NPV, while no single cost change comes close. That tells you where to spend your validation effort. Combinations are worse: a 20% benefit shortfall measured at a 15% hurdle gives an NPV of −$3,352, and the IRR of the shortfall case is only 11.8%, below a 15% hurdle.</p>
+<p><strong>Scenario analysis</strong> instead evaluates a model under several internally consistent sets of assumptions, such as best, base, and worst case, where several inputs move together as they would in reality. Here the worst case is slow adoption: benefits at 60% of plan and running costs 10% higher. The best case has benefits 20% above plan.</p>
+<table>
+<thead>
+<tr>
+<th>Scenario</th>
+<th style="text-align: right;">Year 1 net</th>
+<th style="text-align: right;">Year 2 net</th>
+<th style="text-align: right;">Year 3 net</th>
+<th style="text-align: right;">NPV at 10%</th>
+<th style="text-align: right;">Probability</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Worst</td>
+<td style="text-align: right;">$3,000</td>
+<td style="text-align: right;">$9,500</td>
+<td style="text-align: right;">$9,500</td>
+<td style="text-align: right;">−$42,284</td>
+<td style="text-align: right;">25%</td>
+</tr>
+<tr>
+<td>Base</td>
+<td style="text-align: right;">$30,000</td>
+<td style="text-align: right;">$45,000</td>
+<td style="text-align: right;">$45,000</td>
+<td style="text-align: right;">$38,272</td>
+<td style="text-align: right;">50%</td>
+</tr>
+<tr>
+<td>Best</td>
+<td style="text-align: right;">$42,000</td>
+<td style="text-align: right;">$61,000</td>
+<td style="text-align: right;">$61,000</td>
+<td style="text-align: right;">$74,425</td>
+<td style="text-align: right;">25%</td>
+</tr>
+</tbody>
+</table>
+<p>Weighting each NPV by its probability gives an expected NPV of <span class="arithmatex">\(27,171, also a form of risk adjustment. The range from −\)</span>42,284 to +$74,425 is the more honest message for a decision maker than the single base-case number.</p>
+<div class="admonition mascot-encourage">
+<p class="admonition-title">Sensitivity and Scenario Are Two Different Questions</p>
+<p><img alt="Ledger encouraging" class="mascot-admonition-img" src="../../img/mascot/encouraging.png" />
+If the two techniques blur together, remember the split: sensitivity moves one assumption to find which matters most, while scenario moves a consistent set together to see what could really happen. Run both, and the weak points of your case show themselves.</p>
+</div>
+<h4 id="diagram-sensitivity-tornado-ranker">Diagram: Sensitivity Tornado Ranker<a class="headerlink" href="#diagram-sensitivity-tornado-ranker" title="Permanent link">&para;</a></h4>
+<details>
+<summary>Sensitivity Tornado Ranker</summary>
+<p>Type: chart
+<strong>sim-id:</strong> sensitivity-tornado-ranker<br/>
+<strong>Library:</strong> Chart.js<br/>
+<strong>Status:</strong> Specified<br/>
+<strong>Bloom Level:</strong> Analyze<br/>
+<strong>Bloom Verb:</strong> differentiate<br/>
+<strong>Learning Objective:</strong> The learner will differentiate which of four input changes reduces the running-example NPV the most, by ranking them from most to least damaging, and will predict whether a combined change makes the NPV negative.</p>
+<p><strong>Prerequisites:</strong> sensitivity analysis, scenario analysis, NPV, hurdle rate (all defined in the section "Appraising the Investment" above).</p>
+<p><strong>Evidence of Mastery:</strong> The learner commits (1) a ranking of the four adverse changes from largest to smallest NPV reduction and (2) a prediction of Positive or Negative for the combined change "benefits 20% lower at a 15% discount rate", both before the chart is revealed. Part 1 is correct when the order matches the "Correct rank" column; part 2 is correct when it matches the model sign. Mastery is both parts correct on the first attempt. Exploration is not evidence.</p>
+<p><strong>Misconceptions:</strong> (1) Costs matter more than benefits in an ROI case. (2) A project that stays positive under each change alone stays positive under a combination. (3) The discount rate is the most influential assumption.</p>
+<p><strong>Instructional Rationale:</strong> Analyze-level work means finding which part of a structure drives the result. Committing a ranking first exposes the learner's intuition about costs versus benefits, and the combination prediction shows why single-input tests are not enough.</p>
+<p><strong>Content:</strong></p>
+<p>Base NPV at 10%: <span class="arithmatex">\(38,272. Base flows: year 0 −\)</span>60,000, year 1 +<span class="arithmatex">\(30,000, year 2 +\)</span>45,000, year 3 +$45,000 (benefits $60,000, $80,000, $80,000; running costs $30,000, $35,000, $35,000; investment $60,000).</p>
+<table>
+<thead>
+<tr>
+<th>Change</th>
+<th>NPV after change</th>
+<th>NPV reduction</th>
+<th>Correct rank</th>
+<th>Why (shown as feedback)</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Benefits 20% lower</td>
+<td>$2,119</td>
+<td>$36,153</td>
+<td>1</td>
+<td>Benefits are the largest cash line, so a 20% change moves the NPV most.</td>
+</tr>
+<tr>
+<td>Running costs 20% higher</td>
+<td>$21,773</td>
+<td>$16,499</td>
+<td>2</td>
+<td>Running costs are smaller than benefits, so the same percentage moves the NPV less.</td>
+</tr>
+<tr>
+<td>Investment 20% higher</td>
+<td>$26,272</td>
+<td>$12,000</td>
+<td>3</td>
+<td>The investment is paid at year 0 and is not discounted, but it is the smallest line.</td>
+</tr>
+<tr>
+<td>Discount rate 5 points higher (15%)</td>
+<td>$29,702</td>
+<td>$8,570</td>
+<td>4</td>
+<td>Discounting shrinks later cash flows, but 5 points changes them by less than a 20% change in the cash lines.</td>
+</tr>
+</tbody>
+</table>
+<p>Combination for part 2: benefits 20% lower at a 15% discount rate gives NPV −$3,352 (Negative).</p>
+<p><strong>Provenance:</strong> Computed from the running example in the chapter; the sim must label the data "illustrative". Values are computed from the Rules and rounded to the dollar.</p>
+<p><strong>Rules:</strong> NPV = sum of net cash flow ÷ (1 + rate)^t over years 0 to 3, where net cash flow = benefit − running cost in years 1 to 3, and −investment in year 0. A percentage change multiplies the named line. In exploration the learner changes:</p>
+<table>
+<thead>
+<tr>
+<th>Quantity</th>
+<th>Min</th>
+<th>Max</th>
+<th>Step</th>
+<th>Default</th>
+<th>Unit</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Benefit change</td>
+<td>−40</td>
+<td>40</td>
+<td>10</td>
+<td>0</td>
+<td>percent</td>
+</tr>
+<tr>
+<td>Running cost change</td>
+<td>−40</td>
+<td>40</td>
+<td>10</td>
+<td>0</td>
+<td>percent</td>
+</tr>
+<tr>
+<td>Investment change</td>
+<td>−40</td>
+<td>40</td>
+<td>10</td>
+<td>0</td>
+<td>percent</td>
+</tr>
+<tr>
+<td>Discount rate</td>
+<td>5</td>
+<td>30</td>
+<td>5</td>
+<td>10</td>
+<td>percent</td>
+</tr>
+</tbody>
+</table>
+<p>NPV is shown with a Positive or Negative label and the IRR of the resulting flows.</p>
+<p><strong>Learner Activity:</strong></p>
+<ol>
+<li>The learner orders the four adverse changes from most to least damaging and predicts the sign of the combined case.</li>
+<li>The learner presses Commit. The sim draws a tornado chart of the four NPV reductions and reveals the combined NPV, with the "Why" text for each rank.</li>
+<li>Exploration unlocks: the learner changes the four quantities and watches the NPV and IRR update.</li>
+<li>The learner should notice that benefits and costs move the NPV in opposite directions, and that benefits dominate.</li>
+</ol>
+<p><strong>Feedback:</strong> One commitment (first attempt) is scored for evidence; a practice retry is allowed afterward. Correct: "Correct order." Incorrect: the "Why" text for every item in the wrong position. The combination is explained with the NPV value. A score "Part 1: correct or incorrect; part 2: correct or incorrect" is shown.</p>
+<p><strong>Starting State:</strong> The four changes are listed unordered, with the base NPV of $38,272 shown. The question on screen is "Which change hurts the NPV most? Rank them, then predict the sign of the combined case."</p>
+<p><strong>Chapter Anchors:</strong> The chapter states a base NPV of $38,272, adverse-change NPVs of $2,119, $21,773, $26,272 and $29,702, reductions of $36,153, $16,499, $12,000 and <span class="arithmatex">\(8,570, a combined NPV of −\)</span>3,352, and an IRR of 11.8% for the benefit shortfall.</p>
+</details>
+<h3 id="assembling-the-business-case">Assembling the Business Case<a class="headerlink" href="#assembling-the-business-case" title="Permanent link">&para;</a></h3>
+<p>A <strong>business case</strong> is a structured document presenting the rationale, expected costs, expected benefits, and risks of a proposed investment, used to justify a funding decision. It packages everything in this chapter and the last. The outline below is the order in which a finance reviewer expects to read it.</p>
+<table>
+<thead>
+<tr>
+<th>Section</th>
+<th>Contents</th>
+<th>Running-example content</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Problem and options</td>
+<td>The need and the alternatives, including doing nothing</td>
+<td>Support cost per ticket is $7.50; alternatives are hiring or no change</td>
+</tr>
+<tr>
+<td>Baseline</td>
+<td>Current costs and the counterfactual</td>
+<td>$7.50 per ticket; $1,200,000 counterfactual in year 2</td>
+</tr>
+<tr>
+<td>Costs</td>
+<td>TCO with every component</td>
+<td>$160,000 over three years</td>
+</tr>
+<tr>
+<td>Benefits</td>
+<td>Itemized, reductions and avoidance separate, revenue excluded or flagged</td>
+<td>$220,000; $15,000 reduction and $45,000 avoidance in year 1</td>
+</tr>
+<tr>
+<td>Appraisal</td>
+<td>NPV, IRR, payback against the hurdle rate</td>
+<td>NPV $38,272, IRR about 41%, payback 20 months, hurdle 15%</td>
+</tr>
+<tr>
+<td>Risk</td>
+<td>Sensitivity, scenarios, risk-adjusted view</td>
+<td>Benefit shortfall of 20% fails a 15% hurdle</td>
+</tr>
+<tr>
+<td>Recommendation and ask</td>
+<td>A decision, a size, and a timing aligned to the budget cycle</td>
+<td>Fund $60,000 now, gated on measured benefit</td>
+</tr>
+</tbody>
+</table>
+<div class="admonition mascot-tip">
+<p class="admonition-title">Turn the Weakest Assumption Into a Gate</p>
+<p><img alt="Ledger with a tip" class="mascot-admonition-img" src="../../img/mascot/tip.png" />
+The sensitivity table told us benefits are the assumption that can sink the case. Propose releasing the money in stages, with the next tranche tied to a measured benefit (for example hours saved per ticket) after the first quarter, so the approval does not rest on a forecast alone.</p>
+</div>
+<h3 id="summary-and-quick-check">Summary and Quick Check<a class="headerlink" href="#summary-and-quick-check" title="Permanent link">&para;</a></h3>
+<p>A credible business case starts with how costs reach the income statement and balance sheet and when funding is available. It states unit costs fully loaded, breaks the benefit into productivity, cost reduction, cost avoidance, and revenue (with revenue converted to profit), and measures every saving from a documented baseline and a counterfactual. It forecasts from visible drivers, appraises with NPV, IRR, and payback against the hurdle rate, and tests the result with sensitivity and scenario analysis so the decision maker sees the range, not a single number. Chapter 11 turns to the productivity and quality metrics that supply the benefit figures this case depends on.</p>
+<details class="note">
+<summary>Quick check: why is the counterfactual cost, not last year's actual, the right comparison for year 2? - Click to expand</summary>
+<p>Because volume grew. Without the assistant, year 2 would have cost more than year 1 simply because there were more tickets. Comparing against last year's actual would hide part of the saving, or make growth look like an overrun, while the counterfactual isolates the assistant's own effect.</p>
+</details>
+<details class="note">
+<summary>Quick check: what does sensitivity analysis show that scenario analysis does not? - Click to expand</summary>
+<p>Sensitivity analysis varies one assumption at a time, so it ranks which input matters most. Scenario analysis moves several assumptions together in a consistent story, so it shows the plausible range of outcomes but does not isolate which single input drives them.</p>
+</details>
+<div class="admonition mascot-celebration">
+<p class="admonition-title">You Can Build and Stress-Test a Business Case</p>
+<p><img alt="Ledger celebrating" class="mascot-admonition-img" src="../../img/mascot/celebration.png" />
+You can now compute unit costs, split a benefit into its real components, set a baseline and counterfactual, forecast from drivers, and show finance how the NPV moves when you are wrong. That completes the financial toolkit; the next chapters supply the evidence that feeds it.</p>
+</div>
 
 
 
 
 
 
+
+  
+  
 
 
 
