@@ -1,0 +1,55 @@
+{
+  "title": "Cost Per Task Benchmark Explorer",
+  "creator": "Katie Jo Schuman",
+  "subject": "AI economics",
+  "description": "The learner will compare the cost per completed task of a small and a large model, including human review of rejected answers, and identify which is cheaper at four review costs.",
+  "date": "2026-10-08",
+  "educational": {
+    "gradeLevel": [
+      "Graduate",
+      "Professional"
+    ],
+    "subjectArea": "Business and AI economics",
+    "topic": "Cost Per Task Benchmark Explorer",
+    "learningObjectives": [
+      "The learner will compare the cost per completed task of a small and a large model, including human review of rejected answers, and identify which is cheaper at four review costs."
+    ],
+    "bloomsTaxonomy": "Analyze",
+    "duration": "10-15 minutes",
+    "prerequisites": [
+      "cost-per-task benchmarking",
+      "quality-cost tradeoff",
+      "acceptance rate",
+      "review cost"
+    ],
+    "standards": []
+  },
+  "technical": {
+    "framework": "p5.js",
+    "version": "1.0",
+    "canvasDimensions": {
+      "width": "responsive",
+      "height": 445
+    },
+    "canvasHeight": 445,
+    "responsive": true,
+    "dependencies": [
+      "shared-libs/quiz-kit.js"
+    ],
+    "accessibility": {
+      "hasAltText": true,
+      "keyboardNavigable": true
+    }
+  },
+  "pedagogical": {
+    "teachingStrategy": "Commit-then-explore: predict, receive feedback, then explore",
+    "keyQuestions": [],
+    "commonMisconceptions": [
+      "(1) The model with the lower attempt cost always has the lower cost per task. (2) Human review cost can be ignored when comparing models. (3) The break-even depends on traffic volume."
+    ],
+    "assessmentOpportunities": [
+      "For each of four review costs the learner selects the model with the lower cost per task before the costs are shown. A selection is correct when it matches the \"Cheaper model\" column; at a tie the large model is correct. Mastery is 3 of 4 correct on the first attempt. Exploration is not evidence."
+    ]
+  },
+  "chapter": "08-model-compression-testing-efficiency"
+}

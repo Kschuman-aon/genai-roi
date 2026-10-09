@@ -1,0 +1,55 @@
+{
+  "title": "Fixed Versus Variable Break-Even Calculator",
+  "creator": "Katie Jo Schuman",
+  "subject": "AI economics",
+  "description": "The learner will calculate the monthly request volume at which a fixed-cost server and a per-request API cost the same, to within 1,000 requests.",
+  "date": "2026-10-08",
+  "educational": {
+    "gradeLevel": [
+      "Graduate",
+      "Professional"
+    ],
+    "subjectArea": "Business and AI economics",
+    "topic": "Fixed Versus Variable Break-Even Calculator",
+    "learningObjectives": [
+      "The learner will calculate the monthly request volume at which a fixed-cost server and a per-request API cost the same, to within 1,000 requests."
+    ],
+    "bloomsTaxonomy": "Apply",
+    "duration": "10-15 minutes",
+    "prerequisites": [
+      "fixed cost",
+      "variable cost",
+      "marginal cost",
+      "break-even analysis"
+    ],
+    "standards": []
+  },
+  "technical": {
+    "framework": "Chart.js",
+    "version": "1.0",
+    "canvasDimensions": {
+      "width": "responsive",
+      "height": 520
+    },
+    "canvasHeight": 520,
+    "responsive": true,
+    "dependencies": [
+      "shared-libs/quiz-kit.js"
+    ],
+    "accessibility": {
+      "hasAltText": true,
+      "keyboardNavigable": true
+    }
+  },
+  "pedagogical": {
+    "teachingStrategy": "Commit-then-explore: predict, receive feedback, then explore",
+    "keyQuestions": [],
+    "commonMisconceptions": [
+      "(1) Break-even depends on the benefits only. (2) The break-even volume does not change when the fixed cost changes. (3) The fixed-cost option is always cheaper at high volume, regardless of its capacity."
+    ],
+    "assessmentOpportunities": [
+      "For each of three scenarios the learner types the break-even volume before the chart reveals it. An answer is correct when within 1,000 requests of the model value. Mastery is 3 of 3 correct on the first attempt. Dragging the volume marker is exploration, not evidence."
+    ]
+  },
+  "chapter": "09-core-financial-roi-vocabulary"
+}

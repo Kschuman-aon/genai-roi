@@ -1,0 +1,56 @@
+{
+  "title": "NPV and Payback Calculator",
+  "creator": "Katie Jo Schuman",
+  "subject": "AI economics",
+  "description": "The learner will calculate the net present value of the running-example cash flows at a stated discount rate to within $5, and decide whether the investment should be accepted.",
+  "date": "2026-10-08",
+  "educational": {
+    "gradeLevel": [
+      "Graduate",
+      "Professional"
+    ],
+    "subjectArea": "Business and AI economics",
+    "topic": "NPV and Payback Calculator",
+    "learningObjectives": [
+      "The learner will calculate the net present value of the running-example cash flows at a stated discount rate to within $5, and decide whether the investment should be accepted."
+    ],
+    "bloomsTaxonomy": "Apply",
+    "duration": "10-15 minutes",
+    "prerequisites": [
+      "time value of money",
+      "discount rate",
+      "present value",
+      "net present value",
+      "internal rate of return"
+    ],
+    "standards": []
+  },
+  "technical": {
+    "framework": "p5.js",
+    "version": "1.0",
+    "canvasDimensions": {
+      "width": "responsive",
+      "height": 475
+    },
+    "canvasHeight": 475,
+    "responsive": true,
+    "dependencies": [
+      "shared-libs/quiz-kit.js"
+    ],
+    "accessibility": {
+      "hasAltText": true,
+      "keyboardNavigable": true
+    }
+  },
+  "pedagogical": {
+    "teachingStrategy": "Commit-then-explore: predict, receive feedback, then explore",
+    "keyQuestions": [],
+    "commonMisconceptions": [
+      "(1) A higher discount rate raises NPV. (2) A short payback means a positive NPV. (3) The initial investment should not be discounted, or should be discounted like future flows."
+    ],
+    "assessmentOpportunities": [
+      "For each of four discount rates the learner types the NPV and selects Accept or Reject before the answer is shown. The NPV is correct when within $5 of the model value, and the decision is correct when it is Accept for NPV >= 0 and Reject for NPV < 0. Mastery is 3 of 4 correct on the first attempt. Exploration is not evidence."
+    ]
+  },
+  "chapter": "09-core-financial-roi-vocabulary"
+}

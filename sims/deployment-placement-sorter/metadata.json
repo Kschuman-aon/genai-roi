@@ -1,0 +1,56 @@
+{
+  "title": "Deployment Placement Sorter",
+  "creator": "Katie Jo Schuman",
+  "subject": "AI economics",
+  "description": "The learner will distinguish which of four placement approaches (single region, multi-region, edge, hybrid cloud) best fits each of eight workload descriptions, by matching the deciding requirement in each description.",
+  "date": "2026-10-08",
+  "educational": {
+    "gradeLevel": [
+      "Graduate",
+      "Professional"
+    ],
+    "subjectArea": "Business and AI economics",
+    "topic": "Deployment Placement Sorter",
+    "learningObjectives": [
+      "The learner will distinguish which of four placement approaches (single region, multi-region, edge, hybrid cloud) best fits each of eight workload descriptions, by matching the deciding requirement in each description."
+    ],
+    "bloomsTaxonomy": "Analyze",
+    "duration": "10-15 minutes",
+    "prerequisites": [
+      "multi-region deployment",
+      "edge deployment",
+      "hybrid cloud strategy",
+      "data residency",
+      "always-on floor"
+    ],
+    "standards": []
+  },
+  "technical": {
+    "framework": "JavaScript",
+    "version": "1.0",
+    "canvasDimensions": {
+      "width": "responsive",
+      "height": 600
+    },
+    "canvasHeight": 600,
+    "responsive": true,
+    "dependencies": [
+      "shared-libs/quiz-kit.js"
+    ],
+    "accessibility": {
+      "hasAltText": false,
+      "keyboardNavigable": true
+    }
+  },
+  "pedagogical": {
+    "teachingStrategy": "Commit-then-explore: predict, receive feedback, then explore",
+    "keyQuestions": [],
+    "commonMisconceptions": [
+      "(1) Multi-region is the default choice for reliability and always worth its cost. (2) Edge deployment is suitable for any model size. (3) Hybrid cloud is only about cost, not control or vendor dependence."
+    ],
+    "assessmentOpportunities": [
+      "The learner assigns each of eight scenario cards to one of four bins and commits the assignment. An assignment is correct when it matches the answer column in Content. Mastery is 7 of 8 correct on the first attempt."
+    ]
+  },
+  "chapter": "06-infrastructure-planning-monitoring"
+}

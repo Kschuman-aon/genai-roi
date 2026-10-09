@@ -1456,6 +1456,74 @@
           
         
       
+        
+          
+        
+      
+        
+          
+        
+      
+        
+          
+        
+      
+        
+          
+        
+      
+        
+          
+        
+      
+        
+          
+        
+      
+        
+          
+        
+      
+        
+          
+        
+      
+        
+          
+        
+      
+        
+          
+        
+      
+        
+          
+        
+      
+        
+          
+        
+      
+        
+          
+        
+      
+        
+          
+        
+      
+        
+          
+        
+      
+        
+          
+        
+      
+        
+          
+        
+      
     
     
     
@@ -2002,6 +2070,8 @@ Notice that the small model's price barely matters; the pass rate does. Measure 
 <p>A <strong>fallback model strategy</strong> is different in purpose: a secondary model or provider is invoked automatically when the primary is unavailable, rate-limited, or returns an unacceptable response. A cascade escalates for quality by design, while a fallback triggers on failure to keep the service running. Its cost risk is the price of the fallback model: an outage that fails over to a more expensive provider can multiply spend for as long as it lasts, so price the fallback before you need it.</p>
 <p>The <strong>ensemble cost tradeoff</strong> is the added compute and token cost of querying several models, or several samples from one, and combining their answers to raise reliability. Cost scales roughly with the number of queries: three samples from the small model with a majority vote costs 3 × $0.00044 = $0.00132, still cheaper than one large-model call at $0.00440. Whether it is a good trade depends on whether the voted small-model answer is as accurate as the large model's, which only measurement can say. Chapter 8 returns to this under self-consistency.</p>
 <h4 id="diagram-model-cascade-cost-calculator">Diagram: Model Cascade Cost Calculator<a class="headerlink" href="#diagram-model-cascade-cost-calculator" title="Permanent link">&para;</a></h4>
+<iframe src="../../sims/model-cascade-cost-calculator/main.html" width="100%" height="472px" scrolling="no"></iframe>
+
 <details>
 <summary>Model Cascade Cost Calculator</summary>
 <p>Type: microsim
@@ -2189,6 +2259,8 @@ Notice that the small model's price barely matters; the pass rate does. Measure 
 A semantic cache saves money by answering a question that was not exactly asked. Set the threshold from the number of wrong answers the use case can tolerate, not from the saving, and sample cache hits for review each week.</p>
 </div>
 <h4 id="diagram-semantic-cache-threshold-explorer">Diagram: Semantic Cache Threshold Explorer<a class="headerlink" href="#diagram-semantic-cache-threshold-explorer" title="Permanent link">&para;</a></h4>
+<iframe src="../../sims/semantic-cache-threshold-explorer/main.html" width="100%" height="497px" scrolling="no"></iframe>
+
 <details>
 <summary>Semantic Cache Threshold Explorer</summary>
 <p>Type: chart
@@ -2315,6 +2387,8 @@ A semantic cache saves money by answering a question that was not exactly asked.
 <p><strong>Chapter Anchors:</strong> The chapter states six thresholds from 0.98 to 0.80, 18% exact repeats saving $79.20, a combined saving of $132 at 0.92 (a 30% hit rate), and 240 wrong answers per 100,000 at 0.92.</p>
 </details>
 <h4 id="diagram-request-routing-flow">Diagram: Request Routing Flow<a class="headerlink" href="#diagram-request-routing-flow" title="Permanent link">&para;</a></h4>
+<iframe src="../../sims/request-routing-flow/main.html" width="100%" height="447px" scrolling="no"></iframe>
+
 <details>
 <summary>Request Routing Flow</summary>
 <p>Type: workflow

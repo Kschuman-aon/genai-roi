@@ -1,0 +1,56 @@
+{
+  "title": "Request Routing Flow",
+  "creator": "Katie Jo Schuman",
+  "subject": "AI economics",
+  "description": "The learner will explain which path through cache, small model, quality check, large model, and fallback model each of five example requests takes and what it costs.",
+  "date": "2026-10-08",
+  "educational": {
+    "gradeLevel": [
+      "Graduate",
+      "Professional"
+    ],
+    "subjectArea": "Business and AI economics",
+    "topic": "Request Routing Flow",
+    "learningObjectives": [
+      "The learner will explain which path through cache, small model, quality check, large model, and fallback model each of five example requests takes and what it costs."
+    ],
+    "bloomsTaxonomy": "Understand",
+    "duration": "10-15 minutes",
+    "prerequisites": [
+      "deterministic caching",
+      "semantic deduplication",
+      "model cascading",
+      "small model first strategy",
+      "fallback model strategy"
+    ],
+    "standards": []
+  },
+  "technical": {
+    "framework": "Mermaid",
+    "version": "1.0",
+    "canvasDimensions": {
+      "width": "responsive",
+      "height": 445
+    },
+    "canvasHeight": 445,
+    "responsive": true,
+    "dependencies": [
+      "shared-libs/quiz-kit.js"
+    ],
+    "accessibility": {
+      "hasAltText": true,
+      "keyboardNavigable": true
+    }
+  },
+  "pedagogical": {
+    "teachingStrategy": "Commit-then-explore: predict, receive feedback, then explore",
+    "keyQuestions": [],
+    "commonMisconceptions": [
+      "(1) Every request reaches a model. (2) Escalated requests pay only for the large model. (3) A fallback model is used whenever the small model is wrong."
+    ],
+    "assessmentOpportunities": [
+      "For each of five requests the learner selects, before the trace is shown, the node where the request is answered. A selection is correct when it matches the \"Answered at\" column. Mastery is 4 of 5 correct on the first attempt. Opening a node's description is exploration, not evidence."
+    ]
+  },
+  "chapter": "07-prompt-routing-retrieval-efficiency"
+}

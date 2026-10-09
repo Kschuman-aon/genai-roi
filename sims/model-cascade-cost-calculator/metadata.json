@@ -1,0 +1,55 @@
+{
+  "title": "Model Cascade Cost Calculator",
+  "creator": "Katie Jo Schuman",
+  "subject": "AI economics",
+  "description": "The learner will calculate the monthly cost of a small-model-first cascade for a stated pass rate and decide whether it is cheaper than sending every request to the large model.",
+  "date": "2026-10-08",
+  "educational": {
+    "gradeLevel": [
+      "Graduate",
+      "Professional"
+    ],
+    "subjectArea": "Business and AI economics",
+    "topic": "Model Cascade Cost Calculator",
+    "learningObjectives": [
+      "The learner will calculate the monthly cost of a small-model-first cascade for a stated pass rate and decide whether it is cheaper than sending every request to the large model."
+    ],
+    "bloomsTaxonomy": "Apply",
+    "duration": "10-15 minutes",
+    "prerequisites": [
+      "model cascading",
+      "small model first strategy",
+      "pass rate",
+      "per-request cost"
+    ],
+    "standards": []
+  },
+  "technical": {
+    "framework": "p5.js",
+    "version": "1.0",
+    "canvasDimensions": {
+      "width": "responsive",
+      "height": 470
+    },
+    "canvasHeight": 470,
+    "responsive": true,
+    "dependencies": [
+      "shared-libs/quiz-kit.js"
+    ],
+    "accessibility": {
+      "hasAltText": true,
+      "keyboardNavigable": true
+    }
+  },
+  "pedagogical": {
+    "teachingStrategy": "Commit-then-explore: predict, receive feedback, then explore",
+    "keyQuestions": [],
+    "commonMisconceptions": [
+      "(1) A cascade is always cheaper than using the large model. (2) The cascade cost is only the small model's cost. (3) Failed requests cost the large-model price only, not small plus large."
+    ],
+    "assessmentOpportunities": [
+      "For each of four scenarios the learner types the cascade's monthly cost for 100,000 requests and selects \"cascade\" or \"all-large\" as the cheaper option, before the sim reveals the answer. A scenario is correct when the cost is within $1 of the model value and the selection matches. When the two plans cost the same, \"all-large\" is the correct selection. Mastery is 3 of 4 scenarios correct on the first attempt. Exploration is not evidence."
+    ]
+  },
+  "chapter": "07-prompt-routing-retrieval-efficiency"
+}

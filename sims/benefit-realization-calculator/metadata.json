@@ -1,0 +1,57 @@
+{
+  "title": "Benefit Realization Calculator",
+  "creator": "Katie Jo Schuman",
+  "subject": "AI economics",
+  "description": "The learner will calculate the year 1 realized benefit and the three-year ROI of the running example from measured adoption, usage coverage, minutes saved, and rework data, to within $1 for dollar values and 0.1 percentage points for ROI.",
+  "date": "2026-10-08",
+  "educational": {
+    "gradeLevel": [
+      "Graduate",
+      "Professional"
+    ],
+    "subjectArea": "Business and AI economics",
+    "topic": "Benefit Realization Calculator",
+    "learningObjectives": [
+      "The learner will calculate the year 1 realized benefit and the three-year ROI of the running example from measured adoption, usage coverage, minutes saved, and rework data, to within $1 for dollar values and 0.1 percentage points for ROI."
+    ],
+    "bloomsTaxonomy": "Apply",
+    "duration": "10-15 minutes",
+    "prerequisites": [
+      "adoption rate metric",
+      "usage frequency metric",
+      "rework rate metric",
+      "GenAI ROI metric",
+      "productivity gain",
+      "labor cost savings"
+    ],
+    "standards": []
+  },
+  "technical": {
+    "framework": "p5.js",
+    "version": "1.0",
+    "canvasDimensions": {
+      "width": "responsive",
+      "height": 480
+    },
+    "canvasHeight": 480,
+    "responsive": true,
+    "dependencies": [
+      "shared-libs/quiz-kit.js"
+    ],
+    "accessibility": {
+      "hasAltText": true,
+      "keyboardNavigable": true
+    }
+  },
+  "pedagogical": {
+    "teachingStrategy": "Commit-then-explore: predict, receive feedback, then explore",
+    "keyQuestions": [],
+    "commonMisconceptions": [
+      "(1) Benefit equals tickets times minutes saved times the labor rate, with no adjustment for adoption or usage. (2) Rework can be ignored when the rework rate rises by only one point. (3) A positive ROI always implies a positive NPV."
+    ],
+    "assessmentOpportunities": [
+      "For each of six items the learner types a value before the answer is shown. A value is correct when within $1 of the model value for dollar items, or within 0.1 percentage points for the ROI item. Mastery is 5 of 6 correct on the first attempt. Exploration with the adjustable quantities is not evidence."
+    ]
+  },
+  "chapter": "11-productivity-quality-metrics"
+}

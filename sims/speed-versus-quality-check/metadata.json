@@ -1,0 +1,56 @@
+{
+  "title": "Speed Versus Quality Check",
+  "creator": "Katie Jo Schuman",
+  "subject": "AI economics",
+  "description": "The learner will judge, for each of eight time-saving claims, whether the claim can be reported as stated or must be restated net of rework, using the rule that rework minutes above 25% of the claimed saving require restatement.",
+  "date": "2026-10-08",
+  "educational": {
+    "gradeLevel": [
+      "Graduate",
+      "Professional"
+    ],
+    "subjectArea": "Business and AI economics",
+    "topic": "Speed Versus Quality Check",
+    "learningObjectives": [
+      "The learner will judge, for each of eight time-saving claims, whether the claim can be reported as stated or must be restated net of rework, using the rule that rework minutes above 25% of the claimed saving require restatement."
+    ],
+    "bloomsTaxonomy": "Evaluate",
+    "duration": "10-15 minutes",
+    "prerequisites": [
+      "task completion time",
+      "rework rate metric",
+      "error rate metric",
+      "quality score metric",
+      "the 25% working rule"
+    ],
+    "standards": []
+  },
+  "technical": {
+    "framework": "p5.js",
+    "version": "1.0",
+    "canvasDimensions": {
+      "width": "responsive",
+      "height": 470
+    },
+    "canvasHeight": 470,
+    "responsive": true,
+    "dependencies": [
+      "shared-libs/quiz-kit.js"
+    ],
+    "accessibility": {
+      "hasAltText": true,
+      "keyboardNavigable": true
+    }
+  },
+  "pedagogical": {
+    "teachingStrategy": "Commit-then-explore: predict, receive feedback, then explore",
+    "keyQuestions": [],
+    "commonMisconceptions": [
+      "(1) A time saving is the benefit regardless of quality. (2) A small rise in rework rate is always negligible. (3) Rework only matters when the rework rate itself is high, ignoring how many minutes each rework costs."
+    ],
+    "assessmentOpportunities": [
+      "For each of eight claims the learner commits a verdict, \"Report as stated\" or \"Restate net of rework\", before the arithmetic is shown. A verdict is correct when it matches the \"Correct verdict\" column in Content. Mastery is 7 of 8 correct on the first attempt. Exploration with the adjustable quantities is not evidence."
+    ]
+  },
+  "chapter": "11-productivity-quality-metrics"
+}

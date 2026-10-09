@@ -1441,6 +1441,74 @@
           
         
       
+        
+          
+        
+      
+        
+          
+        
+      
+        
+          
+        
+      
+        
+          
+        
+      
+        
+          
+        
+      
+        
+          
+        
+      
+        
+          
+        
+      
+        
+          
+        
+      
+        
+          
+        
+      
+        
+          
+        
+      
+        
+          
+        
+      
+        
+          
+        
+      
+        
+          
+        
+      
+        
+          
+        
+      
+        
+          
+        
+      
+        
+          
+        
+      
+        
+          
+        
+      
     
     
     
@@ -1958,6 +2026,8 @@ This chapter is about proof: how to test a change, benchmark honestly, and keep 
 </tbody>
 </table>
 <h4 id="diagram-prompt-ab-test-decision-lab">Diagram: Prompt A/B Test Decision Lab<a class="headerlink" href="#diagram-prompt-ab-test-decision-lab" title="Permanent link">&para;</a></h4>
+<iframe src="../../sims/prompt-ab-test-decision-lab/main.html" width="100%" height="452px" scrolling="no"></iframe>
+
 <details>
 <summary>Prompt A/B Test Decision Lab</summary>
 <p>Type: microsim
@@ -2128,6 +2198,8 @@ A per-token price compares models by what they bill. Cost per task compares them
 <p>Choices made today decay as prices, models, and usage change. The <strong>right-sizing review cycle</strong> is a recurring, scheduled reassessment of whether the deployed models, infrastructure, and prompts are still the most cost-effective choice. A quarterly review should ask four questions: has a cheaper model reached the quality bar, has traffic changed enough to change the cascade pass rate or the cache hit rate, is reserved capacity still well used, and has any prompt grown since its last review?</p>
 <p>One strategic choice recurs in these reviews: <strong>fine-tuning versus prompting</strong>. Fine-tuning adapts the model through an upfront training investment that can shorten every later prompt; prompting alone has no training cost but may carry a longer prompt on every request. Suppose a $5,000 fine-tune lets you drop 800 tokens of instructions from each request on the large model. That saves 800 × $2.00 ÷ 1,000,000 = $0.0016 per request, so the fine-tune pays back after 5,000 ÷ 0.0016 = 3.1 million requests, a little over three months at 1 million requests a month. This ignores any premium for serving a fine-tuned model, which you should check against your provider's price list.</p>
 <h4 id="diagram-cost-per-task-benchmark-explorer">Diagram: Cost Per Task Benchmark Explorer<a class="headerlink" href="#diagram-cost-per-task-benchmark-explorer" title="Permanent link">&para;</a></h4>
+<iframe src="../../sims/cost-per-task-benchmark-explorer/main.html" width="100%" height="447px" scrolling="no"></iframe>
+
 <details>
 <summary>Cost Per Task Benchmark Explorer</summary>
 <p>Type: microsim

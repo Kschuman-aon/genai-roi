@@ -1,0 +1,55 @@
+{
+  "title": "Semantic Cache Threshold Explorer",
+  "creator": "Katie Jo Schuman",
+  "subject": "AI economics",
+  "description": "The learner will recommend the similarity threshold that gives the largest saving without exceeding a stated tolerance for wrong cached answers per 100,000 requests.",
+  "date": "2026-10-08",
+  "educational": {
+    "gradeLevel": [
+      "Graduate",
+      "Professional"
+    ],
+    "subjectArea": "Business and AI economics",
+    "topic": "Semantic Cache Threshold Explorer",
+    "learningObjectives": [
+      "The learner will recommend the similarity threshold that gives the largest saving without exceeding a stated tolerance for wrong cached answers per 100,000 requests."
+    ],
+    "bloomsTaxonomy": "Evaluate",
+    "duration": "10-15 minutes",
+    "prerequisites": [
+      "response caching",
+      "deterministic caching",
+      "semantic deduplication",
+      "similarity threshold"
+    ],
+    "standards": []
+  },
+  "technical": {
+    "framework": "Chart.js",
+    "version": "1.0",
+    "canvasDimensions": {
+      "width": "responsive",
+      "height": 495
+    },
+    "canvasHeight": 495,
+    "responsive": true,
+    "dependencies": [
+      "shared-libs/quiz-kit.js"
+    ],
+    "accessibility": {
+      "hasAltText": true,
+      "keyboardNavigable": true
+    }
+  },
+  "pedagogical": {
+    "teachingStrategy": "Commit-then-explore: predict, receive feedback, then explore",
+    "keyQuestions": [],
+    "commonMisconceptions": [
+      "(1) The lowest threshold is best because it saves the most. (2) A higher threshold is always safer without cost. (3) Hit rate and wrong-answer rate move together in proportion."
+    ],
+    "assessmentOpportunities": [
+      "For each of four business situations the learner commits one threshold from the six values before the sim reveals the answer. A commitment is correct when it is the lowest threshold (largest saving) whose wrong answers per 100,000 requests are <= the situation's tolerance. Mastery is 3 of 4 correct on the first attempt. Hovering a threshold to read its values is exploration, not evidence."
+    ]
+  },
+  "chapter": "07-prompt-routing-retrieval-efficiency"
+}

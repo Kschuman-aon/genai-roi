@@ -6,7 +6,7 @@
       <meta charset="utf-8">
       <meta name="viewport" content="width=device-width,initial-scale=1">
       
-        <meta name="description" content="A practical guide to measuring and communicating the return on investment (ROI) of generative AI initiatives in an organization.">
+        <meta name="description" content="How usage and cost telemetry is captured through logging, tracing, and tagging, moved through a pipeline into a cost data warehouse, and turned into real-time monitoring, anomaly detection, forecasts, and budget variance reports.">
       
       
         <meta name="author" content="Katie Jo Schuman">
@@ -26,7 +26,7 @@
     
     
       
-        <title>13. Telemetry, Logging, and Cost Dashboards - Measuring GenAI ROI</title>
+        <title>Telemetry, Logging, and Cost Dashboards - Measuring GenAI ROI</title>
       
     
     
@@ -116,7 +116,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              13. Telemetry, Logging, and Cost Dashboards
+              Telemetry, Logging, and Cost Dashboards
             
           </span>
         </div>
@@ -857,6 +857,111 @@
     </span>
   </a>
   
+    <nav class="md-nav" aria-label="Prerequisites">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#capturing-the-data-telemetry-logs-and-traces" class="md-nav__link">
+    <span class="md-ellipsis">
+      Capturing the Data: Telemetry, Logs, and Traces
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#sampling-retention-and-what-it-costs-to-watch" class="md-nav__link">
+    <span class="md-ellipsis">
+      Sampling, Retention, and What It Costs to Watch
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#tagging-and-attribution" class="md-nav__link">
+    <span class="md-ellipsis">
+      Tagging and Attribution
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Tagging and Attribution">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#diagram-multi-tenant-cost-allocator" class="md-nav__link">
+    <span class="md-ellipsis">
+      Diagram: Multi-Tenant Cost Allocator
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#from-logs-to-a-warehouse-the-cost-data-pipeline" class="md-nav__link">
+    <span class="md-ellipsis">
+      From Logs to a Warehouse: The Cost Data Pipeline
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="From Logs to a Warehouse: The Cost Data Pipeline">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#diagram-pipeline-stage-sorter" class="md-nav__link">
+    <span class="md-ellipsis">
+      Diagram: Pipeline Stage Sorter
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#watching-the-spend-monitoring-anomalies-forecasts-and-variance" class="md-nav__link">
+    <span class="md-ellipsis">
+      Watching the Spend: Monitoring, Anomalies, Forecasts, and Variance
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Watching the Spend: Monitoring, Anomalies, Forecasts, and Variance">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#diagram-spend-anomaly-detector" class="md-nav__link">
+    <span class="md-ellipsis">
+      Diagram: Spend Anomaly Detector
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#summary-and-quick-check" class="md-nav__link">
+    <span class="md-ellipsis">
+      Summary and Quick Check
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
 </li>
       
     </ul>
@@ -1342,6 +1447,74 @@
           
         
       
+        
+          
+        
+      
+        
+          
+        
+      
+        
+          
+        
+      
+        
+          
+        
+      
+        
+          
+        
+      
+        
+          
+        
+      
+        
+          
+        
+      
+        
+          
+        
+      
+        
+          
+        
+      
+        
+          
+        
+      
+        
+          
+        
+      
+        
+          
+        
+      
+        
+          
+        
+      
+        
+          
+        
+      
+        
+          
+        
+      
+        
+          
+        
+      
+        
+          
+        
+      
     
     
     
@@ -1531,6 +1704,111 @@
     </span>
   </a>
   
+    <nav class="md-nav" aria-label="Prerequisites">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#capturing-the-data-telemetry-logs-and-traces" class="md-nav__link">
+    <span class="md-ellipsis">
+      Capturing the Data: Telemetry, Logs, and Traces
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#sampling-retention-and-what-it-costs-to-watch" class="md-nav__link">
+    <span class="md-ellipsis">
+      Sampling, Retention, and What It Costs to Watch
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#tagging-and-attribution" class="md-nav__link">
+    <span class="md-ellipsis">
+      Tagging and Attribution
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Tagging and Attribution">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#diagram-multi-tenant-cost-allocator" class="md-nav__link">
+    <span class="md-ellipsis">
+      Diagram: Multi-Tenant Cost Allocator
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#from-logs-to-a-warehouse-the-cost-data-pipeline" class="md-nav__link">
+    <span class="md-ellipsis">
+      From Logs to a Warehouse: The Cost Data Pipeline
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="From Logs to a Warehouse: The Cost Data Pipeline">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#diagram-pipeline-stage-sorter" class="md-nav__link">
+    <span class="md-ellipsis">
+      Diagram: Pipeline Stage Sorter
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#watching-the-spend-monitoring-anomalies-forecasts-and-variance" class="md-nav__link">
+    <span class="md-ellipsis">
+      Watching the Spend: Monitoring, Anomalies, Forecasts, and Variance
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Watching the Spend: Monitoring, Anomalies, Forecasts, and Variance">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#diagram-spend-anomaly-detector" class="md-nav__link">
+    <span class="md-ellipsis">
+      Diagram: Spend Anomaly Detector
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#summary-and-quick-check" class="md-nav__link">
+    <span class="md-ellipsis">
+      Summary and Quick Check
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
 </li>
       
     </ul>
@@ -1660,13 +1938,839 @@
 <li><a href="../09-core-financial-roi-vocabulary/">Chapter 9: Core Financial and ROI Vocabulary</a></li>
 </ul>
 <hr />
-<p>TODO: Generate Chapter Content</p>
+<p>Chapter 9 split a shared GenAI platform costing $30,000 a month among three teams, Support, Sales, and HR, using an assumed 60%, 30%, and 10% share of token usage. The assumption was a stand-in. A provider invoice arrives as one line, and nothing on it says which team, feature, or request produced the spend. Chapter 12's instrumentation plan asked for measured data on every metric. This chapter builds the machinery that produces it: the records, the pipeline, the warehouse, and the dashboards, using the same shared platform as the running example. Every figure is illustrative.</p>
+<div class="admonition mascot-welcome">
+<p class="admonition-title">From One Invoice Line to Every Request</p>
+<p><img alt="Ledger waving welcome" class="mascot-admonition-img" src="../../img/mascot/welcome.png" />
+Spend you cannot trace is spend you cannot manage, and the trace starts with a log line. By the end of this chapter you can design the records, the tags, and the checks that let finance see who spent what, and spot a runaway bill before the invoice does. Every token counts, and this chapter makes each one countable.</p>
+</div>
+<h3 id="capturing-the-data-telemetry-logs-and-traces">Capturing the Data: Telemetry, Logs, and Traces<a class="headerlink" href="#capturing-the-data-telemetry-logs-and-traces" title="Permanent link">&para;</a></h3>
+<p><strong>Usage telemetry</strong> is the automated collection and transmission of measurements about how a system is used, such as request counts, token counts, latency, and errors, from the running system to a place where they can be analysed. It is the raw material for every cost metric in this book. Three kinds of record carry it: logs (one record per event), metrics (numbers aggregated over time), and traces (the path of one request through several services).</p>
+<p><strong>API call logging</strong> is the practice of recording a structured entry for every call made to a model or other service, with enough fields to identify who made the call, what was called, and how it ended. A <strong>structured log</strong> is a record in a machine-readable format with named fields, rather than a free-text sentence, so a program can sum and filter it. <strong>Token usage logging</strong> is the recording of the input, output, and cached token counts of every model request, together with the price needed to turn them into dollars. A single call record for the Support team looks like this:</p>
+<div class="language-json highlight"><pre><span></span><code><span id="__span-0-1"><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a><span class="p">{</span>
+</span><span id="__span-0-2"><a id="__codelineno-0-2" name="__codelineno-0-2" href="#__codelineno-0-2"></a><span class="w">  </span><span class="nt">&quot;request_id&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;9f3c1a&quot;</span><span class="p">,</span>
+</span><span id="__span-0-3"><a id="__codelineno-0-3" name="__codelineno-0-3" href="#__codelineno-0-3"></a><span class="w">  </span><span class="nt">&quot;timestamp&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;2026-09-14T10:42:07Z&quot;</span><span class="p">,</span>
+</span><span id="__span-0-4"><a id="__codelineno-0-4" name="__codelineno-0-4" href="#__codelineno-0-4"></a><span class="w">  </span><span class="nt">&quot;tenant&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;support&quot;</span><span class="p">,</span>
+</span><span id="__span-0-5"><a id="__codelineno-0-5" name="__codelineno-0-5" href="#__codelineno-0-5"></a><span class="w">  </span><span class="nt">&quot;feature&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;reply-draft&quot;</span><span class="p">,</span>
+</span><span id="__span-0-6"><a id="__codelineno-0-6" name="__codelineno-0-6" href="#__codelineno-0-6"></a><span class="w">  </span><span class="nt">&quot;env&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;prod&quot;</span><span class="p">,</span>
+</span><span id="__span-0-7"><a id="__codelineno-0-7" name="__codelineno-0-7" href="#__codelineno-0-7"></a><span class="w">  </span><span class="nt">&quot;model&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;model-large&quot;</span><span class="p">,</span>
+</span><span id="__span-0-8"><a id="__codelineno-0-8" name="__codelineno-0-8" href="#__codelineno-0-8"></a><span class="w">  </span><span class="nt">&quot;input_tokens&quot;</span><span class="p">:</span><span class="w"> </span><span class="mi">3000</span><span class="p">,</span>
+</span><span id="__span-0-9"><a id="__codelineno-0-9" name="__codelineno-0-9" href="#__codelineno-0-9"></a><span class="w">  </span><span class="nt">&quot;output_tokens&quot;</span><span class="p">:</span><span class="w"> </span><span class="mi">800</span><span class="p">,</span>
+</span><span id="__span-0-10"><a id="__codelineno-0-10" name="__codelineno-0-10" href="#__codelineno-0-10"></a><span class="w">  </span><span class="nt">&quot;cached_tokens&quot;</span><span class="p">:</span><span class="w"> </span><span class="mi">0</span><span class="p">,</span>
+</span><span id="__span-0-11"><a id="__codelineno-0-11" name="__codelineno-0-11" href="#__codelineno-0-11"></a><span class="w">  </span><span class="nt">&quot;latency_ms&quot;</span><span class="p">:</span><span class="w"> </span><span class="mi">2410</span><span class="p">,</span>
+</span><span id="__span-0-12"><a id="__codelineno-0-12" name="__codelineno-0-12" href="#__codelineno-0-12"></a><span class="w">  </span><span class="nt">&quot;status&quot;</span><span class="p">:</span><span class="w"> </span><span class="mi">200</span><span class="p">,</span>
+</span><span id="__span-0-13"><a id="__codelineno-0-13" name="__codelineno-0-13" href="#__codelineno-0-13"></a><span class="w">  </span><span class="nt">&quot;cost_usd&quot;</span><span class="p">:</span><span class="w"> </span><span class="mf">0.0031</span>
+</span><span id="__span-0-14"><a id="__codelineno-0-14" name="__codelineno-0-14" href="#__codelineno-0-14"></a><span class="p">}</span>
+</span></code></pre></div>
+<p>Two fields need a word before you read on. <code>request_id</code> is a unique identifier for this one call, which lets you find it again and detect duplicates. <code>tenant</code> names the team that made the call, and it is the field that makes cost attribution possible later. The <code>cost_usd</code> value follows from Chapter 3: 3,000 input tokens at $0.50 per million plus 800 output tokens at $2.00 per million is <span class="arithmatex">\( 0.0015 + 0.0016 = \$0.0031 \)</span>. Notice that the record holds no prompt text, a choice explained next.</p>
+<p>A <strong>logging strategy</strong> is the set of decisions about what to log, at what level of detail, in what format, and for how long, made so that the data answers the questions the business will ask without exposing more than it should. Four decisions matter most:</p>
+<ul>
+<li><strong>Log metadata always, content rarely.</strong> Tokens, latency, model, and tags are cheap and safe. Prompts and responses can contain customer data, so capture them only for a small sample or on error, and mask personal data first.</li>
+<li><strong>Use structured records.</strong> Free text cannot be summed.</li>
+<li><strong>Carry a correlation identifier</strong> such as <code>request_id</code> through every system a request touches.</li>
+<li><strong>Record the price with the usage.</strong> Provider prices change, and a record that stores only tokens cannot be priced correctly after the fact.</li>
+</ul>
+<div class="admonition mascot-thinking">
+<p class="admonition-title">A Log Is a Ledger Entry</p>
+<p><img alt="Ledger thinking" class="mascot-admonition-img" src="../../img/mascot/thinking.png" />
+Think of each log record as a ledger line: who, what, how much, and when. If the line is missing a field, no later analysis can recover it, which is why the design of the record matters more than the tool that stores it.</p>
+</div>
+<p>A support reply often touches several services, and a single call record cannot show where the time and money went. <strong>Distributed tracing</strong> is the technique of following one request across every service it touches, recording each step as a timed span linked to the others by a shared trace identifier. A span is one unit of work, with a start time, a duration, and any attributes you attach, including cost. A traced reply-draft request in the example breaks down as follows.</p>
+<table>
+<thead>
+<tr>
+<th>Span</th>
+<th style="text-align: right;">Duration</th>
+<th style="text-align: right;">Cost</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>API gateway</td>
+<td style="text-align: right;">5 ms</td>
+<td style="text-align: right;">$0.0000</td>
+</tr>
+<tr>
+<td>Retrieval from the vector store</td>
+<td style="text-align: right;">120 ms</td>
+<td style="text-align: right;">$0.0004</td>
+</tr>
+<tr>
+<td>Model call (3,000 input, 800 output tokens)</td>
+<td style="text-align: right;">2,400 ms</td>
+<td style="text-align: right;">$0.0031</td>
+</tr>
+<tr>
+<td>Safety filter on the output</td>
+<td style="text-align: right;">180 ms</td>
+<td style="text-align: right;">$0.0002</td>
+</tr>
+<tr>
+<td><strong>Request total</strong></td>
+<td style="text-align: right;"><strong>2,705 ms</strong></td>
+<td style="text-align: right;"><strong>$0.0037</strong></td>
+</tr>
+</tbody>
+</table>
+<p>The model call is 84% of the cost ($0.0031 of $0.0037), but a trace also catches costs the call log cannot, such as a retrieval step that fires three times because of a retry, which would show as three retrieval spans under one trace.</p>
+<p>An <strong>observability platform</strong> is a system that ingests logs, metrics, and traces from many sources, stores them, and lets you query, visualise, and alert on them together. You can buy one, assemble it from open components, or use the one your cloud provider offers. The cost question is easy to forget: the platform charges for the data you send it, so a decision to log every prompt is also a decision to pay to store them. The next section shows how to keep that in proportion.</p>
+<h3 id="sampling-retention-and-what-it-costs-to-watch">Sampling, Retention, and What It Costs to Watch<a class="headerlink" href="#sampling-retention-and-what-it-costs-to-watch" title="Permanent link">&para;</a></h3>
+<p>The platform serves 6,000,000 requests a month. Storing a full trace and payload for each is expensive, and for most requests unnecessary. A <strong>sampling strategy for telemetry</strong> is a rule for choosing which events to keep in full when keeping them all is too costly, such as always keeping errors and slow requests and keeping only a small fraction of the rest. In the example, 2% of requests are errors or unusually slow, which is 120,000. Keep all of them, and 1% of the remaining 5,880,000, which is 58,800. The platform keeps 178,800 traces, or 2.98% of traffic, and storage falls by about 97%.</p>
+<p>Sampling has a trap when applied to cost data. Cost is dominated by a few large requests, and a sample can miss them. Consider 1,000 requests: 990 cost $0.003 each, and 10 "whale" requests with very long contexts cost $0.50 each. Total spend is <span class="arithmatex">\( 990 \times 0.003 + 10 \times 0.50 = \$7.97 \)</span>. A 1% sample takes about 10 requests, so there is a good chance of containing no whale at all. If it contains none, the estimate is <span class="arithmatex">\( 100 \times 10 \times 0.003 = \$3.00 \)</span>, which is 62% too low.</p>
+<div class="admonition mascot-warning">
+<p class="admonition-title">Never Sample the Meter</p>
+<p><img alt="Ledger warning" class="mascot-admonition-img" src="../../img/mascot/warning.png" />
+Sample traces and payloads, but record every request's token and cost fields. A sampled cost log underestimates the expensive tail, and it happens because the whales are exactly the rare events a sample skips. Keep a complete usage record, and sample only the heavy detail around it.</p>
+</div>
+<p>A <strong>data retention policy</strong> states how long each class of data is kept, in which storage tier, and when it is deleted or archived. The classes have different jobs, so they have different lifetimes.</p>
+<table>
+<thead>
+<tr>
+<th>Data class</th>
+<th>Hot storage</th>
+<th>Then</th>
+<th>Why</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Prompt and response payloads</td>
+<td>30 days</td>
+<td>Delete</td>
+<td>Privacy exposure and little long-term value</td>
+</tr>
+<tr>
+<td>Per-request usage and cost records</td>
+<td>13 months</td>
+<td>Archive 7 years</td>
+<td>Year-over-year comparison and audit</td>
+</tr>
+<tr>
+<td>Daily and monthly cost aggregates</td>
+<td>Indefinitely</td>
+<td>Not applicable</td>
+<td>Small, and needed for trend and forecasting</td>
+</tr>
+<tr>
+<td>Provider invoices</td>
+<td>Per accounting policy</td>
+<td>Archive</td>
+<td>Reconciliation and finance records</td>
+</tr>
+</tbody>
+</table>
+<p>Storage cost rarely drives this table. If payloads average 20 KB, the platform produces <span class="arithmatex">\( 6{,}000{,}000 \times 20 \text{ KB} = 120 \text{ GB} \)</span> a month. At $0.023 per GB-month, keeping 30 days costs about $2.76 a month, while keeping 7 years holds 10,080 GB and costs about $232 a month. The larger price of long retention is the risk of holding customer text for years, which is why payloads are deleted first.</p>
+<h3 id="tagging-and-attribution">Tagging and Attribution<a class="headerlink" href="#tagging-and-attribution" title="Permanent link">&para;</a></h3>
+<p>Logs say what happened. <strong>Cost attribution tagging</strong> is the practice of attaching labels such as team, feature, environment, and cost center to every resource and request, so spend can be grouped by who or what caused it. A tag is useful only if people use the same words, so a <strong>cost tagging taxonomy</strong> is the agreed, controlled set of tag keys and allowed values, with naming rules and a list of which tags are mandatory.</p>
+<table>
+<thead>
+<tr>
+<th>Tag key</th>
+<th>Allowed values</th>
+<th style="text-align: center;">Required</th>
+<th>Example</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>team</code></td>
+<td>support, sales, hr, engineering</td>
+<td style="text-align: center;">Yes</td>
+<td>support</td>
+</tr>
+<tr>
+<td><code>feature</code></td>
+<td>Product feature name, lower case with hyphens</td>
+<td style="text-align: center;">Yes</td>
+<td>reply-draft</td>
+</tr>
+<tr>
+<td><code>env</code></td>
+<td>prod, stage, dev</td>
+<td style="text-align: center;">Yes</td>
+<td>prod</td>
+</tr>
+<tr>
+<td><code>cost_center</code></td>
+<td>CC- followed by four digits</td>
+<td style="text-align: center;">Yes</td>
+<td>CC-2210</td>
+</tr>
+<tr>
+<td><code>owner</code></td>
+<td>Team mailing list</td>
+<td style="text-align: center;">No</td>
+<td>support-leads</td>
+</tr>
+</tbody>
+</table>
+<p>A taxonomy only works if untagged resources are visible. A tag compliance rate, the share of spend that carries all required tags, makes the gap measurable. If $24,600 of the $30,000 monthly spend is fully tagged, compliance is 82% and $5,400 sits in an "unallocated" bucket that no team owns, which is the first number to put on the dashboard.</p>
+<p><strong>Multi-tenant cost attribution</strong> is the assignment of the cost of a shared service to each tenant, meaning each team or customer that uses it, in proportion to the tenant's actual consumption. It separates two kinds of cost. Direct cost is spend that a request-level record ties to one tenant, such as tokens. Shared cost is spend that no single request causes, such as the vector database, the gateway, and the observability platform. In the example, 6,000,000 requests split 60%, 30%, and 10%, with these measured token costs per request.</p>
+<table>
+<thead>
+<tr>
+<th>Tenant</th>
+<th style="text-align: right;">Requests</th>
+<th style="text-align: right;">Token cost per request</th>
+<th style="text-align: right;">Direct token cost</th>
+<th style="text-align: right;">Shared cost share (by requests)</th>
+<th style="text-align: right;">Allocated total</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Support</td>
+<td style="text-align: right;">3,600,000</td>
+<td style="text-align: right;">$0.0030</td>
+<td style="text-align: right;">$10,800</td>
+<td style="text-align: right;">$6,840</td>
+<td style="text-align: right;">$17,640</td>
+</tr>
+<tr>
+<td>Sales</td>
+<td style="text-align: right;">1,800,000</td>
+<td style="text-align: right;">$0.0040</td>
+<td style="text-align: right;">$7,200</td>
+<td style="text-align: right;">$3,420</td>
+<td style="text-align: right;">$10,620</td>
+</tr>
+<tr>
+<td>HR</td>
+<td style="text-align: right;">600,000</td>
+<td style="text-align: right;">$0.0010</td>
+<td style="text-align: right;">$600</td>
+<td style="text-align: right;">$1,140</td>
+<td style="text-align: right;">$1,740</td>
+</tr>
+<tr>
+<td><strong>Total</strong></td>
+<td style="text-align: right;"><strong>6,000,000</strong></td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"><strong>$18,600</strong></td>
+<td style="text-align: right;"><strong>$11,400</strong></td>
+<td style="text-align: right;"><strong>$30,000</strong></td>
+</tr>
+</tbody>
+</table>
+<p>The Chapter 9 table assigned Support $18,000, Sales $9,000, and HR $3,000. Measured data moves Support to $17,640, Sales to $10,620, and HR to $1,740. The assumption that each team consumed tokens in proportion to its requests was wrong: Sales sends long documents and pays $0.0040 a request, while HR sends short questions and pays $0.0010. The measured token-cost shares are 58.1%, 38.7%, and 3.2%, so telemetry changed a decision, and under chargeback it would have moved $1,260 off HR's budget and onto Sales'.</p>
+<p>The next specification lets the learner reproduce this allocation.</p>
+<h4 id="diagram-multi-tenant-cost-allocator">Diagram: Multi-Tenant Cost Allocator<a class="headerlink" href="#diagram-multi-tenant-cost-allocator" title="Permanent link">&para;</a></h4>
+<details>
+<summary>Multi-Tenant Cost Allocator</summary>
+<p>Type: microsim
+<strong>sim-id:</strong> multi-tenant-cost-allocator<br/>
+<strong>Library:</strong> p5.js<br/>
+<strong>Status:</strong> Specified<br/>
+<strong>Bloom Level:</strong> Apply<br/>
+<strong>Bloom Verb:</strong> calculate<br/>
+<strong>Learning Objective:</strong> The learner will calculate each tenant's direct token cost, shared-cost allocation, and total allocated cost for the shared platform from request counts and per-request costs, to within $1.</p>
+<p><strong>Prerequisites:</strong> multi-tenant cost attribution, direct cost, shared cost, cost attribution tagging (all defined in the section "Tagging and Attribution" above).</p>
+<p><strong>Evidence of Mastery:</strong> For each of eight items the learner types a value before the answer is shown. A value is correct when it is within $1 of the model value for dollar items, or within 0.1 percentage points for the percentage item. Mastery is 7 of 8 correct on the first attempt. Exploration with the adjustable quantities is not evidence.</p>
+<p><strong>Misconceptions:</strong> (1) Teams with equal request shares should pay equal amounts. (2) Shared costs should be split equally per team. (3) An assumed usage share is as good as a measured one.</p>
+<p><strong>Instructional Rationale:</strong> Apply-level work means carrying a procedure out on given data. Splitting direct cost by measurement and shared cost by a stated key, then comparing with the earlier assumed split, shows the learner what telemetry changes.</p>
+<p><strong>Content:</strong></p>
+<p>Fixed inputs: 6,000,000 requests in the month, split 3,600,000 for Support, 1,800,000 for Sales, and 600,000 for HR. Token cost per request is $0.0030 for Support, $0.0040 for Sales, and $0.0010 for HR. Shared cost is $11,400, allocated by request share. The Chapter 9 assumed allocation by usage is $18,000 for Support, $9,000 for Sales, and $3,000 for HR.</p>
+<table>
+<thead>
+<tr>
+<th>#</th>
+<th>Item</th>
+<th>Model value</th>
+<th>Why (shown as feedback)</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>1</td>
+<td>Support direct token cost</td>
+<td>$10,800</td>
+<td>3,600,000 × 0.0030 = 10,800.</td>
+</tr>
+<tr>
+<td>2</td>
+<td>Sales direct token cost</td>
+<td>$7,200</td>
+<td>1,800,000 × 0.0040 = 7,200.</td>
+</tr>
+<tr>
+<td>3</td>
+<td>HR direct token cost</td>
+<td>$600</td>
+<td>600,000 × 0.0010 = 600.</td>
+</tr>
+<tr>
+<td>4</td>
+<td>Support shared-cost allocation</td>
+<td>$6,840</td>
+<td>Support has 60% of requests, and 0.60 × 11,400 = 6,840.</td>
+</tr>
+<tr>
+<td>5</td>
+<td>Sales total allocated cost</td>
+<td>$10,620</td>
+<td>7,200 direct plus 0.30 × 11,400 = 3,420 shared.</td>
+</tr>
+<tr>
+<td>6</td>
+<td>HR total allocated cost</td>
+<td>$1,740</td>
+<td>600 direct plus 0.10 × 11,400 = 1,140 shared.</td>
+</tr>
+<tr>
+<td>7</td>
+<td>Support share of total token cost</td>
+<td>58.1%</td>
+<td>10,800 ÷ 18,600 = 0.581.</td>
+</tr>
+<tr>
+<td>8</td>
+<td>HR allocated cost minus the Chapter 9 assumed allocation</td>
+<td>−$1,260</td>
+<td>1,740 − 3,000 = −1,260.</td>
+</tr>
+</tbody>
+</table>
+<p><strong>Provenance:</strong> All values come from the chapter section "Tagging and Attribution" and the Chapter 9 allocation table. The sim must label the data "illustrative".</p>
+<p><strong>Rules:</strong> Direct token cost = requests × token cost per request. Shared allocation = tenant requests ÷ total requests × shared cost. Allocated total = direct token cost + shared allocation. Totals across tenants must equal $30,000. Percentages are shown to one decimal place. In exploration the learner changes:</p>
+<table>
+<thead>
+<tr>
+<th>Quantity</th>
+<th>Min</th>
+<th>Max</th>
+<th>Step</th>
+<th>Default</th>
+<th>Unit</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Support token cost per request</td>
+<td>0.0010</td>
+<td>0.0060</td>
+<td>0.0005</td>
+<td>0.0030</td>
+<td>dollars</td>
+</tr>
+<tr>
+<td>Sales token cost per request</td>
+<td>0.0010</td>
+<td>0.0060</td>
+<td>0.0005</td>
+<td>0.0040</td>
+<td>dollars</td>
+</tr>
+<tr>
+<td>HR token cost per request</td>
+<td>0.0010</td>
+<td>0.0060</td>
+<td>0.0005</td>
+<td>0.0010</td>
+<td>dollars</td>
+</tr>
+</tbody>
+</table>
+<p>Request counts and shared cost stay fixed. When the learner changes a token cost the allocated totals and the comparison with the Chapter 9 split update, and the platform total changes from $30,000 accordingly.</p>
+<p><strong>Learner Activity:</strong></p>
+<ol>
+<li>The learner reads the fixed inputs and item 1, types a value, and presses Check.</li>
+<li>The sim shows the model value, the arithmetic, and the "Why" text.</li>
+<li>After eight items, exploration unlocks: the learner changes the three token costs per request and watches the allocated totals and the difference from the Chapter 9 split update.</li>
+<li>The learner should notice that equal request shares produce unequal totals once per-request costs differ.</li>
+</ol>
+<p><strong>Feedback:</strong> Eight items, fixed order, two attempts each. Correct: "Correct: <value>." Incorrect on the first attempt: the "Why" text without the model value. After a second wrong attempt the model value is shown and the item counts as missed. A running count "Correct on first attempt: n of 8" is shown.</p>
+<p><strong>Starting State:</strong> The fixed inputs are shown and item 1 has an empty answer box. The question on screen is "What did Support's requests cost in tokens this month?"</p>
+<p><strong>Chapter Anchors:</strong> The chapter states 6,000,000 requests, $0.0030, $0.0040, and $0.0010 per request, direct token costs of $10,800, $7,200, and $600, shared cost of $11,400, allocated totals of $17,640, $10,620, and $1,740, token-cost shares of 58.1%, 38.7%, and 3.2%, and a $1,260 change for HR.</p>
+</details>
+<div class="admonition mascot-tip">
+<p class="admonition-title">Make Missing Tags Fail Loudly</p>
+<p><img alt="Ledger with a tip" class="mascot-admonition-img" src="../../img/mascot/tip.png" />
+Reject the creation of any resource or key that lacks the required tags, and report the tag compliance rate every week. It is far cheaper to refuse an untagged resource on day one than to reconstruct its owner from a bill six months later.</p>
+</div>
+<h3 id="from-logs-to-a-warehouse-the-cost-data-pipeline">From Logs to a Warehouse: The Cost Data Pipeline<a class="headerlink" href="#from-logs-to-a-warehouse-the-cost-data-pipeline" title="Permanent link">&para;</a></h3>
+<p>Records scattered across logs and invoices need a path to one place. A <strong>data pipeline for cost analytics</strong> is the sequence of automated steps that collects usage and billing data from its sources, cleans and enriches it, stores it, and serves it to reports and alerts. Four stages cover it:</p>
+<ol>
+<li><strong>Collect:</strong> gather the records from application logs, gateways, and provider billing interfaces.</li>
+<li><strong>Transform:</strong> clean, deduplicate, price, and tag them.</li>
+<li><strong>Load:</strong> write them to storage in the shape analysts need.</li>
+<li><strong>Serve:</strong> feed dashboards, alerts, and reports.</li>
+</ol>
+<p><strong>ETL for usage data</strong> is the extract, transform, and load process that pulls raw usage records out of their sources, reshapes and prices them, and loads the result into the warehouse. A common alternative, ELT, loads raw data first and transforms inside the warehouse, which keeps the raw records for reprocessing when a price or a tag mapping changes. The transform step does most of the work for cost data: it multiplies tokens by the price in effect on the request date, drops duplicates that share a <code>request_id</code>, and maps tag variants such as <code>supp</code> and <code>Support</code> to one value.</p>
+<p>A <strong>cost data warehouse</strong> is a central analytical store that holds cleaned, joined usage and cost data from all sources in a structure designed for aggregation and trend queries. A common design is a star schema: one fact table of request-level costs, surrounded by dimension tables that describe the dates, tenants, models, and features. Before reading the query below, note what each part does: <code>SUM(cost_usd)</code> adds the cost of every row in the group, <code>WHERE</code> limits the rows to September, and <code>GROUP BY tenant</code> produces one result row per tenant.</p>
+<div class="language-sql highlight"><pre><span></span><code><span id="__span-1-1"><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a><span class="k">SELECT</span><span class="w"> </span><span class="n">tenant</span><span class="p">,</span><span class="w"> </span><span class="k">SUM</span><span class="p">(</span><span class="n">cost_usd</span><span class="p">)</span><span class="w"> </span><span class="k">AS</span><span class="w"> </span><span class="n">token_cost</span>
+</span><span id="__span-1-2"><a id="__codelineno-1-2" name="__codelineno-1-2" href="#__codelineno-1-2"></a><span class="k">FROM</span><span class="w"> </span><span class="n">usage_cost</span>
+</span><span id="__span-1-3"><a id="__codelineno-1-3" name="__codelineno-1-3" href="#__codelineno-1-3"></a><span class="k">WHERE</span><span class="w"> </span><span class="n">usage_date</span><span class="w"> </span><span class="o">&gt;=</span><span class="w"> </span><span class="s1">&#39;2026-09-01&#39;</span><span class="w"> </span><span class="k">AND</span><span class="w"> </span><span class="n">usage_date</span><span class="w"> </span><span class="o">&lt;</span><span class="w"> </span><span class="s1">&#39;2026-10-01&#39;</span>
+</span><span id="__span-1-4"><a id="__codelineno-1-4" name="__codelineno-1-4" href="#__codelineno-1-4"></a><span class="k">GROUP</span><span class="w"> </span><span class="k">BY</span><span class="w"> </span><span class="n">tenant</span>
+</span><span id="__span-1-5"><a id="__codelineno-1-5" name="__codelineno-1-5" href="#__codelineno-1-5"></a><span class="k">ORDER</span><span class="w"> </span><span class="k">BY</span><span class="w"> </span><span class="n">token_cost</span><span class="w"> </span><span class="k">DESC</span><span class="p">;</span>
+</span></code></pre></div>
+<p>This single query reproduces the direct-cost column of the allocation table, which the invoice alone cannot.</p>
+<p><strong>Data quality for cost metrics</strong> is the set of checks that confirm cost data is complete, accurate, unique, valid, and fresh enough to trust. The pipeline should run them on every load.</p>
+<table>
+<thead>
+<tr>
+<th>Check</th>
+<th>Question</th>
+<th>Example failure</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Completeness</td>
+<td>Is every expected source and day present?</td>
+<td>No records for one gateway on Tuesday</td>
+</tr>
+<tr>
+<td>Accuracy</td>
+<td>Does the warehouse total match the invoice within a tolerance, such as 1%?</td>
+<td>Warehouse $29,100 against an invoice of $30,000 (−3.0%)</td>
+</tr>
+<tr>
+<td>Uniqueness</td>
+<td>Does any <code>request_id</code> appear twice?</td>
+<td>A retry logged twice</td>
+</tr>
+<tr>
+<td>Validity</td>
+<td>Are values in range?</td>
+<td>A negative token count</td>
+</tr>
+<tr>
+<td>Freshness</td>
+<td>Did the latest load arrive on time?</td>
+<td>Yesterday's data not loaded by 08:00</td>
+</tr>
+</tbody>
+</table>
+<p>The duplicate failure is the one that quietly inflates spend. Suppose a retry bug writes 36,000 Support records twice. At $0.0030 each that adds <span class="arithmatex">\( 36{,}000 \times 0.0030 = \$108 \)</span> of phantom cost, small in dollars but visible as a mismatch against the invoice, which is why the accuracy check exists.</p>
+<p>The next specification checks whether the learner can place each pipeline task in its stage.</p>
+<h4 id="diagram-pipeline-stage-sorter">Diagram: Pipeline Stage Sorter<a class="headerlink" href="#diagram-pipeline-stage-sorter" title="Permanent link">&para;</a></h4>
+<details>
+<summary>Pipeline Stage Sorter</summary>
+<p>Type: microsim
+<strong>sim-id:</strong> pipeline-stage-sorter<br/>
+<strong>Library:</strong> p5.js<br/>
+<strong>Status:</strong> Specified<br/>
+<strong>Bloom Level:</strong> Understand<br/>
+<strong>Bloom Verb:</strong> classify<br/>
+<strong>Learning Objective:</strong> The learner will classify each of ten cost-analytics pipeline tasks under the one of four stages (Collect, Transform, Load, Serve) in which it occurs, with at least 8 of 10 correct on the first attempt.</p>
+<p><strong>Prerequisites:</strong> data pipeline for cost analytics, ETL for usage data, cost data warehouse, data quality for cost metrics (all defined in the section "From Logs to a Warehouse: The Cost Data Pipeline" above).</p>
+<p><strong>Evidence of Mastery:</strong> For each task the learner chooses one stage and commits. A choice is correct when it matches the "Correct stage" column in Content. Mastery is 8 of 10 correct on the first attempt. Reading the stage definitions is exploration, not evidence.</p>
+<p><strong>Misconceptions:</strong> (1) Cleaning and deduplicating happen after storage. (2) Alerting is part of data collection. (3) Retention management belongs in the transform stage.</p>
+<p><strong>Instructional Rationale:</strong> Classifying concrete tasks under stage definitions is how an Understand objective is shown. Items such as deduplication and tag mapping, which look like storage work, test whether the learner knows where cleaning belongs.</p>
+<p><strong>Content:</strong></p>
+<p>Stage definitions, always visible to the learner:</p>
+<table>
+<thead>
+<tr>
+<th>Stage</th>
+<th>Definition shown</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Collect</td>
+<td>Gather raw usage and billing records from their sources.</td>
+</tr>
+<tr>
+<td>Transform</td>
+<td>Clean, validate, deduplicate, price, and tag the records.</td>
+</tr>
+<tr>
+<td>Load</td>
+<td>Write the cleaned records to storage and manage how long they are kept.</td>
+</tr>
+<tr>
+<td>Serve</td>
+<td>Deliver the stored data to dashboards, alerts, and reports.</td>
+</tr>
+</tbody>
+</table>
+<table>
+<thead>
+<tr>
+<th>#</th>
+<th>Task shown</th>
+<th>Correct stage</th>
+<th>Why (shown as feedback)</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>1</td>
+<td>Write a call record with a request ID and tenant to the application log.</td>
+<td>Collect</td>
+<td>It creates the raw record at the source.</td>
+</tr>
+<tr>
+<td>2</td>
+<td>Pull yesterday's usage from the provider's billing interface.</td>
+<td>Collect</td>
+<td>It gathers raw data from an outside source.</td>
+</tr>
+<tr>
+<td>3</td>
+<td>Multiply input and output tokens by the price in effect on the request date.</td>
+<td>Transform</td>
+<td>Pricing enriches the raw record.</td>
+</tr>
+<tr>
+<td>4</td>
+<td>Drop records that share a request ID with an earlier record.</td>
+<td>Transform</td>
+<td>Deduplication cleans the data before storage.</td>
+</tr>
+<tr>
+<td>5</td>
+<td>Map the tag values "supp" and "Support" to the single value "support".</td>
+<td>Transform</td>
+<td>Normalizing tags is cleaning.</td>
+</tr>
+<tr>
+<td>6</td>
+<td>Reject a record with a negative token count.</td>
+<td>Transform</td>
+<td>Validation is a cleaning step.</td>
+</tr>
+<tr>
+<td>7</td>
+<td>Append the day's cleaned records to the fact table, partitioned by date.</td>
+<td>Load</td>
+<td>It writes the cleaned data to storage.</td>
+</tr>
+<tr>
+<td>8</td>
+<td>Move payload logs to cheaper storage after 30 days.</td>
+<td>Load</td>
+<td>Retention management is a storage step.</td>
+</tr>
+<tr>
+<td>9</td>
+<td>Refresh the dashboard panel that shows cost by team.</td>
+<td>Serve</td>
+<td>It delivers stored data to a report.</td>
+</tr>
+<tr>
+<td>10</td>
+<td>Send an alert when daily spend passes the anomaly threshold.</td>
+<td>Serve</td>
+<td>It delivers a signal from stored data to people.</td>
+</tr>
+</tbody>
+</table>
+<p><strong>Provenance:</strong> The stages and tasks come from the chapter section "From Logs to a Warehouse: The Cost Data Pipeline". The sim must label the data "illustrative".</p>
+<p><strong>Rules:</strong> Ten items, each with exactly one correct stage. Stage counts in the item list are two for Collect, four for Transform, two for Load, and two for Serve. Score is the count correct on the first attempt; mastery is &gt;= 8.</p>
+<p><strong>Learner Activity:</strong></p>
+<ol>
+<li>The learner reads task 1 and selects one of the four stages, then presses Commit.</li>
+<li>The sim marks the choice correct or incorrect and shows the "Why" text.</li>
+<li>The learner continues through all ten tasks.</li>
+<li>At the end the learner sees every task under its correct stage, and should notice which cleaning tasks were mistaken for storage tasks.</li>
+</ol>
+<p><strong>Feedback:</strong> Ten items, fixed order, two attempts each. Correct: "Correct: <stage>. <Why>". Incorrect on the first attempt: "Not quite. <Why>" without naming the stage. After a second wrong attempt the correct stage and the "Why" are shown and the item counts as missed. A running count "Correct on first attempt: n of 10" is shown.</p>
+<p><strong>Starting State:</strong> The four definitions are visible and task 1 is shown with nothing selected. The question on screen is "At which stage of the pipeline does this task happen?"</p>
+<p><strong>Chapter Anchors:</strong> The chapter names four stages, Collect, Transform, Load, and Serve, and lists pricing, deduplication, and tag mapping as transform tasks.</p>
+</details>
+<h3 id="watching-the-spend-monitoring-anomalies-forecasts-and-variance">Watching the Spend: Monitoring, Anomalies, Forecasts, and Variance<a class="headerlink" href="#watching-the-spend-monitoring-anomalies-forecasts-and-variance" title="Permanent link">&para;</a></h3>
+<p>Chapter 6 introduced cost alerts and budget thresholds on cumulative spend. This section adds the signals that need the warehouse behind them.</p>
+<p><strong>Real-time cost monitoring</strong> is the continuous measurement and display of spend as it happens, with a delay of minutes rather than a day, so a problem can be stopped while it is still small. It costs more than a nightly load, since it needs a streaming path, so ask what an hour of delay costs. Suppose a retry loop adds $60 an hour. A nightly batch detects it after 12 hours on average, which is <span class="arithmatex">\( 12 \times 60 = \$720 \)</span> of waste. A streaming pipeline with a 5-minute delay and a 10-minute alert path stops it after about 15 minutes, a waste of <span class="arithmatex">\( 60 \times 0.25 = \$15 \)</span>. If the streaming path costs $400 a month more, it pays for itself if it prevents one such incident a year, and not otherwise.</p>
+<p><strong>Anomaly detection in spend</strong> is the automated identification of spend that deviates from its normal pattern by more than chance would explain. A simple rule compares each day to a baseline built from recent days. Flag a day when its spend exceeds the mean of the previous 7 days by more than 3 standard deviations of those days. The standard deviation measures how much the days normally vary, so 3 of them is a spike that the usual wobble is very unlikely to produce. In the example, daily spend is near $1,000 with a standard deviation of about $13, so the threshold is about $1,040, and a day at $1,620 stands out at a z-score near 40.</p>
+<p>There is a trap in the rule. The next day, at $1,650, is not flagged. The previous 7 days now include the $1,620 spike, which inflated the standard deviation to $233 and raised the threshold to $1,791. Continuing anomalies hide behind the first one, which is called masking. The remedy is to compute baselines from days already judged normal, or to use a robust measure such as the median.</p>
+<p>The following specification lets the learner apply the rule to 14 days.</p>
+<h4 id="diagram-spend-anomaly-detector">Diagram: Spend Anomaly Detector<a class="headerlink" href="#diagram-spend-anomaly-detector" title="Permanent link">&para;</a></h4>
+<details>
+<summary>Spend Anomaly Detector</summary>
+<p>Type: microsim
+<strong>sim-id:</strong> spend-anomaly-detector<br/>
+<strong>Library:</strong> p5.js<br/>
+<strong>Status:</strong> Specified<br/>
+<strong>Bloom Level:</strong> Analyze<br/>
+<strong>Bloom Verb:</strong> distinguish<br/>
+<strong>Learning Objective:</strong> The learner will distinguish, for each of 14 days of platform spend, the days flagged by the rule "spend greater than the mean plus 3 standard deviations of the previous 7 days" from the days not flagged, and will identify the day on which masking hides a real spike.</p>
+<p><strong>Prerequisites:</strong> anomaly detection in spend, standard deviation, z-score, masking (all defined in the section "Watching the Spend" above).</p>
+<p><strong>Evidence of Mastery:</strong> For each of 14 days the learner commits "Flag" or "No flag" before the baseline is shown. A choice is correct when it matches the "Rule result" column in Content. After the 14 days the learner selects the one day on which masking hides a real spike, which is correct when it is day 13. Mastery is 12 of 14 day choices correct on the first attempt and the masked day identified. Exploration is not evidence.</p>
+<p><strong>Misconceptions:</strong> (1) A day that looks very high to a person will always be flagged. (2) A flagged spike is followed by another flag if spend stays high. (3) A threshold of 3 standard deviations is a fixed dollar amount.</p>
+<p><strong>Instructional Rationale:</strong> Analyze-level work breaks a result into its parts. Predicting each flag before the baseline appears makes the learner estimate what is normal, and the masked day forces them to see that the baseline itself is built from the data being judged.</p>
+<p><strong>Content:</strong></p>
+<p>Daily platform spend in dollars, days 1 to 21: 980, 1010, 1000, 990, 1020, 1005, 995, 1015, 985, 1000, 1030, 1620, 1650, 1010, 1000, 990, 1025, 1060, 1005, 995, 1380. Days 1 to 7 are the first baseline window only. Days 8 to 21 are the 14 days judged.</p>
+<table>
+<thead>
+<tr>
+<th>Day</th>
+<th>Spend</th>
+<th>Previous 7 days mean</th>
+<th>Previous 7 days SD</th>
+<th>Threshold (mean + 3 SD)</th>
+<th>Rule result</th>
+<th>Why (shown as feedback)</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>8</td>
+<td>1,015</td>
+<td>1,000.0</td>
+<td>13.2</td>
+<td>1,039.7</td>
+<td>No flag</td>
+<td>Within the usual range.</td>
+</tr>
+<tr>
+<td>9</td>
+<td>985</td>
+<td>1,005.0</td>
+<td>10.8</td>
+<td>1,037.4</td>
+<td>No flag</td>
+<td>Below the mean.</td>
+</tr>
+<tr>
+<td>10</td>
+<td>1,000</td>
+<td>1,001.4</td>
+<td>12.8</td>
+<td>1,039.9</td>
+<td>No flag</td>
+<td>Within the usual range.</td>
+</tr>
+<tr>
+<td>11</td>
+<td>1,030</td>
+<td>1,001.4</td>
+<td>12.8</td>
+<td>1,039.9</td>
+<td>No flag</td>
+<td>z is 2.23, high but below 3.</td>
+</tr>
+<tr>
+<td>12</td>
+<td>1,620</td>
+<td>1,007.1</td>
+<td>15.5</td>
+<td>1,053.7</td>
+<td>Flag</td>
+<td>Far above the threshold.</td>
+</tr>
+<tr>
+<td>13</td>
+<td>1,650</td>
+<td>1,092.9</td>
+<td>232.9</td>
+<td>1,791.5</td>
+<td>No flag</td>
+<td>Masked: day 12 inflated the standard deviation.</td>
+</tr>
+<tr>
+<td>14</td>
+<td>1,010</td>
+<td>1,185.0</td>
+<td>307.9</td>
+<td>2,108.6</td>
+<td>No flag</td>
+<td>Normal spend.</td>
+</tr>
+<tr>
+<td>15</td>
+<td>1,000</td>
+<td>1,187.1</td>
+<td>306.4</td>
+<td>2,106.3</td>
+<td>No flag</td>
+<td>Normal spend.</td>
+</tr>
+<tr>
+<td>16</td>
+<td>990</td>
+<td>1,185.0</td>
+<td>307.8</td>
+<td>2,108.5</td>
+<td>No flag</td>
+<td>Normal spend.</td>
+</tr>
+<tr>
+<td>17</td>
+<td>1,025</td>
+<td>1,185.7</td>
+<td>307.3</td>
+<td>2,107.6</td>
+<td>No flag</td>
+<td>Normal spend.</td>
+</tr>
+<tr>
+<td>18</td>
+<td>1,060</td>
+<td>1,189.3</td>
+<td>304.9</td>
+<td>2,104.0</td>
+<td>No flag</td>
+<td>Normal spend.</td>
+</tr>
+<tr>
+<td>19</td>
+<td>1,005</td>
+<td>1,193.6</td>
+<td>302.5</td>
+<td>2,101.1</td>
+<td>No flag</td>
+<td>Normal spend.</td>
+</tr>
+<tr>
+<td>20</td>
+<td>995</td>
+<td>1,105.7</td>
+<td>241.1</td>
+<td>1,829.0</td>
+<td>No flag</td>
+<td>Normal spend.</td>
+</tr>
+<tr>
+<td>21</td>
+<td>1,380</td>
+<td>1,012.1</td>
+<td>24.0</td>
+<td>1,084.0</td>
+<td>Flag</td>
+<td>The window has cleared, so the baseline is tight again.</td>
+</tr>
+</tbody>
+</table>
+<p><strong>Provenance:</strong> The spend series is synthetic and illustrative, written for this chapter, and the sim must label it "illustrative". The mean and standard deviation are computed from the Rules.</p>
+<p><strong>Rules:</strong> For day d from 8 to 21, mean = average of days d−7 to d−1 as recorded, and SD = sample standard deviation (divisor n − 1) of the same seven values. Threshold = mean + 3 × SD. A day is flagged when spend &gt; threshold. Only increases are flagged. Values are shown to one decimal place. In exploration the learner changes:</p>
+<table>
+<thead>
+<tr>
+<th>Quantity</th>
+<th>Min</th>
+<th>Max</th>
+<th>Step</th>
+<th>Default</th>
+<th>Unit</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Multiplier on the standard deviation</td>
+<td>1</td>
+<td>5</td>
+<td>0.5</td>
+<td>3</td>
+<td>standard deviations</td>
+</tr>
+<tr>
+<td>Window length</td>
+<td>3</td>
+<td>10</td>
+<td>1</td>
+<td>7</td>
+<td>days</td>
+</tr>
+</tbody>
+</table>
+<p>With the changes the flags are recomputed for the days that have a full window, and days without one are marked "No baseline".</p>
+<p><strong>Learner Activity:</strong></p>
+<ol>
+<li>The learner sees the spend of day 8 and chooses Flag or No flag, then presses Commit.</li>
+<li>The sim shows the previous-days mean, the standard deviation, the threshold, and the "Why" text.</li>
+<li>After 14 days, the learner selects the one day where masking hides a real spike.</li>
+<li>Exploration unlocks: the learner changes the multiplier and the window and watches which days are flagged.</li>
+<li>The learner should notice that a lower multiplier flags day 11 but also raises false alarms, and that day 13 is flagged only when the window contains no recent spike.</li>
+</ol>
+<p><strong>Feedback:</strong> Fourteen days, fixed order, two attempts each. Correct: "Correct: <result>." Incorrect on the first attempt: the "Why" text without the result. After a second wrong attempt the result is shown and the day counts as missed. The masked-day question allows one attempt, with the "Why" text for day 13 shown afterwards. A running count "Correct on first attempt: n of 14" is shown.</p>
+<p><strong>Starting State:</strong> Day 8 is shown with the 21-day spend series visible up to that day and no choice made. The question on screen is "Is this day's spend an anomaly under the rule?"</p>
+<p><strong>Chapter Anchors:</strong> The chapter states daily spend near $1,000 with a standard deviation near $13, a threshold near $1,040, a spike of $1,620 with a z-score near 40, a following day of $1,650 with an inflated standard deviation of $233 and a threshold of $1,791, and masking as the cause.</p>
+</details>
+<div class="admonition mascot-encourage">
+<p class="admonition-title">Statistics Without the Fear</p>
+<p><img alt="Ledger encouraging" class="mascot-admonition-img" src="../../img/mascot/encouraging.png" />
+If standard deviations and z-scores feel like a lot at once, that is normal, and you already used the same idea in Chapter 12. Try the rule on the day 8 to 12 numbers by hand first, then let the tool check you.</p>
+</div>
+<p><strong>Spend forecasting</strong> is the projection of future spend from past usage, prices, and planned changes, used to compare the expected month-end or year-end total with the budget. Two simple methods bracket the answer. The run-rate method multiplies the average daily spend so far by the days in the month. The recent-trend method adds the cumulative spend to the average of the last 7 days times the days remaining. Suppose that after 12 days of a 30-day month the platform has spent $12,600, a daily average of $1,050, and the last 7 days averaged $1,120.</p>
+<table>
+<thead>
+<tr>
+<th>Method</th>
+<th>Calculation</th>
+<th style="text-align: right;">Month-end forecast</th>
+<th style="text-align: right;">Against the $30,000 budget</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Run rate</td>
+<td><span class="arithmatex">\( 12{,}600 \div 12 \times 30 \)</span></td>
+<td style="text-align: right;">$31,500</td>
+<td style="text-align: right;">$1,500 over</td>
+</tr>
+<tr>
+<td>Recent trend</td>
+<td><span class="arithmatex">\( 12{,}600 + 18 \times 1{,}120 \)</span></td>
+<td style="text-align: right;">$32,760</td>
+<td style="text-align: right;">$2,760 over</td>
+</tr>
+</tbody>
+</table>
+<p>The two methods differ by $1,260, which is itself useful: a wide gap says the spend is accelerating and the forecast is uncertain. Add known events, such as a planned launch, rather than hoping a trend will capture them.</p>
+<p><strong>Budget variance analysis</strong> is the comparison of actual spend with the budget, with the difference, called the variance, explained by its causes. A variance is favorable when spend is below budget and unfavorable when it is above. The explanation matters more than the total. Split the variance into a volume part, caused by more or fewer requests than planned, and a rate part, caused by a different cost per request. Take Support, budgeted at 3,600,000 requests at $0.0030, which is $10,800, with an actual of 3,900,000 requests at $0.0033, which is $12,870.</p>
+<table>
+<thead>
+<tr>
+<th>Component</th>
+<th>Calculation</th>
+<th style="text-align: right;">Variance</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Volume</td>
+<td><span class="arithmatex">\( (3{,}900{,}000 - 3{,}600{,}000) \times 0.0030 \)</span></td>
+<td style="text-align: right;">$900 unfavorable</td>
+</tr>
+<tr>
+<td>Rate</td>
+<td><span class="arithmatex">\( 3{,}900{,}000 \times (0.0033 - 0.0030) \)</span></td>
+<td style="text-align: right;">$1,170 unfavorable</td>
+</tr>
+<tr>
+<td><strong>Total</strong></td>
+<td><span class="arithmatex">\( 12{,}870 - 10{,}800 \)</span></td>
+<td style="text-align: right;"><strong>$2,070 unfavorable</strong></td>
+</tr>
+</tbody>
+</table>
+<p>The larger part, <span class="arithmatex">\(1,170, is the rate: each request cost 10% more than planned, perhaps because prompts grew. A manager who sees only "\)</span>2,070 over" will ask for fewer requests, which is the wrong remedy.</p>
+<p><strong>Cost dashboard design</strong> applies the KPI dashboard principles of Chapter 12 to spend: one audience per dashboard, every figure against a budget or baseline, and drill-down from the total to the cause. The panels for the finance sponsor would be month-to-date spend against budget with the forecast line, cost by tenant, cost per resolved ticket against baseline, tag compliance rate, and the variance split by volume and rate. Operations would add the anomaly flags and the real-time panel.</p>
+<div class="admonition mascot-warning">
+<p class="admonition-title">A Dashboard Nobody Trusts Gets Replaced by a Spreadsheet</p>
+<p><img alt="Ledger warning" class="mascot-admonition-img" src="../../img/mascot/warning.png" />
+If the dashboard total disagrees with the invoice, people stop looking at it, and that happens quickly. Show the reconciliation difference on the dashboard itself, and investigate any gap above 1% before you publish a new panel.</p>
+</div>
+<h3 id="summary-and-quick-check">Summary and Quick Check<a class="headerlink" href="#summary-and-quick-check" title="Permanent link">&para;</a></h3>
+<p>Usage telemetry starts with structured API call and token usage records, kept under a logging strategy that favors metadata over content, and distributed tracing shows where cost arises inside one request. An observability platform stores them, a sampling strategy keeps the detail affordable but never samples the cost meter, and a retention policy sets how long each class is kept. Cost attribution tagging with a controlled taxonomy and multi-tenant attribution turn one invoice line into a cost per team. A pipeline of collect, transform, load, and serve, with ETL and data quality checks, fills the cost data warehouse. Real-time monitoring, anomaly detection, forecasting, variance analysis, and dashboard design turn it into action. In the example, measured data changed the Chapter 9 allocation by as much as $1,260 for one team. Chapter 14 takes the same data and builds departmental, project, user, and feature views, plus the governance that keeps them trustworthy.</p>
+<details class="note">
+<summary>Quick check: why should the cost fields never be sampled? - Click to expand</summary>
+<p>A few very large requests produce much of the spend, and a small sample is likely to miss them. The estimate then comes out too low, so sample traces and payloads and keep every request's token and cost fields.</p>
+</details>
+<details class="note">
+<summary>Quick check: why was day 13's $1,650 not flagged although day 12's $1,620 was? - Click to expand</summary>
+<p>The 7-day window for day 13 contained day 12's spike, which inflated the standard deviation from about $15 to $233 and raised the threshold to $1,791. This masking effect is avoided by building baselines from days already judged normal.</p>
+</details>
+<details class="note">
+<summary>Quick check: what does a volume and rate split of a budget variance tell you that the total does not? - Click to expand</summary>
+<p>It says whether you spent more because you ran more requests or because each request cost more. In the example $900 of the $2,070 overspend is volume and $1,170 is rate, which points at prompt growth rather than demand.</p>
+</details>
+<div class="admonition mascot-celebration">
+<p class="admonition-title">You Can Trace a Dollar to Its Request</p>
+<p><img alt="Ledger celebrating" class="mascot-admonition-img" src="../../img/mascot/celebration.png" />
+You can now design the log record, the tags, and the pipeline that turn one invoice line into spend by team, and read the anomaly, forecast, and variance signals that follow. That is the foundation every cost report in the rest of this book stands on.</p>
+</div>
 
 
 
 
 
 
+
+  
+  
 
 
 
