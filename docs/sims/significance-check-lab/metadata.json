@@ -1,0 +1,55 @@
+{
+  "title": "Significance Check Lab",
+  "creator": "Katie Jo Schuman",
+  "subject": "AI economics",
+  "description": "The learner will judge, for each of eight comparisons of two rates, whether the difference is statistically significant at the 5% level using the rule that the absolute value of z must be at least 1.96.",
+  "date": "2026-10-09",
+  "educational": {
+    "gradeLevel": [
+      "Graduate",
+      "Professional"
+    ],
+    "subjectArea": "Business and AI economics",
+    "topic": "Significance Check Lab",
+    "learningObjectives": [
+      "The learner will judge, for each of eight comparisons of two rates, whether the difference is statistically significant at the 5% level using the rule that the absolute value of z must be at least 1.96."
+    ],
+    "bloomsTaxonomy": "Evaluate",
+    "duration": "10-15 minutes",
+    "prerequisites": [
+      "statistical significance check",
+      "standard error",
+      "z statistic",
+      "pooled rate"
+    ],
+    "standards": []
+  },
+  "technical": {
+    "framework": "JavaScript",
+    "version": "1.0",
+    "canvasDimensions": {
+      "width": "responsive",
+      "height": 320
+    },
+    "canvasHeight": 320,
+    "responsive": true,
+    "dependencies": [
+      "shared-libs/quiz-kit.js"
+    ],
+    "accessibility": {
+      "hasAltText": false,
+      "keyboardNavigable": true
+    }
+  },
+  "pedagogical": {
+    "teachingStrategy": "Commit-then-explore: predict, receive feedback, then explore",
+    "keyQuestions": [],
+    "commonMisconceptions": [
+      "(1) A difference that looks large in percentage terms is significant. (2) A non-significant result proves there is no difference. (3) Sample size does not matter if the rates are the same."
+    ],
+    "assessmentOpportunities": [
+      "For each of eight comparisons the learner commits a verdict, \"Significant\" or \"Not significant\", before z is shown. A verdict is correct when it matches the Content table. Mastery is 7 of 8 correct on the first attempt. Exploration is not evidence."
+    ]
+  },
+  "chapter": "12-measurement-rigor-kpi-reporting"
+}

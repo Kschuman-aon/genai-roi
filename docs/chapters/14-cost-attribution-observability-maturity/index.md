@@ -99,6 +99,10 @@ The first specification practises the roll-up, the unit cost, and the reconcilia
 
 #### Diagram: Roll-Up and Reconciliation Calculator
 
+
+<iframe src="../../sims/rollup-reconciliation-calculator/main.html" width="100%" height="392px" scrolling="no"></iframe>
+[Run Roll-Up and Reconciliation Calculator Fullscreen](../../sims/rollup-reconciliation-calculator/main.html)
+
 <details markdown="1">
 <summary>Roll-Up and Reconciliation Calculator</summary>
 Type: microsim
@@ -184,6 +188,10 @@ A **data lineage for cost metrics** is the documented path of data from its orig
 
 #### Diagram: Cost Metric Lineage Explorer
 
+
+<iframe src="../../sims/cost-metric-lineage-explorer/main.html" width="100%" height="582px" scrolling="no"></iframe>
+[Run Cost Metric Lineage Explorer Fullscreen](../../sims/cost-metric-lineage-explorer/main.html)
+
 <details markdown="1">
 <summary>Cost Metric Lineage Explorer</summary>
 Type: graph-model
@@ -268,6 +276,10 @@ Alerts and dashboards also need design, because poor settings produce either sil
 The next specification lets the learner choose thresholds against a false-alarm limit.
 
 #### Diagram: Alert Threshold Tuner
+
+
+<iframe src="../../sims/alert-threshold-tuner/main.html" width="100%" height="302px" scrolling="no"></iframe>
+[Run Alert Threshold Tuner Fullscreen](../../sims/alert-threshold-tuner/main.html)
 
 <details markdown="1">
 <summary>Alert Threshold Tuner</summary>

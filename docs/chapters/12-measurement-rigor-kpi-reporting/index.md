@@ -83,6 +83,10 @@ The first of the specifications below lets the learner compute these measures.
 
 #### Diagram: Confusion Matrix Metric Explorer
 
+
+<iframe src="../../sims/confusion-matrix-metric-explorer/main.html" width="100%" height="362px" scrolling="no"></iframe>
+[Run Confusion Matrix Metric Explorer Fullscreen](../../sims/confusion-matrix-metric-explorer/main.html)
+
 <details markdown="1">
 <summary>Confusion Matrix Metric Explorer</summary>
 Type: microsim
@@ -232,6 +236,10 @@ The second specification lets the learner practise the attribution.
 
 #### Diagram: Control Group Attribution Lab
 
+
+<iframe src="../../sims/control-group-attribution-lab/main.html" width="100%" height="362px" scrolling="no"></iframe>
+[Run Control Group Attribution Lab Fullscreen](../../sims/control-group-attribution-lab/main.html)
+
 <details markdown="1">
 <summary>Control Group Attribution Lab</summary>
 Type: microsim
@@ -307,6 +315,10 @@ for \( p_1 = 3.0\% \) and \( p_2 = 4.0\% \). Reviewing 100 replies a week would 
 The third specification lets the learner judge eight such results.
 
 #### Diagram: Significance Check Lab
+
+
+<iframe src="../../sims/significance-check-lab/main.html" width="100%" height="322px" scrolling="no"></iframe>
+[Run Significance Check Lab Fullscreen](../../sims/significance-check-lab/main.html)
 
 <details markdown="1">
 <summary>Significance Check Lab</summary>

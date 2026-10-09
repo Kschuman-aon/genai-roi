@@ -1,0 +1,55 @@
+{
+  "title": "Multi-Tenant Cost Allocator",
+  "creator": "Katie Jo Schuman",
+  "subject": "AI economics",
+  "description": "The learner will calculate each tenant's direct token cost, shared-cost allocation, and total allocated cost for the shared platform from request counts and per-request costs, to within $1.",
+  "date": "2026-10-09",
+  "educational": {
+    "gradeLevel": [
+      "Graduate",
+      "Professional"
+    ],
+    "subjectArea": "Business and AI economics",
+    "topic": "Multi-Tenant Cost Allocator",
+    "learningObjectives": [
+      "The learner will calculate each tenant's direct token cost, shared-cost allocation, and total allocated cost for the shared platform from request counts and per-request costs, to within $1."
+    ],
+    "bloomsTaxonomy": "Apply",
+    "duration": "10-15 minutes",
+    "prerequisites": [
+      "multi-tenant cost attribution",
+      "direct cost",
+      "shared cost",
+      "cost attribution tagging"
+    ],
+    "standards": []
+  },
+  "technical": {
+    "framework": "JavaScript",
+    "version": "1.0",
+    "canvasDimensions": {
+      "width": "responsive",
+      "height": 390
+    },
+    "canvasHeight": 390,
+    "responsive": true,
+    "dependencies": [
+      "shared-libs/quiz-kit.js"
+    ],
+    "accessibility": {
+      "hasAltText": false,
+      "keyboardNavigable": true
+    }
+  },
+  "pedagogical": {
+    "teachingStrategy": "Commit-then-explore: predict, receive feedback, then explore",
+    "keyQuestions": [],
+    "commonMisconceptions": [
+      "(1) Teams with equal request shares should pay equal amounts. (2) Shared costs should be split equally per team. (3) An assumed usage share is as good as a measured one."
+    ],
+    "assessmentOpportunities": [
+      "For each of eight items the learner types a value before the answer is shown. A value is correct when it is within $1 of the model value for dollar items, or within 0.1 percentage points for the percentage item. Mastery is 7 of 8 correct on the first attempt. Exploration with the adjustable quantities is not evidence."
+    ]
+  },
+  "chapter": "13-telemetry-logging-cost-dashboards"
+}

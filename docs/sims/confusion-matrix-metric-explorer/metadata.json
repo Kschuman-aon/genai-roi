@@ -1,0 +1,57 @@
+{
+  "title": "Confusion Matrix Metric Explorer",
+  "creator": "Katie Jo Schuman",
+  "subject": "AI economics",
+  "description": "The learner will calculate precision, recall, and accuracy from the four counts of a confusion matrix for eight prompted cases, to within 0.5 percentage points.",
+  "date": "2026-10-09",
+  "educational": {
+    "gradeLevel": [
+      "Graduate",
+      "Professional"
+    ],
+    "subjectArea": "Business and AI economics",
+    "topic": "Confusion Matrix Metric Explorer",
+    "learningObjectives": [
+      "The learner will calculate precision, recall, and accuracy from the four counts of a confusion matrix for eight prompted cases, to within 0.5 percentage points."
+    ],
+    "bloomsTaxonomy": "Apply",
+    "duration": "10-15 minutes",
+    "prerequisites": [
+      "model accuracy metric",
+      "precision and recall",
+      "true positive",
+      "false positive",
+      "false negative",
+      "true negative"
+    ],
+    "standards": []
+  },
+  "technical": {
+    "framework": "JavaScript",
+    "version": "1.0",
+    "canvasDimensions": {
+      "width": "responsive",
+      "height": 360
+    },
+    "canvasHeight": 360,
+    "responsive": true,
+    "dependencies": [
+      "shared-libs/quiz-kit.js"
+    ],
+    "accessibility": {
+      "hasAltText": false,
+      "keyboardNavigable": true
+    }
+  },
+  "pedagogical": {
+    "teachingStrategy": "Commit-then-explore: predict, receive feedback, then explore",
+    "keyQuestions": [],
+    "commonMisconceptions": [
+      "(1) A high accuracy means the system finds the cases that matter. (2) Precision and recall are two names for the same thing. (3) Fewer false positives always means a better system."
+    ],
+    "assessmentOpportunities": [
+      "For each of eight items the learner types a percentage before the answer is shown. A value is correct when it is within 0.5 percentage points of the model value. Mastery is 7 of 8 correct on the first attempt. Exploration with the adjustable counts is not evidence."
+    ]
+  },
+  "chapter": "12-measurement-rigor-kpi-reporting"
+}

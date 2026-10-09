@@ -1,0 +1,55 @@
+{
+  "title": "Control Group Attribution Lab",
+  "creator": "Katie Jo Schuman",
+  "subject": "AI economics",
+  "description": "The learner will attribute the measured change in ticket handle time to the assistant for each of six scenarios by subtracting the control group's change, and will identify whether a pre/post study alone overstates, understates, or about equals the attributable benefit.",
+  "date": "2026-10-09",
+  "educational": {
+    "gradeLevel": [
+      "Graduate",
+      "Professional"
+    ],
+    "subjectArea": "Business and AI economics",
+    "topic": "Control Group Attribution Lab",
+    "learningObjectives": [
+      "The learner will attribute the measured change in ticket handle time to the assistant for each of six scenarios by subtracting the control group's change, and will identify whether a pre/post study alone overstates, understates, or about equals the attributable benefit."
+    ],
+    "bloomsTaxonomy": "Analyze",
+    "duration": "10-15 minutes",
+    "prerequisites": [
+      "pre/post comparison study",
+      "confounding factor",
+      "control group comparison",
+      "metric attribution"
+    ],
+    "standards": []
+  },
+  "technical": {
+    "framework": "JavaScript",
+    "version": "1.0",
+    "canvasDimensions": {
+      "width": "responsive",
+      "height": 360
+    },
+    "canvasHeight": 360,
+    "responsive": true,
+    "dependencies": [
+      "shared-libs/quiz-kit.js"
+    ],
+    "accessibility": {
+      "hasAltText": false,
+      "keyboardNavigable": true
+    }
+  },
+  "pedagogical": {
+    "teachingStrategy": "Commit-then-explore: predict, receive feedback, then explore",
+    "keyQuestions": [],
+    "commonMisconceptions": [
+      "(1) A before and after drop is the effect of the intervention. (2) The control group's change is irrelevant if the treated group improved. (3) A confounder can only make an intervention look better, never worse."
+    ],
+    "assessmentOpportunities": [
+      "For each of six scenarios the learner commits two answers before the result is shown: the attributable benefit in minutes, and a verdict of \"Pre/post overstates\", \"Pre/post understates\", or \"Pre/post is about right\". The benefit is correct within 0.05 minutes. The verdict is correct when it matches the Content table. Mastery is 5 of 6 scenarios with both answers correct on the first attempt. Exploration is not evidence."
+    ]
+  },
+  "chapter": "12-measurement-rigor-kpi-reporting"
+}

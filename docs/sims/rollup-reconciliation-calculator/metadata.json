@@ -1,0 +1,54 @@
+{
+  "title": "Roll-Up and Reconciliation Calculator",
+  "creator": "Katie Jo Schuman",
+  "subject": "AI economics",
+  "description": "The learner will calculate a feature's allocated shared cost and unit cost, the reconciliation difference between warehouse and invoices, and a normalized cost per million words for two providers, to the tolerances stated for each item.",
+  "date": "2026-10-09",
+  "educational": {
+    "gradeLevel": [
+      "Graduate",
+      "Professional"
+    ],
+    "subjectArea": "Business and AI economics",
+    "topic": "Roll-Up and Reconciliation Calculator",
+    "learningObjectives": [
+      "The learner will calculate a feature's allocated shared cost and unit cost, the reconciliation difference between warehouse and invoices, and a normalized cost per million words for two providers, to the tolerances stated for each item."
+    ],
+    "bloomsTaxonomy": "Apply",
+    "duration": "10-15 minutes",
+    "prerequisites": [
+      "per-feature cost tracking",
+      "vendor invoice reconciliation",
+      "cost data normalization"
+    ],
+    "standards": []
+  },
+  "technical": {
+    "framework": "JavaScript",
+    "version": "1.0",
+    "canvasDimensions": {
+      "width": "responsive",
+      "height": 390
+    },
+    "canvasHeight": 390,
+    "responsive": true,
+    "dependencies": [
+      "shared-libs/quiz-kit.js"
+    ],
+    "accessibility": {
+      "hasAltText": false,
+      "keyboardNavigable": true
+    }
+  },
+  "pedagogical": {
+    "teachingStrategy": "Commit-then-explore: predict, receive feedback, then explore",
+    "keyQuestions": [],
+    "commonMisconceptions": [
+      "(1) Shared costs belong to no feature. (2) A higher price per token always means a higher cost for the same work. (3) A small reconciliation difference needs no explanation."
+    ],
+    "assessmentOpportunities": [
+      "For each of eight items the learner types a value before the answer is shown. A value is correct when it is within the tolerance in the Content table. Mastery is 7 of 8 correct on the first attempt. Exploration with the adjustable quantities is not evidence."
+    ]
+  },
+  "chapter": "14-cost-attribution-observability-maturity"
+}

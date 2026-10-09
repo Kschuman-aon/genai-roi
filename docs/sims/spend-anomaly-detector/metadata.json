@@ -1,0 +1,55 @@
+{
+  "title": "Spend Anomaly Detector",
+  "creator": "Katie Jo Schuman",
+  "subject": "AI economics",
+  "description": "The learner will distinguish, for each of 14 days of platform spend, the days flagged by the rule \"spend greater than the mean plus 3 standard deviations of the previous 7 days\" from the days not flagged, and will identify the day on which masking hides a real spike.",
+  "date": "2026-10-09",
+  "educational": {
+    "gradeLevel": [
+      "Graduate",
+      "Professional"
+    ],
+    "subjectArea": "Business and AI economics",
+    "topic": "Spend Anomaly Detector",
+    "learningObjectives": [
+      "The learner will distinguish, for each of 14 days of platform spend, the days flagged by the rule \"spend greater than the mean plus 3 standard deviations of the previous 7 days\" from the days not flagged, and will identify the day on which masking hides a real spike."
+    ],
+    "bloomsTaxonomy": "Analyze",
+    "duration": "10-15 minutes",
+    "prerequisites": [
+      "anomaly detection in spend",
+      "standard deviation",
+      "z-score",
+      "masking"
+    ],
+    "standards": []
+  },
+  "technical": {
+    "framework": "Chart.js",
+    "version": "1.0",
+    "canvasDimensions": {
+      "width": "responsive",
+      "height": 580
+    },
+    "canvasHeight": 580,
+    "responsive": true,
+    "dependencies": [
+      "shared-libs/quiz-kit.js"
+    ],
+    "accessibility": {
+      "hasAltText": false,
+      "keyboardNavigable": true
+    }
+  },
+  "pedagogical": {
+    "teachingStrategy": "Commit-then-explore: predict, receive feedback, then explore",
+    "keyQuestions": [],
+    "commonMisconceptions": [
+      "(1) A day that looks very high to a person will always be flagged. (2) A flagged spike is followed by another flag if spend stays high. (3) A threshold of 3 standard deviations is a fixed dollar amount."
+    ],
+    "assessmentOpportunities": [
+      "For each of 14 days the learner commits \"Flag\" or \"No flag\" before the baseline is shown. A choice is correct when it matches the \"Rule result\" column in Content. After the 14 days the learner selects the one day on which masking hides a real spike, which is correct when it is day 13. Mastery is 12 of 14 day choices correct on the first attempt and the masked day identified. Exploration is not evidence."
+    ]
+  },
+  "chapter": "13-telemetry-logging-cost-dashboards"
+}

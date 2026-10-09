@@ -155,6 +155,10 @@ The next specification lets the learner reproduce this allocation.
 
 #### Diagram: Multi-Tenant Cost Allocator
 
+
+<iframe src="../../sims/multi-tenant-cost-allocator/main.html" width="100%" height="392px" scrolling="no"></iframe>
+[Run Multi-Tenant Cost Allocator Fullscreen](../../sims/multi-tenant-cost-allocator/main.html)
+
 <details markdown="1">
 <summary>Multi-Tenant Cost Allocator</summary>
 Type: microsim
@@ -257,6 +261,10 @@ The next specification checks whether the learner can place each pipeline task i
 
 #### Diagram: Pipeline Stage Sorter
 
+
+<iframe src="../../sims/pipeline-stage-sorter/main.html" width="100%" height="402px" scrolling="no"></iframe>
+[Run Pipeline Stage Sorter Fullscreen](../../sims/pipeline-stage-sorter/main.html)
+
 <details markdown="1">
 <summary>Pipeline Stage Sorter</summary>
 Type: microsim
@@ -330,6 +338,10 @@ There is a trap in the rule. The next day, at $1,650, is not flagged. The previo
 The following specification lets the learner apply the rule to 14 days.
 
 #### Diagram: Spend Anomaly Detector
+
+
+<iframe src="../../sims/spend-anomaly-detector/main.html" width="100%" height="582px" scrolling="no"></iframe>
+[Run Spend Anomaly Detector Fullscreen](../../sims/spend-anomaly-detector/main.html)
 
 <details markdown="1">
 <summary>Spend Anomaly Detector</summary>

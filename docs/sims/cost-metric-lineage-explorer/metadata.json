@@ -1,0 +1,55 @@
+{
+  "title": "Cost Metric Lineage Explorer",
+  "creator": "Katie Jo Schuman",
+  "subject": "AI economics",
+  "description": "The learner will examine a 19-node lineage graph to identify every downstream node affected when one source, table, or metric changes, for six change scenarios, matching the affected set exactly.",
+  "date": "2026-10-09",
+  "educational": {
+    "gradeLevel": [
+      "Graduate",
+      "Professional"
+    ],
+    "subjectArea": "Business and AI economics",
+    "topic": "Cost Metric Lineage Explorer",
+    "learningObjectives": [
+      "The learner will examine a 19-node lineage graph to identify every downstream node affected when one source, table, or metric changes, for six change scenarios, matching the affected set exactly."
+    ],
+    "bloomsTaxonomy": "Analyze",
+    "duration": "10-15 minutes",
+    "prerequisites": [
+      "data lineage for cost metrics",
+      "cost data warehouse",
+      "single source of truth",
+      "metric definition documentation"
+    ],
+    "standards": []
+  },
+  "technical": {
+    "framework": "vis-network",
+    "version": "1.0",
+    "canvasDimensions": {
+      "width": "responsive",
+      "height": 580
+    },
+    "canvasHeight": 580,
+    "responsive": true,
+    "dependencies": [
+      "shared-libs/quiz-kit.js"
+    ],
+    "accessibility": {
+      "hasAltText": false,
+      "keyboardNavigable": true
+    }
+  },
+  "pedagogical": {
+    "teachingStrategy": "Commit-then-explore: predict, receive feedback, then explore",
+    "keyQuestions": [],
+    "commonMisconceptions": [
+      "(1) A change in one source affects only the metric named after it. (2) A change to a price table affects every dashboard. (3) A change to a metric definition changes the data underneath it."
+    ],
+    "assessmentOpportunities": [
+      "For each of six scenarios the learner selects the nodes they believe are affected and commits the selection before the answer is shown. A selection is correct when it equals the \"Affected nodes\" set in Content exactly, with no missing and no extra nodes. Mastery is 5 of 6 scenarios correct on the first attempt. Clicking nodes to read their descriptions is exploration, not evidence."
+    ]
+  },
+  "chapter": "14-cost-attribution-observability-maturity"
+}
