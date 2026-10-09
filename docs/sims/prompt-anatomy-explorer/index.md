@@ -1,6 +1,6 @@
 ---
-title: Anatomy of a Prompt
-description: Interactive p5.js MicroSim for anatomy of a prompt.
+title: "Anatomy of a Prompt"
+description: "Interactive p5.js MicroSim for anatomy of a prompt."
 image: /sims/prompt-anatomy-explorer/prompt-anatomy-explorer.png
 og:image: /sims/prompt-anatomy-explorer/prompt-anatomy-explorer.png
 twitter:image: /sims/prompt-anatomy-explorer/prompt-anatomy-explorer.png

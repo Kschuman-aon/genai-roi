@@ -1,0 +1,55 @@
+{
+  "title": "Sensitivity Tornado Ranker",
+  "creator": "Katie Jo Schuman",
+  "subject": "AI economics",
+  "description": "The learner will differentiate which of four input changes reduces the running-example NPV the most, by ranking them from most to least damaging, and will predict whether a combined change makes the NPV negative.",
+  "date": "2026-10-08",
+  "educational": {
+    "gradeLevel": [
+      "Graduate",
+      "Professional"
+    ],
+    "subjectArea": "Business and AI economics",
+    "topic": "Sensitivity Tornado Ranker",
+    "learningObjectives": [
+      "The learner will differentiate which of four input changes reduces the running-example NPV the most, by ranking them from most to least damaging, and will predict whether a combined change makes the NPV negative."
+    ],
+    "bloomsTaxonomy": "Analyze",
+    "duration": "10-15 minutes",
+    "prerequisites": [
+      "sensitivity analysis",
+      "scenario analysis",
+      "NPV",
+      "hurdle rate"
+    ],
+    "standards": []
+  },
+  "technical": {
+    "framework": "Chart.js",
+    "version": "1.0",
+    "canvasDimensions": {
+      "width": "responsive",
+      "height": 580
+    },
+    "canvasHeight": 580,
+    "responsive": true,
+    "dependencies": [
+      "shared-libs/quiz-kit.js"
+    ],
+    "accessibility": {
+      "hasAltText": true,
+      "keyboardNavigable": true
+    }
+  },
+  "pedagogical": {
+    "teachingStrategy": "Commit-then-explore: predict, receive feedback, then explore",
+    "keyQuestions": [],
+    "commonMisconceptions": [
+      "(1) Costs matter more than benefits in an ROI case. (2) A project that stays positive under each change alone stays positive under a combination. (3) The discount rate is the most influential assumption."
+    ],
+    "assessmentOpportunities": [
+      "The learner commits (1) a ranking of the four adverse changes from largest to smallest NPV reduction and (2) a prediction of Positive or Negative for the combined change \"benefits 20% lower at a 15% discount rate\", both before the chart is revealed. Part 1 is correct when the order matches the \"Correct rank\" column; part 2 is correct when it matches the model sign. Mastery is both parts correct on the first attempt. Exploration is not evidence."
+    ]
+  },
+  "chapter": "10-business-case-financial-forecasting"
+}

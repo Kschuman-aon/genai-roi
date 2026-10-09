@@ -148,6 +148,8 @@ The following specification lets the learner apply that rule on eight claims.
 
 #### Diagram: Speed Versus Quality Check
 
+<iframe src="../../sims/speed-versus-quality-check/main.html" width="100%" height="472px" scrolling="no"></iframe>
+
 <details markdown="1">
 <summary>Speed Versus Quality Check</summary>
 Type: microsim
@@ -243,6 +245,8 @@ The two hard items give $3,750 + $4,500 = $8,250 a quarter, or $33,000 a year. I
 With all 21 metrics now defined, the next specification tests whether you can match a situation to the metric it measures.
 
 #### Diagram: Metric Matcher
+
+<iframe src="../../sims/metric-matcher/main.html" width="100%" height="562px" scrolling="no"></iframe>
 
 <details markdown="1">
 <summary>Metric Matcher</summary>
@@ -343,6 +347,8 @@ Two lessons follow. First, even perfect adoption cannot restore 37.5% once rewor
 The following specification lets the learner reproduce this calculation and test the levers.
 
 #### Diagram: Benefit Realization Calculator
+
+<iframe src="../../sims/benefit-realization-calculator/main.html" width="100%" height="482px" scrolling="no"></iframe>
 
 <details markdown="1">
 <summary>Benefit Realization Calculator</summary>

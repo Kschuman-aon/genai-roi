@@ -1,6 +1,6 @@
 ---
-title: Byte Pair Encoding Step-Through
-description: Interactive p5.js MicroSim for byte pair encoding step-through.
+title: "Byte Pair Encoding Step-Through"
+description: "Interactive p5.js MicroSim for byte pair encoding step-through."
 image: /sims/bpe-tokenizer-explorer/bpe-tokenizer-explorer.png
 og:image: /sims/bpe-tokenizer-explorer/bpe-tokenizer-explorer.png
 twitter:image: /sims/bpe-tokenizer-explorer/bpe-tokenizer-explorer.png

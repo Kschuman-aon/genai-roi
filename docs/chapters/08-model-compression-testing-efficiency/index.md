@@ -92,6 +92,8 @@ Suppose variant B trims the prompt by 18% in tokens, and the team will accept a 
 
 #### Diagram: Prompt A/B Test Decision Lab
 
+<iframe src="../../sims/prompt-ab-test-decision-lab/main.html" width="100%" height="452px" scrolling="no"></iframe>
+
 <details markdown="1">
 <summary>Prompt A/B Test Decision Lab</summary>
 Type: microsim
@@ -170,6 +172,8 @@ Choices made today decay as prices, models, and usage change. The **right-sizing
 One strategic choice recurs in these reviews: **fine-tuning versus prompting**. Fine-tuning adapts the model through an upfront training investment that can shorten every later prompt; prompting alone has no training cost but may carry a longer prompt on every request. Suppose a $5,000 fine-tune lets you drop 800 tokens of instructions from each request on the large model. That saves 800 × $2.00 ÷ 1,000,000 = $0.0016 per request, so the fine-tune pays back after 5,000 ÷ 0.0016 = 3.1 million requests, a little over three months at 1 million requests a month. This ignores any premium for serving a fine-tuned model, which you should check against your provider's price list.
 
 #### Diagram: Cost Per Task Benchmark Explorer
+
+<iframe src="../../sims/cost-per-task-benchmark-explorer/main.html" width="100%" height="447px" scrolling="no"></iframe>
 
 <details markdown="1">
 <summary>Cost Per Task Benchmark Explorer</summary>

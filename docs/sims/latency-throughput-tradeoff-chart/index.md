@@ -1,6 +1,6 @@
 ---
-title: The Batch-Size Trade-Off
-description: Interactive Chart.js MicroSim for the batch-size trade-off.
+title: "The Batch-Size Trade-Off"
+description: "Interactive Chart.js MicroSim for the batch-size trade-off."
 image: /sims/latency-throughput-tradeoff-chart/latency-throughput-tradeoff-chart.png
 og:image: /sims/latency-throughput-tradeoff-chart/latency-throughput-tradeoff-chart.png
 twitter:image: /sims/latency-throughput-tradeoff-chart/latency-throughput-tradeoff-chart.png

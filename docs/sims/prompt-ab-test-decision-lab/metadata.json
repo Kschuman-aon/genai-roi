@@ -1,0 +1,55 @@
+{
+  "title": "Prompt A/B Test Decision Lab",
+  "creator": "Katie Jo Schuman",
+  "subject": "AI economics",
+  "description": "The learner will judge, from a 95% interval for the quality difference, whether to adopt, reject, or keep testing a shorter prompt variant against a 3-point quality tolerance.",
+  "date": "2026-10-08",
+  "educational": {
+    "gradeLevel": [
+      "Graduate",
+      "Professional"
+    ],
+    "subjectArea": "Business and AI economics",
+    "topic": "Prompt A/B Test Decision Lab",
+    "learningObjectives": [
+      "The learner will judge, from a 95% interval for the quality difference, whether to adopt, reject, or keep testing a shorter prompt variant against a 3-point quality tolerance."
+    ],
+    "bloomsTaxonomy": "Evaluate",
+    "duration": "10-15 minutes",
+    "prerequisites": [
+      "A/B testing prompts",
+      "prompt version control",
+      "95% confidence interval",
+      "quality tolerance"
+    ],
+    "standards": []
+  },
+  "technical": {
+    "framework": "p5.js",
+    "version": "1.0",
+    "canvasDimensions": {
+      "width": "responsive",
+      "height": 450
+    },
+    "canvasHeight": 450,
+    "responsive": true,
+    "dependencies": [
+      "shared-libs/quiz-kit.js"
+    ],
+    "accessibility": {
+      "hasAltText": true,
+      "keyboardNavigable": true
+    }
+  },
+  "pedagogical": {
+    "teachingStrategy": "Commit-then-explore: predict, receive feedback, then explore",
+    "keyQuestions": [],
+    "commonMisconceptions": [
+      "(1) A smaller difference in the sample means the variants are equal. (2) If the interval includes zero the test proves B is fine. (3) More tokens saved justifies adopting regardless of the interval."
+    ],
+    "assessmentOpportunities": [
+      "For each of four test results the learner selects Adopt B, Reject B, or Keep testing before the interval is drawn. A selection is correct when it matches the decision rule in Rules for that result. Mastery is 3 of 4 correct on the first attempt. Exploration is not evidence."
+    ]
+  },
+  "chapter": "08-model-compression-testing-efficiency"
+}

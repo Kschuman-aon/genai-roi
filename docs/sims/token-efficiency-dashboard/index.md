@@ -1,6 +1,6 @@
 ---
-title: Cross-Provider Token Efficiency Dashboard
-description: Interactive Chart.js MicroSim for cross-provider token efficiency dashboard.
+title: "Cross-Provider Token Efficiency Dashboard"
+description: "Interactive Chart.js MicroSim for cross-provider token efficiency dashboard."
 image: /sims/token-efficiency-dashboard/token-efficiency-dashboard.png
 og:image: /sims/token-efficiency-dashboard/token-efficiency-dashboard.png
 twitter:image: /sims/token-efficiency-dashboard/token-efficiency-dashboard.png

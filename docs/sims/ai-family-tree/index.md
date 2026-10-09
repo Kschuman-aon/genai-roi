@@ -1,6 +1,6 @@
 ---
-title: The AI Family Tree
-description: An interactive vis-network diagram showing how Artificial Intelligence, Machine Learning, Deep Learning, Neural Networks, Generative AI, Foundation Models, and Large Language Models nest inside one another.
+title: "The AI Family Tree"
+description: "An interactive vis-network diagram showing how Artificial Intelligence, Machine Learning, Deep Learning, Neural Networks, Generative AI, Foundation Models, and Large Language Models nest inside one another."
 image: /sims/ai-family-tree/ai-family-tree.png
 og:image: /sims/ai-family-tree/ai-family-tree.png
 twitter:image: /sims/ai-family-tree/ai-family-tree.png

@@ -91,6 +91,8 @@ These measures become **financial KPIs** when you track them over time: key perf
 
 #### Diagram: Unit Cost Metrics Calculator
 
+<iframe src="../../sims/unit-cost-metrics-calculator/main.html" width="100%" height="462px" scrolling="no"></iframe>
+
 <details markdown="1">
 <summary>Unit Cost Metrics Calculator</summary>
 Type: microsim
@@ -222,6 +224,8 @@ Weighting each NPV by its probability gives an expected NPV of $27,171, also a f
     If the two techniques blur together, remember the split: sensitivity moves one assumption to find which matters most, while scenario moves a consistent set together to see what could really happen. Run both, and the weak points of your case show themselves.
 
 #### Diagram: Sensitivity Tornado Ranker
+
+<iframe src="../../sims/sensitivity-tornado-ranker/main.html" width="100%" height="582px" scrolling="no"></iframe>
 
 <details markdown="1">
 <summary>Sensitivity Tornado Ranker</summary>

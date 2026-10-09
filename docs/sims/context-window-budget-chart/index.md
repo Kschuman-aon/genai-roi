@@ -1,6 +1,6 @@
 ---
-title: Context Window Budget Allocation
-description: Interactive Chart.js MicroSim for context window budget allocation.
+title: "Context Window Budget Allocation"
+description: "Interactive Chart.js MicroSim for context window budget allocation."
 image: /sims/context-window-budget-chart/context-window-budget-chart.png
 og:image: /sims/context-window-budget-chart/context-window-budget-chart.png
 twitter:image: /sims/context-window-budget-chart/context-window-budget-chart.png

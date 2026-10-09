@@ -87,24 +87,41 @@ nav:
     - List of MicroSims: sims/index.md
     - Anatomy of a Prompt: sims/prompt-anatomy-explorer/index.md
     - Autoscaling and Warm Pool Behavior Over a Traffic Day: sims/autoscaling-traffic-simulator/index.md
+    - Benefit Realization Calculator: sims/benefit-realization-calculator/index.md
+    - Budget Burn Alert Simulator: sims/budget-burn-alert-simulator/index.md
     - Byte Pair Encoding Step-Through: sims/bpe-tokenizer-explorer/index.md
     - Compute Utilization and Idle Cost Explorer: sims/compute-utilization-explorer/index.md
     - Context Window Budget Allocation: sims/context-window-budget-chart/index.md
+    - Cost Concept Classifier: sims/cost-concept-classifier/index.md
+    - Cost Per Task Benchmark Explorer: sims/cost-per-task-benchmark-explorer/index.md
     - Cross-Provider Token Efficiency Dashboard: sims/token-efficiency-dashboard/index.md
+    - Deployment Placement Sorter: sims/deployment-placement-sorter/index.md
+    - Fixed Versus Variable Break-Even Calculator: sims/break-even-calculator/index.md
     - From Raw Text to Helpful Assistant: sims/training-lifecycle-workflow/index.md
     - Learning Graph Viewer: sims/graph-viewer/index.md
+    - Metric Matcher: sims/metric-matcher/index.md
+    - Model Cascade Cost Calculator: sims/model-cascade-cost-calculator/index.md
     - Model Scale Across Five Years: sims/model-parameter-scale-chart/index.md
+    - NPV and Payback Calculator: sims/npv-payback-calculator/index.md
     - One-Time Training vs. Recurring Inference: sims/training-vs-inference-cost-chart/index.md
+    - Peak Capacity Planner: sims/peak-capacity-planner/index.md
     - Per-Request Token Cost Calculator: sims/token-cost-calculator/index.md
+    - Prompt A/B Test Decision Lab: sims/prompt-ab-test-decision-lab/index.md
     - Prompt Compression Before/After Comparator: sims/prompt-compression-comparator/index.md
+    - Request Routing Flow: sims/request-routing-flow/index.md
     - Same Task, Three Prompting Strategies: sims/prompting-technique-comparator/index.md
     - Self-Attention, Qualitatively: sims/self-attention-explorer/index.md
+    - Semantic Cache Threshold Explorer: sims/semantic-cache-threshold-explorer/index.md
+    - Sensitivity Tornado Ranker: sims/sensitivity-tornado-ranker/index.md
+    - Serving Batch Size Tuner: sims/serving-batch-tuner/index.md
+    - Speed Versus Quality Check: sims/speed-versus-quality-check/index.md
     - The AI Family Tree: sims/ai-family-tree/index.md
     - The Batch-Size Trade-Off: sims/latency-throughput-tradeoff-chart/index.md
     - The GenAI Deployment Landscape: sims/model-deployment-landscape/index.md
     - The RAG Pipeline: sims/rag-pipeline-workflow/index.md
     - Three Ways to Shrink a Model: sims/model-compression-tradeoffs-chart/index.md
     - Token Budget Governance Workflow: sims/token-budget-governance-workflow/index.md
+    - Unit Cost Metrics Calculator: sims/unit-cost-metrics-calculator/index.md
     - Where Should This Model Run?: sims/deployment-model-landscape/index.md
 
 

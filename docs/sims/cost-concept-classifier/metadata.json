@@ -1,0 +1,55 @@
+{
+  "title": "Cost Concept Classifier",
+  "creator": "Katie Jo Schuman",
+  "subject": "AI economics",
+  "description": "The learner will classify each of eight spending descriptions as capital expenditure, operating expenditure, sunk cost, or opportunity cost.",
+  "date": "2026-10-08",
+  "educational": {
+    "gradeLevel": [
+      "Graduate",
+      "Professional"
+    ],
+    "subjectArea": "Business and AI economics",
+    "topic": "Cost Concept Classifier",
+    "learningObjectives": [
+      "The learner will classify each of eight spending descriptions as capital expenditure, operating expenditure, sunk cost, or opportunity cost."
+    ],
+    "bloomsTaxonomy": "Understand",
+    "duration": "10-15 minutes",
+    "prerequisites": [
+      "capital expenditure",
+      "operating expenditure",
+      "sunk cost",
+      "opportunity cost"
+    ],
+    "standards": []
+  },
+  "technical": {
+    "framework": "JavaScript",
+    "version": "1.0",
+    "canvasDimensions": {
+      "width": "responsive",
+      "height": 600
+    },
+    "canvasHeight": 600,
+    "responsive": true,
+    "dependencies": [
+      "shared-libs/quiz-kit.js"
+    ],
+    "accessibility": {
+      "hasAltText": false,
+      "keyboardNavigable": true
+    }
+  },
+  "pedagogical": {
+    "teachingStrategy": "Commit-then-explore: predict, receive feedback, then explore",
+    "keyQuestions": [],
+    "commonMisconceptions": [
+      "(1) A large payment is always capital expenditure. (2) Money already spent should count in a continue-or-stop decision. (3) Opportunity cost is a cash payment."
+    ],
+    "assessmentOpportunities": [
+      "The learner places each of eight cards in one of four bins and commits. A placement is correct when it matches the \"Correct bin\" column. Mastery is 7 of 8 correct on the first attempt."
+    ]
+  },
+  "chapter": "09-core-financial-roi-vocabulary"
+}

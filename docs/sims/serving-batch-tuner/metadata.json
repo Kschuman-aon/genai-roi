@@ -1,0 +1,58 @@
+{
+  "title": "Serving Batch Size Tuner",
+  "creator": "Katie Jo Schuman",
+  "subject": "AI economics",
+  "description": "The learner will solve for the batch size that gives the lowest cost per million tokens while a 400-token response finishes within a stated latency limit and the batch fits in GPU memory.",
+  "date": "2026-10-08",
+  "educational": {
+    "gradeLevel": [
+      "Graduate",
+      "Professional"
+    ],
+    "subjectArea": "Business and AI economics",
+    "topic": "Serving Batch Size Tuner",
+    "learningObjectives": [
+      "The learner will solve for the batch size that gives the lowest cost per million tokens while a 400-token response finishes within a stated latency limit and the batch fits in GPU memory."
+    ],
+    "bloomsTaxonomy": "Apply",
+    "duration": "10-15 minutes",
+    "prerequisites": [
+      "batch size tuning",
+      "concurrency limit",
+      "throughput-latency tradeoff",
+      "inter-token latency",
+      "aggregate throughput",
+      "cost per million tokens",
+      "GPU memory constraint"
+    ],
+    "standards": []
+  },
+  "technical": {
+    "framework": "p5.js",
+    "version": "1.0",
+    "canvasDimensions": {
+      "width": "responsive",
+      "height": 445
+    },
+    "canvasHeight": 445,
+    "responsive": true,
+    "dependencies": [
+      "shared-libs/quiz-kit.js"
+    ],
+    "accessibility": {
+      "hasAltText": true,
+      "keyboardNavigable": true
+    }
+  },
+  "pedagogical": {
+    "teachingStrategy": "Commit-then-explore: predict, receive feedback, then explore",
+    "keyQuestions": [],
+    "commonMisconceptions": [
+      "(1) The largest batch is always the cheapest. (2) Cost keeps falling as batch size rises. (3) A batch that is fast enough on latency must also fit in memory."
+    ],
+    "assessmentOpportunities": [
+      "For each of four challenges the learner commits one batch size before any row is highlighted. A commitment is correct when it equals the batch size with the lowest cost per million tokens among the batch sizes that satisfy both the latency limit (response time <= limit) and the memory ceiling (batch size <= 120). When two batch sizes tie on cost, the smaller one is correct. Mastery is 3 of 4 correct on the first attempt. Exploration (changing the selected batch size and reading the readouts) is not evidence."
+    ]
+  },
+  "chapter": "06-infrastructure-planning-monitoring"
+}

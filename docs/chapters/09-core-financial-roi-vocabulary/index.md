@@ -105,6 +105,8 @@ An **opportunity cost** is the value of the next-best alternative given up when 
 
 #### Diagram: Cost Concept Classifier
 
+<iframe src="../../sims/cost-concept-classifier/main.html" width="100%" height="602px" scrolling="no"></iframe>
+
 <details markdown="1">
 <summary>Cost Concept Classifier</summary>
 Type: microsim
@@ -184,6 +186,8 @@ The simplest of the time-based measures is the **payback period**: how long unti
 
 #### Diagram: NPV and Payback Calculator
 
+<iframe src="../../sims/npv-payback-calculator/main.html" width="100%" height="477px" scrolling="no"></iframe>
+
 <details markdown="1">
 <summary>NPV and Payback Calculator</summary>
 Type: microsim
@@ -253,6 +257,8 @@ Below about 655,000 requests a month the API is cheaper; above it the server is.
     Payback ignores both the time value of money and everything after the break-even date, so a project that returns its cost in a year and then stops can look better than one that pays back in two and earns for ten. Report payback beside NPV, never instead of it.
 
 #### Diagram: Fixed Versus Variable Break-Even Calculator
+
+<iframe src="../../sims/break-even-calculator/main.html" width="100%" height="522px" scrolling="no"></iframe>
 
 <details markdown="1">
 <summary>Fixed Versus Variable Break-Even Calculator</summary>

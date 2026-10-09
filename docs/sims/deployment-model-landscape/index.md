@@ -1,6 +1,6 @@
 ---
-title: Where Should This Model Run?
-description: Interactive vis-network MicroSim for where should this model run?.
+title: "Where Should This Model Run?"
+description: "Interactive vis-network MicroSim for where should this model run?."
 image: /sims/deployment-model-landscape/deployment-model-landscape.png
 og:image: /sims/deployment-model-landscape/deployment-model-landscape.png
 twitter:image: /sims/deployment-model-landscape/deployment-model-landscape.png

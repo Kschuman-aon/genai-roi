@@ -1,6 +1,6 @@
 ---
-title: Autoscaling and Warm Pool Behavior Over a Traffic Day
-description: Interactive p5.js MicroSim for autoscaling and warm pool behavior over a traffic day.
+title: "Autoscaling and Warm Pool Behavior Over a Traffic Day"
+description: "Interactive p5.js MicroSim for autoscaling and warm pool behavior over a traffic day."
 image: /sims/autoscaling-traffic-simulator/autoscaling-traffic-simulator.png
 og:image: /sims/autoscaling-traffic-simulator/autoscaling-traffic-simulator.png
 twitter:image: /sims/autoscaling-traffic-simulator/autoscaling-traffic-simulator.png

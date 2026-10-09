@@ -1,6 +1,6 @@
 ---
-title: Model Scale Across Five Years
-description: Interactive Chart.js MicroSim for model scale across five years.
+title: "Model Scale Across Five Years"
+description: "Interactive Chart.js MicroSim for model scale across five years."
 image: /sims/model-parameter-scale-chart/model-parameter-scale-chart.png
 og:image: /sims/model-parameter-scale-chart/model-parameter-scale-chart.png
 twitter:image: /sims/model-parameter-scale-chart/model-parameter-scale-chart.png

@@ -1,6 +1,6 @@
 ---
-title: Prompt Compression Before/After Comparator
-description: Interactive p5.js MicroSim for prompt compression before/after comparator.
+title: "Prompt Compression Before/After Comparator"
+description: "Interactive p5.js MicroSim for prompt compression before/after comparator."
 image: /sims/prompt-compression-comparator/prompt-compression-comparator.png
 og:image: /sims/prompt-compression-comparator/prompt-compression-comparator.png
 twitter:image: /sims/prompt-compression-comparator/prompt-compression-comparator.png

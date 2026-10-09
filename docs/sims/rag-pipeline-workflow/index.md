@@ -1,6 +1,6 @@
 ---
-title: The RAG Pipeline
-description: Interactive Mermaid MicroSim for the rag pipeline.
+title: "The RAG Pipeline"
+description: "Interactive Mermaid MicroSim for the rag pipeline."
 image: /sims/rag-pipeline-workflow/rag-pipeline-workflow.png
 og:image: /sims/rag-pipeline-workflow/rag-pipeline-workflow.png
 twitter:image: /sims/rag-pipeline-workflow/rag-pipeline-workflow.png

@@ -1,6 +1,6 @@
 ---
-title: From Raw Text to Helpful Assistant
-description: Interactive Mermaid MicroSim for from raw text to helpful assistant.
+title: "From Raw Text to Helpful Assistant"
+description: "Interactive Mermaid MicroSim for from raw text to helpful assistant."
 image: /sims/training-lifecycle-workflow/training-lifecycle-workflow.png
 og:image: /sims/training-lifecycle-workflow/training-lifecycle-workflow.png
 twitter:image: /sims/training-lifecycle-workflow/training-lifecycle-workflow.png

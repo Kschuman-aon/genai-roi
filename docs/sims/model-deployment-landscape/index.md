@@ -1,6 +1,6 @@
 ---
-title: The GenAI Deployment Landscape
-description: Interactive vis-network MicroSim for the genai deployment landscape.
+title: "The GenAI Deployment Landscape"
+description: "Interactive vis-network MicroSim for the genai deployment landscape."
 image: /sims/model-deployment-landscape/model-deployment-landscape.png
 og:image: /sims/model-deployment-landscape/model-deployment-landscape.png
 twitter:image: /sims/model-deployment-landscape/model-deployment-landscape.png

@@ -1,6 +1,6 @@
 ---
-title: Compute Utilization and Idle Cost Explorer
-description: Interactive Chart.js MicroSim for compute utilization and idle cost explorer.
+title: "Compute Utilization and Idle Cost Explorer"
+description: "Interactive Chart.js MicroSim for compute utilization and idle cost explorer."
 image: /sims/compute-utilization-explorer/compute-utilization-explorer.png
 og:image: /sims/compute-utilization-explorer/compute-utilization-explorer.png
 twitter:image: /sims/compute-utilization-explorer/compute-utilization-explorer.png

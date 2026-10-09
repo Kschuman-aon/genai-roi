@@ -1,0 +1,59 @@
+{
+  "title": "Metric Matcher",
+  "creator": "Katie Jo Schuman",
+  "subject": "AI economics",
+  "description": "The learner will classify each of ten described situations under the one metric from a list of eight that the situation measures, with at least 8 of 10 correct on the first attempt.",
+  "date": "2026-10-08",
+  "educational": {
+    "gradeLevel": [
+      "Graduate",
+      "Professional"
+    ],
+    "subjectArea": "Business and AI economics",
+    "topic": "Metric Matcher",
+    "learningObjectives": [
+      "The learner will classify each of ten described situations under the one metric from a list of eight that the situation measures, with at least 8 of 10 correct on the first attempt."
+    ],
+    "bloomsTaxonomy": "Understand",
+    "duration": "10-15 minutes",
+    "prerequisites": [
+      "adoption rate metric",
+      "usage frequency metric",
+      "task completion time",
+      "cycle time reduction",
+      "throughput improvement metric",
+      "deflection rate metric",
+      "first-contact resolution rate",
+      "rework rate metric"
+    ],
+    "standards": []
+  },
+  "technical": {
+    "framework": "JavaScript",
+    "version": "1.0",
+    "canvasDimensions": {
+      "width": "responsive",
+      "height": 560
+    },
+    "canvasHeight": 560,
+    "responsive": true,
+    "dependencies": [
+      "shared-libs/quiz-kit.js"
+    ],
+    "accessibility": {
+      "hasAltText": false,
+      "keyboardNavigable": true
+    }
+  },
+  "pedagogical": {
+    "teachingStrategy": "Commit-then-explore: predict, receive feedback, then explore",
+    "keyQuestions": [],
+    "commonMisconceptions": [
+      "(1) Adoption rate and usage frequency are the same measure. (2) A task-level time saving equals a process-level cycle time reduction. (3) Deflection and first-contact resolution are interchangeable, but only first-contact resolution allows a human to be involved. (4) Throughput and task time are different data rather than two views of the same change."
+    ],
+    "assessmentOpportunities": [
+      "For each situation the learner chooses one metric and commits. A choice is correct when it matches the \"Correct metric\" column in Content. Mastery is 8 of 10 correct on the first attempt. Reading the metric definitions is exploration, not evidence."
+    ]
+  },
+  "chapter": "11-productivity-quality-metrics"
+}

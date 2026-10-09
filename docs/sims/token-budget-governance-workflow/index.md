@@ -1,6 +1,6 @@
 ---
-title: Token Budget Governance Workflow
-description: Interactive Mermaid MicroSim for token budget governance workflow.
+title: "Token Budget Governance Workflow"
+description: "Interactive Mermaid MicroSim for token budget governance workflow."
 image: /sims/token-budget-governance-workflow/token-budget-governance-workflow.png
 og:image: /sims/token-budget-governance-workflow/token-budget-governance-workflow.png
 twitter:image: /sims/token-budget-governance-workflow/token-budget-governance-workflow.png

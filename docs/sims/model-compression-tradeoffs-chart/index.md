@@ -1,6 +1,6 @@
 ---
-title: Three Ways to Shrink a Model
-description: Interactive Chart.js MicroSim for three ways to shrink a model.
+title: "Three Ways to Shrink a Model"
+description: "Interactive Chart.js MicroSim for three ways to shrink a model."
 image: /sims/model-compression-tradeoffs-chart/model-compression-tradeoffs-chart.png
 og:image: /sims/model-compression-tradeoffs-chart/model-compression-tradeoffs-chart.png
 twitter:image: /sims/model-compression-tradeoffs-chart/model-compression-tradeoffs-chart.png

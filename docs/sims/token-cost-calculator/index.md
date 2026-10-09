@@ -1,6 +1,6 @@
 ---
-title: Per-Request Token Cost Calculator
-description: Interactive p5.js MicroSim for per-request token cost calculator.
+title: "Per-Request Token Cost Calculator"
+description: "Interactive p5.js MicroSim for per-request token cost calculator."
 image: /sims/token-cost-calculator/token-cost-calculator.png
 og:image: /sims/token-cost-calculator/token-cost-calculator.png
 twitter:image: /sims/token-cost-calculator/token-cost-calculator.png

@@ -1,0 +1,56 @@
+{
+  "title": "Unit Cost Metrics Calculator",
+  "creator": "Katie Jo Schuman",
+  "subject": "AI economics",
+  "description": "The learner will calculate cost per transaction, cost per query, and cost per user from the running example's operating data, distinguishing fully loaded cost from fees only.",
+  "date": "2026-10-08",
+  "educational": {
+    "gradeLevel": [
+      "Graduate",
+      "Professional"
+    ],
+    "subjectArea": "Business and AI economics",
+    "topic": "Unit Cost Metrics Calculator",
+    "learningObjectives": [
+      "The learner will calculate cost per transaction, cost per query, and cost per user from the running example's operating data, distinguishing fully loaded cost from fees only."
+    ],
+    "bloomsTaxonomy": "Apply",
+    "duration": "10-15 minutes",
+    "prerequisites": [
+      "cost per query",
+      "cost per transaction",
+      "cost per user",
+      "financial KPI",
+      "fully loaded cost"
+    ],
+    "standards": []
+  },
+  "technical": {
+    "framework": "p5.js",
+    "version": "1.0",
+    "canvasDimensions": {
+      "width": "responsive",
+      "height": 460
+    },
+    "canvasHeight": 460,
+    "responsive": true,
+    "dependencies": [
+      "shared-libs/quiz-kit.js"
+    ],
+    "accessibility": {
+      "hasAltText": true,
+      "keyboardNavigable": true
+    }
+  },
+  "pedagogical": {
+    "teachingStrategy": "Commit-then-explore: predict, receive feedback, then explore",
+    "keyQuestions": [],
+    "commonMisconceptions": [
+      "(1) Fees-only cost equals the full cost per query. (2) Cost per user falls whenever cost per ticket falls. (3) Cost per query and cost per transaction are interchangeable."
+    ],
+    "assessmentOpportunities": [
+      "For each of five items the learner types a value before the answer is shown. A value is correct when within $0.0005 of the model value for per-ticket and per-query items and within $1 for the per-user item. Mastery is 4 of 5 correct on the first attempt. Exploration is not evidence."
+    ]
+  },
+  "chapter": "10-business-case-financial-forecasting"
+}

@@ -1,6 +1,6 @@
 ---
-title: Same Task, Three Prompting Strategies
-description: Interactive p5.js MicroSim for same task, three prompting strategies.
+title: "Same Task, Three Prompting Strategies"
+description: "Interactive p5.js MicroSim for same task, three prompting strategies."
 image: /sims/prompting-technique-comparator/prompting-technique-comparator.png
 og:image: /sims/prompting-technique-comparator/prompting-technique-comparator.png
 twitter:image: /sims/prompting-technique-comparator/prompting-technique-comparator.png

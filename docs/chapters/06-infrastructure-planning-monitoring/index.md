@@ -116,6 +116,8 @@ Suppose the product requires a 400-token response within 20 seconds. Batch 32 me
 
 #### Diagram: Serving Batch Size Tuner
 
+<iframe src="../../sims/serving-batch-tuner/main.html" width="100%" height="447px" scrolling="no"></iframe>
+
 <details markdown="1">
 <summary>Serving Batch Size Tuner</summary>
 Type: microsim
@@ -197,6 +199,8 @@ Provisioning for the peak around the clock costs $7,200 a month more than adding
     A fleet sized for the busiest hour will look wasteful on every utilization report for the other twenty. Pair the peak number with a schedule or an autoscaling rule from day one, so finance sees a plan rather than a surprise.
 
 #### Diagram: Peak Capacity Planner
+
+<iframe src="../../sims/peak-capacity-planner/main.html" width="100%" height="482px" scrolling="no"></iframe>
 
 <details markdown="1">
 <summary>Peak Capacity Planner</summary>
@@ -293,6 +297,8 @@ So far the workload has lived in one data center. Three alternatives change both
 
 #### Diagram: Deployment Placement Sorter
 
+<iframe src="../../sims/deployment-placement-sorter/main.html" width="100%" height="602px" scrolling="no"></iframe>
+
 <details markdown="1">
 <summary>Deployment Placement Sorter</summary>
 Type: microsim
@@ -388,6 +394,8 @@ The 100% alert fires on day 22, with 8 days left and the budget already gone. By
     An alert on cumulative spend can only fire after the money is spent. Add at least one rate-based alert, such as a forecast against the month-end budget, and make sure each alert names an owner who can act on it.
 
 #### Diagram: Budget Burn Alert Simulator
+
+<iframe src="../../sims/budget-burn-alert-simulator/main.html" width="100%" height="472px" scrolling="no"></iframe>
 
 <details markdown="1">
 <summary>Budget Burn Alert Simulator</summary>

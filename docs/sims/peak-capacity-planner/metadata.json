@@ -1,0 +1,56 @@
+{
+  "title": "Peak Capacity Planner",
+  "creator": "Katie Jo Schuman",
+  "subject": "AI economics",
+  "description": "The learner will calculate the number of inference servers needed for a stated peak request rate and utilization ceiling, and the monthly cost of provisioning for the peak around the clock, to the nearest whole server and dollar.",
+  "date": "2026-10-08",
+  "educational": {
+    "gradeLevel": [
+      "Graduate",
+      "Professional"
+    ],
+    "subjectArea": "Business and AI economics",
+    "topic": "Peak Capacity Planner",
+    "learningObjectives": [
+      "The learner will calculate the number of inference servers needed for a stated peak request rate and utilization ceiling, and the monthly cost of provisioning for the peak around the clock, to the nearest whole server and dollar."
+    ],
+    "bloomsTaxonomy": "Apply",
+    "duration": "10-15 minutes",
+    "prerequisites": [
+      "inference server",
+      "peak load provisioning",
+      "capacity planning",
+      "idle capacity cost",
+      "utilization"
+    ],
+    "standards": []
+  },
+  "technical": {
+    "framework": "p5.js",
+    "version": "1.0",
+    "canvasDimensions": {
+      "width": "responsive",
+      "height": 480
+    },
+    "canvasHeight": 480,
+    "responsive": true,
+    "dependencies": [
+      "shared-libs/quiz-kit.js"
+    ],
+    "accessibility": {
+      "hasAltText": true,
+      "keyboardNavigable": true
+    }
+  },
+  "pedagogical": {
+    "teachingStrategy": "Commit-then-explore: predict, receive feedback, then explore",
+    "keyQuestions": [],
+    "commonMisconceptions": [
+      "(1) Servers needed = peak tokens \u00f7 raw capacity, with no utilization ceiling. (2) Rounding down is acceptable. (3) A peak-sized fleet has high average utilization."
+    ],
+    "assessmentOpportunities": [
+      "For each of three scenarios the learner types the number of servers and the monthly cost of running that many servers around the clock before the sim reveals the model answer. A response is correct when the server count equals the model count and the cost equals the model cost within $1. Mastery is 3 of 3 correct on the first attempt. Exploration of the elastic plan is not evidence."
+    ]
+  },
+  "chapter": "06-infrastructure-planning-monitoring"
+}

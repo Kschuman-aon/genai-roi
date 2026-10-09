@@ -137,6 +137,8 @@ The **ensemble cost tradeoff** is the added compute and token cost of querying s
 
 #### Diagram: Model Cascade Cost Calculator
 
+<iframe src="../../sims/model-cascade-cost-calculator/main.html" width="100%" height="472px" scrolling="no"></iframe>
+
 <details markdown="1">
 <summary>Model Cascade Cost Calculator</summary>
 Type: microsim
@@ -218,6 +220,8 @@ Each step down in threshold buys a modest saving and a steep rise in wrong answe
 
 #### Diagram: Semantic Cache Threshold Explorer
 
+<iframe src="../../sims/semantic-cache-threshold-explorer/main.html" width="100%" height="497px" scrolling="no"></iframe>
+
 <details markdown="1">
 <summary>Semantic Cache Threshold Explorer</summary>
 Type: chart
@@ -277,6 +281,8 @@ The four situations:
 </details>
 
 #### Diagram: Request Routing Flow
+
+<iframe src="../../sims/request-routing-flow/main.html" width="100%" height="447px" scrolling="no"></iframe>
 
 <details markdown="1">
 <summary>Request Routing Flow</summary>

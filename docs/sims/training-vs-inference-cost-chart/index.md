@@ -1,6 +1,6 @@
 ---
-title: One-Time Training vs. Recurring Inference
-description: Interactive Chart.js MicroSim for one-time training vs. recurring inference.
+title: "One-Time Training vs. Recurring Inference"
+description: "Interactive Chart.js MicroSim for one-time training vs. recurring inference."
 image: /sims/training-vs-inference-cost-chart/training-vs-inference-cost-chart.png
 og:image: /sims/training-vs-inference-cost-chart/training-vs-inference-cost-chart.png
 twitter:image: /sims/training-vs-inference-cost-chart/training-vs-inference-cost-chart.png

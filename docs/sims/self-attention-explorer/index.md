@@ -1,6 +1,6 @@
 ---
-title: Self-Attention, Qualitatively
-description: Interactive p5.js MicroSim for self-attention, qualitatively.
+title: "Self-Attention, Qualitatively"
+description: "Interactive p5.js MicroSim for self-attention, qualitatively."
 image: /sims/self-attention-explorer/self-attention-explorer.png
 og:image: /sims/self-attention-explorer/self-attention-explorer.png
 twitter:image: /sims/self-attention-explorer/self-attention-explorer.png
