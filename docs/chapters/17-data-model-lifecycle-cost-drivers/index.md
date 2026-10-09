@@ -92,6 +92,10 @@ The first specification lets the learner compare labeling strategies.
 
 #### Diagram: Labeling Strategy Cost Calculator
 
+
+<iframe src="../../sims/labeling-strategy-cost-calculator/main.html" width="100%" height="310px" scrolling="no"></iframe>
+[Run Labeling Strategy Cost Calculator Fullscreen](../../sims/labeling-strategy-cost-calculator/main.html)
+
 <details markdown="1">
 <summary>Labeling Strategy Cost Calculator</summary>
 Type: microsim
@@ -193,6 +197,10 @@ The second specification lets the learner apply the rule.
 
 #### Diagram: Retraining Trigger Classifier
 
+
+<iframe src="../../sims/retraining-trigger-classifier/main.html" width="100%" height="324px" scrolling="no"></iframe>
+[Run Retraining Trigger Classifier Fullscreen](../../sims/retraining-trigger-classifier/main.html)
+
 <details markdown="1">
 <summary>Retraining Trigger Classifier</summary>
 Type: microsim
@@ -274,6 +282,10 @@ The cheapest cadence is every 4 months at $28,890, and 3 months costs only $30 m
 The third specification lets the learner choose the cadence.
 
 #### Diagram: Retraining Cadence Tuner
+
+
+<iframe src="../../sims/retraining-cadence-tuner/main.html" width="100%" height="324px" scrolling="no"></iframe>
+[Run Retraining Cadence Tuner Fullscreen](../../sims/retraining-cadence-tuner/main.html)
 
 <details markdown="1">
 <summary>Retraining Cadence Tuner</summary>

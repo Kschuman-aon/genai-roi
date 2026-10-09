@@ -1,0 +1,55 @@
+{
+  "title": "Retraining Trigger Classifier",
+  "creator": "Katie Jo Schuman",
+  "subject": "AI economics",
+  "description": "The learner will differentiate eight monthly monitoring readings that call for retraining, investigation, or no action by applying the team's retraining trigger rule.",
+  "date": "2026-10-09",
+  "educational": {
+    "gradeLevel": [
+      "Graduate",
+      "Professional"
+    ],
+    "subjectArea": "Business and AI economics",
+    "topic": "Retraining Trigger Classifier",
+    "learningObjectives": [
+      "The learner will differentiate eight monthly monitoring readings that call for retraining, investigation, or no action by applying the team's retraining trigger rule."
+    ],
+    "bloomsTaxonomy": "Analyze",
+    "duration": "10-15 minutes",
+    "prerequisites": [
+      "model retraining trigger",
+      "data drift detection",
+      "model drift detection",
+      "PSI"
+    ],
+    "standards": []
+  },
+  "technical": {
+    "framework": "JavaScript",
+    "version": "1.0",
+    "canvasDimensions": {
+      "width": "responsive",
+      "height": 322
+    },
+    "canvasHeight": 322,
+    "responsive": true,
+    "dependencies": [
+      "shared-libs/quiz-kit.js"
+    ],
+    "accessibility": {
+      "hasAltText": false,
+      "keyboardNavigable": true
+    }
+  },
+  "pedagogical": {
+    "teachingStrategy": "Commit-then-explore: predict, receive feedback, then explore",
+    "keyQuestions": [],
+    "commonMisconceptions": [
+      "(1) A high PSI means the model must be retrained. (2) A single reading below the accuracy floor means retrain. (3) A reading exactly on a threshold is below it."
+    ],
+    "assessmentOpportunities": [
+      "For each of eight readings the learner commits one of three actions before the answer is shown. An action is correct when it matches the correct action in the Content table. Mastery is 7 of 8 correct on the first attempt. Exploration is not evidence."
+    ]
+  },
+  "chapter": "17-data-model-lifecycle-cost-drivers"
+}

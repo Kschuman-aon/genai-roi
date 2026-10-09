@@ -1,0 +1,56 @@
+{
+  "title": "Developer Productivity Index Builder",
+  "creator": "Katie Jo Schuman",
+  "subject": "AI economics",
+  "description": "The learner will calculate four improvement ratios and the weighted developer productivity index for the 20-engineer team, to within 0.01 for ratios and 0.1 for index points.",
+  "date": "2026-10-09",
+  "educational": {
+    "gradeLevel": [
+      "Graduate",
+      "Professional"
+    ],
+    "subjectArea": "Business and AI economics",
+    "topic": "Developer Productivity Index Builder",
+    "learningObjectives": [
+      "The learner will calculate four improvement ratios and the weighted developer productivity index for the 20-engineer team, to within 0.01 for ratios and 0.1 for index points."
+    ],
+    "bloomsTaxonomy": "Apply",
+    "duration": "10-15 minutes",
+    "prerequisites": [
+      "developer productivity index",
+      "improvement ratio",
+      "lead time for changes",
+      "change failure rate",
+      "code review cycle time"
+    ],
+    "standards": []
+  },
+  "technical": {
+    "framework": "JavaScript",
+    "version": "1.0",
+    "canvasDimensions": {
+      "width": "responsive",
+      "height": 368
+    },
+    "canvasHeight": 368,
+    "responsive": true,
+    "dependencies": [
+      "shared-libs/quiz-kit.js"
+    ],
+    "accessibility": {
+      "hasAltText": false,
+      "keyboardNavigable": true
+    }
+  },
+  "pedagogical": {
+    "teachingStrategy": "Commit-then-explore: predict, receive feedback, then explore",
+    "keyQuestions": [],
+    "commonMisconceptions": [
+      "(1) Lower is always better, so a lower throughput number is an improvement. (2) An index above 100 means every component improved. (3) Components with equal weights contribute equally."
+    ],
+    "assessmentOpportunities": [
+      "For each of eight items the learner types a value before the answer is shown. A value is correct when it is within the tolerance in the Content table. Mastery is 7 of 8 correct on the first attempt. Exploration with the adjustable quantities is not evidence."
+    ]
+  },
+  "chapter": "16-sdlc-productivity-risk-roadmapping"
+}

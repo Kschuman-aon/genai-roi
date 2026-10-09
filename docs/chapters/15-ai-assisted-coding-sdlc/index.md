@@ -91,6 +91,10 @@ The first specification lets the learner reproduce this arithmetic.
 
 #### Diagram: SDLC Phase Savings Calculator
 
+
+<iframe src="../../sims/sdlc-phase-savings-calculator/main.html" width="100%" height="494px" scrolling="no"></iframe>
+[Run SDLC Phase Savings Calculator Fullscreen](../../sims/sdlc-phase-savings-calculator/main.html)
+
 <details markdown="1">
 <summary>SDLC Phase Savings Calculator</summary>
 Type: chart
@@ -184,6 +188,10 @@ The 10 production defects are 20% of the count and 72.7% of the cost. That asymm
 The second specification asks the learner to apply that test to six investment options.
 
 #### Diagram: Shift-Left Investment Judge
+
+
+<iframe src="../../sims/shift-left-investment-judge/main.html" width="100%" height="304px" scrolling="no"></iframe>
+[Run Shift-Left Investment Judge Fullscreen](../../sims/shift-left-investment-judge/main.html)
 
 <details markdown="1">
 <summary>Shift-Left Investment Judge</summary>
@@ -279,6 +287,10 @@ The **code quality regression risk** is the probability and cost that changes as
 The third specification asks the learner to judge how much of a saving the debt consumes.
 
 #### Diagram: Technical Debt Break-Even Explorer
+
+
+<iframe src="../../sims/technical-debt-break-even-explorer/main.html" width="100%" height="292px" scrolling="no"></iframe>
+[Run Technical Debt Break-Even Explorer Fullscreen](../../sims/technical-debt-break-even-explorer/main.html)
 
 <details markdown="1">
 <summary>Technical Debt Break-Even Explorer</summary>

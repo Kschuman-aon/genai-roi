@@ -1,0 +1,55 @@
+{
+  "title": "Roadmap Prioritizer",
+  "creator": "Katie Jo Schuman",
+  "subject": "AI economics",
+  "description": "The learner will prioritize six SDLC initiatives for each of six one-time budgets by selecting the set that the rule \"fund in payback order, skipping any initiative that does not fit the remaining budget\" produces.",
+  "date": "2026-10-09",
+  "educational": {
+    "gradeLevel": [
+      "Graduate",
+      "Professional"
+    ],
+    "subjectArea": "Business and AI economics",
+    "topic": "Roadmap Prioritizer",
+    "learningObjectives": [
+      "The learner will prioritize six SDLC initiatives for each of six one-time budgets by selecting the set that the rule \"fund in payback order, skipping any initiative that does not fit the remaining budget\" produces."
+    ],
+    "bloomsTaxonomy": "Evaluate",
+    "duration": "10-15 minutes",
+    "prerequisites": [
+      "SDLC cost reduction roadmap",
+      "payback",
+      "one-time cost",
+      "quarterly net saving"
+    ],
+    "standards": []
+  },
+  "technical": {
+    "framework": "JavaScript",
+    "version": "1.0",
+    "canvasDimensions": {
+      "width": "responsive",
+      "height": 394
+    },
+    "canvasHeight": 394,
+    "responsive": true,
+    "dependencies": [
+      "shared-libs/quiz-kit.js"
+    ],
+    "accessibility": {
+      "hasAltText": false,
+      "keyboardNavigable": true
+    }
+  },
+  "pedagogical": {
+    "teachingStrategy": "Commit-then-explore: predict, receive feedback, then explore",
+    "keyQuestions": [],
+    "commonMisconceptions": [
+      "(1) The largest saving should always be funded first. (2) An unfunded initiative always blocks later ones. (3) A larger budget only adds initiatives at the end of the list."
+    ],
+    "assessmentOpportunities": [
+      "For each of six budgets the learner selects the initiatives to fund and commits before the answer is shown. A selection is correct when it equals the \"Funded set\" in Content exactly. Mastery is 5 of 6 budgets correct on the first attempt. Exploration is not evidence."
+    ]
+  },
+  "chapter": "16-sdlc-productivity-risk-roadmapping"
+}

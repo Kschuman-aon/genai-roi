@@ -1,0 +1,55 @@
+{
+  "title": "Labeling Strategy Cost Calculator",
+  "creator": "Katie Jo Schuman",
+  "subject": "AI economics",
+  "description": "The learner will calculate the cost of labeling 20,000 tickets by manual labeling, AI-assisted labeling, active learning, and an outside vendor, to within the tolerance stated for each item.",
+  "date": "2026-10-09",
+  "educational": {
+    "gradeLevel": [
+      "Graduate",
+      "Professional"
+    ],
+    "subjectArea": "Business and AI economics",
+    "topic": "Labeling Strategy Cost Calculator",
+    "learningObjectives": [
+      "The learner will calculate the cost of labeling 20,000 tickets by manual labeling, AI-assisted labeling, active learning, and an outside vendor, to within the tolerance stated for each item."
+    ],
+    "bloomsTaxonomy": "Apply",
+    "duration": "10-15 minutes",
+    "prerequisites": [
+      "data labeling cost",
+      "AI-assisted data labeling",
+      "active learning cost reduction",
+      "annotation vendor management"
+    ],
+    "standards": []
+  },
+  "technical": {
+    "framework": "JavaScript",
+    "version": "1.0",
+    "canvasDimensions": {
+      "width": "responsive",
+      "height": 308
+    },
+    "canvasHeight": 308,
+    "responsive": true,
+    "dependencies": [
+      "shared-libs/quiz-kit.js"
+    ],
+    "accessibility": {
+      "hasAltText": false,
+      "keyboardNavigable": true
+    }
+  },
+  "pedagogical": {
+    "teachingStrategy": "Commit-then-explore: predict, receive feedback, then explore",
+    "keyQuestions": [],
+    "commonMisconceptions": [
+      "(1) A vendor's quoted price per label is its true cost. (2) AI-assisted labeling cost is mostly the token charge. (3) AI-assisted labeling saves the same amount whatever the reviewer's check time."
+    ],
+    "assessmentOpportunities": [
+      "For each of eight items the learner types a value before the answer is shown. A value is correct when it is within the tolerance in the Content table. Mastery is 7 of 8 correct on the first attempt. Exploration with the adjustable quantities is not evidence."
+    ]
+  },
+  "chapter": "17-data-model-lifecycle-cost-drivers"
+}

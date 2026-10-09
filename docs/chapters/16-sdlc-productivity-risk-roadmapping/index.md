@@ -82,6 +82,10 @@ The first specification lets the learner compute the index.
 
 #### Diagram: Developer Productivity Index Builder
 
+
+<iframe src="../../sims/developer-productivity-index-builder/main.html" width="100%" height="370px" scrolling="no"></iframe>
+[Run Developer Productivity Index Builder Fullscreen](../../sims/developer-productivity-index-builder/main.html)
+
 <details markdown="1">
 <summary>Developer Productivity Index Builder</summary>
 Type: microsim
@@ -237,6 +241,10 @@ The second specification lets the learner build a funded roadmap.
 
 #### Diagram: Roadmap Prioritizer
 
+
+<iframe src="../../sims/roadmap-prioritizer/main.html" width="100%" height="396px" scrolling="no"></iframe>
+[Run Roadmap Prioritizer Fullscreen](../../sims/roadmap-prioritizer/main.html)
+
 <details markdown="1">
 <summary>Roadmap Prioritizer</summary>
 Type: microsim
@@ -327,6 +335,10 @@ The ROI swings from −24.1% to 165.6% on one assumption, which is the case stud
 The last specification lets the learner build the case.
 
 #### Diagram: SDLC ROI Case Study Workbench
+
+
+<iframe src="../../sims/sdlc-roi-case-study-workbench/main.html" width="100%" height="318px" scrolling="no"></iframe>
+[Run SDLC ROI Case Study Workbench Fullscreen](../../sims/sdlc-roi-case-study-workbench/main.html)
 
 <details markdown="1">
 <summary>SDLC ROI Case Study Workbench</summary>
