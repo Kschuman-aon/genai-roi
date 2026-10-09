@@ -1,0 +1,55 @@
+{
+  "title": "Alert Threshold Tuner",
+  "creator": "Katie Jo Schuman",
+  "subject": "AI economics",
+  "description": "The learner will recommend, for each of six monitoring scenarios, the smallest threshold multiplier from 2, 2.5, 3, 3.5, and 4 standard deviations that keeps the expected false alerts per week at or below the stated limit.",
+  "date": "2026-10-09",
+  "educational": {
+    "gradeLevel": [
+      "Graduate",
+      "Professional"
+    ],
+    "subjectArea": "Business and AI economics",
+    "topic": "Alert Threshold Tuner",
+    "learningObjectives": [
+      "The learner will recommend, for each of six monitoring scenarios, the smallest threshold multiplier from 2, 2.5, 3, 3.5, and 4 standard deviations that keeps the expected false alerts per week at or below the stated limit."
+    ],
+    "bloomsTaxonomy": "Evaluate",
+    "duration": "10-15 minutes",
+    "prerequisites": [
+      "alerting threshold design",
+      "real-time alert fatigue",
+      "anomaly detection in spend",
+      "standard deviation"
+    ],
+    "standards": []
+  },
+  "technical": {
+    "framework": "JavaScript",
+    "version": "1.0",
+    "canvasDimensions": {
+      "width": "responsive",
+      "height": 300
+    },
+    "canvasHeight": 300,
+    "responsive": true,
+    "dependencies": [
+      "shared-libs/quiz-kit.js"
+    ],
+    "accessibility": {
+      "hasAltText": false,
+      "keyboardNavigable": true
+    }
+  },
+  "pedagogical": {
+    "teachingStrategy": "Commit-then-explore: predict, receive feedback, then explore",
+    "keyQuestions": [],
+    "commonMisconceptions": [
+      "(1) The same threshold suits every number of monitored series. (2) A stricter threshold is always better. (3) False alerts are only a nuisance and do not reduce response to real ones."
+    ],
+    "assessmentOpportunities": [
+      "For each of six scenarios the learner selects one multiplier and commits before the expected false alerts are shown. A selection is correct when it is the smallest multiplier whose expected false alerts per week are <= the limit. Mastery is 5 of 6 correct on the first attempt. Exploration is not evidence."
+    ]
+  },
+  "chapter": "14-cost-attribution-observability-maturity"
+}

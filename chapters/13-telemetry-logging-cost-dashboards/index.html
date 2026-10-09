@@ -1515,6 +1515,78 @@
           
         
       
+        
+          
+        
+      
+        
+          
+        
+      
+        
+          
+        
+      
+        
+          
+        
+      
+        
+          
+        
+      
+        
+          
+        
+      
+        
+          
+        
+      
+        
+          
+        
+      
+        
+          
+        
+      
+        
+          
+        
+      
+        
+          
+        
+      
+        
+          
+        
+      
+        
+          
+        
+      
+        
+          
+        
+      
+        
+          
+        
+      
+        
+          
+        
+      
+        
+          
+        
+      
+        
+          
+        
+      
     
     
     
@@ -2155,6 +2227,8 @@ Sample traces and payloads, but record every request's token and cost fields. A 
 <p>The Chapter 9 table assigned Support $18,000, Sales $9,000, and HR $3,000. Measured data moves Support to $17,640, Sales to $10,620, and HR to $1,740. The assumption that each team consumed tokens in proportion to its requests was wrong: Sales sends long documents and pays $0.0040 a request, while HR sends short questions and pays $0.0010. The measured token-cost shares are 58.1%, 38.7%, and 3.2%, so telemetry changed a decision, and under chargeback it would have moved $1,260 off HR's budget and onto Sales'.</p>
 <p>The next specification lets the learner reproduce this allocation.</p>
 <h4 id="diagram-multi-tenant-cost-allocator">Diagram: Multi-Tenant Cost Allocator<a class="headerlink" href="#diagram-multi-tenant-cost-allocator" title="Permanent link">&para;</a></h4>
+<iframe src="../../sims/multi-tenant-cost-allocator/main.html" width="100%" height="392px" scrolling="no"></iframe>
+<p><a href="../../sims/multi-tenant-cost-allocator/main.html">Run Multi-Tenant Cost Allocator Fullscreen</a></p>
 <details>
 <summary>Multi-Tenant Cost Allocator</summary>
 <p>Type: microsim
@@ -2344,6 +2418,8 @@ Reject the creation of any resource or key that lacks the required tags, and rep
 <p>The duplicate failure is the one that quietly inflates spend. Suppose a retry bug writes 36,000 Support records twice. At $0.0030 each that adds <span class="arithmatex">\( 36{,}000 \times 0.0030 = \$108 \)</span> of phantom cost, small in dollars but visible as a mismatch against the invoice, which is why the accuracy check exists.</p>
 <p>The next specification checks whether the learner can place each pipeline task in its stage.</p>
 <h4 id="diagram-pipeline-stage-sorter">Diagram: Pipeline Stage Sorter<a class="headerlink" href="#diagram-pipeline-stage-sorter" title="Permanent link">&para;</a></h4>
+<iframe src="../../sims/pipeline-stage-sorter/main.html" width="100%" height="402px" scrolling="no"></iframe>
+<p><a href="../../sims/pipeline-stage-sorter/main.html">Run Pipeline Stage Sorter Fullscreen</a></p>
 <details>
 <summary>Pipeline Stage Sorter</summary>
 <p>Type: microsim
@@ -2477,6 +2553,8 @@ Reject the creation of any resource or key that lacks the required tags, and rep
 <p>There is a trap in the rule. The next day, at $1,650, is not flagged. The previous 7 days now include the $1,620 spike, which inflated the standard deviation to $233 and raised the threshold to $1,791. Continuing anomalies hide behind the first one, which is called masking. The remedy is to compute baselines from days already judged normal, or to use a robust measure such as the median.</p>
 <p>The following specification lets the learner apply the rule to 14 days.</p>
 <h4 id="diagram-spend-anomaly-detector">Diagram: Spend Anomaly Detector<a class="headerlink" href="#diagram-spend-anomaly-detector" title="Permanent link">&para;</a></h4>
+<iframe src="../../sims/spend-anomaly-detector/main.html" width="100%" height="582px" scrolling="no"></iframe>
+<p><a href="../../sims/spend-anomaly-detector/main.html">Run Spend Anomaly Detector Fullscreen</a></p>
 <details>
 <summary>Spend Anomaly Detector</summary>
 <p>Type: microsim

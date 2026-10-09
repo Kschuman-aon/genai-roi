@@ -1,0 +1,57 @@
+{
+  "title": "SDLC ROI Case Study Workbench",
+  "creator": "Katie Jo Schuman",
+  "subject": "AI economics",
+  "description": "The learner will calculate the year 1 costs, benefit, net, ROI, and break-even realization of the 20-engineer SDLC case, to within $1 for dollar values and 0.1 percentage points for percentages.",
+  "date": "2026-10-09",
+  "educational": {
+    "gradeLevel": [
+      "Graduate",
+      "Professional"
+    ],
+    "subjectArea": "Business and AI economics",
+    "topic": "SDLC ROI Case Study Workbench",
+    "learningObjectives": [
+      "The learner will calculate the year 1 costs, benefit, net, ROI, and break-even realization of the 20-engineer SDLC case, to within $1 for dollar values and 0.1 percentage points for percentages."
+    ],
+    "bloomsTaxonomy": "Apply",
+    "duration": "10-15 minutes",
+    "prerequisites": [
+      "gross time value",
+      "realization",
+      "one-time cost",
+      "running cost",
+      "ROI",
+      "break-even"
+    ],
+    "standards": []
+  },
+  "technical": {
+    "framework": "JavaScript",
+    "version": "1.0",
+    "canvasDimensions": {
+      "width": "responsive",
+      "height": 316
+    },
+    "canvasHeight": 316,
+    "responsive": true,
+    "dependencies": [
+      "shared-libs/quiz-kit.js"
+    ],
+    "accessibility": {
+      "hasAltText": false,
+      "keyboardNavigable": true
+    }
+  },
+  "pedagogical": {
+    "teachingStrategy": "Commit-then-explore: predict, receive feedback, then explore",
+    "keyQuestions": [],
+    "commonMisconceptions": [
+      "(1) The tool licence is the main cost of an AI coding assistant. (2) The ROI depends mainly on how fast the tool is. (3) A positive gross saving implies a positive ROI."
+    ],
+    "assessmentOpportunities": [
+      "For each of eight items the learner types a value before the answer is shown. A value is correct when it is within the tolerance stated above. Mastery is 7 of 8 correct on the first attempt. Exploration with the adjustable quantities is not evidence."
+    ]
+  },
+  "chapter": "16-sdlc-productivity-risk-roadmapping"
+}

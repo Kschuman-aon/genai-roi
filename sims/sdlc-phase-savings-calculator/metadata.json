@@ -1,0 +1,56 @@
+{
+  "title": "SDLC Phase Savings Calculator",
+  "creator": "Katie Jo Schuman",
+  "subject": "AI economics",
+  "description": "The learner will calculate the quarterly cost of an SDLC phase, the time value freed in it, and the total gross and net time value across six phases for the 20-engineer team, to within $1.",
+  "date": "2026-10-09",
+  "educational": {
+    "gradeLevel": [
+      "Graduate",
+      "Professional"
+    ],
+    "subjectArea": "Business and AI economics",
+    "topic": "SDLC Phase Savings Calculator",
+    "learningObjectives": [
+      "The learner will calculate the quarterly cost of an SDLC phase, the time value freed in it, and the total gross and net time value across six phases for the 20-engineer team, to within $1."
+    ],
+    "bloomsTaxonomy": "Apply",
+    "duration": "10-15 minutes",
+    "prerequisites": [
+      "software development lifecycle",
+      "the six phase costs",
+      "loaded labor rate",
+      "realization"
+    ],
+    "standards": []
+  },
+  "technical": {
+    "framework": "Chart.js",
+    "version": "1.0",
+    "canvasDimensions": {
+      "width": "responsive",
+      "height": 492
+    },
+    "canvasHeight": 492,
+    "responsive": true,
+    "dependencies": [
+      "chart.js@4.4.4 (CDN)",
+      "shared-libs/quiz-kit.js"
+    ],
+    "accessibility": {
+      "hasAltText": false,
+      "keyboardNavigable": true
+    }
+  },
+  "pedagogical": {
+    "teachingStrategy": "Commit-then-explore: predict, receive feedback, then explore",
+    "keyQuestions": [],
+    "commonMisconceptions": [
+      "(1) Coding is where most engineering cost sits. (2) Time freed is the same as money saved. (3) An assistant's tool cost is the only cost it adds."
+    ],
+    "assessmentOpportunities": [
+      "For each of eight items the learner types a value before the answer is shown. A value is correct when it is within $1 of the model value for dollar items, or within 0.1 percentage points for percentage items. Mastery is 7 of 8 correct on the first attempt. Exploration with the adjustable quantities is not evidence."
+    ]
+  },
+  "chapter": "15-ai-assisted-coding-sdlc"
+}

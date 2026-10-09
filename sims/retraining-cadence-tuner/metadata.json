@@ -1,0 +1,55 @@
+{
+  "title": "Retraining Cadence Tuner",
+  "creator": "Katie Jo Schuman",
+  "subject": "AI economics",
+  "description": "The learner will recommend, for each of six scenarios, the retraining interval of 1, 2, 3, 4, 6, or 12 months that has the lowest annual cost.",
+  "date": "2026-10-09",
+  "educational": {
+    "gradeLevel": [
+      "Graduate",
+      "Professional"
+    ],
+    "subjectArea": "Business and AI economics",
+    "topic": "Retraining Cadence Tuner",
+    "learningObjectives": [
+      "The learner will recommend, for each of six scenarios, the retraining interval of 1, 2, 3, 4, 6, or 12 months that has the lowest annual cost."
+    ],
+    "bloomsTaxonomy": "Evaluate",
+    "duration": "10-15 minutes",
+    "prerequisites": [
+      "retraining cadence tuning",
+      "retraining cost",
+      "error cost",
+      "point-month"
+    ],
+    "standards": []
+  },
+  "technical": {
+    "framework": "JavaScript",
+    "version": "1.0",
+    "canvasDimensions": {
+      "width": "responsive",
+      "height": 322
+    },
+    "canvasHeight": 322,
+    "responsive": true,
+    "dependencies": [
+      "shared-libs/quiz-kit.js"
+    ],
+    "accessibility": {
+      "hasAltText": false,
+      "keyboardNavigable": true
+    }
+  },
+  "pedagogical": {
+    "teachingStrategy": "Commit-then-explore: predict, receive feedback, then explore",
+    "keyQuestions": [],
+    "commonMisconceptions": [
+      "(1) Retraining as often as possible is safest. (2) The cheapest model update is the cheapest schedule. (3) The best interval is the same for every model."
+    ],
+    "assessmentOpportunities": [
+      "For each of six scenarios the learner commits one interval before the answer is shown. An interval is correct when it has the lowest annual total in the Content table. Mastery is 5 of 6 correct on the first attempt. Exploration is not evidence."
+    ]
+  },
+  "chapter": "17-data-model-lifecycle-cost-drivers"
+}

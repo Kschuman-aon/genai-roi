@@ -1,0 +1,55 @@
+{
+  "title": "Technical Debt Break-Even Explorer",
+  "creator": "Katie Jo Schuman",
+  "subject": "AI economics",
+  "description": "The learner will assess, for each of eight scenarios, whether an AI saving can be reported as stated, must be restated net of debt, or is net negative, using thresholds on the share of the gross saving that the debt consumes.",
+  "date": "2026-10-09",
+  "educational": {
+    "gradeLevel": [
+      "Graduate",
+      "Professional"
+    ],
+    "subjectArea": "Business and AI economics",
+    "topic": "Technical Debt Break-Even Explorer",
+    "learningObjectives": [
+      "The learner will assess, for each of eight scenarios, whether an AI saving can be reported as stated, must be restated net of debt, or is net negative, using thresholds on the share of the gross saving that the debt consumes."
+    ],
+    "bloomsTaxonomy": "Evaluate",
+    "duration": "10-15 minutes",
+    "prerequisites": [
+      "technical debt from AI code",
+      "refactoring cost",
+      "gross saving",
+      "net saving"
+    ],
+    "standards": []
+  },
+  "technical": {
+    "framework": "JavaScript",
+    "version": "1.0",
+    "canvasDimensions": {
+      "width": "responsive",
+      "height": 290
+    },
+    "canvasHeight": 290,
+    "responsive": true,
+    "dependencies": [
+      "shared-libs/quiz-kit.js"
+    ],
+    "accessibility": {
+      "hasAltText": false,
+      "keyboardNavigable": true
+    }
+  },
+  "pedagogical": {
+    "teachingStrategy": "Commit-then-explore: predict, receive feedback, then explore",
+    "keyQuestions": [],
+    "commonMisconceptions": [
+      "(1) A positive gross saving means a positive result. (2) A small debt rate is always negligible. (3) Hours per refactoring do not matter if the rate is low."
+    ],
+    "assessmentOpportunities": [
+      "For each of eight scenarios the learner commits one of three verdicts before the arithmetic is shown. A verdict is correct when it matches the Content table. Mastery is 7 of 8 correct on the first attempt. Exploration is not evidence."
+    ]
+  },
+  "chapter": "15-ai-assisted-coding-sdlc"
+}

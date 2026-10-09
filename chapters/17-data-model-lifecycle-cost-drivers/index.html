@@ -1518,6 +1518,78 @@
           
         
       
+        
+          
+        
+      
+        
+          
+        
+      
+        
+          
+        
+      
+        
+          
+        
+      
+        
+          
+        
+      
+        
+          
+        
+      
+        
+          
+        
+      
+        
+          
+        
+      
+        
+          
+        
+      
+        
+          
+        
+      
+        
+          
+        
+      
+        
+          
+        
+      
+        
+          
+        
+      
+        
+          
+        
+      
+        
+          
+        
+      
+        
+          
+        
+      
+        
+          
+        
+      
+        
+          
+        
+      
     
     
     
@@ -1981,6 +2053,8 @@ People shown a proposed label tend to accept it, so the labeling saving can turn
 <p>The last data source is manufactured. <strong>Synthetic data generation</strong> is the use of a model to write artificial training examples, here tickets for rare queues that real data covers thinly. Generating 5,000 tickets of 200 input and 300 output tokens costs <span class="arithmatex">\( 5{,}000 \times (0.0006 + 0.0045) = \$25.50 \)</span>. The <strong>synthetic data cost tradeoff</strong> is the comparison of that low price per example with the lower value of each example and the checking it needs. Suppose a reviewer checks 10% of the set, 500 tickets at 1.5 minutes, <span class="arithmatex">\( 500 \times 1.125 = \$562.50 \)</span>, so the total is $588. If the 5,000 synthetic tickets improve the rare queues as much as 1,500 real ones, the cost per real-equivalent example is <span class="arithmatex">\( 588 \div 1{,}500 = \$0.39 \)</span>, against $1.125 for a real label, or $1,687.50 for 1,500. The equivalence of 1,500 is the assumption that decides the case, and it should be measured on a held-out set of real tickets, never on synthetic ones.</p>
 <p>The first specification lets the learner compare labeling strategies.</p>
 <h4 id="diagram-labeling-strategy-cost-calculator">Diagram: Labeling Strategy Cost Calculator<a class="headerlink" href="#diagram-labeling-strategy-cost-calculator" title="Permanent link">&para;</a></h4>
+<iframe src="../../sims/labeling-strategy-cost-calculator/main.html" width="100%" height="310px" scrolling="no"></iframe>
+<p><a href="../../sims/labeling-strategy-cost-calculator/main.html">Run Labeling Strategy Cost Calculator Fullscreen</a></p>
 <details>
 <summary>Labeling Strategy Cost Calculator</summary>
 <p>Type: microsim
@@ -2147,6 +2221,8 @@ Before choosing a sample, write down the smallest accuracy drop that would chang
 <p>The <strong>model retraining trigger</strong> is the rule that decides when drift calls for action: the thresholds on measured accuracy and input shift, and the number of readings required, that start an investigation or a retraining. The team's rule is: retrain now if this month's accuracy is below 85.0%, or if both last month's and this month's are below 88.0%; investigate if this month's is below 88.0% or the PSI is 0.25 or more; otherwise do nothing. Requiring two readings below the floor avoids retraining on one noisy sample.</p>
 <p>The second specification lets the learner apply the rule.</p>
 <h4 id="diagram-retraining-trigger-classifier">Diagram: Retraining Trigger Classifier<a class="headerlink" href="#diagram-retraining-trigger-classifier" title="Permanent link">&para;</a></h4>
+<iframe src="../../sims/retraining-trigger-classifier/main.html" width="100%" height="324px" scrolling="no"></iframe>
+<p><a href="../../sims/retraining-trigger-classifier/main.html">Run Retraining Trigger Classifier Fullscreen</a></p>
 <details>
 <summary>Retraining Trigger Classifier</summary>
 <p>Type: microsim
@@ -2350,6 +2426,8 @@ Notice that two forces pull in opposite directions, retraining cost falling as t
 </div>
 <p>The third specification lets the learner choose the cadence.</p>
 <h4 id="diagram-retraining-cadence-tuner">Diagram: Retraining Cadence Tuner<a class="headerlink" href="#diagram-retraining-cadence-tuner" title="Permanent link">&para;</a></h4>
+<iframe src="../../sims/retraining-cadence-tuner/main.html" width="100%" height="324px" scrolling="no"></iframe>
+<p><a href="../../sims/retraining-cadence-tuner/main.html">Run Retraining Cadence Tuner Fullscreen</a></p>
 <details>
 <summary>Retraining Cadence Tuner</summary>
 <p>Type: microsim

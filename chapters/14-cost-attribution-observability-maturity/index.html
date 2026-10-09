@@ -1515,6 +1515,78 @@
           
         
       
+        
+          
+        
+      
+        
+          
+        
+      
+        
+          
+        
+      
+        
+          
+        
+      
+        
+          
+        
+      
+        
+          
+        
+      
+        
+          
+        
+      
+        
+          
+        
+      
+        
+          
+        
+      
+        
+          
+        
+      
+        
+          
+        
+      
+        
+          
+        
+      
+        
+          
+        
+      
+        
+          
+        
+      
+        
+          
+        
+      
+        
+          
+        
+      
+        
+          
+        
+      
+        
+          
+        
+      
     
     
     
@@ -2037,6 +2109,8 @@ Stamp the user, project, and feature identifiers onto each request at the gatewa
 <p><strong>Cross-provider cost aggregation</strong> is the combination of normalized cost data from several vendors or clouds into one consolidated view of total spend. In the example Provider A bills $14,880 and Provider B $3,720, which sum to the $18,600 token cost and give A 80% of spend. The aggregated view can answer questions no single invoice can, such as the blended cost per request or whether moving a feature from one provider to the other lowers the bill after accounting for tokenizer differences.</p>
 <p>The first specification practises the roll-up, the unit cost, and the reconciliation.</p>
 <h4 id="diagram-roll-up-and-reconciliation-calculator">Diagram: Roll-Up and Reconciliation Calculator<a class="headerlink" href="#diagram-roll-up-and-reconciliation-calculator" title="Permanent link">&para;</a></h4>
+<iframe src="../../sims/rollup-reconciliation-calculator/main.html" width="100%" height="392px" scrolling="no"></iframe>
+<p><a href="../../sims/rollup-reconciliation-calculator/main.html">Run Roll-Up and Reconciliation Calculator Fullscreen</a></p>
 <details>
 <summary>Roll-Up and Reconciliation Calculator</summary>
 <p>Type: microsim
@@ -2215,6 +2289,8 @@ Stamp the user, project, and feature identifiers onto each request at the gatewa
 <p>A <strong>single source of truth</strong> is the one authoritative system or dataset designated for each metric, so every report draws on the same data and any difference is a bug and not a disagreement. Without it, Finance reports $29,400 for September, from invoices closed at midnight UTC and net of a $600 credit, while Engineering's dashboard shows $30,000 from request logs, and each is right by its own rules. The remedy is to name the warehouse's reconciled monthly table as the source for the cost metrics, publish the reconciliation, and retire the others.</p>
 <p>A <strong>data lineage for cost metrics</strong> is the documented path of data from its original sources through every transformation to the metric or dashboard tile that reports it. It answers two questions. Upstream: where did this number come from? Downstream: if this input changes, what else is affected? The second is the one that prevents surprises. The lineage of the cost metrics in the example is shown in the specification below, where each arrow points from a source to something computed from it.</p>
 <h4 id="diagram-cost-metric-lineage-explorer">Diagram: Cost Metric Lineage Explorer<a class="headerlink" href="#diagram-cost-metric-lineage-explorer" title="Permanent link">&para;</a></h4>
+<iframe src="../../sims/cost-metric-lineage-explorer/main.html" width="100%" height="582px" scrolling="no"></iframe>
+<p><a href="../../sims/cost-metric-lineage-explorer/main.html">Run Cost Metric Lineage Explorer Fullscreen</a></p>
 <details>
 <summary>Cost Metric Lineage Explorer</summary>
 <p>Type: graph-model
@@ -2424,6 +2500,8 @@ Stamp the user, project, and feature identifiers onto each request at the gatewa
 <p><strong>Real-time alert fatigue</strong> is the loss of attention to alerts that follows when too many are false or non-actionable, so the people who receive them start ignoring all of them, including the real ones. If the team receives 32 alerts a week and 2 are real, alert precision, the share of alerts that matter, is 6%, and an agent who has acted on 30 false alarms will not run to the 31st. The remedies are higher thresholds, grouping related alerts into one, routing by severity, and retiring alerts nobody acts on.</p>
 <p>The next specification lets the learner choose thresholds against a false-alarm limit.</p>
 <h4 id="diagram-alert-threshold-tuner">Diagram: Alert Threshold Tuner<a class="headerlink" href="#diagram-alert-threshold-tuner" title="Permanent link">&para;</a></h4>
+<iframe src="../../sims/alert-threshold-tuner/main.html" width="100%" height="302px" scrolling="no"></iframe>
+<p><a href="../../sims/alert-threshold-tuner/main.html">Run Alert Threshold Tuner Fullscreen</a></p>
 <details>
 <summary>Alert Threshold Tuner</summary>
 <p>Type: microsim

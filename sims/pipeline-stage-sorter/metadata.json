@@ -1,0 +1,55 @@
+{
+  "title": "Pipeline Stage Sorter",
+  "creator": "Katie Jo Schuman",
+  "subject": "AI economics",
+  "description": "The learner will classify each of ten cost-analytics pipeline tasks under the one of four stages (Collect, Transform, Load, Serve) in which it occurs, with at least 8 of 10 correct on the first attempt.",
+  "date": "2026-10-09",
+  "educational": {
+    "gradeLevel": [
+      "Graduate",
+      "Professional"
+    ],
+    "subjectArea": "Business and AI economics",
+    "topic": "Pipeline Stage Sorter",
+    "learningObjectives": [
+      "The learner will classify each of ten cost-analytics pipeline tasks under the one of four stages (Collect, Transform, Load, Serve) in which it occurs, with at least 8 of 10 correct on the first attempt."
+    ],
+    "bloomsTaxonomy": "Understand",
+    "duration": "10-15 minutes",
+    "prerequisites": [
+      "data pipeline for cost analytics",
+      "ETL for usage data",
+      "cost data warehouse",
+      "data quality for cost metrics"
+    ],
+    "standards": []
+  },
+  "technical": {
+    "framework": "JavaScript",
+    "version": "1.0",
+    "canvasDimensions": {
+      "width": "responsive",
+      "height": 400
+    },
+    "canvasHeight": 400,
+    "responsive": true,
+    "dependencies": [
+      "shared-libs/quiz-kit.js"
+    ],
+    "accessibility": {
+      "hasAltText": false,
+      "keyboardNavigable": true
+    }
+  },
+  "pedagogical": {
+    "teachingStrategy": "Commit-then-explore: predict, receive feedback, then explore",
+    "keyQuestions": [],
+    "commonMisconceptions": [
+      "(1) Cleaning and deduplicating happen after storage. (2) Alerting is part of data collection. (3) Retention management belongs in the transform stage."
+    ],
+    "assessmentOpportunities": [
+      "For each task the learner chooses one stage and commits. A choice is correct when it matches the \"Correct stage\" column in Content. Mastery is 8 of 10 correct on the first attempt. Reading the stage definitions is exploration, not evidence."
+    ]
+  },
+  "chapter": "13-telemetry-logging-cost-dashboards"
+}

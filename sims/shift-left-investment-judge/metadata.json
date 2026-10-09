@@ -1,0 +1,54 @@
+{
+  "title": "Shift-Left Investment Judge",
+  "creator": "Katie Jo Schuman",
+  "subject": "AI economics",
+  "description": "The learner will judge, for each of six AI investment options, whether to fund it using the rule that savings from moving defects to an earlier phase must be at least twice the cost.",
+  "date": "2026-10-09",
+  "educational": {
+    "gradeLevel": [
+      "Graduate",
+      "Professional"
+    ],
+    "subjectArea": "Business and AI economics",
+    "topic": "Shift-Left Investment Judge",
+    "learningObjectives": [
+      "The learner will judge, for each of six AI investment options, whether to fund it using the rule that savings from moving defects to an earlier phase must be at least twice the cost."
+    ],
+    "bloomsTaxonomy": "Evaluate",
+    "duration": "10-15 minutes",
+    "prerequisites": [
+      "the defect fix costs by phase",
+      "shift-left",
+      "benefit-cost ratio"
+    ],
+    "standards": []
+  },
+  "technical": {
+    "framework": "JavaScript",
+    "version": "1.0",
+    "canvasDimensions": {
+      "width": "responsive",
+      "height": 302
+    },
+    "canvasHeight": 302,
+    "responsive": true,
+    "dependencies": [
+      "shared-libs/quiz-kit.js"
+    ],
+    "accessibility": {
+      "hasAltText": false,
+      "keyboardNavigable": true
+    }
+  },
+  "pedagogical": {
+    "teachingStrategy": "Commit-then-explore: predict, receive feedback, then explore",
+    "keyQuestions": [],
+    "commonMisconceptions": [
+      "(1) The option that moves the most defects is the best. (2) Any positive saving justifies funding. (3) The phase the defect moves to does not matter."
+    ],
+    "assessmentOpportunities": [
+      "For each of six options the learner commits \"Fund\" or \"Do not fund\" before the ratio is shown. A verdict is correct when it matches the Content table. Mastery is 5 of 6 correct on the first attempt. Exploration is not evidence."
+    ]
+  },
+  "chapter": "15-ai-assisted-coding-sdlc"
+}
